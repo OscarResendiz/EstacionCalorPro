@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<history>
+   <processor signature="arm-none-eabi-gcc 13.1.0 x86_64-w64-mingw32 -mcpu=cortex-m3 -mthumb -Wall -ffunction-sections -g -O0 -c -DSTM32F103C8 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -D__ASSEMBLY__ -ID:\RepositoriosGit\EstacionCalorPro\softeare\STM32\EstacionAireCoide\Librerias -ID:\RepositoriosGit\EstacionCalorPro\softeare\STM32\EstacionAireCoide\cmsis_boot -ID:\RepositoriosGit\EstacionCalorPro\softeare\STM32\EstacionAireCoide\stm_lib\inc -ID:\RepositoriosGit\EstacionCalorPro\softeare\STM32\EstacionAireCoide\cmsis -ID:\RepositoriosGit\EstacionCalorPro\softeare\STM32\EstacionAireCoide\stm_lib -ID:\RepositoriosGit\EstacionCalorPro\softeare\STM32 -ID:\RepositoriosGit\EstacionCalorPro\softeare\STM32\EstacionAireCoide">
+      <target file="printf.o" lastModified="190bf10ea95">
+         <source file="..\..\..\stdio\printf.c" lastModified="190bef48c25"/>
+      </target>
+      <target file="main.o" lastModified="190bf11ae4b">
+         <source file="..\..\..\main.c" lastModified="190bf10e608"/>
+      </target>
+   </processor>
+   <processor signature="arm-none-eabi-gcc 13.1.0 x86_64-w64-mingw32 -mcpu=cortex-m3 -mthumb -Wall -ffunction-sections -g -O0 -c -DSTM32F103C8 -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -D__ASSEMBLY__ -DSUPPORT_CPLUSPLUS -ID:\RepositoriosGit\EstacionCalorPro\softeare\STM32\EstacionAireCoide\Librerias -ID:\RepositoriosGit\EstacionCalorPro\softeare\STM32\EstacionAireCoide\cmsis_boot -ID:\RepositoriosGit\EstacionCalorPro\softeare\STM32\EstacionAireCoide\stm_lib\inc -ID:\RepositoriosGit\EstacionCalorPro\softeare\STM32\EstacionAireCoide\cmsis -ID:\RepositoriosGit\EstacionCalorPro\softeare\STM32\EstacionAireCoide\stm_lib -ID:\RepositoriosGit\EstacionCalorPro\softeare\STM32 -ID:\RepositoriosGit\EstacionCalorPro\softeare\STM32\EstacionAireCoide">
+      <target file="stm32f10x_adc.o" lastModified="190bf1e7821">
+         <source file="..\..\..\stm_lib\src\stm32f10x_adc.c" lastModified="190bef4eaf7"/>
+      </target>
+      <target file="syscalls.o" lastModified="190bf1e7937">
+         <source file="..\..\..\syscalls\syscalls.c" lastModified="190bef4616b"/>
+      </target>
+      <target file="ControlVelocidadAire.o" lastModified="190bf1e7593">
+         <source file="..\..\..\Librerias\ControlVelocidadAire\ControlVelocidadAire.cpp" lastModified="190bf1d509e"/>
+      </target>
+      <target file="system_stm32f10x.o" lastModified="190bf1e754d">
+         <source file="..\..\..\cmsis_boot\system_stm32f10x.c" lastModified="190bef4a6aa"/>
+      </target>
+      <target file="usart1.o" lastModified="190bf1e7a22">
+         <source file="..\..\..\Librerias\usart1.c" lastModified="190bf12a27c"/>
+      </target>
+      <target file="stm32f10x_usart.o" lastModified="190bf1e78a7">
+         <source file="..\..\..\stm_lib\src\stm32f10x_usart.c" lastModified="190bef4fa58"/>
+      </target>
+      <target file="stm32f10x_gpio.o" lastModified="190bf1e7643">
+         <source file="..\..\..\stm_lib\src\stm32f10x_gpio.c" lastModified="190bef4bddb"/>
+      </target>
+      <target file="stm32f10x_rcc.o" lastModified="190bf1e7791">
+         <source file="..\..\..\stm_lib\src\stm32f10x_rcc.c" lastModified="190bef4a6a1"/>
+      </target>
+      <target file="startup_stm32f10x_md.o" lastModified="190bf1e75d3">
+         <source file="..\..\..\cmsis_boot\startup\startup_stm32f10x_md.c" lastModified="190bef4a6a6"/>
+      </target>
+   </processor>
+</history>

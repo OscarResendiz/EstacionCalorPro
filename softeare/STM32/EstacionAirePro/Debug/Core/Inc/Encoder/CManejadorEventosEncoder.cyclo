@@ -1,0 +1,9 @@
+../Core/Inc/Encoder/CManejadorEventosEncoder.cpp:10:1:CManejadorEventosEncoder::CManejadorEventosEncoder()	1
+../Core/Inc/Encoder/CManejadorEventosEncoder.cpp:16:1:CManejadorEventosEncoder::~CManejadorEventosEncoder()	1
+../Core/Inc/Encoder/CManejadorEventosEncoder.cpp:16:1:virtual CManejadorEventosEncoder::~CManejadorEventosEncoder()	1
+../Core/Inc/Encoder/CManejadorEventosEncoder.cpp:21:6:virtual void CManejadorEventosEncoder::OnIncrementoEncoder(int)	1
+../Core/Inc/Encoder/CManejadorEventosEncoder.cpp:25:6:virtual void CManejadorEventosEncoder::OnDecrementoEncoder(int)	1
+../Core/Inc/Encoder/CManejadorEventosEncoder.cpp:29:6:virtual void CManejadorEventosEncoder::OnBotonEncoderClickEvent(int, int)	1
+../Core/Inc/Encoder/CManejadorEventosEncoder.cpp:33:6:virtual void CManejadorEventosEncoder::OnBotonEncoderPresionadoEvent(int)	1
+../Core/Inc/Encoder/CManejadorEventosEncoder.cpp:37:6:virtual void CManejadorEventosEncoder::OnBotonEncoderPresionadoLargoEvent(int)	1
+../Core/Inc/Encoder/CManejadorEventosEncoder.cpp:41:6:virtual void CManejadorEventosEncoder::OnBotonEncoderSueltoEvent(int)	1

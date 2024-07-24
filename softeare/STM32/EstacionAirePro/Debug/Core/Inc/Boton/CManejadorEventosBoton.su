@@ -1,0 +1,7 @@
+../Core/Inc/Boton/CManejadorEventosBoton.cpp:10:1:CManejadorEventosBoton::CManejadorEventosBoton()	16	static
+../Core/Inc/Boton/CManejadorEventosBoton.cpp:16:1:CManejadorEventosBoton::~CManejadorEventosBoton()	16	static
+../Core/Inc/Boton/CManejadorEventosBoton.cpp:16:1:virtual CManejadorEventosBoton::~CManejadorEventosBoton()	16	static
+../Core/Inc/Boton/CManejadorEventosBoton.cpp:21:6:virtual void CManejadorEventosBoton::OnBotonClickEvent(int, int)	24	static
+../Core/Inc/Boton/CManejadorEventosBoton.cpp:25:7:virtual void CManejadorEventosBoton::OnBotonPresionadoEvent(int)	16	static
+../Core/Inc/Boton/CManejadorEventosBoton.cpp:29:7:virtual void CManejadorEventosBoton::OnBotonSueltoEvent(int)	16	static
+../Core/Inc/Boton/CManejadorEventosBoton.cpp:33:7:virtual void CManejadorEventosBoton::OnBotonPresionadoLargoEvent(int)	16	static

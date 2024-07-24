@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dependencies>
+   <includePath signature="/ID:\RepositoriosGit\EstacionCalorPro\softeare\STM32\EstacionAireCoide\Librerias /ID:\RepositoriosGit\EstacionCalorPro\softeare\STM32\EstacionAireCoide\cmsis_boot /ID:\RepositoriosGit\EstacionCalorPro\softeare\STM32\EstacionAireCoide\stm_lib\inc /ID:\RepositoriosGit\EstacionCalorPro\softeare\STM32\EstacionAireCoide\cmsis /ID:\RepositoriosGit\EstacionCalorPro\softeare\STM32\EstacionAireCoide\stm_lib /ID:\RepositoriosGit\EstacionCalorPro\softeare\STM32 /ID:\RepositoriosGit\EstacionCalorPro\softeare\STM32\EstacionAireCoide">
+      <source file="..\..\..\Librerias\ControlVelocidadAire\ControlVelocidadAire.cpp" lastModified="190bf1d509e">
+         <include file="..\..\..\Librerias\ControlVelocidadAire\ControlVelocidadAire.hpp"/>
+      </source>
+      <source file="..\..\..\cmsis_boot\stm32f10x.h" lastModified="190bef4aa91">
+         <include file="..\..\..\cmsis\core_cm3.h"/>
+         <include file="..\..\..\cmsis_boot\system_stm32f10x.h"/>
+         <include file="..\..\..\cmsis_boot\stm32f10x_conf.h"/>
+      </source>
+      <source file="..\..\..\cmsis\core_cmInstr.h" lastModified="190bef4ae83">
+      </source>
+      <source file="..\..\..\stm_lib\inc\stm32f10x_adc.h" lastModified="190bef4eaf6">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\cmsis_boot\stm32f10x_conf.h" lastModified="190bef4a6a9">
+      </source>
+      <source file="..\..\..\stm_lib\src\stm32f10x_adc.c" lastModified="190bef4eaf7">
+         <include file="..\..\..\stm_lib\inc\stm32f10x_adc.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\src\stm32f10x_gpio.c" lastModified="190bef4bddb">
+         <include file="..\..\..\stm_lib\inc\stm32f10x_gpio.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
+      </source>
+      <source file="..\..\..\Librerias\usart1.h" lastModified="18832ca54f4">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\inc\stm32f10x_gpio.h" lastModified="190bef4bdda">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\inc\stm32f10x_rcc.h" lastModified="190bef4a6a0">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\Librerias\usart1.c" lastModified="190bf12aa4c">
+         <include file="..\..\..\Librerias\usart1.h"/>
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_gpio.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_usart.h"/>
+      </source>
+      <source file="..\..\..\cmsis\core_cm3.h" lastModified="190bef4aa9a">
+         <include file="..\..\..\cmsis\core_cmInstr.h"/>
+         <include file="..\..\..\cmsis\core_cmFunc.h"/>
+      </source>
+      <source file="..\..\..\syscalls\syscalls.c" lastModified="190bef4710b">
+      </source>
+      <source file="..\..\..\stm_lib\src\stm32f10x_rcc.c" lastModified="190bef4a6a1">
+         <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
+      </source>
+      <source file="..\..\..\cmsis\core_cmFunc.h" lastModified="190bef4ae83">
+      </source>
+      <source file="..\..\..\stm_lib\src\stm32f10x_usart.c" lastModified="190bef4fa58">
+         <include file="..\..\..\stm_lib\inc\stm32f10x_usart.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
+      </source>
+      <source file="..\..\..\cmsis_boot\system_stm32f10x.h" lastModified="190bef4a6ab">
+      </source>
+      <source file="..\..\..\Librerias\ControlVelocidadAire\ControlVelocidadAire.hpp" lastModified="190bf1d5096">
+      </source>
+      <source file="..\..\..\cmsis_boot\system_stm32f10x.c" lastModified="190bef4a6aa">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\inc\stm32f10x_usart.h" lastModified="190bef4fa56">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\cmsis_boot\startup\startup_stm32f10x_md.c" lastModified="190bef4a6a6">
+      </source>
+   </includePath>
+   <includePath signature="/ID:\RepositoriosGit\EstacionCalorPro\softeare\STM32\EstacionAireCoide\cmsis_boot /ID:\RepositoriosGit\EstacionCalorPro\softeare\STM32\EstacionAireCoide\stm_lib\inc /ID:\RepositoriosGit\EstacionCalorPro\softeare\STM32\EstacionAireCoide\cmsis /ID:\RepositoriosGit\EstacionCalorPro\softeare\STM32\EstacionAireCoide\stm_lib /ID:\RepositoriosGit\EstacionCalorPro\softeare\STM32 /ID:\RepositoriosGit\EstacionCalorPro\softeare\STM32\EstacionAireCoide">
+      <source file="..\..\..\stm_lib\inc\stm32f10x_adc.h" lastModified="190bef4eaf6">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\cmsis_boot\stm32f10x_conf.h" lastModified="190bef4a6a9">
+      </source>
+      <source file="..\..\..\stm_lib\src\stm32f10x_adc.c" lastModified="190bef4eaf7">
+         <include file="..\..\..\stm_lib\inc\stm32f10x_adc.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\src\stm32f10x_gpio.c" lastModified="190bef4bddb">
+         <include file="..\..\..\stm_lib\inc\stm32f10x_gpio.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\inc\stm32f10x_gpio.h" lastModified="190bef4bdda">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\inc\stm32f10x_rcc.h" lastModified="190bef4a6a0">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\src\stm32f10x_rcc.c" lastModified="190bef4a6a1">
+         <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\src\stm32f10x_usart.c" lastModified="190bef4fa58">
+         <include file="..\..\..\stm_lib\inc\stm32f10x_usart.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
+      </source>
+      <source file="..\..\..\cmsis_boot\system_stm32f10x.h" lastModified="190bef4a6ab">
+      </source>
+      <source file="..\..\..\cmsis_boot\system_stm32f10x.c" lastModified="190bef4a6aa">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\inc\stm32f10x_usart.h" lastModified="190bef4fa56">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\cmsis_boot\startup\startup_stm32f10x_md.c" lastModified="190bef4a6a6">
+      </source>
+   </includePath>
+</dependencies>

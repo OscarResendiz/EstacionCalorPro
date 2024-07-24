@@ -1,0 +1,5 @@
+../Core/Src/Principal.cpp:21:6:void IncializaSistema()	8	static
+../Core/Src/Principal.cpp:44:6:void EjecutaSistema()	120	static
+../Core/Src/Principal.cpp:85:1:void __static_initialization_and_destruction_0(int, int)	16	static
+../Core/Src/Principal.cpp:85:1:cpp)	8	static
+../Core/Src/Principal.cpp:85:1:cpp)	8	static
