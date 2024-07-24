@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP MAX6675ISA+T
+D Sensor Interface Cold-Junction-Compensated K-Thermocouple-to-Digital Converter (0 C to +1024 C)
+K
+F https://datasheets.maximintegrated.com/en/ds/MAX6675.pdf
+$ENDCMP
+#
+#End Doc Library
