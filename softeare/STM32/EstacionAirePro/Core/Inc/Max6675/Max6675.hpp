@@ -18,14 +18,14 @@ private:
 	uint16_t DAT_MAX_Pin;
 	uint16_t CK_MAX_Pin;
 	uint16_t CS_MAX_Pin;
-
+	int TiempoTranscurrido;
+	float UltimaTemperatura;
 public:
 	MAX6675();
 	void Init();
 	void SetConfigDatPin(GPIO_TypeDef *portDat, uint16_t pinDat);
 	void SetConfigCkPin(GPIO_TypeDef *portCk, uint16_t pinCk);
 	void SetConfigCsPin(GPIO_TypeDef *portCs, uint16_t pinCs);
-	void MAX6675_init();
 	uint8_t MAX6675_pulso();
 	float MAX6675_lee();
 };

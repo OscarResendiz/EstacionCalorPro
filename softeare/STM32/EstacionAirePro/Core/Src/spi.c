@@ -66,6 +66,10 @@ void SPI1_Init(void)
   }
 
 }
+void Error_Handler()
+{
+
+}
 //void HAL_SPI_MspInit(SPI_HandleTypeDef* spiHandle)
 //{
 //

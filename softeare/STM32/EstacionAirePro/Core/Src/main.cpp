@@ -74,7 +74,7 @@ static void MX_GPIO_Init(void);
  */
 int main(void)
 {
-
+//main.cpp
 	/* USER CODE BEGIN 1 */
 
 	/* USER CODE END 1 */
@@ -101,13 +101,13 @@ int main(void)
 	EjecutaSistema();
 	/* USER CODE BEGIN 2 */
 	delay_us_dwt_init();
-	while (1)
-	{
-		HAL_Delay(1000);
+//	while (1)
+//	{
+		//HAL_Delay(1000);
 		/* USER CODE END WHILE */
 
 		/* USER CODE BEGIN 3 */
-	}
+//	}
 
 	/* USER CODE END 2 */
 	ILI9341_Init(); //initial driver setup to drive ili9341
@@ -642,8 +642,53 @@ void SystemClock_Config(void)
  */
 static void MX_GPIO_Init(void)
 {
-	GPIO_InitTypeDef GPIO_InitStruct =
-	{ 0 };
+	  GPIO_InitTypeDef GPIO_InitStruct = {0};
+	/* USER CODE BEGIN MX_GPIO_Init_1 */
+	/* USER CODE END MX_GPIO_Init_1 */
+
+	  /* GPIO Ports Clock Enable */
+	  __HAL_RCC_GPIOA_CLK_ENABLE();
+	  __HAL_RCC_GPIOB_CLK_ENABLE();
+
+	  /*Configure GPIO pin Output Level */
+	  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1|GPIO_PIN_2, GPIO_PIN_RESET);
+
+	  /*Configure GPIO pin Output Level */
+	  HAL_GPIO_WritePin(Display_DC_GPIO_Port, Display_DC_Pin, GPIO_PIN_RESET);
+
+	  /*Configure GPIO pins : PA0 Btn1_Pin PA6 */
+	  GPIO_InitStruct.Pin = GPIO_PIN_0|Btn1_Pin|GPIO_PIN_6;
+	  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+	  GPIO_InitStruct.Pull = GPIO_NOPULL;
+	  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+	  /*Configure GPIO pins : PA1 PA2 */
+	  GPIO_InitStruct.Pin = GPIO_PIN_1|GPIO_PIN_2;
+	  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+	  GPIO_InitStruct.Pull = GPIO_NOPULL;
+	  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+	  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+	  /*Configure GPIO pin : Display_DC_Pin */
+	  GPIO_InitStruct.Pin = Display_DC_Pin;
+	  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+	  GPIO_InitStruct.Pull = GPIO_NOPULL;
+	  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+	  HAL_GPIO_Init(Display_DC_GPIO_Port, &GPIO_InitStruct);
+
+	  /*Configure GPIO pin : PB10 */
+	  GPIO_InitStruct.Pin = GPIO_PIN_10;
+	  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+	  GPIO_InitStruct.Pull = GPIO_NOPULL;
+	  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+	  /*Configure GPIO pin : PB14 */
+	  GPIO_InitStruct.Pin = GPIO_PIN_14;
+	  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+	  GPIO_InitStruct.Pull = GPIO_PULLUP;
+	  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+	//--------------------------------------------------------------------------
+	//GPIO_InitTypeDef GPIO_InitStruct ={ 0 };
 	/* USER CODE BEGIN MX_GPIO_Init_1 */
 	/* USER CODE END MX_GPIO_Init_1 */
 

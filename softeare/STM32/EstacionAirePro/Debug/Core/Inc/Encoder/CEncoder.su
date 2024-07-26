@@ -2,14 +2,14 @@
 ../Core/Inc/Encoder/CEncoder.cpp:16:1:CEncoder::~CEncoder()	16	static
 ../Core/Inc/Encoder/CEncoder.cpp:16:1:virtual CEncoder::~CEncoder()	16	static
 ../Core/Inc/Encoder/CEncoder.cpp:21:6:void CEncoder::Configurar(GPIO_TypeDef*, uint16_t, GPIO_TypeDef*, uint16_t, GPIO_TypeDef*, uint16_t, int)	32	static
-../Core/Inc/Encoder/CEncoder.cpp:42:5:int CEncoder::LeeClk()	16	static
-../Core/Inc/Encoder/CEncoder.cpp:46:5:int CEncoder::LeeDt()	16	static
-../Core/Inc/Encoder/CEncoder.cpp:51:6:void CEncoder::Init()	32	static
-../Core/Inc/Encoder/CEncoder.cpp:72:6:void CEncoder::AsignaManejadorEventos(CManejadorEventosEncoder*)	16	static
-../Core/Inc/Encoder/CEncoder.cpp:77:6:virtual void CEncoder::OnBotonSueltoEvent(int)	16	static
-../Core/Inc/Encoder/CEncoder.cpp:91:6:virtual void CEncoder::OnBotonPresionadoEvent(int)	16	static
-../Core/Inc/Encoder/CEncoder.cpp:105:6:virtual void CEncoder::OnBotonClickEvent(int, int)	24	static
-../Core/Inc/Encoder/CEncoder.cpp:116:6:virtual void CEncoder::Procesa()	16	static
-../Core/Inc/Encoder/CEncoder.cpp:122:6:void CEncoder::leeEncoder()	16	static
-../Core/Inc/Encoder/CEncoder.cpp:139:6:void CEncoder::incrementa()	16	static
-../Core/Inc/Encoder/CEncoder.cpp:144:6:void CEncoder::decrementa()	16	static
+../Core/Inc/Encoder/CEncoder.cpp:40:5:int CEncoder::LeeClk()	16	static
+../Core/Inc/Encoder/CEncoder.cpp:44:5:int CEncoder::LeeDt()	16	static
+../Core/Inc/Encoder/CEncoder.cpp:49:6:void CEncoder::Init()	32	static
+../Core/Inc/Encoder/CEncoder.cpp:70:6:void CEncoder::AsignaManejadorEventos(CManejadorEventosEncoder*)	16	static
+../Core/Inc/Encoder/CEncoder.cpp:75:6:virtual void CEncoder::OnBotonSueltoEvent(int)	16	static
+../Core/Inc/Encoder/CEncoder.cpp:89:6:virtual void CEncoder::OnBotonPresionadoEvent(int)	16	static
+../Core/Inc/Encoder/CEncoder.cpp:103:6:virtual void CEncoder::OnBotonClickEvent(int, int)	24	static
+../Core/Inc/Encoder/CEncoder.cpp:114:6:virtual void CEncoder::Procesa()	16	static
+../Core/Inc/Encoder/CEncoder.cpp:120:6:void CEncoder::leeEncoder()	16	static
+../Core/Inc/Encoder/CEncoder.cpp:137:6:void CEncoder::incrementa()	16	static
+../Core/Inc/Encoder/CEncoder.cpp:142:6:void CEncoder::decrementa()	16	static

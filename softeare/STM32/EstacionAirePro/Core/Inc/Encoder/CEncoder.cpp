@@ -18,9 +18,7 @@ CEncoder::~CEncoder()
 	// TODO Auto-generated destructor stub
 }
 
-void CEncoder::Configurar(GPIO_TypeDef *clk_Port, uint16_t pinClk,
-		GPIO_TypeDef *dt_Port, uint16_t pinDt, GPIO_TypeDef *boton_Port,
-		uint16_t pinBoton, int id_Encoder)
+void CEncoder::Configurar(GPIO_TypeDef *clk_Port, uint16_t pinClk,GPIO_TypeDef *dt_Port, uint16_t pinDt, GPIO_TypeDef *boton_Port,uint16_t pinBoton, int id_Encoder)
 {
 	Clk_Port = clk_Port;
 	PinClk = pinClk;
@@ -33,7 +31,7 @@ void CEncoder::Configurar(GPIO_TypeDef *clk_Port, uint16_t pinClk,
 
 	ID_Encoder = id_Encoder;
 	Boton = new CManejadorBoton();
-
+	Boton->AsignaManejadorEventos(this);
 	Boton->Configurar(Boton_Port, PinBoton, ID_BOTON);
 	CLK_statusAnterior = LeeClk();
 

@@ -1,0 +1,60 @@
+../Core/Inc/GUI/CComponenteBaseTft.cpp:13:1:CComponenteBaseTft::CComponenteBaseTft()	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:19:1:CComponenteBaseTft::~CComponenteBaseTft()	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:19:1:virtual CComponenteBaseTft::~CComponenteBaseTft()	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:25:6:virtual void CComponenteBaseTft::drawPixel(int16_t, int16_t, uint16_t)	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:31:6:virtual void CComponenteBaseTft::startWrite()	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:35:6:virtual void CComponenteBaseTft::writePixel(int16_t, int16_t, uint16_t)	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:39:6:virtual void CComponenteBaseTft::writeFillRect(int16_t, int16_t, int16_t, int16_t, uint16_t)	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:44:6:virtual void CComponenteBaseTft::writeFastVLine(int16_t, int16_t, int16_t, uint16_t)	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:49:6:virtual void CComponenteBaseTft::writeFastHLine(int16_t, int16_t, int16_t, uint16_t)	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:54:6:virtual void CComponenteBaseTft::writeLine(int16_t, int16_t, int16_t, int16_t, uint16_t)	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:59:6:virtual void CComponenteBaseTft::endWrite()	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:63:6:virtual void CComponenteBaseTft::setRotation(uint8_t)	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:67:6:virtual void CComponenteBaseTft::invertDisplay(bool)	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:71:6:virtual void CComponenteBaseTft::drawFastVLine(int16_t, int16_t, int16_t, uint16_t)	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:76:6:virtual void CComponenteBaseTft::drawFastHLine(int16_t, int16_t, int16_t, uint16_t)	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:81:6:virtual void CComponenteBaseTft::fillScreen(uint16_t)	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:85:6:virtual void CComponenteBaseTft::drawLine(int16_t, int16_t, int16_t, int16_t, uint16_t)	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:90:6:void CComponenteBaseTft::drawCircle(int16_t, int16_t, int16_t, uint16_t)	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:95:6:void CComponenteBaseTft::drawCircleHelper(int16_t, int16_t, int16_t, uint8_t, uint16_t)	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:100:6:void CComponenteBaseTft::fillCircle(int16_t, int16_t, int16_t, uint16_t)	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:105:6:void CComponenteBaseTft::fillCircleHelper(int16_t, int16_t, int16_t, uint8_t, int16_t, uint16_t)	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:110:6:void CComponenteBaseTft::drawTriangle(int16_t, int16_t, int16_t, int16_t, int16_t, int16_t, uint16_t)	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:115:6:void CComponenteBaseTft::fillTriangle(int16_t, int16_t, int16_t, int16_t, int16_t, int16_t, uint16_t)	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:120:6:void CComponenteBaseTft::drawRoundRect(int16_t, int16_t, int16_t, int16_t, int16_t, uint16_t)	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:125:6:void CComponenteBaseTft::fillRoundRect(int16_t, int16_t, int16_t, int16_t, int16_t, uint16_t)	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:130:6:void CComponenteBaseTft::drawBitmap(int16_t, int16_t, const uint8_t*, int16_t, int16_t, uint16_t)	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:135:6:void CComponenteBaseTft::drawBitmap(int16_t, int16_t, const uint8_t*, int16_t, int16_t, uint16_t, uint16_t)	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:141:6:void CComponenteBaseTft::drawBitmap(int16_t, int16_t, uint8_t*, int16_t, int16_t, uint16_t)	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:146:6:void CComponenteBaseTft::drawBitmap(int16_t, int16_t, uint8_t*, int16_t, int16_t, uint16_t, uint16_t)	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:151:6:void CComponenteBaseTft::drawXBitmap(int16_t, int16_t, const uint8_t*, int16_t, int16_t, uint16_t)	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:156:6:void CComponenteBaseTft::drawGrayscaleBitmap(int16_t, int16_t, const uint8_t*, int16_t, int16_t)	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:161:6:void CComponenteBaseTft::drawGrayscaleBitmap(int16_t, int16_t, uint8_t*, int16_t, int16_t)	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:166:6:void CComponenteBaseTft::drawGrayscaleBitmap(int16_t, int16_t, const uint8_t*, const uint8_t*, int16_t, int16_t)	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:171:6:void CComponenteBaseTft::drawGrayscaleBitmap(int16_t, int16_t, uint8_t*, uint8_t*, int16_t, int16_t)	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:176:6:void CComponenteBaseTft::drawRGBBitmap(int16_t, int16_t, const uint16_t*, int16_t, int16_t)	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:181:6:void CComponenteBaseTft::drawRGBBitmap(int16_t, int16_t, uint16_t*, int16_t, int16_t)	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:186:6:void CComponenteBaseTft::drawRGBBitmap(int16_t, int16_t, const uint16_t*, const uint8_t*, int16_t, int16_t)	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:191:6:void CComponenteBaseTft::drawRGBBitmap(int16_t, int16_t, uint16_t*, uint8_t*, int16_t, int16_t)	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:196:6:void CComponenteBaseTft::drawChar(int16_t, int16_t, unsigned char, uint16_t, uint16_t, uint8_t)	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:201:6:void CComponenteBaseTft::drawChar(int16_t, int16_t, unsigned char, uint16_t, uint16_t, uint8_t, uint8_t)	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:206:6:void CComponenteBaseTft::getTextBounds(const char*, int16_t, int16_t, int16_t*, int16_t*, uint16_t*, uint16_t*)	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:225:6:void CComponenteBaseTft::setTextColor(uint16_t, uint16_t)	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:229:6:void CComponenteBaseTft::setTextWrap(bool)	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:233:6:void CComponenteBaseTft::cp437(bool)	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:237:9:int16_t CComponenteBaseTft::width()	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:241:9:int16_t CComponenteBaseTft::height()	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:245:9:uint8_t CComponenteBaseTft::getRotation()	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:250:9:int16_t CComponenteBaseTft::getCursorX()	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:255:9:int16_t CComponenteBaseTft::getCursorY()	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:260:6:void CComponenteBaseTft::println(char*)	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:264:6:void CComponenteBaseTft::println(unsigned int, int)	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:268:6:void CComponenteBaseTft::print(unsigned int, int)	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:272:6:)	12
+../Core/Inc/GUI/CComponenteBaseTft.cpp:345:6:virtual void CComponenteBaseTft::fillRect(int16_t, int16_t, int16_t, int16_t, uint16_t)	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:349:6:virtual void CComponenteBaseTft::drawRect(int16_t, int16_t, int16_t, int16_t, uint16_t)	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:354:6:void CComponenteBaseTft::setCursor(int16_t, int16_t)	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:359:6:void CComponenteBaseTft::setTextSize(uint8_t)	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:363:6:void CComponenteBaseTft::setTextSize(uint8_t, uint8_t)	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:367:6:void CComponenteBaseTft::setTextColor(uint16_t)	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:371:6:void CComponenteBaseTft::print(char*)	1

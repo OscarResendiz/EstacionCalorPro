@@ -51,7 +51,7 @@ int ControlVelocidadAire::LeeVelocidad()
 	//4095->100
 	//valor->X
 	//x=valor*100/4095
-	return 	(int)(valor*100/4095);
+	return 	100-(int)(valor*100/4095);
 }
 void ControlVelocidadAire::Error_Handler(void)
 {

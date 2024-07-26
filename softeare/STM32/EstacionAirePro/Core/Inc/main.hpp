@@ -36,6 +36,16 @@ extern "C" {
 //#define CK_MAX_GPIO_Port GPIOA
 //#define CS_MAX_Pin GPIO_PIN_2
 //#define CS_MAX_GPIO_Port GPIOA
+#define MAX_SO_Pin GPIO_PIN_0
+#define MAX_SO_GPIO_Port GPIOA
+#define MAX_SK_Pin GPIO_PIN_1
+#define MAX_SK_GPIO_Port GPIOA
+#define MAX_CS_Pin GPIO_PIN_2
+#define MAX_CS_GPIO_Port GPIOA
+#define Btn1_Pin GPIO_PIN_4
+#define Btn1_GPIO_Port GPIOA
+#define Display_DC_Pin GPIO_PIN_1
+#define Display_DC_GPIO_Port GPIOB
 
 /* USER CODE END Includes */
 

@@ -1,0 +1,25 @@
+../Core/Inc/Estaciones/CestacionVirtual.cpp:10:1:CestacionVirtual::~CestacionVirtual()	1
+../Core/Inc/Estaciones/CestacionVirtual.cpp:10:1:virtual CestacionVirtual::~CestacionVirtual()	1
+../Core/Inc/Estaciones/CestacionVirtual.cpp:15:1:CestacionVirtual::CestacionVirtual()	1
+../Core/Inc/Estaciones/CestacionVirtual.cpp:51:7:virtual float CestacionVirtual::GetTemperaturaReal()	1
+../Core/Inc/Estaciones/CestacionVirtual.cpp:58:6:virtual void CestacionVirtual::SetTemperatura(int)	1
+../Core/Inc/Estaciones/CestacionVirtual.cpp:65:5:virtual int CestacionVirtual::GetTemperatura()	1
+../Core/Inc/Estaciones/CestacionVirtual.cpp:71:6:virtual void CestacionVirtual::SetNivelAire(int)	1
+../Core/Inc/Estaciones/CestacionVirtual.cpp:77:5:virtual int CestacionVirtual::GetNivelAire()	1
+../Core/Inc/Estaciones/CestacionVirtual.cpp:83:5:virtual int CestacionVirtual::GetEstado()	1
+../Core/Inc/Estaciones/CestacionVirtual.cpp:88:6:virtual void CestacionVirtual::Procesa()	1
+../Core/Inc/Estaciones/CestacionVirtual.cpp:97:6:void CestacionVirtual::ProcesaTemperatura()	2
+../Core/Inc/Estaciones/CestacionVirtual.cpp:111:6:void CestacionVirtual::procesaAire()	2
+../Core/Inc/Estaciones/CestacionVirtual.cpp:121:6:void CestacionVirtual::ProcesaTemperaturaReal()	2
+../Core/Inc/Estaciones/CestacionVirtual.cpp:131:6:void CestacionVirtual::ProcesaBotones()	1
+../Core/Inc/Estaciones/CestacionVirtual.cpp:141:6:virtual void CestacionVirtual::OnBotonClickEvent(int, int)	5
+../Core/Inc/Estaciones/CestacionVirtual.cpp:160:6:virtual void CestacionVirtual::OnBotonPresionadoEvent(int)	5
+../Core/Inc/Estaciones/CestacionVirtual.cpp:180:6:virtual void CestacionVirtual::OnBotonSueltoEvent(int)	5
+../Core/Inc/Estaciones/CestacionVirtual.cpp:200:6:virtual void CestacionVirtual::OnIncrementoEncoder(int)	1
+../Core/Inc/Estaciones/CestacionVirtual.cpp:205:6:virtual void CestacionVirtual::OnDecrementoEncoder(int)	1
+../Core/Inc/Estaciones/CestacionVirtual.cpp:210:6:virtual void CestacionVirtual::OnBotonEncoderClickEvent(int, int)	1
+../Core/Inc/Estaciones/CestacionVirtual.cpp:215:6:virtual void CestacionVirtual::OnBotonEncoderPresionadoEvent(int)	1
+../Core/Inc/Estaciones/CestacionVirtual.cpp:220:6:virtual void CestacionVirtual::OnBotonEncoderPresionadoLargoEvent(int)	1
+../Core/Inc/Estaciones/CestacionVirtual.cpp:225:6:virtual void CestacionVirtual::OnBotonEncoderSueltoEvent(int)	1
+../Core/Inc/Estaciones/CestacionVirtual.cpp:230:6:virtual void CestacionVirtual::IncrementaTemperatura()	2
+../Core/Inc/Estaciones/CestacionVirtual.cpp:239:6:virtual void CestacionVirtual::DecrementaTemperatura()	2

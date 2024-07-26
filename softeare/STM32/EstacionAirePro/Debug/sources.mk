@@ -42,7 +42,11 @@ Core/Inc/Boton \
 Core/Inc/ControlVelocidadAire \
 Core/Inc/Delays \
 Core/Inc/Encoder \
+Core/Inc/Estaciones \
+Core/Inc/GUI \
+Core/Inc/GUI/PantallaManual \
 Core/Inc/ILI9341 \
+Core/Inc/ManejadorControles \
 Core/Inc/Max6675 \
 Core/Inc/Uart \
 Core/Src \

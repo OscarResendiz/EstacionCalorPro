@@ -1,4 +1,4 @@
-../Core/Inc/ILI9341/ILI9341_Touchscreen.cpp:86:10:uint16_t TP_Read()	3
-../Core/Inc/ILI9341/ILI9341_Touchscreen.cpp:110:6:void TP_Write(uint8_t)	3
-../Core/Inc/ILI9341/ILI9341_Touchscreen.cpp:137:9:uint8_t TP_Read_Coordinates(uint16_t*)	7
-../Core/Inc/ILI9341/ILI9341_Touchscreen.cpp:204:9:uint8_t TP_Touchpad_Pressed()	2
+../Core/Inc/ILI9341/ILI9341_Touchscreen.cpp:85:10:uint16_t TP_Read()	3
+../Core/Inc/ILI9341/ILI9341_Touchscreen.cpp:109:6:void TP_Write(uint8_t)	3
+../Core/Inc/ILI9341/ILI9341_Touchscreen.cpp:134:9:uint8_t TP_Read_Coordinates(uint16_t*)	7
+../Core/Inc/ILI9341/ILI9341_Touchscreen.cpp:198:9:uint8_t TP_Touchpad_Pressed()	2

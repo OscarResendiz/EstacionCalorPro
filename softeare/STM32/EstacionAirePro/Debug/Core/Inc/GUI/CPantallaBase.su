@@ -1,0 +1,4 @@
+../Core/Inc/GUI/CPantallaBase.cpp:10:1:CPantallaBase::~CPantallaBase()	16	static
+../Core/Inc/GUI/CPantallaBase.cpp:10:1:virtual CPantallaBase::~CPantallaBase()	16	static
+../Core/Inc/GUI/CPantallaBase.cpp:16:1:CPantallaBase::CPantallaBase(int, char*)	72	static
+../Core/Inc/GUI/CPantallaBase.cpp:28:6:virtual void CPantallaBase::Show()	16	static

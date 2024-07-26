@@ -14,7 +14,11 @@ RM := rm -rf
 -include Core/Src/subdir.mk
 -include Core/Inc/Uart/subdir.mk
 -include Core/Inc/Max6675/subdir.mk
+-include Core/Inc/ManejadorControles/subdir.mk
 -include Core/Inc/ILI9341/subdir.mk
+-include Core/Inc/GUI/PantallaManual/subdir.mk
+-include Core/Inc/GUI/subdir.mk
+-include Core/Inc/Estaciones/subdir.mk
 -include Core/Inc/Encoder/subdir.mk
 -include Core/Inc/Delays/subdir.mk
 -include Core/Inc/ControlVelocidadAire/subdir.mk

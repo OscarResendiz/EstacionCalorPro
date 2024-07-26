@@ -28,10 +28,22 @@ Core/Src/Principal.o: ../Core/Src/Principal.cpp ../Core/Inc/Principal.hpp \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
  ../Core/Inc/ControlVelocidadAire/ControlVelocidadAire.hpp \
- ../Core/Inc/Uart/Uart.hpp ../Core/Inc/Max6675/Max6675.hpp \
+ ../Core/Inc/Uart/Uart.hpp ../Core/Inc/max6675/max6675.hpp \
  ../Core/Inc/ControlVelocidadAire/ControlVelocidadAire.hpp \
  ../Core/Inc/Boton/CManejadorBoton.hpp \
- ../Core/Inc/Boton/CManejadorEventosBoton.hpp
+ ../Core/Inc/Boton/CManejadorEventosBoton.hpp \
+ ../Core/Inc/ILI9341/ILI9341_GFX.hpp \
+ ../Core/Inc/ILI9341/ILI9341_STM32_Driver.hpp \
+ ../Core/Inc/ILI9341/ILI9341_Touchscreen.hpp \
+ ../Core/Inc/GUI/CRectanguloTft.hpp \
+ ../Core/Inc/GUI/CComponenteBaseTft.hpp ../Core/Inc/GUI/CEtiquetaTft.hpp \
+ ../Core/Inc/GUI/CPantallaBase.hpp \
+ ../Core/Inc/GUI/PantallaManual/CPantallaManual.hpp \
+ ../Core/Inc/ManejadorControles/CManejadorControlesBase.hpp \
+ ../Core/Inc/Estaciones/CEstacionBase.hpp \
+ ../Core/Inc/Estaciones/CestacionVirtual.hpp \
+ ../Core/Inc/Encoder/CManejadorEventosEncoder.hpp \
+ ../Core/Inc/Max6675/MAX6675.hpp ../Core/Inc/Encoder/CEncoder.hpp
 ../Core/Inc/Principal.hpp:
 ../Core/Inc/Max6675/Max6675.hpp:
 ../Core/Inc/Delays/delays.hpp:
@@ -64,7 +76,21 @@ Core/Src/Principal.o: ../Core/Src/Principal.cpp ../Core/Inc/Principal.hpp \
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:
 ../Core/Inc/ControlVelocidadAire/ControlVelocidadAire.hpp:
 ../Core/Inc/Uart/Uart.hpp:
-../Core/Inc/Max6675/Max6675.hpp:
+../Core/Inc/max6675/max6675.hpp:
 ../Core/Inc/ControlVelocidadAire/ControlVelocidadAire.hpp:
 ../Core/Inc/Boton/CManejadorBoton.hpp:
 ../Core/Inc/Boton/CManejadorEventosBoton.hpp:
+../Core/Inc/ILI9341/ILI9341_GFX.hpp:
+../Core/Inc/ILI9341/ILI9341_STM32_Driver.hpp:
+../Core/Inc/ILI9341/ILI9341_Touchscreen.hpp:
+../Core/Inc/GUI/CRectanguloTft.hpp:
+../Core/Inc/GUI/CComponenteBaseTft.hpp:
+../Core/Inc/GUI/CEtiquetaTft.hpp:
+../Core/Inc/GUI/CPantallaBase.hpp:
+../Core/Inc/GUI/PantallaManual/CPantallaManual.hpp:
+../Core/Inc/ManejadorControles/CManejadorControlesBase.hpp:
+../Core/Inc/Estaciones/CEstacionBase.hpp:
+../Core/Inc/Estaciones/CestacionVirtual.hpp:
+../Core/Inc/Encoder/CManejadorEventosEncoder.hpp:
+../Core/Inc/Max6675/MAX6675.hpp:
+../Core/Inc/Encoder/CEncoder.hpp:

@@ -43,9 +43,7 @@ private:
 public:
 	CEncoder();
 	virtual ~CEncoder();
-	void Configurar(GPIO_TypeDef *clk_Port, uint16_t pinClk,
-			GPIO_TypeDef *dt_Port, uint16_t pinDt, GPIO_TypeDef *boton_Port,
-			uint16_t pinBoton, int id_Encoder);
+	void Configurar(GPIO_TypeDef *clk_Port, uint16_t pinClk,GPIO_TypeDef *dt_Port, uint16_t pinDt, GPIO_TypeDef *boton_Port,uint16_t pinBoton, int id_Encoder);
 	void Init();
 	void AsignaManejadorEventos(CManejadorEventosEncoder *manejador);
 	virtual void Procesa();

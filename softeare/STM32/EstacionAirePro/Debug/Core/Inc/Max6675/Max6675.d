@@ -26,7 +26,8 @@ Core/Inc/Max6675/Max6675.o: ../Core/Inc/Max6675/Max6675.cpp \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
- ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
+ ../Core/Inc/Uart/Uart.hpp
 ../Core/Inc/Max6675/Max6675.hpp:
 ../Core/Inc/Delays/delays.hpp:
 ../Core/Inc/Constantes.hpp:
@@ -56,3 +57,4 @@ Core/Inc/Max6675/Max6675.o: ../Core/Inc/Max6675/Max6675.cpp \
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:
+../Core/Inc/Uart/Uart.hpp:

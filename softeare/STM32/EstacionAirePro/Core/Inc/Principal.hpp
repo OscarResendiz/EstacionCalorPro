@@ -10,9 +10,10 @@
 #include "Max6675/Max6675.hpp"
 #include "ControlVelocidadAire/ControlVelocidadAire.hpp"
 
-extern MAX6675 max6675;
+extern MAX6675 * max6675;
 extern ControlVelocidadAire controlVelocidadAire;
 void IncializaSistema();
 void EjecutaSistema();
-
+void PruebaPantalla();
+void PruebaPantalla2();
 #endif /* INC_PRINCIPAL_HPP_ */

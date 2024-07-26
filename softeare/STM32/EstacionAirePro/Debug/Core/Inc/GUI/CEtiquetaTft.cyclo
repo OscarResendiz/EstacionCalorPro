@@ -1,0 +1,13 @@
+../Core/Inc/GUI/CEtiquetaTft.cpp:11:1:CEtiquetaTft::~CEtiquetaTft()	1
+../Core/Inc/GUI/CEtiquetaTft.cpp:11:1:virtual CEtiquetaTft::~CEtiquetaTft()	1
+../Core/Inc/GUI/CEtiquetaTft.cpp:16:1:CEtiquetaTft::CEtiquetaTft(int, int, int, int, int, char*, int, int, int, int)	1
+../Core/Inc/GUI/CEtiquetaTft.cpp:24:6:)	12
+../Core/Inc/GUI/CEtiquetaTft.cpp:98:7:char* CEtiquetaTft::DameTexto()	1
+../Core/Inc/GUI/CEtiquetaTft.cpp:103:6:void CEtiquetaTft::SetSeparacion(int, int)	1
+../Core/Inc/GUI/CEtiquetaTft.cpp:109:5:int CEtiquetaTft::DameSeparacionArriba()	1
+../Core/Inc/GUI/CEtiquetaTft.cpp:114:5:int CEtiquetaTft::DameSeparacionIzquierda()	1
+../Core/Inc/GUI/CEtiquetaTft.cpp:119:6:void CEtiquetaTft::SetColorTexto(int)	1
+../Core/Inc/GUI/CEtiquetaTft.cpp:124:5:int CEtiquetaTft::DameColorTexto()	1
+../Core/Inc/GUI/CEtiquetaTft.cpp:129:6:virtual void CEtiquetaTft::Show()	1
+../Core/Inc/GUI/CEtiquetaTft.cpp:143:6:void CEtiquetaTft::SetTextSize(int)	1
+../Core/Inc/GUI/CEtiquetaTft.cpp:148:5:int CEtiquetaTft::DameTextSize()	1
