@@ -31,6 +31,7 @@ public:
 	virtual void SetManejadorControles(CManejadorControlesBase *obj);
 	//funcion que se debera llamar para controlar la estacion de calor
 	virtual void Procesa();
+	virtual void InterrupcionEncoder();
 
 protected:
 	virtual void TemperaturaEvent(int temperatura);

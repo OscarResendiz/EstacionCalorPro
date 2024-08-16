@@ -1,7 +1,3 @@
-../Core/Src/Principal.cpp:31:6:void IncializaSistema()	1
-../Core/Src/Principal.cpp:61:6:void EjecutaSistema()	6
-../Core/Src/Principal.cpp:106:6:void PruebaPantalla2()	1
-../Core/Src/Principal.cpp:122:6:void PruebaPantalla()	18
-../Core/Src/Principal.cpp:403:1:void __static_initialization_and_destruction_0(int, int)	5
-../Core/Src/Principal.cpp:403:1:cpp)	1
-../Core/Src/Principal.cpp:403:1:cpp)	1
+../Core/Src/Principal.cpp:27:6:void IncializaSistema()	1
+../Core/Src/Principal.cpp:39:6:void EjecutaSistema()	1
+../Core/Src/Principal.cpp:53:6:void HAL_GPIO_EXTI_Callback(uint16_t)	1

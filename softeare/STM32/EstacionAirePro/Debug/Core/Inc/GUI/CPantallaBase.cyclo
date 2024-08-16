@@ -2,3 +2,4 @@
 ../Core/Inc/GUI/CPantallaBase.cpp:10:1:virtual CPantallaBase::~CPantallaBase()	1
 ../Core/Inc/GUI/CPantallaBase.cpp:16:1:CPantallaBase::CPantallaBase(int, char*)	1
 ../Core/Inc/GUI/CPantallaBase.cpp:28:6:virtual void CPantallaBase::Show()	1
+../Core/Inc/GUI/CPantallaBase.cpp:35:6:virtual void CPantallaBase::Refresca()	1

@@ -32,3 +32,7 @@ void CPantallaBase::Show()
 	//dibujo el titulo
 	LabelTitulo->Show();
 }
+void CPantallaBase::Refresca()
+{
+
+}

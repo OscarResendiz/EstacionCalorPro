@@ -48,6 +48,7 @@ Core/Inc/GUI/PantallaManual \
 Core/Inc/ILI9341 \
 Core/Inc/ManejadorControles \
 Core/Inc/Max6675 \
+Core/Inc/PWM \
 Core/Inc/Uart \
 Core/Src \
 Core/Startup \

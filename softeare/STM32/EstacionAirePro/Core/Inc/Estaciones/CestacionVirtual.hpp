@@ -14,6 +14,7 @@
 #include "Max6675/MAX6675.hpp"
 #include "Encoder/CEncoder.hpp"
 #include "ControlVelocidadAire/ControlVelocidadAire.hpp"
+#include "PWM/Pwm.hpp"
 
 class CestacionVirtual: public CEstacionBase,CManejadorEventosBoton,CManejadorEventosEncoder
 {
@@ -35,6 +36,7 @@ protected:
 	CManejadorBoton BotonManual;
 	CEncoder Encoder;
 	ControlVelocidadAire controlVelocidadAire;
+	Pwm pwm;
 public:
 	CestacionVirtual();
 	virtual ~CestacionVirtual();
@@ -51,6 +53,7 @@ public:
 	//regresa 1 si esta activo y 0 si esta en reposo
 	virtual int GetEstado();
 	virtual void Procesa();
+	virtual void InterrupcionEncoder();
 private:
 	//verifica el nivel de temperatura seleccinada por el usuario
 	void ProcesaTemperatura();

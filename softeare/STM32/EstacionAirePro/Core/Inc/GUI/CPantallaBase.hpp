@@ -24,6 +24,7 @@ public:
 	CPantallaBase(int verTitulo = 1, char *titulo = "");
 	//funcion que se tiene que reemplazar para verse
 	virtual void Show();
+	virtual void Refresca();
 };
 
 #endif /* INC_GUI_CPANTALLABASE_HPP_ */

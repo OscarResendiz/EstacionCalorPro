@@ -19,8 +19,7 @@ CManejadorBoton::~CManejadorBoton()
 	// TODO Auto-generated destructor stub
 }
 
-void CManejadorBoton::Configurar(GPIO_TypeDef *puerto, uint16_t pin,
-		uint8_t identificador)
+void CManejadorBoton::Configurar(GPIO_TypeDef *puerto, uint16_t pin,uint8_t identificador)
 {
 	GPIO_Port = puerto;
 	Gpio_Pin = pin;

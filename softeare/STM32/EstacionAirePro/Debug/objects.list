@@ -16,6 +16,7 @@
 "./Core/Inc/ILI9341/ILI9341_Touchscreen.o"
 "./Core/Inc/ManejadorControles/CManejadorControlesBase.o"
 "./Core/Inc/Max6675/Max6675.o"
+"./Core/Inc/PWM/Pwm.o"
 "./Core/Inc/Uart/Uart.o"
 "./Core/Src/Principal.o"
 "./Core/Src/gpio.o"

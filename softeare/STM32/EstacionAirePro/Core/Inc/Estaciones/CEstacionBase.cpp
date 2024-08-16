@@ -239,3 +239,7 @@ void CEstacionBase::EncoderDecremento()
 	ManejadorControles->OnPerillaDecremento();
 
 }
+void CEstacionBase::InterrupcionEncoder()
+{
+
+}

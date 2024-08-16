@@ -36,28 +36,13 @@ void CPantallaManual::Show()
 
 	LabelTemperatura->Show();
 	LeeDatosEstacion();
-	LabelTemperaturas->SetTexto("%d/%d ", Temperatura, SetTemperatura);
-	LabelTemperaturas->Show();
-	LabelAire->SetTexto("Aire: %d", NivelAire);
-	LabelAire->Show();
-	EstadoBoquilla = Estacion->GetEstado();
-	if (EstadoBoquilla == 1)
-	{
-		LabelEstado->SetColorFondo(COLOR::GREEN);
-		LabelEstado->SetColorTexto(COLOR::BLACK);
-		LabelEstado->SetTexto("Estado: ACTIVO");
-	}
-	else
-	{
-		LabelEstado->SetColorFondo(COLOR::RED);
-		LabelEstado->SetColorTexto(COLOR::WHITE);
-		LabelEstado->SetTexto("Estado: REPOSO");
-	}
-	LabelEstado->Show();
-
+	Refresca();
 }
 void CPantallaManual::MuestraEstado()
 {
+	if(EstadoBoquillaAnterior==EstadoBoquilla)
+		return;
+	EstadoBoquillaAnterior=EstadoBoquilla;
 	if (EstadoBoquilla == 1)
 	{
 		LabelEstado->SetColorFondo(COLOR::BLUE);
@@ -81,23 +66,35 @@ void CPantallaManual::LeeDatosEstacion()
 void CPantallaManual::OnTemperaturaEvent(int temperatura)
 {
 	SetTemperatura = temperatura;
-	MuestraTemperaturas();
+//	MuestraTemperaturas();
 }
 void CPantallaManual::MuestraTemperaturas()
 {
-	LabelTemperaturas->SetTexto("%d/%d ", Temperatura, SetTemperatura);
+	if(TemperaturaAnterior==Temperatura &&SetTemperaturaAnterior==SetTemperatura)
+		return;
+	TemperaturaAnterior=Temperatura;
+	SetTemperaturaAnterior=SetTemperatura;
+	LabelTemperaturas->SetTexto("%d/%d", Temperatura, SetTemperatura);
 	LabelTemperaturas->Show();
 }
 void CPantallaManual::OnNivelAireEvent(int aire)
 {
 	NivelAire = aire;
+	Estacion->SetNivelAire(NivelAire);
+}
+void CPantallaManual::MuestraNivelAire()
+{
+	if(NivelAireAnterior==NivelAire)
+		return;
+	NivelAireAnterior=NivelAire;
 	LabelAire->SetTexto("Aire: %d", NivelAire);
 	LabelAire->Show();
+
 }
 void CPantallaManual::OnTemperaturaRealEvent(int temperatura)
 {
 	Temperatura = temperatura;
-	MuestraTemperaturas();
+//	MuestraTemperaturas();
 }
 
 void CPantallaManual::OnBotonDosClickEvent(int tiempoClick)
@@ -122,4 +119,11 @@ void CPantallaManual::OnBotonPerillaClickEvent(int tiempoClick)
 	else
 		EstadoBoquilla = 1;
 	MuestraEstado();
+}
+void CPantallaManual::Refresca()
+{
+	LeeDatosEstacion();
+	MuestraTemperaturas();
+	MuestraEstado();
+	MuestraNivelAire();
 }

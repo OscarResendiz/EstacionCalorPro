@@ -31,10 +31,13 @@ Core/Inc/Estaciones/CestacionVirtual.o: \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
  ../Core/Inc/Max6675/MAX6675.hpp ../Core/Inc/Delays/delays.hpp \
  ../Core/Inc/Constantes.hpp ../Core/Inc/Encoder/CEncoder.hpp \
- ../Core/Inc/ControlVelocidadAire/ControlVelocidadAire.hpp
+ ../Core/Inc/ControlVelocidadAire/ControlVelocidadAire.hpp \
+ ../Core/Inc/PWM/Pwm.hpp
 ../Core/Inc/Estaciones/CestacionVirtual.hpp:
 ../Core/Inc/Estaciones/CEstacionBase.hpp:
 ../Core/Inc/ManejadorControles/CManejadorControlesBase.hpp:
@@ -66,9 +69,12 @@ Core/Inc/Estaciones/CestacionVirtual.o: \
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:
 ../Core/Inc/Max6675/MAX6675.hpp:
 ../Core/Inc/Delays/delays.hpp:
 ../Core/Inc/Constantes.hpp:
 ../Core/Inc/Encoder/CEncoder.hpp:
 ../Core/Inc/ControlVelocidadAire/ControlVelocidadAire.hpp:
+../Core/Inc/PWM/Pwm.hpp:

@@ -15,8 +15,9 @@ CestacionVirtual::~CestacionVirtual()
 CestacionVirtual::CestacionVirtual() :
 		CEstacionBase()
 {
+	pwm.Init(TIM2,TIM_CHANNEL_1,65535);
+
 	//inicializa la termocupla
-	//thermocouple = new MAX6675();//CONFIG_TCSCK_PIN, CONFIG_TCCS_PIN,CONFIG_TCDO_PIN);
 	thermocouple.SetConfigCkPin(GPIOA, GPIO_PIN_1);
 	thermocouple.SetConfigCsPin(GPIOA, GPIO_PIN_2);
 	thermocouple.SetConfigDatPin(GPIOA, GPIO_PIN_0);
@@ -45,6 +46,7 @@ CestacionVirtual::CestacionVirtual() :
 
 	controlVelocidadAire.Inicializa();
 
+
 }
 
 //regresa la tenperatura actual de la estacion
@@ -70,7 +72,7 @@ int CestacionVirtual::GetTemperatura()
 //establece el nivel de aire
 void CestacionVirtual::SetNivelAire(int nivel)
 {
-
+	pwm.SicloTrabajo(nivel);
 }
 
 //regresa el nivel de aire setado
@@ -134,7 +136,6 @@ void CestacionVirtual::ProcesaBotones()
 	BotonMemoria2.Procesa();
 	BotonMemoria3.Procesa();
 	BotonManual.Procesa();
-	Encoder.Procesa();
 }
 
 //eventos de CManejadorEventosBoton
@@ -243,4 +244,8 @@ void CestacionVirtual::DecrementaTemperatura()
 		TemperaturaEspecificada--;
 		TemperaturaEvent(TemperaturaEspecificada);
 	}
+}
+void CestacionVirtual::InterrupcionEncoder()
+{
+	Encoder.Procesa();
 }

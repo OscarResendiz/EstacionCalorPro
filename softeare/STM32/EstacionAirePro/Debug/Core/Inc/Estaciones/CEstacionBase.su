@@ -36,3 +36,4 @@
 ../Core/Inc/Estaciones/CEstacionBase.cpp:221:6:virtual void CEstacionBase::BotonPerillaSueltoEvent()	16	static
 ../Core/Inc/Estaciones/CEstacionBase.cpp:228:6:virtual void CEstacionBase::EncoderIncremento()	16	static
 ../Core/Inc/Estaciones/CEstacionBase.cpp:235:6:virtual void CEstacionBase::EncoderDecremento()	16	static
+../Core/Inc/Estaciones/CEstacionBase.cpp:242:6:virtual void CEstacionBase::InterrupcionEncoder()	16	static
