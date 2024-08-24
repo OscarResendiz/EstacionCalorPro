@@ -15,8 +15,11 @@
 #include "Encoder/CEncoder.hpp"
 #include "ControlVelocidadAire/ControlVelocidadAire.hpp"
 #include "PWM/Pwm.hpp"
+#include "Calefactor/Calefactor.hpp"
+#include <SensorMagnetico/SensorMagnetico.hpp>
 
-class CestacionVirtual: public CEstacionBase,CManejadorEventosBoton,CManejadorEventosEncoder
+
+class CestacionVirtual: public CEstacionBase,CManejadorEventosBoton,CManejadorEventosEncoder,CManejadorEventoSensorMagnetico
 {
 private:
 	int TemperaturaMaxima = 500;
@@ -28,6 +31,7 @@ protected:
 	int CONFIG_TCSCK_PIN = 8;
 	int CONFIG_TCCS_PIN = 11;
 	int CONFIG_TCDO_PIN = 12;
+	int EstadoCalefator=APAGADO;
 // OBJETO UTILIZADO PARA LA COMUNICACION CON EL MAX6675
 	MAX6675 thermocouple;
 	CManejadorBoton BotonMemoria1;
@@ -37,6 +41,8 @@ protected:
 	CEncoder Encoder;
 	ControlVelocidadAire controlVelocidadAire;
 	Pwm pwm;
+	Calefactor calefactor;
+	SensorMagnetico sensorMagnetico;
 public:
 	CestacionVirtual();
 	virtual ~CestacionVirtual();
@@ -54,6 +60,8 @@ public:
 	virtual int GetEstado();
 	virtual void Procesa();
 	virtual void InterrupcionEncoder();
+	virtual void ActivarCalefactor();
+	virtual void DesactivarCalefactor();
 private:
 	//verifica el nivel de temperatura seleccinada por el usuario
 	void ProcesaTemperatura();
@@ -74,6 +82,9 @@ private:
 	virtual void OnBotonEncoderSueltoEvent(int id_Encoder);
 	virtual void IncrementaTemperatura();
 	virtual void DecrementaTemperatura();
+	void ProcesaCalefactor();
+	virtual void OnSensorMagneticoChange(int estado);
+	void EnfriaYApagaPistola();
 };
 
 #endif /* INC_ESTACIONES_CESTACIONVIRTUAL_HPP_ */

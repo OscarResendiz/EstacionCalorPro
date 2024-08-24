@@ -18,9 +18,12 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include <main.hpp>
+
+/* Private includes ----------------------------------------------------------*/
+/* USER CODE BEGIN Includes */
 #include "spi.h"
 #include "Principal.hpp"
-
+#include "stm32f1xx_hal_conf.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -308,7 +311,7 @@ static void MX_TIM1_Init(void)
   /* USER CODE BEGIN TIM1_Init 2 */
 
   /* USER CODE END TIM1_Init 2 */
-  //HAL_TIM_MspPostInit(&htim1);
+  HAL_TIM_MspPostInit(&htim1);
 
 }
 
@@ -367,7 +370,7 @@ static void MX_TIM2_Init(void)
   /* USER CODE BEGIN TIM2_Init 2 */
 
   /* USER CODE END TIM2_Init 2 */
-  //HAL_TIM_MspPostInit(&htim2);
+  HAL_TIM_MspPostInit(&htim2);
 
 }
 
@@ -425,6 +428,9 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(Display_DC_GPIO_Port, Display_DC_Pin, GPIO_PIN_RESET);
 
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_3|GPIO_PIN_4, GPIO_PIN_SET);
+
   /*Configure GPIO pins : PA0 Btn1_Pin PA6 */
   GPIO_InitStruct.Pin = GPIO_PIN_0|Btn1_Pin|GPIO_PIN_6;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
@@ -438,12 +444,12 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : Display_DC_Pin */
-  GPIO_InitStruct.Pin = Display_DC_Pin;
+  /*Configure GPIO pins : Display_DC_Pin PB3 PB4 */
+  GPIO_InitStruct.Pin = Display_DC_Pin|GPIO_PIN_3|GPIO_PIN_4;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(Display_DC_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
   /*Configure GPIO pin : PB10 */
   GPIO_InitStruct.Pin = GPIO_PIN_10;
@@ -452,10 +458,10 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
   /*Configure GPIO pin : EncoderClk_Pin */
-  //GPIO_InitStruct.Pin = EncoderClk_Pin;
+  GPIO_InitStruct.Pin = EncoderClk_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING_FALLING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  //HAL_GPIO_Init(EncoderClk_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(EncoderClk_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pin : PB14 */
   GPIO_InitStruct.Pin = GPIO_PIN_14;

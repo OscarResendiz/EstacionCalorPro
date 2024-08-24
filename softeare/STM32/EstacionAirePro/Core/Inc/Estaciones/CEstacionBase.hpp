@@ -32,6 +32,8 @@ public:
 	//funcion que se debera llamar para controlar la estacion de calor
 	virtual void Procesa();
 	virtual void InterrupcionEncoder();
+	virtual void ActivarCalefactor();
+	virtual void DesactivarCalefactor();
 
 protected:
 	virtual void TemperaturaEvent(int temperatura);

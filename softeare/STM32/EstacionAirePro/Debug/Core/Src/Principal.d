@@ -46,7 +46,9 @@ Core/Src/Principal.o: ../Core/Src/Principal.cpp \
  ../Core/Inc/Estaciones/CestacionVirtual.hpp \
  ../Core/Inc/Encoder/CManejadorEventosEncoder.hpp \
  ../Core/Inc/Max6675/MAX6675.hpp ../Core/Inc/Encoder/CEncoder.hpp \
- ../Core/Inc/PWM/Pwm.hpp
+ ../Core/Inc/PWM/Pwm.hpp ../Core/Inc/Calefactor/Calefactor.hpp \
+ ../Core/Inc/SensorMagnetico/SensorMagnetico.hpp \
+ ../Core/Inc/SensorMagnetico/CManejadorEventoSensorMagnetico.hpp
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
 ../Core/Inc/stm32f1xx_hal_conf.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:
@@ -100,3 +102,6 @@ Core/Src/Principal.o: ../Core/Src/Principal.cpp \
 ../Core/Inc/Max6675/MAX6675.hpp:
 ../Core/Inc/Encoder/CEncoder.hpp:
 ../Core/Inc/PWM/Pwm.hpp:
+../Core/Inc/Calefactor/Calefactor.hpp:
+../Core/Inc/SensorMagnetico/SensorMagnetico.hpp:
+../Core/Inc/SensorMagnetico/CManejadorEventoSensorMagnetico.hpp:

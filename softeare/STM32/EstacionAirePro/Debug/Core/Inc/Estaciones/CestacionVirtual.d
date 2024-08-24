@@ -37,7 +37,9 @@ Core/Inc/Estaciones/CestacionVirtual.o: \
  ../Core/Inc/Max6675/MAX6675.hpp ../Core/Inc/Delays/delays.hpp \
  ../Core/Inc/Constantes.hpp ../Core/Inc/Encoder/CEncoder.hpp \
  ../Core/Inc/ControlVelocidadAire/ControlVelocidadAire.hpp \
- ../Core/Inc/PWM/Pwm.hpp
+ ../Core/Inc/PWM/Pwm.hpp ../Core/Inc/Calefactor/Calefactor.hpp \
+ ../Core/Inc/SensorMagnetico/SensorMagnetico.hpp \
+ ../Core/Inc/SensorMagnetico/CManejadorEventoSensorMagnetico.hpp
 ../Core/Inc/Estaciones/CestacionVirtual.hpp:
 ../Core/Inc/Estaciones/CEstacionBase.hpp:
 ../Core/Inc/ManejadorControles/CManejadorControlesBase.hpp:
@@ -78,3 +80,6 @@ Core/Inc/Estaciones/CestacionVirtual.o: \
 ../Core/Inc/Encoder/CEncoder.hpp:
 ../Core/Inc/ControlVelocidadAire/ControlVelocidadAire.hpp:
 ../Core/Inc/PWM/Pwm.hpp:
+../Core/Inc/Calefactor/Calefactor.hpp:
+../Core/Inc/SensorMagnetico/SensorMagnetico.hpp:
+../Core/Inc/SensorMagnetico/CManejadorEventoSensorMagnetico.hpp:

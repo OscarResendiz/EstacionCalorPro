@@ -6,6 +6,8 @@
  */
 
 #include <Estaciones/CestacionVirtual.hpp>
+#include "Calefactor/Calefactor.hpp"
+#include "Constantes.hpp"
 
 CestacionVirtual::~CestacionVirtual()
 {
@@ -15,7 +17,7 @@ CestacionVirtual::~CestacionVirtual()
 CestacionVirtual::CestacionVirtual() :
 		CEstacionBase()
 {
-	pwm.Init(TIM2,TIM_CHANNEL_1,65535);
+	pwm.Init(TIM2, TIM_CHANNEL_1, 65535);
 
 	//inicializa la termocupla
 	thermocouple.SetConfigCkPin(GPIOA, GPIO_PIN_1);
@@ -40,19 +42,23 @@ CestacionVirtual::CestacionVirtual() :
 	BotonManual.AsignaManejadorEventos(this);
 	BotonManual.Init();
 
-	Encoder.Configurar(GPIOB, GPIO_PIN_11, GPIOB, GPIO_PIN_12, GPIOB, GPIO_PIN_13, 1);
+	Encoder.Configurar(GPIOB, GPIO_PIN_11, GPIOB, GPIO_PIN_12, GPIOB,
+			GPIO_PIN_13, 1);
 	Encoder.AsignaManejadorEventos(this);
 	Encoder.Init();
 
 	controlVelocidadAire.Inicializa();
-
-
+	calefactor.Configurar(GPIOB, GPIO_PIN_3);
+	calefactor.Init();
+	sensorMagnetico.Configurar(GPIOA, GPIO_PIN_8);
+	sensorMagnetico.Init();
+	sensorMagnetico.AsignaManejadorEventos(this);
 }
 
 //regresa la tenperatura actual de la estacion
 float CestacionVirtual::GetTemperaturaReal()
 {
-	float temperatura = thermocouple.MAX6675_lee() ;//* .59;
+	float temperatura = thermocouple.MAX6675_lee(); //* .59;
 	return temperatura;
 }
 
@@ -84,58 +90,7 @@ int CestacionVirtual::GetNivelAire()
 //regresa 1 si esta activo y 0 si esta en reposo
 int CestacionVirtual::GetEstado()
 {
-	return 0;
-}
-
-void CestacionVirtual::Procesa()
-{
-	ProcesaTemperatura();
-	ProcesaTemperaturaReal();
-	procesaAire();
-	ProcesaBotones();
-}
-
-//verifica el nivel de temperatura seleccinada por el usuario
-void CestacionVirtual::ProcesaTemperatura()
-{
-	//leo la temperatura
-	int temp = GetTemperatura();
-	//veo si cambio
-	if (temperaturaAnterior != temp)
-	{
-		temperaturaAnterior = temp;
-		//aviso que cambio la temperatura
-		TemperaturaEvent(temperaturaAnterior);
-	}
-}
-
-//verifica elnivel de aire
-void CestacionVirtual::procesaAire()
-{
-	int aire = GetNivelAire();
-	if (AireAnterior != aire)
-	{
-		AireAnterior = aire;
-		NivelAireEvent(AireAnterior);
-	}
-}
-
-void CestacionVirtual::ProcesaTemperaturaReal()
-{
-	int temperatura = GetTemperaturaReal();
-	if (temperaturaRealAnterior != temperatura)
-	{
-		temperaturaRealAnterior = temperatura;
-		TemperaturaRealEvent(temperaturaRealAnterior);
-	}
-}
-
-void CestacionVirtual::ProcesaBotones()
-{
-	BotonMemoria1.Procesa();
-	BotonMemoria2.Procesa();
-	BotonMemoria3.Procesa();
-	BotonManual.Procesa();
+	return sensorMagnetico.Leer();
 }
 
 //eventos de CManejadorEventosBoton
@@ -245,7 +200,114 @@ void CestacionVirtual::DecrementaTemperatura()
 		TemperaturaEvent(TemperaturaEspecificada);
 	}
 }
+
 void CestacionVirtual::InterrupcionEncoder()
 {
 	Encoder.Procesa();
+}
+
+void CestacionVirtual::ActivarCalefactor()
+{
+	EstadoCalefator = ENCENDIDO;
+}
+
+void CestacionVirtual::DesactivarCalefactor()
+{
+	EstadoCalefator = APAGADO;
+}
+
+void CestacionVirtual::EnfriaYApagaPistola()
+{
+	calefactor.Apagar();
+	float temperatura = GetTemperaturaReal();
+	if (temperatura <= TEMPERATURA_APAGADO)
+	{
+		pwm.SicloTrabajo(0);
+		return;
+	}
+	//pongo al maximo el aire para enfriar la pistola
+	pwm.SicloTrabajo(100);
+}
+
+void CestacionVirtual::OnSensorMagneticoChange(int estado)
+{
+
+}
+
+void CestacionVirtual::Procesa()
+{
+	ProcesaTemperatura();
+	ProcesaTemperaturaReal();
+	procesaAire();
+	ProcesaBotones();
+	ProcesaCalefactor();
+}
+
+//verifica el nivel de temperatura seleccinada por el usuario
+void CestacionVirtual::ProcesaTemperatura()
+{
+	//leo la temperatura
+	int temp = GetTemperatura();
+	//veo si cambio
+	if (temperaturaAnterior != temp)
+	{
+		temperaturaAnterior = temp;
+		//aviso que cambio la temperatura
+		TemperaturaEvent(temperaturaAnterior);
+	}
+}
+
+void CestacionVirtual::ProcesaTemperaturaReal()
+{
+	int temperatura = GetTemperaturaReal();
+	if (temperaturaRealAnterior != temperatura)
+	{
+		temperaturaRealAnterior = temperatura;
+		TemperaturaRealEvent(temperaturaRealAnterior);
+	}
+}
+
+//verifica elnivel de aire
+void CestacionVirtual::procesaAire()
+{
+	int aire = GetNivelAire();
+	if (AireAnterior != aire)
+	{
+		AireAnterior = aire;
+		NivelAireEvent(AireAnterior);
+	}
+}
+
+void CestacionVirtual::ProcesaBotones()
+{
+	BotonMemoria1.Procesa();
+	BotonMemoria2.Procesa();
+	BotonMemoria3.Procesa();
+	BotonManual.Procesa();
+}
+
+void CestacionVirtual::ProcesaCalefactor()
+{
+	if (EstadoCalefator == APAGADO)
+	{
+		//esta apagado el calefactor
+		calefactor.Apagar();
+		return;
+	}
+	int sensor = sensorMagnetico.Leer();
+	if (sensor == BOTON_PRESIONADO)
+	{
+		//el usuario coloco la pistola en su base por lo que hay que enfriarla
+		EnfriaYApagaPistola();
+		return;
+	}
+	float temperatura = GetTemperaturaReal();
+	if (temperatura < TemperaturaEspecificada)
+	{
+		calefactor.Encender();
+	}
+	else
+	{
+		calefactor.Apagar();
+	}
 }

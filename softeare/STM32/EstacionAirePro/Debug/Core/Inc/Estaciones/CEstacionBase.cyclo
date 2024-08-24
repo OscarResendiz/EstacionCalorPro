@@ -37,3 +37,5 @@
 ../Core/Inc/Estaciones/CEstacionBase.cpp:228:6:virtual void CEstacionBase::EncoderIncremento()	2
 ../Core/Inc/Estaciones/CEstacionBase.cpp:235:6:virtual void CEstacionBase::EncoderDecremento()	2
 ../Core/Inc/Estaciones/CEstacionBase.cpp:242:6:virtual void CEstacionBase::InterrupcionEncoder()	1
+../Core/Inc/Estaciones/CEstacionBase.cpp:246:6:virtual void CEstacionBase::ActivarCalefactor()	1
+../Core/Inc/Estaciones/CEstacionBase.cpp:250:6:virtual void CEstacionBase::DesactivarCalefactor()	1

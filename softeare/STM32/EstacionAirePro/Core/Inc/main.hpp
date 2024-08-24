@@ -17,6 +17,7 @@
   ******************************************************************************
   */
 /* USER CODE END Header */
+#include "stm32f1xx_hal.h"
 
 /* Define to prevent recursive inclusion -------------------------------------*/
 #ifndef __MAIN_H
@@ -27,7 +28,7 @@ extern "C" {
 #endif
 
 /* Includes ------------------------------------------------------------------*/
-
+void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 //#define DAT_MAX_Pin GPIO_PIN_0
@@ -46,6 +47,8 @@ extern "C" {
 #define Btn1_GPIO_Port GPIOA
 #define Display_DC_Pin GPIO_PIN_1
 #define Display_DC_GPIO_Port GPIOB
+#define EncoderClk_Pin GPIO_PIN_11
+#define EncoderClk_GPIO_Port GPIOB
 
 /* USER CODE END Includes */
 

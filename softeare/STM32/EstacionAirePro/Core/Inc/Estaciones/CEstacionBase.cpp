@@ -243,3 +243,11 @@ void CEstacionBase::InterrupcionEncoder()
 {
 
 }
+void CEstacionBase::ActivarCalefactor()
+{
+
+}
+void CEstacionBase::DesactivarCalefactor()
+{
+
+}

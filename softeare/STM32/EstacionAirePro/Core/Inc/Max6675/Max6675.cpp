@@ -33,11 +33,13 @@ uint8_t MAX6675::MAX6675_pulso()
 {
 	uint8_t lei;
 	HAL_GPIO_WritePin(CK_MAX_GPIO_Port, CK_MAX_Pin,	GPIO_PinState::GPIO_PIN_SET); //SACA UN 1 reloj
-	Delay_us(10);
+	for(int i=0;i<1000;i++);
+//	Delay_us(10);
 //	HAL_Delay(1);
 	lei = HAL_GPIO_ReadPin(DAT_MAX_GPIO_Port, DAT_MAX_Pin); // lee el pin
 	HAL_GPIO_WritePin(CK_MAX_GPIO_Port, CK_MAX_Pin,	GPIO_PinState::GPIO_PIN_RESET); //SACA UN 0 reloj
-	Delay_us(10);
+	for(int i=0;i<1000;i++);
+//	Delay_us(10);
 //	HAL_Delay(1);
 	return lei;
 }

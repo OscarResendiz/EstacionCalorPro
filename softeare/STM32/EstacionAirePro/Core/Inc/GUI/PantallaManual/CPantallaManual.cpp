@@ -29,6 +29,7 @@ void CPantallaManual::SetEstacion(CEstacionBase *estacion)
 	Estacion = estacion;
 	//asigno los evetos de la estacion
 	Estacion->SetManejadorControles(this);
+	Estacion->ActivarCalefactor();
 }
 void CPantallaManual::Show()
 {
@@ -62,6 +63,7 @@ void CPantallaManual::LeeDatosEstacion()
 	SetTemperatura = Estacion->GetTemperatura();
 	Temperatura = Estacion->GetTemperaturaReal();
 	NivelAire = Estacion->GetNivelAire();
+	EstadoBoquilla=Estacion->GetEstado();
 }
 void CPantallaManual::OnTemperaturaEvent(int temperatura)
 {
@@ -114,11 +116,11 @@ void CPantallaManual::OnPerillaDecremento()
 void CPantallaManual::OnBotonPerillaClickEvent(int tiempoClick)
 {
 //	Serial.println("Hola");
-	if (EstadoBoquilla == 1)
-		EstadoBoquilla = 0;
-	else
-		EstadoBoquilla = 1;
-	MuestraEstado();
+//	if (EstadoBoquilla == 1)
+//		EstadoBoquilla = 0;
+//	else
+//		EstadoBoquilla = 1;
+//	MuestraEstado();
 }
 void CPantallaManual::Refresca()
 {

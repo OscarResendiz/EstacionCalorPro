@@ -13,6 +13,7 @@ RM := rm -rf
 -include Core/Startup/subdir.mk
 -include Core/Src/subdir.mk
 -include Core/Inc/Uart/subdir.mk
+-include Core/Inc/SensorMagnetico/subdir.mk
 -include Core/Inc/PWM/subdir.mk
 -include Core/Inc/Max6675/subdir.mk
 -include Core/Inc/ManejadorControles/subdir.mk
@@ -23,6 +24,7 @@ RM := rm -rf
 -include Core/Inc/Encoder/subdir.mk
 -include Core/Inc/Delays/subdir.mk
 -include Core/Inc/ControlVelocidadAire/subdir.mk
+-include Core/Inc/Calefactor/subdir.mk
 -include Core/Inc/Boton/subdir.mk
 -include objects.mk
 

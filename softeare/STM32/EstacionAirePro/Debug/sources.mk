@@ -39,6 +39,7 @@ CPP_DEPS :=
 # Every subdirectory with source files must be described here
 SUBDIRS := \
 Core/Inc/Boton \
+Core/Inc/Calefactor \
 Core/Inc/ControlVelocidadAire \
 Core/Inc/Delays \
 Core/Inc/Encoder \
@@ -49,6 +50,7 @@ Core/Inc/ILI9341 \
 Core/Inc/ManejadorControles \
 Core/Inc/Max6675 \
 Core/Inc/PWM \
+Core/Inc/SensorMagnetico \
 Core/Inc/Uart \
 Core/Src \
 Core/Startup \

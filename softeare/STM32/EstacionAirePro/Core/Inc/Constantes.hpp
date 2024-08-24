@@ -93,6 +93,9 @@
 #define BOTON_MEMORIA3 3
 #define BOTON_MANUAL 4
 #define BOTON_PERILLA 5
+#define APAGADO 0
+#define ENCENDIDO 1
+#define TEMPERATURA_APAGADO 30
 //definicion de colores baicos
 enum COLOR
 {

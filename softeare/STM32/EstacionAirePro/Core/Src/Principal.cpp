@@ -20,12 +20,15 @@
 #include "GUI/CPantallaBase.hpp"
 #include "GUI/PantallaManual/CPantallaManual.hpp"
 #include <Estaciones/CestacionVirtual.hpp>
+#include "Delays/delays.hpp"
 
 CestacionVirtual *estacion;
 //TIM_HandleTypeDef htim2;
 
 void IncializaSistema()
 {
+	//TIMX->CR1|=1>>0;
+	//delay_us_tim_init();
 	  HAL_NVIC_SetPriority(EXTI15_10_IRQn, 0, 0);
 	  HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
 
