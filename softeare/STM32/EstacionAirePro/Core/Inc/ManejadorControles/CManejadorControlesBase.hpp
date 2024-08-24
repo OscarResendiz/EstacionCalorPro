@@ -13,7 +13,6 @@ class CManejadorControlesBase
 public:
 	CManejadorControlesBase();
 	virtual ~CManejadorControlesBase();
-	virtual void OnTemperaturaEvent(int temperatura);
 	virtual void OnTemperaturaRealEvent(int temperatura);
 	virtual void OnNivelAireEvent(int aire);
 	virtual void OnBotonUnoClickEvent(int tiempoClick);

@@ -42,7 +42,6 @@ private:
 	void MuestraEstado();
 	void MuestraNivelAire();
 	void LeeDatosEstacion();
-	virtual void OnTemperaturaEvent(int temperatura);
 	void MuestraTemperaturas();
 	void OnNivelAireEvent(int aire);
 	virtual void OnTemperaturaRealEvent(int temperatura);

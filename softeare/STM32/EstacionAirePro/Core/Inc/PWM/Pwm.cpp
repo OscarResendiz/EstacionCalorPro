@@ -60,7 +60,7 @@ void Pwm::Init(TIM_TypeDef * timer, int chanel,int periodo)
 	  }
 	  HAL_TIM_MspPostInit(&Htim);
 	HAL_TIM_PWM_Start(&Htim,chanel);
-	Htim.Instance->CCR1=25000;
+	SicloTrabajo(0);
 }
 void Pwm::SicloTrabajo(int siclo)
 {

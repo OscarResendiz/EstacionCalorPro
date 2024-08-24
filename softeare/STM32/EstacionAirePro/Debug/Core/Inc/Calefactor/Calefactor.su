@@ -3,6 +3,6 @@
 ../Core/Inc/Calefactor/Calefactor.cpp:16:1:virtual Calefactor::~Calefactor()	16	static
 ../Core/Inc/Calefactor/Calefactor.cpp:21:6:void Calefactor::Configurar(GPIO_TypeDef*, uint16_t)	24	static
 ../Core/Inc/Calefactor/Calefactor.cpp:27:6:void Calefactor::Init()	32	static
-../Core/Inc/Calefactor/Calefactor.cpp:36:6:void Calefactor::Encender()	16	static
-../Core/Inc/Calefactor/Calefactor.cpp:41:6:void Calefactor::Apagar()	16	static
-../Core/Inc/Calefactor/Calefactor.cpp:46:5:int Calefactor::DameEstado()	16	static
+../Core/Inc/Calefactor/Calefactor.cpp:37:6:void Calefactor::Encender()	16	static
+../Core/Inc/Calefactor/Calefactor.cpp:42:6:void Calefactor::Apagar()	16	static
+../Core/Inc/Calefactor/Calefactor.cpp:47:5:int Calefactor::DameEstado()	16	static

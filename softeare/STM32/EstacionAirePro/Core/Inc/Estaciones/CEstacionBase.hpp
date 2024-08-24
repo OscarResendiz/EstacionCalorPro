@@ -36,7 +36,6 @@ public:
 	virtual void DesactivarCalefactor();
 
 protected:
-	virtual void TemperaturaEvent(int temperatura);
 	virtual void NivelAireEvent(int aire);
 	virtual void TemperaturaRealEvent(int temperatura);
 	//eventros del boton uno

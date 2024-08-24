@@ -47,26 +47,24 @@ CestacionVirtual::CestacionVirtual() :
 	Encoder.AsignaManejadorEventos(this);
 	Encoder.Init();
 
-	controlVelocidadAire.Inicializa();
 	calefactor.Configurar(GPIOB, GPIO_PIN_3);
 	calefactor.Init();
 	sensorMagnetico.Configurar(GPIOA, GPIO_PIN_8);
 	sensorMagnetico.Init();
 	sensorMagnetico.AsignaManejadorEventos(this);
+	controlVelocidadAire.Inicializa();
 }
 
 //regresa la tenperatura actual de la estacion
 float CestacionVirtual::GetTemperaturaReal()
 {
-	float temperatura = thermocouple.MAX6675_lee(); //* .59;
-	return temperatura;
+	return thermocouple.MAX6675_lee(); //* .59;
 }
 
 //establece la temperatura que se quiere alcanzar
 void CestacionVirtual::SetTemperatura(int temperatura)
 {
 	TemperaturaEspecificada = temperatura;
-	TemperaturaEvent(TemperaturaEspecificada);
 }
 
 // regresa la temperatura seteada
@@ -78,7 +76,8 @@ int CestacionVirtual::GetTemperatura()
 //establece el nivel de aire
 void CestacionVirtual::SetNivelAire(int nivel)
 {
-	pwm.SicloTrabajo(nivel);
+	NivelAire=nivel;
+	//pwm.SicloTrabajo(nivel);
 }
 
 //regresa el nivel de aire setado
@@ -188,7 +187,6 @@ void CestacionVirtual::IncrementaTemperatura()
 	if (TemperaturaEspecificada < TemperaturaMaxima)
 	{
 		TemperaturaEspecificada++;
-		TemperaturaEvent(TemperaturaEspecificada);
 	}
 }
 
@@ -197,7 +195,6 @@ void CestacionVirtual::DecrementaTemperatura()
 	if (TemperaturaEspecificada > 0)
 	{
 		TemperaturaEspecificada--;
-		TemperaturaEvent(TemperaturaEspecificada);
 	}
 }
 
@@ -216,18 +213,6 @@ void CestacionVirtual::DesactivarCalefactor()
 	EstadoCalefator = APAGADO;
 }
 
-void CestacionVirtual::EnfriaYApagaPistola()
-{
-	calefactor.Apagar();
-	float temperatura = GetTemperaturaReal();
-	if (temperatura <= TEMPERATURA_APAGADO)
-	{
-		pwm.SicloTrabajo(0);
-		return;
-	}
-	//pongo al maximo el aire para enfriar la pistola
-	pwm.SicloTrabajo(100);
-}
 
 void CestacionVirtual::OnSensorMagneticoChange(int estado)
 {
@@ -252,8 +237,6 @@ void CestacionVirtual::ProcesaTemperatura()
 	if (temperaturaAnterior != temp)
 	{
 		temperaturaAnterior = temp;
-		//aviso que cambio la temperatura
-		TemperaturaEvent(temperaturaAnterior);
 	}
 }
 
@@ -301,6 +284,10 @@ void CestacionVirtual::ProcesaCalefactor()
 		EnfriaYApagaPistola();
 		return;
 	}
+	TiempoEnfriando=0;
+	//enciendo el aire
+	int aire = GetNivelAire();
+	pwm.SicloTrabajo(aire);
 	float temperatura = GetTemperaturaReal();
 	if (temperatura < TemperaturaEspecificada)
 	{
@@ -309,5 +296,30 @@ void CestacionVirtual::ProcesaCalefactor()
 	else
 	{
 		calefactor.Apagar();
+	}
+}
+
+void CestacionVirtual::EnfriaYApagaPistola()
+{
+	calefactor.Apagar();
+	float temperatura = GetTemperaturaReal();
+	if (temperatura <= TEMPERATURA_APAGADO)
+	{
+		if(TiempoEnfriando==0)
+		{
+			TiempoEnfriando=HAL_GetTick();
+			return;
+		}
+		if(HAL_GetTick()-TiempoEnfriando<=10000)
+		{
+			return;
+		}
+		pwm.SicloTrabajo(0);
+		return;
+	}
+	//pongo al maximo el aire para enfriar la pistola
+	if(temperatura>10)
+	{
+		pwm.SicloTrabajo(100);
 	}
 }

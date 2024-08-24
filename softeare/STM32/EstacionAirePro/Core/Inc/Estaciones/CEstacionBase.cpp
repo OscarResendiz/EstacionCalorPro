@@ -62,12 +62,6 @@ void CEstacionBase::Procesa()
 {
 
 }
-void CEstacionBase::TemperaturaEvent(int temperatura)
-{
-	if (ManejadorControles == NULL)
-		return;
-	ManejadorControles->OnTemperaturaEvent(temperatura);
-}
 void CEstacionBase::NivelAireEvent(int aire)
 {
 	if (ManejadorControles == NULL)

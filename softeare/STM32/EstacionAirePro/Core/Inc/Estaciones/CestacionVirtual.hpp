@@ -27,6 +27,7 @@ private:
 	int temperaturaAnterior = 0;
 	int temperaturaRealAnterior = 0;
 	int AireAnterior = 0;
+	double TiempoEnfriando=0;
 protected:
 	int CONFIG_TCSCK_PIN = 8;
 	int CONFIG_TCCS_PIN = 11;
@@ -43,6 +44,7 @@ protected:
 	Pwm pwm;
 	Calefactor calefactor;
 	SensorMagnetico sensorMagnetico;
+	int NivelAire=0;
 public:
 	CestacionVirtual();
 	virtual ~CestacionVirtual();

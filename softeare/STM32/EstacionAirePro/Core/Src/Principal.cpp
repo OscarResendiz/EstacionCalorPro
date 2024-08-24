@@ -29,29 +29,28 @@ void IncializaSistema()
 {
 	//TIMX->CR1|=1>>0;
 	//delay_us_tim_init();
-	  HAL_NVIC_SetPriority(EXTI15_10_IRQn, 0, 0);
-	  HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
+	HAL_NVIC_SetPriority(EXTI15_10_IRQn, 0, 0);
+	HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
 
 	USART1_UART_Init();
-	estacion=new CestacionVirtual();
+	estacion = new CestacionVirtual();
 	ILI9341_Init(); //initial driver setup to drive ili9341
-	ILI9341_Fill_Screen(WHITE);
 	ILI9341_Set_Rotation(SCREEN_HORIZONTAL_2);
+	ILI9341_Fill_Screen(WHITE);
 }
 
 void EjecutaSistema()
 {
-	CPantallaManual *pantalla=new CPantallaManual();
+	CPantallaManual *pantalla = new CPantallaManual();
 	pantalla->SetEstacion(estacion);
 	pantalla->Show();
-	while(1)
+	while (1)
 	{
 		estacion->Procesa();
 		pantalla->Refresca();
 		HAL_Delay(1);
 	}
 }
-
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {

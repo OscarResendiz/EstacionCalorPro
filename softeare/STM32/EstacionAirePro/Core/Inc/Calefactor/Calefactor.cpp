@@ -32,6 +32,7 @@ void Calefactor::Init()
 	GPIO_InitStruct.Pull = GPIO_NOPULL;
 	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
 	HAL_GPIO_Init(GPIO_Port, &GPIO_InitStruct);
+	Apagar();
 }
 void Calefactor::Encender()
 {

@@ -1,3 +1,3 @@
 ../Core/Src/Principal.cpp:28:6:void IncializaSistema()	16	static
 ../Core/Src/Principal.cpp:42:6:void EjecutaSistema()	24	static
-../Core/Src/Principal.cpp:56:6:void HAL_GPIO_EXTI_Callback(uint16_t)	16	static
+../Core/Src/Principal.cpp:55:6:void HAL_GPIO_EXTI_Callback(uint16_t)	16	static

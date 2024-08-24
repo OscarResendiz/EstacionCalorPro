@@ -31,6 +31,7 @@ void CPantallaManual::SetEstacion(CEstacionBase *estacion)
 	Estacion->SetManejadorControles(this);
 	Estacion->ActivarCalefactor();
 }
+
 void CPantallaManual::Show()
 {
 	CPantallaBase::Show();
@@ -39,6 +40,7 @@ void CPantallaManual::Show()
 	LeeDatosEstacion();
 	Refresca();
 }
+
 void CPantallaManual::MuestraEstado()
 {
 	if(EstadoBoquillaAnterior==EstadoBoquilla)
@@ -58,6 +60,7 @@ void CPantallaManual::MuestraEstado()
 	}
 	LabelEstado->Show();
 }
+
 void CPantallaManual::LeeDatosEstacion()
 {
 	SetTemperatura = Estacion->GetTemperatura();
@@ -65,11 +68,8 @@ void CPantallaManual::LeeDatosEstacion()
 	NivelAire = Estacion->GetNivelAire();
 	EstadoBoquilla=Estacion->GetEstado();
 }
-void CPantallaManual::OnTemperaturaEvent(int temperatura)
-{
-	SetTemperatura = temperatura;
-//	MuestraTemperaturas();
-}
+
+
 void CPantallaManual::MuestraTemperaturas()
 {
 	if(TemperaturaAnterior==Temperatura &&SetTemperaturaAnterior==SetTemperatura)
@@ -79,11 +79,13 @@ void CPantallaManual::MuestraTemperaturas()
 	LabelTemperaturas->SetTexto("%d/%d", Temperatura, SetTemperatura);
 	LabelTemperaturas->Show();
 }
+
 void CPantallaManual::OnNivelAireEvent(int aire)
 {
 	NivelAire = aire;
 	Estacion->SetNivelAire(NivelAire);
 }
+
 void CPantallaManual::MuestraNivelAire()
 {
 	if(NivelAireAnterior==NivelAire)
@@ -93,10 +95,10 @@ void CPantallaManual::MuestraNivelAire()
 	LabelAire->Show();
 
 }
+
 void CPantallaManual::OnTemperaturaRealEvent(int temperatura)
 {
 	Temperatura = temperatura;
-//	MuestraTemperaturas();
 }
 
 void CPantallaManual::OnBotonDosClickEvent(int tiempoClick)
@@ -109,19 +111,16 @@ void CPantallaManual::OnPerillaIncremento()
 {
 	Estacion->IncrementaTemperatura();
 }
+
 void CPantallaManual::OnPerillaDecremento()
 {
 	Estacion->DecrementaTemperatura();
 }
+
 void CPantallaManual::OnBotonPerillaClickEvent(int tiempoClick)
 {
-//	Serial.println("Hola");
-//	if (EstadoBoquilla == 1)
-//		EstadoBoquilla = 0;
-//	else
-//		EstadoBoquilla = 1;
-//	MuestraEstado();
 }
+
 void CPantallaManual::Refresca()
 {
 	LeeDatosEstacion();

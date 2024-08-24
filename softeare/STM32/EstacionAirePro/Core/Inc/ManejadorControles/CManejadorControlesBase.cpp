@@ -18,10 +18,6 @@ CManejadorControlesBase::~CManejadorControlesBase()
 	// TODO Auto-generated destructor stub
 }
 
-void CManejadorControlesBase::OnTemperaturaEvent(int temperatura)
-{
-
-}
 void CManejadorControlesBase::OnTemperaturaRealEvent(int temperatura)
 {
 
