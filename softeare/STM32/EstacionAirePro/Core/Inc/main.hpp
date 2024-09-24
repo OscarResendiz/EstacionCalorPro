@@ -49,6 +49,9 @@ void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
 #define Display_DC_GPIO_Port GPIOB
 #define EncoderClk_Pin GPIO_PIN_11
 #define EncoderClk_GPIO_Port GPIOB
+#define EncoderClk_EXTI_IRQn EXTI15_10_IRQn
+#define CruceCero_Pin GPIO_PIN_4
+#define CruceCero_GPIO_Port GPIOB
 
 /* USER CODE END Includes */
 

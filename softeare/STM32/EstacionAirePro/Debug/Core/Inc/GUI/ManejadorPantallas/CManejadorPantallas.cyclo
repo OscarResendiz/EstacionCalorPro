@@ -1,0 +1,8 @@
+../Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.cpp:12:1:CManejadorPantallas::CManejadorPantallas()	1
+../Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.cpp:17:1:CManejadorPantallas::~CManejadorPantallas()	1
+../Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.cpp:17:1:virtual CManejadorPantallas::~CManejadorPantallas()	1
+../Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.cpp:21:6:void CManejadorPantallas::SetEstacion(CEstacionBase*)	1
+../Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.cpp:25:6:void CManejadorPantallas::MuestraPantallaManual()	2
+../Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.cpp:31:6:void CManejadorPantallas::MuestraMenuPrincipal()	2
+../Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.cpp:38:6:void CManejadorPantallas::RefrescaPantalla()	2
+../Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.cpp:45:6:void CManejadorPantallas::AsignaPantallaActual(CPantallaBase*)	2

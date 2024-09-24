@@ -16,6 +16,7 @@ CPantallaBase::~CPantallaBase()
 CPantallaBase::CPantallaBase(int verTitulo, char *titulo) :
 		CRectanguloTft(0, 0, 0, 0, COLOR::BLACK, 1, COLOR::BLUE)
 {
+	Visible=false;
 	VerTitulo = verTitulo;
 	strcpy(Titulo, titulo);
 	setRotation(3);  //ROTACION::HORIZONTAL); //en horizontal
@@ -34,5 +35,31 @@ void CPantallaBase::Show()
 }
 void CPantallaBase::Refresca()
 {
-
+//	if(visible==false)
+//	{
+		//Show();
+//		visible=true;
+//	}
+}
+void CPantallaBase::SetEstacion(CEstacionBase *estacion)
+{
+	Estacion = estacion;
+	//asigno los evetos de la estacion
+	Estacion->SetManejadorControles(this);
+	Estacion->ActivarCalefactor();
+}
+void CPantallaBase::Ocultar()
+{
+	Estacion->QuitaManejadorControles();
+	Visible=false;
+}
+bool CPantallaBase::EsVisible()
+{
+	return Visible;
+}
+void CPantallaBase::SetVisible(bool visible)
+{
+	if(Visible==visible)
+		return;
+	Visible=visible;
 }

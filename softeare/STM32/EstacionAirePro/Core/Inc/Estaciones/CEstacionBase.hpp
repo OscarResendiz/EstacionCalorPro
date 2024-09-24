@@ -29,12 +29,16 @@ public:
 	virtual void DecrementaTemperatura();
 	// asigna el evento que sellamara cuando cambie la temperatura que el usuario especifica
 	virtual void SetManejadorControles(CManejadorControlesBase *obj);
+	virtual void QuitaManejadorControles();
 	//funcion que se debera llamar para controlar la estacion de calor
 	virtual void Procesa();
 	virtual void InterrupcionEncoder();
 	virtual void ActivarCalefactor();
 	virtual void DesactivarCalefactor();
-
+	virtual void CruceXCero(int gpio_pin);
+	virtual void TimerTick();
+	virtual int GetPID();
+	virtual void SetPID(int valor);
 protected:
 	virtual void NivelAireEvent(int aire);
 	virtual void TemperaturaRealEvent(int temperatura);
@@ -66,6 +70,7 @@ protected:
 	//eventos del encoder
 	virtual void EncoderIncremento();
 	virtual void EncoderDecremento();
+	virtual void GPIO_INTERRUPCION(int GPIO_Pin);
 };
 
 #endif /* INC_ESTACIONES_CESTACIONBASE_HPP_ */

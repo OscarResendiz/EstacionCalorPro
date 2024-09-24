@@ -149,3 +149,7 @@ int CEtiquetaTft::DameTextSize()
 {
 	return TextSize;
 }
+void CEtiquetaTft::SetBackColor(int color)
+{
+	BackColor=color;
+}

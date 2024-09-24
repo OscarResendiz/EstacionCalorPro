@@ -6,15 +6,15 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
 ../Core/Inc/Estaciones/CEstacionBase.cpp \
-../Core/Inc/Estaciones/CestacionVirtual.cpp 
+../Core/Inc/Estaciones/CestacionBaku601.cpp 
 
 OBJS += \
 ./Core/Inc/Estaciones/CEstacionBase.o \
-./Core/Inc/Estaciones/CestacionVirtual.o 
+./Core/Inc/Estaciones/CestacionBaku601.o 
 
 CPP_DEPS += \
 ./Core/Inc/Estaciones/CEstacionBase.d \
-./Core/Inc/Estaciones/CestacionVirtual.d 
+./Core/Inc/Estaciones/CestacionBaku601.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -24,7 +24,7 @@ Core/Inc/Estaciones/%.o Core/Inc/Estaciones/%.su Core/Inc/Estaciones/%.cyclo: ..
 clean: clean-Core-2f-Inc-2f-Estaciones
 
 clean-Core-2f-Inc-2f-Estaciones:
-	-$(RM) ./Core/Inc/Estaciones/CEstacionBase.cyclo ./Core/Inc/Estaciones/CEstacionBase.d ./Core/Inc/Estaciones/CEstacionBase.o ./Core/Inc/Estaciones/CEstacionBase.su ./Core/Inc/Estaciones/CestacionVirtual.cyclo ./Core/Inc/Estaciones/CestacionVirtual.d ./Core/Inc/Estaciones/CestacionVirtual.o ./Core/Inc/Estaciones/CestacionVirtual.su
+	-$(RM) ./Core/Inc/Estaciones/CEstacionBase.cyclo ./Core/Inc/Estaciones/CEstacionBase.d ./Core/Inc/Estaciones/CEstacionBase.o ./Core/Inc/Estaciones/CEstacionBase.su ./Core/Inc/Estaciones/CestacionBaku601.cyclo ./Core/Inc/Estaciones/CestacionBaku601.d ./Core/Inc/Estaciones/CestacionBaku601.o ./Core/Inc/Estaciones/CestacionBaku601.su
 
 .PHONY: clean-Core-2f-Inc-2f-Estaciones
 

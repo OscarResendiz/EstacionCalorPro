@@ -70,7 +70,7 @@
 #define TMS_GPIO_Port GPIOA
 #define TCK_Pin GPIO_PIN_14
 #define TCK_GPIO_Port GPIOA
-#define RST_Pin GPIO_PIN_10
+#define RST_Pin GPIO_PIN_5//GPIO_PIN_10
 #define RST_GPIO_Port GPIOC
 #define RMII_TX_EN_Pin GPIO_PIN_11
 #define RMII_TX_EN_GPIO_Port GPIOG
@@ -96,7 +96,11 @@
 #define APAGADO 0
 #define ENCENDIDO 1
 #define TEMPERATURA_APAGADO 30
+#define CruceCero_Pin GPIO_PIN_4
+#define EncoderClk_Pin GPIO_PIN_11
+
 //definicion de colores baicos
+//0X ROJO VERDE AZUL AZUL
 enum COLOR
 {
  BLACK= 0x0000,

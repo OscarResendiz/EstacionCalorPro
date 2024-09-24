@@ -111,14 +111,16 @@ void CEncoder::OnBotonClickEvent(int idBoton, int tiempoClick)
 	}
 }
 
-void CEncoder::Procesa()
+void CEncoder::Procesa(int gpio_pin)
 {
-	Boton->Procesa();
-	leeEncoder();
+	Boton->Procesa(gpio_pin);
+	leeEncoder(gpio_pin);
 }
 
-void CEncoder::leeEncoder()
+void CEncoder::leeEncoder(int gpio_pin)
 {
+	if(PinClk!=gpio_pin)
+		return;
 	CLK_status = LeeClk();
 	if (CLK_status != CLK_statusAnterior && CLK_status == 1)
 	{

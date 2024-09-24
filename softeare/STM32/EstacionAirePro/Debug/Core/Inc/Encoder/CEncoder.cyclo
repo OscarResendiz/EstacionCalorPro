@@ -9,7 +9,7 @@
 ../Core/Inc/Encoder/CEncoder.cpp:75:6:virtual void CEncoder::OnBotonSueltoEvent(int)	3
 ../Core/Inc/Encoder/CEncoder.cpp:89:6:virtual void CEncoder::OnBotonPresionadoEvent(int)	3
 ../Core/Inc/Encoder/CEncoder.cpp:103:6:virtual void CEncoder::OnBotonClickEvent(int, int)	2
-../Core/Inc/Encoder/CEncoder.cpp:114:6:virtual void CEncoder::Procesa()	1
-../Core/Inc/Encoder/CEncoder.cpp:120:6:void CEncoder::leeEncoder()	4
-../Core/Inc/Encoder/CEncoder.cpp:137:6:void CEncoder::incrementa()	1
-../Core/Inc/Encoder/CEncoder.cpp:142:6:void CEncoder::decrementa()	1
+../Core/Inc/Encoder/CEncoder.cpp:114:6:virtual void CEncoder::Procesa(int)	1
+../Core/Inc/Encoder/CEncoder.cpp:120:6:void CEncoder::leeEncoder(int)	5
+../Core/Inc/Encoder/CEncoder.cpp:139:6:void CEncoder::incrementa()	1
+../Core/Inc/Encoder/CEncoder.cpp:144:6:void CEncoder::decrementa()	1

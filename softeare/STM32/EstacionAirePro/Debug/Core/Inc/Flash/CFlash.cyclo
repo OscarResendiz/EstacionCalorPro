@@ -1,0 +1,5 @@
+../Core/Inc/Flash/CFlash.cpp:10:1:CFlash::CFlash()	1
+../Core/Inc/Flash/CFlash.cpp:16:1:CFlash::~CFlash()	1
+../Core/Inc/Flash/CFlash.cpp:16:1:virtual CFlash::~CFlash()	1
+../Core/Inc/Flash/CFlash.cpp:21:6:void CFlash::Guardar(int, int)	1
+../Core/Inc/Flash/CFlash.cpp:25:5:int CFlash::Leer(int)	1

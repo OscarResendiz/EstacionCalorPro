@@ -9,6 +9,7 @@
 #define INC_PRINCIPAL_HPP_
 #include "Max6675/Max6675.hpp"
 #include "ControlVelocidadAire/ControlVelocidadAire.hpp"
+#include <Timer/Timer.hpp>
 
 extern MAX6675 * max6675;
 extern ControlVelocidadAire controlVelocidadAire;

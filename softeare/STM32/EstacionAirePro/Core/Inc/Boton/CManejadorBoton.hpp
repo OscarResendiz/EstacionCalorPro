@@ -27,7 +27,7 @@ public:
 	void Init();
 	int Leer();
 	void AsignaManejadorEventos(CManejadorEventosBoton * manejador);
-	void Procesa();
+	void Procesa(int gpio_pin);
 };
 
 #endif /* BOTON_H_ */

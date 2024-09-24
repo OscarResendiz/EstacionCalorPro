@@ -30,7 +30,9 @@ Core/Inc/GUI/CPantallaBase.o: ../Core/Inc/GUI/CPantallaBase.cpp \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
- ../Core/Inc/Constantes.hpp ../Core/Inc/GUI/CEtiquetaTft.hpp
+ ../Core/Inc/Constantes.hpp ../Core/Inc/GUI/CEtiquetaTft.hpp \
+ ../Core/Inc/Estaciones/CEstacionBase.hpp \
+ ../Core/Inc/ManejadorControles/CManejadorControlesBase.hpp
 ../Core/Inc/GUI/CPantallaBase.hpp:
 ../Core/Inc/GUI/CRectanguloTft.hpp:
 ../Core/Inc/GUI/CComponenteBaseTft.hpp:
@@ -65,3 +67,5 @@ Core/Inc/GUI/CPantallaBase.o: ../Core/Inc/GUI/CPantallaBase.cpp \
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:
 ../Core/Inc/Constantes.hpp:
 ../Core/Inc/GUI/CEtiquetaTft.hpp:
+../Core/Inc/Estaciones/CEstacionBase.hpp:
+../Core/Inc/ManejadorControles/CManejadorControlesBase.hpp:

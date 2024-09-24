@@ -19,7 +19,7 @@
 #include <SensorMagnetico/SensorMagnetico.hpp>
 
 
-class CestacionVirtual: public CEstacionBase,CManejadorEventosBoton,CManejadorEventosEncoder,CManejadorEventoSensorMagnetico
+class CestacionBaku601: public CEstacionBase,CManejadorEventosBoton,CManejadorEventosEncoder,CManejadorEventoSensorMagnetico
 {
 private:
 	int TemperaturaMaxima = 500;
@@ -28,6 +28,20 @@ private:
 	int temperaturaRealAnterior = 0;
 	int AireAnterior = 0;
 	double TiempoEnfriando=0;
+	int PotenciaCalefactor=5;
+	int TiempoCalefactorEncendido=0;
+	//variables para el calculo del PID
+	int TiempoMuestreoTemperatura=500; //por defualt hace el muestreo de temperatura cada segundo
+	int TiempoActual=0;
+	int TiempoProximoMuestreo=0;
+	float PID_error;
+	float Error_INT=0;
+	float PID_value = 0;
+	// Constantes de PID
+	float Kc = 5;
+	float Tao_I =600;//500; //80;
+	int TiempoAntiReboresCruceXCero=1;
+	int ciclos=0;
 protected:
 	int CONFIG_TCSCK_PIN = 8;
 	int CONFIG_TCCS_PIN = 11;
@@ -46,8 +60,8 @@ protected:
 	SensorMagnetico sensorMagnetico;
 	int NivelAire=0;
 public:
-	CestacionVirtual();
-	virtual ~CestacionVirtual();
+	CestacionBaku601();
+	virtual ~CestacionBaku601();
 	//regresa la tenperatura actual de la estacion
 	virtual float GetTemperaturaReal();
 	//establece la temperatura que se quiere alcanzar
@@ -61,16 +75,21 @@ public:
 	//regresa 1 si esta activo y 0 si esta en reposo
 	virtual int GetEstado();
 	virtual void Procesa();
-	virtual void InterrupcionEncoder();
+	virtual void InterrupcionEncoder(int GPIO_Pin);
 	virtual void ActivarCalefactor();
 	virtual void DesactivarCalefactor();
+	virtual void CruceXCero(int gpio_pin);
+	virtual void TimerTick();
+	virtual int GetPID();
+	virtual void SetPID(int valor);
+	virtual void GPIO_INTERRUPCION(int GPIO_Pin);
 private:
 	//verifica el nivel de temperatura seleccinada por el usuario
 	void ProcesaTemperatura();
 	//verifica elnivel de aire
 	void procesaAire();
 	void ProcesaTemperaturaReal();
-	void ProcesaBotones();
+	void ProcesaBotones(int gpio_pin);
 	//eventos de CManejadorEventosBoton
 	virtual void OnBotonClickEvent(int idBoton, int tiempoClick);
 	virtual void OnBotonPresionadoEvent(int idBoton);

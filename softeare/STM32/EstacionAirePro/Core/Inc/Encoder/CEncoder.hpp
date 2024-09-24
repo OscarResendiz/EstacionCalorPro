@@ -46,14 +46,14 @@ public:
 	void Configurar(GPIO_TypeDef *clk_Port, uint16_t pinClk,GPIO_TypeDef *dt_Port, uint16_t pinDt, GPIO_TypeDef *boton_Port,uint16_t pinBoton, int id_Encoder);
 	void Init();
 	void AsignaManejadorEventos(CManejadorEventosEncoder *manejador);
-	virtual void Procesa();
+	virtual void Procesa(int gpio_pin);
 protected:
 	int LeeClk();
 	int LeeDt();
 	virtual void OnBotonSueltoEvent(int idBoton);
 	virtual void OnBotonPresionadoEvent(int idBoton);
 	virtual void OnBotonClickEvent(int idBoton, int tiempoClick);
-	void leeEncoder();
+	void leeEncoder(int gpio_pin);
 	void incrementa();
 	void decrementa();
 

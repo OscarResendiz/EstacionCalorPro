@@ -5,4 +5,4 @@
 ../Core/Inc/Boton/CManejadorBoton.cpp:28:6:void CManejadorBoton::Init()	32	static
 ../Core/Inc/Boton/CManejadorBoton.cpp:37:5:int CManejadorBoton::Leer()	16	static
 ../Core/Inc/Boton/CManejadorBoton.cpp:42:6:void CManejadorBoton::AsignaManejadorEventos(CManejadorEventosBoton*)	16	static
-../Core/Inc/Boton/CManejadorBoton.cpp:46:6:void CManejadorBoton::Procesa()	32	static
+../Core/Inc/Boton/CManejadorBoton.cpp:46:6:void CManejadorBoton::Procesa(int)	32	static

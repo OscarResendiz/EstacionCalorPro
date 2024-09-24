@@ -38,3 +38,9 @@
 ../Core/Inc/Estaciones/CEstacionBase.cpp:236:6:virtual void CEstacionBase::InterrupcionEncoder()	16	static
 ../Core/Inc/Estaciones/CEstacionBase.cpp:240:6:virtual void CEstacionBase::ActivarCalefactor()	16	static
 ../Core/Inc/Estaciones/CEstacionBase.cpp:244:6:virtual void CEstacionBase::DesactivarCalefactor()	16	static
+../Core/Inc/Estaciones/CEstacionBase.cpp:248:6:virtual void CEstacionBase::CruceXCero(int)	16	static
+../Core/Inc/Estaciones/CEstacionBase.cpp:252:6:virtual void CEstacionBase::TimerTick()	16	static
+../Core/Inc/Estaciones/CEstacionBase.cpp:256:5:virtual int CEstacionBase::GetPID()	16	static
+../Core/Inc/Estaciones/CEstacionBase.cpp:260:6:virtual void CEstacionBase::SetPID(int)	16	static
+../Core/Inc/Estaciones/CEstacionBase.cpp:264:6:virtual void CEstacionBase::GPIO_INTERRUPCION(int)	16	static
+../Core/Inc/Estaciones/CEstacionBase.cpp:268:6:virtual void CEstacionBase::QuitaManejadorControles()	16	static

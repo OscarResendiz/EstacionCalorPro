@@ -1,0 +1,11 @@
+D:\RepositoriosGit\EstacionCalorPro\softeare\CalculadorColores\CalculadorColores\CalculadorColores\bin\Debug\CalculadorColores.exe.config
+D:\RepositoriosGit\EstacionCalorPro\softeare\CalculadorColores\CalculadorColores\CalculadorColores\bin\Debug\CalculadorColores.exe
+D:\RepositoriosGit\EstacionCalorPro\softeare\CalculadorColores\CalculadorColores\CalculadorColores\bin\Debug\CalculadorColores.pdb
+D:\RepositoriosGit\EstacionCalorPro\softeare\CalculadorColores\CalculadorColores\CalculadorColores\obj\Debug\CalculadorColores.csproj.AssemblyReference.cache
+D:\RepositoriosGit\EstacionCalorPro\softeare\CalculadorColores\CalculadorColores\CalculadorColores\obj\Debug\CalculadorColores.csproj.SuggestedBindingRedirects.cache
+D:\RepositoriosGit\EstacionCalorPro\softeare\CalculadorColores\CalculadorColores\CalculadorColores\obj\Debug\CalculadorColores.Form1.resources
+D:\RepositoriosGit\EstacionCalorPro\softeare\CalculadorColores\CalculadorColores\CalculadorColores\obj\Debug\CalculadorColores.Properties.Resources.resources
+D:\RepositoriosGit\EstacionCalorPro\softeare\CalculadorColores\CalculadorColores\CalculadorColores\obj\Debug\CalculadorColores.csproj.GenerateResource.cache
+D:\RepositoriosGit\EstacionCalorPro\softeare\CalculadorColores\CalculadorColores\CalculadorColores\obj\Debug\CalculadorColores.csproj.CoreCompileInputs.cache
+D:\RepositoriosGit\EstacionCalorPro\softeare\CalculadorColores\CalculadorColores\CalculadorColores\obj\Debug\CalculadorColores.exe
+D:\RepositoriosGit\EstacionCalorPro\softeare\CalculadorColores\CalculadorColores\CalculadorColores\obj\Debug\CalculadorColores.pdb

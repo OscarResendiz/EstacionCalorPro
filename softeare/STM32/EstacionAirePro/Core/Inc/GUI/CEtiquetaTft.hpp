@@ -31,6 +31,7 @@ public:
 	  virtual void Show();
 	  void SetTextSize(int textZize);
 	  int DameTextSize();
+	  void SetBackColor(int color);
 };
 
 #endif /* INC_GUI_CETIQUETATFT_HPP_ */

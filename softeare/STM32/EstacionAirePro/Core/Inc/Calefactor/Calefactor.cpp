@@ -36,12 +36,12 @@ void Calefactor::Init()
 }
 void Calefactor::Encender()
 {
-	HAL_GPIO_WritePin(GPIO_Port, Gpio_Pin,	GPIO_PinState::GPIO_PIN_SET); //Habilita el modulo
+	HAL_GPIO_WritePin(GPIO_Port, Gpio_Pin,	GPIO_PinState::GPIO_PIN_SET);
 	Estado=ENCENDIDO;
 }
 void Calefactor::Apagar()
 {
-	HAL_GPIO_WritePin(GPIO_Port, Gpio_Pin,	GPIO_PinState::GPIO_PIN_RESET); //Habilita el modulo
+	HAL_GPIO_WritePin(GPIO_Port, Gpio_Pin,	GPIO_PinState::GPIO_PIN_RESET);
 	Estado=APAGADO;
 }
 int Calefactor::DameEstado()

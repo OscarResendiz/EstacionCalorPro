@@ -31,6 +31,7 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+//TIM_HandleTypeDef htim3;
 
 /* USER CODE END Includes */
 
@@ -59,13 +60,8 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define Btn1_Pin GPIO_PIN_4
-#define Btn1_GPIO_Port GPIOA
 #define Display_DC_Pin GPIO_PIN_1
 #define Display_DC_GPIO_Port GPIOB
-#define EncoderClk_Pin GPIO_PIN_11
-#define EncoderClk_GPIO_Port GPIOB
-#define EncoderClk_EXTI_IRQn EXTI15_10_IRQn
 
 /* USER CODE BEGIN Private defines */
 //TIM_HandleTypeDef htim2;

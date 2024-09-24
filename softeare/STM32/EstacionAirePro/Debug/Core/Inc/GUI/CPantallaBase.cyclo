@@ -1,5 +1,9 @@
 ../Core/Inc/GUI/CPantallaBase.cpp:10:1:CPantallaBase::~CPantallaBase()	1
 ../Core/Inc/GUI/CPantallaBase.cpp:10:1:virtual CPantallaBase::~CPantallaBase()	1
 ../Core/Inc/GUI/CPantallaBase.cpp:16:1:CPantallaBase::CPantallaBase(int, char*)	1
-../Core/Inc/GUI/CPantallaBase.cpp:28:6:virtual void CPantallaBase::Show()	1
-../Core/Inc/GUI/CPantallaBase.cpp:35:6:virtual void CPantallaBase::Refresca()	1
+../Core/Inc/GUI/CPantallaBase.cpp:29:6:virtual void CPantallaBase::Show()	1
+../Core/Inc/GUI/CPantallaBase.cpp:36:6:virtual void CPantallaBase::Refresca()	1
+../Core/Inc/GUI/CPantallaBase.cpp:44:6:virtual void CPantallaBase::SetEstacion(CEstacionBase*)	1
+../Core/Inc/GUI/CPantallaBase.cpp:51:6:virtual void CPantallaBase::Ocultar()	1
+../Core/Inc/GUI/CPantallaBase.cpp:56:6:virtual bool CPantallaBase::EsVisible()	1
+../Core/Inc/GUI/CPantallaBase.cpp:60:6:virtual void CPantallaBase::SetVisible(bool)	2

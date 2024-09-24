@@ -245,3 +245,27 @@ void CEstacionBase::DesactivarCalefactor()
 {
 
 }
+void CEstacionBase::CruceXCero(int gpio_pin)
+{
+
+}
+void CEstacionBase::TimerTick()
+{
+
+}
+int CEstacionBase::GetPID()
+{
+	return 0;
+}
+void CEstacionBase::SetPID(int valor)
+{
+
+}
+void CEstacionBase::GPIO_INTERRUPCION(int GPIO_Pin)
+{
+
+}
+void CEstacionBase::QuitaManejadorControles()
+{
+	ManejadorControles = NULL;
+}

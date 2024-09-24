@@ -1,16 +1,17 @@
-../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:10:1:CPantallaManual::~CPantallaManual()	16	static
-../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:10:1:virtual CPantallaManual::~CPantallaManual()	16	static
-../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:15:1:CPantallaManual::CPantallaManual()	64	static
-../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:27:6:virtual void CPantallaManual::SetEstacion(CEstacionBase*)	16	static
-../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:35:6:virtual void CPantallaManual::Show()	16	static
-../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:44:6:void CPantallaManual::MuestraEstado()	16	static
-../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:64:6:void CPantallaManual::LeeDatosEstacion()	16	static
-../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:73:6:void CPantallaManual::MuestraTemperaturas()	16	static
-../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:83:6:virtual void CPantallaManual::OnNivelAireEvent(int)	16	static
-../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:89:6:void CPantallaManual::MuestraNivelAire()	16	static
-../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:99:6:virtual void CPantallaManual::OnTemperaturaRealEvent(int)	16	static
-../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:104:6:virtual void CPantallaManual::OnBotonDosClickEvent(int)	16	static
-../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:110:6:virtual void CPantallaManual::OnPerillaIncremento()	16	static
-../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:115:6:virtual void CPantallaManual::OnPerillaDecremento()	16	static
-../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:120:6:virtual void CPantallaManual::OnBotonPerillaClickEvent(int)	16	static
-../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:124:6:virtual void CPantallaManual::Refresca()	16	static
+../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:11:1:CPantallaManual::~CPantallaManual()	16	static
+../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:11:1:virtual CPantallaManual::~CPantallaManual()	16	static
+../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:16:1:CPantallaManual::CPantallaManual()	64	static
+../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:39:6:void CPantallaManual::MuestraEstado(bool)	16	static
+../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:67:6:void CPantallaManual::LeeDatosEstacion()	16	static
+../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:76:6:void CPantallaManual::MuestraTemperaturas(bool)	16	static
+../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:89:6:virtual void CPantallaManual::OnNivelAireEvent(int)	16	static
+../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:95:6:void CPantallaManual::MuestraNivelAire(bool)	16	static
+../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:108:6:virtual void CPantallaManual::OnTemperaturaRealEvent(int)	16	static
+../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:114:6:virtual void CPantallaManual::OnPerillaIncremento()	16	static
+../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:119:6:virtual void CPantallaManual::OnPerillaDecremento()	16	static
+../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:125:6:virtual void CPantallaManual::Refresca()	16	static
+../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:129:7:virtual void CPantallaManual::OnBotonUnoClickEvent(int)	24	static
+../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:135:7:virtual void CPantallaManual::OnBotonDosClickEvent(int)	24	static
+../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:142:7:virtual void CPantallaManual::OnBotonPerillaClickEvent(int)	16	static
+../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:146:7:virtual void CPantallaManual::Show()	16	static
+../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:154:7:void CPantallaManual::MuestraInformacion(bool)	24	static

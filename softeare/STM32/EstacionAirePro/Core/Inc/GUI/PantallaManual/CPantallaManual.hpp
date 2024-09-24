@@ -11,7 +11,7 @@
 #include "ManejadorControles/CManejadorControlesBase.hpp"
 #include "Estaciones/CEstacionBase.hpp"
 
-class CPantallaManual: public CPantallaBase, CManejadorControlesBase
+class CPantallaManual: public CPantallaBase//, CManejadorControlesBase
 {
 private:
 	int SetTemperatura = 0;
@@ -22,35 +22,38 @@ private:
 	int NivelAireAnterior=-1;
 	int EstadoBoquilla = 0;
 	int EstadoBoquillaAnterior=-1;
+	int pidAnteriro=0;
 
-
-	CEstacionBase *Estacion;
 	CEtiquetaTft *LabelTemperatura;
 	CEtiquetaTft *LabelTemperaturas;
 	CEtiquetaTft *LabelAire;
 	CEtiquetaTft *LabelEstado;
+	CEtiquetaTft *LabelPID;
 
 public:
 	CPantallaManual(CEstacionBase *estacion);
 	virtual ~CPantallaManual();
 	CPantallaManual();
-	virtual void SetEstacion(CEstacionBase *estacion);
 	virtual void Show();
 	virtual void Refresca();
 
 private:
-	void MuestraEstado();
-	void MuestraNivelAire();
+	void MuestraEstado(bool forrzar);
+	void MuestraNivelAire(bool forrzar);
 	void LeeDatosEstacion();
-	void MuestraTemperaturas();
+	void MuestraTemperaturas(bool forrzar);
 	void OnNivelAireEvent(int aire);
 	virtual void OnTemperaturaRealEvent(int temperatura);
-	virtual void OnBotonDosClickEvent(int tiempoClick);
+	void MuestraInformacion(bool forzar);
 
 	//eventos del Encoder
 	virtual void OnPerillaIncremento();
 	virtual void OnPerillaDecremento();
 	virtual void OnBotonPerillaClickEvent(int tiempoClick);
+
+	virtual void OnBotonUnoClickEvent(int tiempoClick);
+	virtual void OnBotonDosClickEvent(int tiempoClick);
+
 };
 
 #endif /* INC_GUI_PANTALLAMANUAL_CPANTALLAMANUAL_HPP_ */

@@ -30,7 +30,8 @@ Core/Src/Principal.o: ../Core/Src/Principal.cpp \
  ../Core/Inc/Principal.hpp ../Core/Inc/Max6675/Max6675.hpp \
  ../Core/Inc/Delays/delays.hpp ../Core/Inc/Constantes.hpp \
  ../Core/Inc/ControlVelocidadAire/ControlVelocidadAire.hpp \
- ../Core/Inc/Uart/Uart.hpp ../Core/Inc/max6675/max6675.hpp \
+ ../Core/Inc/Timer/Timer.hpp ../Core/Inc/main.h ../Core/Inc/Uart/Uart.hpp \
+ ../Core/Inc/max6675/max6675.hpp \
  ../Core/Inc/ControlVelocidadAire/ControlVelocidadAire.hpp \
  ../Core/Inc/Boton/CManejadorBoton.hpp \
  ../Core/Inc/Boton/CManejadorEventosBoton.hpp \
@@ -40,15 +41,19 @@ Core/Src/Principal.o: ../Core/Src/Principal.cpp \
  ../Core/Inc/GUI/CRectanguloTft.hpp \
  ../Core/Inc/GUI/CComponenteBaseTft.hpp ../Core/Inc/GUI/CEtiquetaTft.hpp \
  ../Core/Inc/GUI/CPantallaBase.hpp \
- ../Core/Inc/GUI/PantallaManual/CPantallaManual.hpp \
- ../Core/Inc/ManejadorControles/CManejadorControlesBase.hpp \
  ../Core/Inc/Estaciones/CEstacionBase.hpp \
- ../Core/Inc/Estaciones/CestacionVirtual.hpp \
+ ../Core/Inc/ManejadorControles/CManejadorControlesBase.hpp \
+ ../Core/Inc/GUI/PantallaManual/CPantallaManual.hpp \
+ ../Core/Inc/Estaciones/CestacionBaku601.hpp \
  ../Core/Inc/Encoder/CManejadorEventosEncoder.hpp \
  ../Core/Inc/Max6675/MAX6675.hpp ../Core/Inc/Encoder/CEncoder.hpp \
  ../Core/Inc/PWM/Pwm.hpp ../Core/Inc/Calefactor/Calefactor.hpp \
  ../Core/Inc/SensorMagnetico/SensorMagnetico.hpp \
- ../Core/Inc/SensorMagnetico/CManejadorEventoSensorMagnetico.hpp
+ ../Core/Inc/SensorMagnetico/CManejadorEventoSensorMagnetico.hpp \
+ ../Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.hpp \
+ ../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.h \
+ ../Core/Inc/GUI/Menu/CMenuItem.hpp ../Core/Inc/GUI/Menu/CMenu.hpp \
+ ../Core/Inc/GUI/Menu/CManejadorEventoMenu.hpp
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
 ../Core/Inc/stm32f1xx_hal_conf.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:
@@ -82,6 +87,8 @@ Core/Src/Principal.o: ../Core/Src/Principal.cpp \
 ../Core/Inc/Delays/delays.hpp:
 ../Core/Inc/Constantes.hpp:
 ../Core/Inc/ControlVelocidadAire/ControlVelocidadAire.hpp:
+../Core/Inc/Timer/Timer.hpp:
+../Core/Inc/main.h:
 ../Core/Inc/Uart/Uart.hpp:
 ../Core/Inc/max6675/max6675.hpp:
 ../Core/Inc/ControlVelocidadAire/ControlVelocidadAire.hpp:
@@ -94,10 +101,10 @@ Core/Src/Principal.o: ../Core/Src/Principal.cpp \
 ../Core/Inc/GUI/CComponenteBaseTft.hpp:
 ../Core/Inc/GUI/CEtiquetaTft.hpp:
 ../Core/Inc/GUI/CPantallaBase.hpp:
-../Core/Inc/GUI/PantallaManual/CPantallaManual.hpp:
-../Core/Inc/ManejadorControles/CManejadorControlesBase.hpp:
 ../Core/Inc/Estaciones/CEstacionBase.hpp:
-../Core/Inc/Estaciones/CestacionVirtual.hpp:
+../Core/Inc/ManejadorControles/CManejadorControlesBase.hpp:
+../Core/Inc/GUI/PantallaManual/CPantallaManual.hpp:
+../Core/Inc/Estaciones/CestacionBaku601.hpp:
 ../Core/Inc/Encoder/CManejadorEventosEncoder.hpp:
 ../Core/Inc/Max6675/MAX6675.hpp:
 ../Core/Inc/Encoder/CEncoder.hpp:
@@ -105,3 +112,8 @@ Core/Src/Principal.o: ../Core/Src/Principal.cpp \
 ../Core/Inc/Calefactor/Calefactor.hpp:
 ../Core/Inc/SensorMagnetico/SensorMagnetico.hpp:
 ../Core/Inc/SensorMagnetico/CManejadorEventoSensorMagnetico.hpp:
+../Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.hpp:
+../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.h:
+../Core/Inc/GUI/Menu/CMenuItem.hpp:
+../Core/Inc/GUI/Menu/CMenu.hpp:
+../Core/Inc/GUI/Menu/CManejadorEventoMenu.hpp:

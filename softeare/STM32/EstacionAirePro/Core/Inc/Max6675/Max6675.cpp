@@ -69,7 +69,7 @@ float MAX6675::MAX6675_lee()
 	sensor_dato = (max6675_dato >> 3); //desplaz 3 veces
 	UltimaTemperatura=(((float) sensor_dato * 0.25)); //0.25
 //	SerialPrintf("temperatura=%f sensor=%d\r\n", UltimaTemperatura,sensor_dato);
-	return UltimaTemperatura;
+	return UltimaTemperatura+26;
 }
 void MAX6675::Init()
 {

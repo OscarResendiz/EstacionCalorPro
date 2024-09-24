@@ -1,0 +1,10 @@
+../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.cpp:15:1:CMenuPrincipal::CMenuPrincipal()	2
+../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.cpp:30:1:CMenuPrincipal::~CMenuPrincipal()	1
+../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.cpp:30:1:virtual CMenuPrincipal::~CMenuPrincipal()	1
+../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.cpp:35:6:virtual void CMenuPrincipal::Show()	1
+../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.cpp:40:6:virtual void CMenuPrincipal::Refresca()	2
+../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.cpp:46:6:virtual void CMenuPrincipal::OnBotonCuatroClickEvent(int)	1
+../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.cpp:50:6:virtual void CMenuPrincipal::OnPerillaIncremento()	1
+../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.cpp:54:6:virtual void CMenuPrincipal::OnPerillaDecremento()	1
+../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.cpp:58:6:virtual void CMenuPrincipal::OnBotonPerillaClickEvent(int)	1
+../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.cpp:62:6:virtual void CMenuPrincipal::OnMenuEvent(int)	2

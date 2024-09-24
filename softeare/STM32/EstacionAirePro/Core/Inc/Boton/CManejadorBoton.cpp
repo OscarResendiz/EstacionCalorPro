@@ -43,37 +43,40 @@ void CManejadorBoton::AsignaManejadorEventos(CManejadorEventosBoton *manejador)
 {
 	Manejador = manejador;
 }
-void CManejadorBoton::Procesa()
+void CManejadorBoton::Procesa(int gpio_pin)
 {
+	if (Manejador == NULL)
+		return;
+	if(gpio_pin!=Gpio_Pin)
+		return;
 	int tiempoClick = 0;
 	int estado = 0;
-	if (Manejador == NULL)
-	{
-		return;
-	}
 	estado = Leer();
 
-	if (Estado == estado)
-	{
-		if (Estado == BOTON_PRESIONADO)
-		{
-			tiempoClick = HAL_GetTick() - TiempoInicioClick;
-			if (tiempoClick >= TIRMPO_MILIS_BOTON_PRESIONADO_LARGO)
-			{
-				TiempoInicioClick = HAL_GetTick();
-				Manejador->OnBotonPresionadoLargoEvent(Identificador);
-			}
-		}
+//	if (Estado == estado)
+//	{
+//		if (Estado == BOTON_PRESIONADO)
+		//{
+//			tiempoClick = HAL_GetTick() - TiempoInicioClick;
+	//		ReboteMilis = HAL_GetTick();  //leo el tiempo actual
+		//	if (tiempoClick >= TIRMPO_MILIS_BOTON_PRESIONADO_LARGO)
+			//{
+				//TiempoInicioClick = HAL_GetTick();
+//				Manejador->OnBotonPresionadoEvent(Identificador);
+//				Manejador->OnBotonPresionadoLargoEvent(Identificador);
+	//		}
+		//	return;
+//		}
 		//no ha cambiado por lo que no hay evento que informar
-		return;
-	}
-	if (estado != PreEstado)
-	{
+//		return;
+//	}
+//	if (estado != PreEstado)
+//	{
 		//acaba de cambiar
-		ReboteMilis = HAL_GetTick();  //leo el tiempo actual
-		PreEstado = estado;
-		return;
-	}
+//		ReboteMilis = HAL_GetTick();  //leo el tiempo actual
+//		PreEstado = estado;
+//		return;
+//	}
 	//leo el tiempo actual
 	int tiempo = HAL_GetTick();
 	if ((tiempo - ReboteMilis) < TIEMPO_REBOTE)
@@ -81,6 +84,8 @@ void CManejadorBoton::Procesa()
 		//como todavia no pasa el tiempo de espera para evitar rebotes no hago nada
 		return;
 	}
+	ReboteMilis = HAL_GetTick();  //leo el tiempo actual
+
 	//ya filtre los rebotes, por lo que ahora si informo del cambio de estado del boton
 	Estado = estado;
 	if (Estado == BOTON_SUELTO)
