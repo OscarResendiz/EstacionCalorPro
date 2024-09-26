@@ -31,14 +31,6 @@ CPantallaManual::CPantallaManual() :
 	LabelPID=new CEtiquetaTft( 5, 180, 200, 30, COLOR::BLACK, "PID: 00",COLOR::WHITE, 3, 0, COLOR::RED);
 }
 
-/*void CPantallaManual::SetEstacion(CEstacionBase *estacion)
-{
-	Estacion = estacion;
-	//asigno los evetos de la estacion
-	Estacion->SetManejadorControles(this);
-	Estacion->ActivarCalefactor();
-}
-*/
 
 void CPantallaManual::MuestraEstado(bool forzar)
 {
@@ -174,24 +166,14 @@ void CPantallaManual::Refresca()
  {
  	uint8_t temperatura=Estacion->GetTemperatura();
  	uint8_t datos_w[10];
-
- 	//  HAL_I2C_Mem_Write(&hi2c1,ADDRESS_EEPROM,0,I2C_MEMADD_SIZE_8BIT,datos_w,10,HAL_MAX_DELAY);
  	int t= HAL_GetTick();
  	if(t>tiempoescritura)
  	{
-// 		  for(uint8_t i=0;i<10;i++)
- 		  //{
-// 			  datos_w[i]=125;
-// 		  }
-// 		  HAL_I2C_Mem_Write(&hi2c1,ADDRESS_EEPROM,0,I2C_MEMADD_SIZE_8BIT,datos_w,10,HAL_MAX_DELAY);
 
  		HAL_I2C_Mem_Write(&hi2c1,ADDRESS_EEPROM,0,I2C_MEMADD_SIZE_8BIT,&temperatura,1,HAL_MAX_DELAY);
  		TemperaturaGuardada=true;
  		tiempoescritura=t+1000;
-// 		SerialPrintf("\r\nSe guardo temperatura: %d",temperatura);
  	}
-// 	temperatura=0;
-// 	HAL_I2C_Mem_Read(&hi2c1,ADDRESS_EEPROM,0,I2C_MEMADD_SIZE_8BIT,&temperatura,1,HAL_MAX_DELAY);
 
  }
  void CPantallaManual::Show()
@@ -204,7 +186,6 @@ void CPantallaManual::Refresca()
  	uint8_t datos_w[10];
  	uint8_t datos_r[10];
  	char buf_tx[30];
-// 	HAL_I2C_Mem_Read(&hi2c1,ADDRESS_EEPROM,0,I2C_MEMADD_SIZE_8BIT,&temperatura,1,HAL_MAX_DELAY);
  	  if( HAL_I2C_Mem_Read(&hi2c1,ADDRESS_EEPROM,0,I2C_MEMADD_SIZE_8BIT,&temperatura,1,HAL_MAX_DELAY)==HAL_OK)
  	  {
  		 	if(temperatura>=0 && temperatura<=500)
@@ -213,14 +194,6 @@ void CPantallaManual::Refresca()
  		 	}
  		 	TemperaturaGuardada=true;
  	  }
-// 	  for(uint8_t i=0;i<10;i++)
-// 	  {
-// 		  sprintf(buf_tx,"Dir: %u, Dato: %u\r\n",i,datos_r[i]);
-// 		  HAL_UART_Transmit(&huart1,(uint8_t *)buf_tx,strlen(buf_tx),HAL_MAX_DELAY);
-// 	  }
-// 	  HAL_UART_Transmit(&huart1,(uint8_t *)"\r\n",2,HAL_MAX_DELAY);
-
-
  	LeeDatosEstacion();
  	MuestraInformacion(true);
  }

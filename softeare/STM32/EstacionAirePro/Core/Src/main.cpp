@@ -30,8 +30,7 @@
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-#include <stdio.h>
-#include <string.h>
+
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -57,13 +56,9 @@ TIM_HandleTypeDef htim3;
 UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN PV */
-#define ADDRESS_EEPROM 0XA0
 
 /* USER CODE END PV */
-/*uint8_t datos_w[10];
-uint8_t datos_r[10];
-char buf_tx[30];
-*/
+
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
@@ -79,33 +74,6 @@ static void MX_I2C1_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-void USART1_UART_Init(void)
-{
-
-	/* USER CODE BEGIN USART1_Init 0 */
-
-	/* USER CODE END USART1_Init 0 */
-
-	/* USER CODE BEGIN USART1_Init 1 */
-
-	/* USER CODE END USART1_Init 1 */
-	Huart1.Instance = USART1;
-	Huart1.Init.BaudRate = 115200;
-	Huart1.Init.WordLength = UART_WORDLENGTH_8B;
-	Huart1.Init.StopBits = UART_STOPBITS_1;
-	Huart1.Init.Parity = UART_PARITY_NONE;
-	Huart1.Init.Mode = UART_MODE_TX_RX;
-	Huart1.Init.HwFlowCtl = UART_HWCONTROL_NONE;
-	Huart1.Init.OverSampling = UART_OVERSAMPLING_16;
-	if (HAL_UART_Init(&Huart1) != HAL_OK)
-	{
-		//ErrorHandler();
-	}
-	/* USER CODE BEGIN USART1_Init 2 */
-
-	/* USER CODE END USART1_Init 2 */
-
-}
 
 /* USER CODE END 0 */
 
@@ -144,43 +112,7 @@ int main(void)
   MX_TIM3_Init();
   MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
-	USART1_UART_Init();
-/*
-  sprintf(buf_tx,"Escribiendo datos....\r\n\r\n");
-  uint8_t a=10;
-  HAL_UART_Transmit(&huart1,(uint8_t *)buf_tx,strlen(buf_tx),HAL_MAX_DELAY);
-
-  HAL_I2C_Mem_Write(&hi2c1,ADDRESS_EEPROM,0,I2C_MEMADD_SIZE_8BIT,&a,1,HAL_MAX_DELAY);
-  HAL_Delay(1000);
-
-  HAL_I2C_Mem_Read(&hi2c1,ADDRESS_EEPROM,0,I2C_MEMADD_SIZE_8BIT,&a,1,HAL_MAX_DELAY);
-  sprintf(buf_tx,"Dato: %u\r\n",a);
-  HAL_UART_Transmit(&huart1,(uint8_t *)buf_tx,strlen(buf_tx),HAL_MAX_DELAY);
-*/
-  /*
-  sprintf(buf_tx,"Escribiendo datos....\r\n\r\n");
-  HAL_UART_Transmit(&huart1,(uint8_t *)buf_tx,strlen(buf_tx),HAL_MAX_DELAY);
-  for(uint8_t i=0;i<10;i++)
-  {
-	  datos_w[i]=i+100;
-  }
-  HAL_I2C_Mem_Write(&hi2c1,ADDRESS_EEPROM,0,I2C_MEMADD_SIZE_8BIT,datos_w,10,HAL_MAX_DELAY);
-  HAL_Delay(1000);
-*/
-/*
-  HAL_I2C_Mem_Read(&hi2c1,ADDRESS_EEPROM,0,I2C_MEMADD_SIZE_8BIT,datos_r,10,HAL_MAX_DELAY);
-  for(uint8_t i=0;i<10;i++)
-  {
-	  sprintf(buf_tx,"Dir: %u, Dato: %u\r\n",i,datos_r[i]);
-	  HAL_UART_Transmit(&huart1,(uint8_t *)buf_tx,strlen(buf_tx),HAL_MAX_DELAY);
-  }
-  HAL_UART_Transmit(&huart1,(uint8_t *)"\r\n",2,HAL_MAX_DELAY);
-
-*/
-
-//	pruebalectura("MAIN");
-  IncializaSistema();
-
+	IncializaSistema();
 	EjecutaSistema();
 
   /* USER CODE END 2 */
@@ -546,8 +478,8 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : PA4 PA6 */
-  GPIO_InitStruct.Pin = GPIO_PIN_4|GPIO_PIN_6;
+  /*Configure GPIO pin : PA6 */
+  GPIO_InitStruct.Pin = GPIO_PIN_6;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING_FALLING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
@@ -576,6 +508,12 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : PB4 */
+  GPIO_InitStruct.Pin = GPIO_PIN_4;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
   /* EXTI interrupt init*/

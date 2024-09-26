@@ -222,7 +222,6 @@ void CestacionBaku601::Procesa()
 	ProcesaTemperatura();
 	ProcesaTemperaturaReal();
 	procesaAire();
-//	ProcesaBotones();
 	ProcesaCalefactor();
 }
 
