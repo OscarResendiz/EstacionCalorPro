@@ -23,7 +23,8 @@ private:
 	int EstadoBoquilla = 0;
 	int EstadoBoquillaAnterior=-1;
 	int pidAnteriro=0;
-
+	bool TemperaturaGuardada=false;
+	int tiempoescritura=0;
 	CEtiquetaTft *LabelTemperatura;
 	CEtiquetaTft *LabelTemperaturas;
 	CEtiquetaTft *LabelAire;
@@ -53,6 +54,7 @@ private:
 
 	virtual void OnBotonUnoClickEvent(int tiempoClick);
 	virtual void OnBotonDosClickEvent(int tiempoClick);
+	void GuardaTemperatura();
 
 };
 

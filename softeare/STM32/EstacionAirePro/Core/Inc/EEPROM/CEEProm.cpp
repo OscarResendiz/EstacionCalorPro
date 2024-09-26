@@ -5,24 +5,24 @@
  *      Author: W10
  */
 
-#include <Flash/CFlash.hpp>
+#include <EEPROM/CEEProm.hpp>
 
-CFlash::CFlash()
+CEEProm::CEEProm()
 {
 	// TODO Auto-generated constructor stub
 
 }
 
-CFlash::~CFlash()
+CEEProm::~CEEProm()
 {
 	// TODO Auto-generated destructor stub
 }
 
-void CFlash::Guardar(int clave, int valor)
+void CEEProm::Guardar(int clave, int valor)
 {
 
 }
-int CFlash::Leer(int clave)
+int CEEProm::Leer(int clave)
 {
 	return 0;
 }

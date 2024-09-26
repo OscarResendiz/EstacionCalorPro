@@ -9,6 +9,7 @@
 #include "GUI/PantallaManual/CPantallaManual.hpp"
 #include <GUI/PantallaMenuPrincipal/CMenuPrincipal.h>
 #include <stdio.h>
+
 CManejadorPantallas::CManejadorPantallas()
 {
 	// TODO Auto-generated constructor stub

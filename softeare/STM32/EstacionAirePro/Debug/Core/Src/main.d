@@ -22,14 +22,15 @@ Core/Src/main.o: ../Core/Src/main.cpp ../Core/Inc/main.hpp \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
- ../Core/Inc/spi.h ../Core/Inc/Principal.hpp \
- ../Core/Inc/Max6675/Max6675.hpp ../Core/Inc/Delays/delays.hpp \
- ../Core/Inc/Constantes.hpp \
+ ../Core/Inc/pruebaMemoria.h ../Core/Inc/Uart/Uart.h ../Core/Inc/spi.h \
+ ../Core/Inc/Principal.hpp ../Core/Inc/Max6675/Max6675.hpp \
+ ../Core/Inc/Delays/delays.hpp ../Core/Inc/Constantes.hpp \
  ../Core/Inc/ControlVelocidadAire/ControlVelocidadAire.hpp \
  ../Core/Inc/Timer/Timer.hpp ../Core/Inc/main.h
 ../Core/Inc/main.hpp:
@@ -56,11 +57,14 @@ Core/Src/main.o: ../Core/Src/main.cpp ../Core/Inc/main.hpp \
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:
+../Core/Inc/pruebaMemoria.h:
+../Core/Inc/Uart/Uart.h:
 ../Core/Inc/spi.h:
 ../Core/Inc/Principal.hpp:
 ../Core/Inc/Max6675/Max6675.hpp:

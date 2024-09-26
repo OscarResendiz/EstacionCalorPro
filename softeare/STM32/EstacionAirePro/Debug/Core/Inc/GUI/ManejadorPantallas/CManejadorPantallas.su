@@ -1,8 +1,8 @@
-../Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.cpp:12:1:CManejadorPantallas::CManejadorPantallas()	16	static
-../Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.cpp:17:1:CManejadorPantallas::~CManejadorPantallas()	16	static
-../Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.cpp:17:1:virtual CManejadorPantallas::~CManejadorPantallas()	16	static
-../Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.cpp:21:6:void CManejadorPantallas::SetEstacion(CEstacionBase*)	16	static
-../Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.cpp:25:6:void CManejadorPantallas::MuestraPantallaManual()	24	static
-../Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.cpp:31:6:void CManejadorPantallas::MuestraMenuPrincipal()	24	static
-../Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.cpp:38:6:void CManejadorPantallas::RefrescaPantalla()	16	static
-../Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.cpp:45:6:void CManejadorPantallas::AsignaPantallaActual(CPantallaBase*)	16	static
+../Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.cpp:13:1:CManejadorPantallas::CManejadorPantallas()	16	static
+../Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.cpp:18:1:CManejadorPantallas::~CManejadorPantallas()	16	static
+../Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.cpp:18:1:virtual CManejadorPantallas::~CManejadorPantallas()	16	static
+../Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.cpp:22:6:void CManejadorPantallas::SetEstacion(CEstacionBase*)	16	static
+../Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.cpp:26:6:void CManejadorPantallas::MuestraPantallaManual()	24	static
+../Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.cpp:32:6:void CManejadorPantallas::MuestraMenuPrincipal()	24	static
+../Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.cpp:39:6:void CManejadorPantallas::RefrescaPantalla()	16	static
+../Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.cpp:46:6:void CManejadorPantallas::AsignaPantallaActual(CPantallaBase*)	16	static

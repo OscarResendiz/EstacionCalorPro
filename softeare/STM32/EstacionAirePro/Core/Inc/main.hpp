@@ -54,6 +54,7 @@ void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
 #define CruceCero_GPIO_Port GPIOB
 
 /* USER CODE END Includes */
+extern I2C_HandleTypeDef hi2c1;
 
 /* Exported types ------------------------------------------------------------*/
 /* USER CODE BEGIN ET */

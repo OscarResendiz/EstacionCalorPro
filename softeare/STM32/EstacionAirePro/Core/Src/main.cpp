@@ -18,6 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include <main.hpp>
+#include <pruebaMemoria.h>
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -29,7 +30,8 @@
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-
+#include <stdio.h>
+#include <string.h>
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -45,6 +47,8 @@
 /* Private variables ---------------------------------------------------------*/
 ADC_HandleTypeDef hadc1;
 
+I2C_HandleTypeDef hi2c1;
+
 SPI_HandleTypeDef hspi1;
 
 TIM_HandleTypeDef htim2;
@@ -53,9 +57,13 @@ TIM_HandleTypeDef htim3;
 UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN PV */
+#define ADDRESS_EEPROM 0XA0
 
 /* USER CODE END PV */
-
+/*uint8_t datos_w[10];
+uint8_t datos_r[10];
+char buf_tx[30];
+*/
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
@@ -64,12 +72,40 @@ static void MX_USART1_UART_Init(void);
 static void MX_ADC1_Init(void);
 static void MX_TIM2_Init(void);
 static void MX_TIM3_Init(void);
+static void MX_I2C1_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+void USART1_UART_Init(void)
+{
+
+	/* USER CODE BEGIN USART1_Init 0 */
+
+	/* USER CODE END USART1_Init 0 */
+
+	/* USER CODE BEGIN USART1_Init 1 */
+
+	/* USER CODE END USART1_Init 1 */
+	Huart1.Instance = USART1;
+	Huart1.Init.BaudRate = 115200;
+	Huart1.Init.WordLength = UART_WORDLENGTH_8B;
+	Huart1.Init.StopBits = UART_STOPBITS_1;
+	Huart1.Init.Parity = UART_PARITY_NONE;
+	Huart1.Init.Mode = UART_MODE_TX_RX;
+	Huart1.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+	Huart1.Init.OverSampling = UART_OVERSAMPLING_16;
+	if (HAL_UART_Init(&Huart1) != HAL_OK)
+	{
+		//ErrorHandler();
+	}
+	/* USER CODE BEGIN USART1_Init 2 */
+
+	/* USER CODE END USART1_Init 2 */
+
+}
 
 /* USER CODE END 0 */
 
@@ -106,8 +142,45 @@ int main(void)
   MX_ADC1_Init();
   MX_TIM2_Init();
   MX_TIM3_Init();
+  MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
-	IncializaSistema();
+	USART1_UART_Init();
+/*
+  sprintf(buf_tx,"Escribiendo datos....\r\n\r\n");
+  uint8_t a=10;
+  HAL_UART_Transmit(&huart1,(uint8_t *)buf_tx,strlen(buf_tx),HAL_MAX_DELAY);
+
+  HAL_I2C_Mem_Write(&hi2c1,ADDRESS_EEPROM,0,I2C_MEMADD_SIZE_8BIT,&a,1,HAL_MAX_DELAY);
+  HAL_Delay(1000);
+
+  HAL_I2C_Mem_Read(&hi2c1,ADDRESS_EEPROM,0,I2C_MEMADD_SIZE_8BIT,&a,1,HAL_MAX_DELAY);
+  sprintf(buf_tx,"Dato: %u\r\n",a);
+  HAL_UART_Transmit(&huart1,(uint8_t *)buf_tx,strlen(buf_tx),HAL_MAX_DELAY);
+*/
+  /*
+  sprintf(buf_tx,"Escribiendo datos....\r\n\r\n");
+  HAL_UART_Transmit(&huart1,(uint8_t *)buf_tx,strlen(buf_tx),HAL_MAX_DELAY);
+  for(uint8_t i=0;i<10;i++)
+  {
+	  datos_w[i]=i+100;
+  }
+  HAL_I2C_Mem_Write(&hi2c1,ADDRESS_EEPROM,0,I2C_MEMADD_SIZE_8BIT,datos_w,10,HAL_MAX_DELAY);
+  HAL_Delay(1000);
+*/
+/*
+  HAL_I2C_Mem_Read(&hi2c1,ADDRESS_EEPROM,0,I2C_MEMADD_SIZE_8BIT,datos_r,10,HAL_MAX_DELAY);
+  for(uint8_t i=0;i<10;i++)
+  {
+	  sprintf(buf_tx,"Dir: %u, Dato: %u\r\n",i,datos_r[i]);
+	  HAL_UART_Transmit(&huart1,(uint8_t *)buf_tx,strlen(buf_tx),HAL_MAX_DELAY);
+  }
+  HAL_UART_Transmit(&huart1,(uint8_t *)"\r\n",2,HAL_MAX_DELAY);
+
+*/
+
+//	pruebalectura("MAIN");
+  IncializaSistema();
+
 	EjecutaSistema();
 
   /* USER CODE END 2 */
@@ -139,7 +212,9 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
-  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
+  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI_DIV2;
+  RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL8;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
     Error_Handler();
@@ -149,12 +224,12 @@ void SystemClock_Config(void)
   */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
-  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSI;
+  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
-  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
+  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_0) != HAL_OK)
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_1) != HAL_OK)
   {
     Error_Handler();
   }
@@ -210,6 +285,40 @@ static void MX_ADC1_Init(void)
   /* USER CODE BEGIN ADC1_Init 2 */
 
   /* USER CODE END ADC1_Init 2 */
+
+}
+
+/**
+  * @brief I2C1 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_I2C1_Init(void)
+{
+
+  /* USER CODE BEGIN I2C1_Init 0 */
+
+  /* USER CODE END I2C1_Init 0 */
+
+  /* USER CODE BEGIN I2C1_Init 1 */
+
+  /* USER CODE END I2C1_Init 1 */
+  hi2c1.Instance = I2C1;
+  hi2c1.Init.ClockSpeed = 100000;
+  hi2c1.Init.DutyCycle = I2C_DUTYCYCLE_2;
+  hi2c1.Init.OwnAddress1 = 0;
+  hi2c1.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
+  hi2c1.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
+  hi2c1.Init.OwnAddress2 = 0;
+  hi2c1.Init.GeneralCallMode = I2C_GENERALCALL_DISABLE;
+  hi2c1.Init.NoStretchMode = I2C_NOSTRETCH_DISABLE;
+  if (HAL_I2C_Init(&hi2c1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN I2C1_Init 2 */
+
+  /* USER CODE END I2C1_Init 2 */
 
 }
 
@@ -401,6 +510,7 @@ static void MX_GPIO_Init(void)
 
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOC_CLK_ENABLE();
+  __HAL_RCC_GPIOD_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
@@ -411,7 +521,7 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1|GPIO_PIN_2, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0|Display_DC_Pin|GPIO_PIN_5|GPIO_PIN_6, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0|Display_DC_Pin|GPIO_PIN_5, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_3, GPIO_PIN_SET);
@@ -442,8 +552,8 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : PB0 Display_DC_Pin PB5 PB6 */
-  GPIO_InitStruct.Pin = GPIO_PIN_0|Display_DC_Pin|GPIO_PIN_5|GPIO_PIN_6;
+  /*Configure GPIO pins : PB0 Display_DC_Pin PB5 */
+  GPIO_InitStruct.Pin = GPIO_PIN_0|Display_DC_Pin|GPIO_PIN_5;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_PULLUP;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;

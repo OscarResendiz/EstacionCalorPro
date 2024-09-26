@@ -5,16 +5,16 @@
  *      Author: W10
  */
 
-#ifndef INC_FLASH_CFLASH_HPP_
-#define INC_FLASH_CFLASH_HPP_
+#ifndef INC_EEPROM_CEEPROM_HPP_
+#define INC_EEPROM_CEEPROM_HPP_
 
-class CFlash
+class CEEProm
 {
 public:
-	CFlash();
-	virtual ~CFlash();
+	CEEProm();
+	virtual ~CEEProm();
 	void Guardar(int clave, int valor);
 	int Leer(int clave);
 };
 
-#endif /* INC_FLASH_CFLASH_HPP_ */
+#endif /* INC_EEPROM_CEEPROM_HPP_ */

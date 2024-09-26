@@ -8,7 +8,7 @@
 #include <Estaciones/CestacionBaku601.hpp>
 #include "Calefactor/Calefactor.hpp"
 #include "Constantes.hpp"
-#include "Uart/Uart.hpp"
+#include "Uart/Uart.h"
 
 CestacionBaku601::~CestacionBaku601()
 {
@@ -340,12 +340,12 @@ void CestacionBaku601::CruceXCero(int gpio_pin)
 	if(ciclos<PotenciaCalefactor)
 	{
 		calefactor.Encender();
-		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6,	GPIO_PinState::GPIO_PIN_SET);
+//		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6,	GPIO_PinState::GPIO_PIN_SET);
 	}
 	else
 	{
 		calefactor.Apagar();
-		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6,	GPIO_PinState::GPIO_PIN_RESET);
+//		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6,	GPIO_PinState::GPIO_PIN_RESET);
 	}
 	ciclos=ciclos+1;
 }

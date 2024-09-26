@@ -8,7 +8,7 @@
 #include "stm32f1xx_hal.h"
 #include "Principal.hpp"
 #include <stdio.h>
-#include "Uart/Uart.hpp"
+#include "Uart/Uart.h"
 #include "max6675/max6675.hpp"
 #include "ControlVelocidadAire/ControlVelocidadAire.hpp"
 #include "Boton/CManejadorBoton.hpp"
@@ -23,21 +23,21 @@
 #include "Delays/delays.hpp"
 #include <Timer/Timer.hpp>
 #include "GUI/ManejadorPantallas/CManejadorPantallas.hpp"
+
 CestacionBaku601 *estacion;
 //TIM_HandleTypeDef htim2;
 CManejadorPantallas ManejadorPantallas;
 void IncializaSistema()
 {
+//	SerialPrintf("\r\IniciandoSistema");
 	CTimer timer;
-	USART1_UART_Init();
-	SerialPrintf("\r\IniciandoSistema");
-	uartx_write_text("HOLA");
+//	uartx_write_text("HOLA");
 	//TIMX->CR1|=1>>0;
 	//delay_us_tim_init();
 	HAL_NVIC_SetPriority(EXTI15_10_IRQn, 0, 0);
 	HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
 
-	USART1_UART_Init();
+//	USART1_UART_Init();
 	estacion = new CestacionBaku601();
 	ILI9341_Init(); //initial driver setup to drive ili9341
 	ILI9341_Set_Rotation(SCREEN_HORIZONTAL_2);

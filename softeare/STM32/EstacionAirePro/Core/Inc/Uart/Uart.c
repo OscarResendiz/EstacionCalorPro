@@ -5,7 +5,7 @@
  *      Author: Alcides Ramos
  */
 
-#include "uart.hpp"
+#include "uart.h"
 #include "stdio.h"
 #include <stdarg.h>
 #include "string.h"

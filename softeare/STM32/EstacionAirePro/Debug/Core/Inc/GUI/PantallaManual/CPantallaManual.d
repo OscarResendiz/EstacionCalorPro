@@ -27,6 +27,7 @@ Core/Inc/GUI/PantallaManual/CPantallaManual.o: \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
@@ -38,7 +39,7 @@ Core/Inc/GUI/PantallaManual/CPantallaManual.o: \
  ../Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.hpp \
  ../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.h \
  ../Core/Inc/GUI/Menu/CMenuItem.hpp ../Core/Inc/GUI/Menu/CMenu.hpp \
- ../Core/Inc/GUI/Menu/CManejadorEventoMenu.hpp
+ ../Core/Inc/GUI/Menu/CManejadorEventoMenu.hpp ../Core/Inc/Uart/Uart.h
 ../Core/Inc/GUI/PantallaManual/CPantallaManual.hpp:
 ../Core/Inc/GUI/CPantallaBase.hpp:
 ../Core/Inc/GUI/CRectanguloTft.hpp:
@@ -67,6 +68,7 @@ Core/Inc/GUI/PantallaManual/CPantallaManual.o: \
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h:
@@ -81,3 +83,4 @@ Core/Inc/GUI/PantallaManual/CPantallaManual.o: \
 ../Core/Inc/GUI/Menu/CMenuItem.hpp:
 ../Core/Inc/GUI/Menu/CMenu.hpp:
 ../Core/Inc/GUI/Menu/CManejadorEventoMenu.hpp:
+../Core/Inc/Uart/Uart.h:

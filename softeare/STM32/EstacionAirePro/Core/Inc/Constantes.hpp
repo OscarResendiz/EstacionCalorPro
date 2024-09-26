@@ -78,7 +78,7 @@
 #define RMII_TXD0_GPIO_Port GPIOG
 #define SWO_Pin GPIO_PIN_3
 #define SWO_GPIO_Port GPIOB
-#define LD2_Pin GPIO_PIN_7
+#define LD2_Pin GPIO_PIN_9
 #define LD2_GPIO_Port GPIOB
 #define  GPIO_SPEED_FREQ_VERY_HIGH   ((uint32_t)0x00000003U)  /*!< High speed    */
 #define GPIO_AF11_ETH           ((uint8_t)0x0BU)  /* ETHERNET Alternate Function mapping */
@@ -98,7 +98,7 @@
 #define TEMPERATURA_APAGADO 30
 #define CruceCero_Pin GPIO_PIN_4
 #define EncoderClk_Pin GPIO_PIN_11
-
+#define ADDRESS_EEPROM 0XA0
 //definicion de colores baicos
 //0X ROJO VERDE AZUL AZUL
 enum COLOR

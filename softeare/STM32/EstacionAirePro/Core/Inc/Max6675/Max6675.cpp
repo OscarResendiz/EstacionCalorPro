@@ -6,7 +6,7 @@
  */
 
 #include "Max6675/Max6675.hpp"
-#include "Uart/Uart.hpp"
+#include "Uart/Uart.h"
 MAX6675::MAX6675()
 {
 
