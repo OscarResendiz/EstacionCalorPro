@@ -43,12 +43,14 @@ Core/Src/Principal.o: ../Core/Src/Principal.cpp \
  ../Core/Inc/GUI/CComponenteBaseTft.hpp ../Core/Inc/GUI/CEtiquetaTft.hpp \
  ../Core/Inc/GUI/CPantallaBase.hpp \
  ../Core/Inc/Estaciones/CEstacionBase.hpp \
- ../Core/Inc/ManejadorControles/CManejadorControlesBase.hpp \
+ ../Core/Inc/ManejadorControles/CManejadorEventosControles.hpp \
+ ../Core/Inc/ManejadorControles/CManejadorControles.hpp \
+ ../Core/Inc/Encoder/CEncoder.hpp \
+ ../Core/Inc/Encoder/CManejadorEventosEncoder.hpp \
  ../Core/Inc/GUI/PantallaManual/CPantallaManual.hpp \
  ../Core/Inc/Estaciones/CestacionBaku601.hpp \
- ../Core/Inc/Encoder/CManejadorEventosEncoder.hpp \
- ../Core/Inc/Max6675/MAX6675.hpp ../Core/Inc/Encoder/CEncoder.hpp \
- ../Core/Inc/PWM/Pwm.hpp ../Core/Inc/Calefactor/Calefactor.hpp \
+ ../Core/Inc/Max6675/MAX6675.hpp ../Core/Inc/PWM/Pwm.hpp \
+ ../Core/Inc/Calefactor/Calefactor.hpp \
  ../Core/Inc/SensorMagnetico/SensorMagnetico.hpp \
  ../Core/Inc/SensorMagnetico/CManejadorEventoSensorMagnetico.hpp \
  ../Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.hpp \
@@ -104,12 +106,13 @@ Core/Src/Principal.o: ../Core/Src/Principal.cpp \
 ../Core/Inc/GUI/CEtiquetaTft.hpp:
 ../Core/Inc/GUI/CPantallaBase.hpp:
 ../Core/Inc/Estaciones/CEstacionBase.hpp:
-../Core/Inc/ManejadorControles/CManejadorControlesBase.hpp:
+../Core/Inc/ManejadorControles/CManejadorEventosControles.hpp:
+../Core/Inc/ManejadorControles/CManejadorControles.hpp:
+../Core/Inc/Encoder/CEncoder.hpp:
+../Core/Inc/Encoder/CManejadorEventosEncoder.hpp:
 ../Core/Inc/GUI/PantallaManual/CPantallaManual.hpp:
 ../Core/Inc/Estaciones/CestacionBaku601.hpp:
-../Core/Inc/Encoder/CManejadorEventosEncoder.hpp:
 ../Core/Inc/Max6675/MAX6675.hpp:
-../Core/Inc/Encoder/CEncoder.hpp:
 ../Core/Inc/PWM/Pwm.hpp:
 ../Core/Inc/Calefactor/Calefactor.hpp:
 ../Core/Inc/SensorMagnetico/SensorMagnetico.hpp:

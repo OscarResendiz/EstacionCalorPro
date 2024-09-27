@@ -23,22 +23,21 @@
 #include "Delays/delays.hpp"
 #include <Timer/Timer.hpp>
 #include "GUI/ManejadorPantallas/CManejadorPantallas.hpp"
+#include "ManejadorControles/CManejadorControles.hpp"
 
 CestacionBaku601 *estacion;
 //TIM_HandleTypeDef htim2;
 CManejadorPantallas ManejadorPantallas;
+CManejadorControles *ManejadorControles;
+
 void IncializaSistema()
 {
-//	SerialPrintf("\r\IniciandoSistema");
 	CTimer timer;
-//	uartx_write_text("HOLA");
-	//TIMX->CR1|=1>>0;
-	//delay_us_tim_init();
 	HAL_NVIC_SetPriority(EXTI15_10_IRQn, 0, 0);
 	HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
 
-//	USART1_UART_Init();
 	estacion = new CestacionBaku601();
+	ManejadorControles=new CManejadorControles();
 	ILI9341_Init(); //initial driver setup to drive ili9341
 	ILI9341_Set_Rotation(SCREEN_HORIZONTAL_2);
 	ILI9341_Fill_Screen(WHITE);
@@ -50,12 +49,9 @@ void IncializaSistema()
 
 void EjecutaSistema()
 {
-//	CManejadorPantallas* manejador=CManejadorPantallas::DameControlador();
 	ManejadorPantallas.SetEstacion(estacion);
-//	CPantallaManual *pantalla = new CPantallaManual();
+	ManejadorPantallas.SetManejadorControles(ManejadorControles);
 	ManejadorPantallas.MuestraPantallaManual();
-//	pantalla->SetEstacion(estacion);
-//	pantalla->Show();
 	while (1)
 	{
 		estacion->Procesa();
@@ -66,25 +62,14 @@ void EjecutaSistema()
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
-
 	estacion->GPIO_INTERRUPCION(GPIO_Pin);
-/*
-	if(GPIO_Pin==EncoderClk_Pin)
-	{
-		estacion->InterrupcionEncoder();
-	}
-	else if(GPIO_Pin==CruceCero_Pin)
-	{
-		estacion->CruceXCero();
-	}
-*/
+	ManejadorControles->GPIO_INTERRUPCION(GPIO_Pin);
 }
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
 	if(htim->Instance==TIM3)
 	{
 		estacion->TimerTick();
-		//HAL_GPIO_TogglePin(GPIOC,GPIO_PIN_13);
 	}
 }
 

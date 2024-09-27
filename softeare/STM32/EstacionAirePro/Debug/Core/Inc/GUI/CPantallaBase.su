@@ -7,3 +7,4 @@
 ../Core/Inc/GUI/CPantallaBase.cpp:51:6:virtual void CPantallaBase::Ocultar()	16	static
 ../Core/Inc/GUI/CPantallaBase.cpp:56:6:virtual bool CPantallaBase::EsVisible()	16	static
 ../Core/Inc/GUI/CPantallaBase.cpp:60:6:virtual void CPantallaBase::SetVisible(bool)	16	static
+../Core/Inc/GUI/CPantallaBase.cpp:67:6:virtual void CPantallaBase::SetManejadorControles(CManejadorControles*)	16	static

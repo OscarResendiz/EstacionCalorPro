@@ -49,5 +49,10 @@ void CManejadorPantallas::AsignaPantallaActual(CPantallaBase* pantalla)
 		PantallaActual->Ocultar();
 	PantallaActual=pantalla;
 	PantallaActual->SetEstacion(Estacion);
+	PantallaActual->SetManejadorControles(ManejadorControles);
 	CambioPantalla=true;
+}
+void CManejadorPantallas::SetManejadorControles(CManejadorControles* manejador)
+{
+	ManejadorControles=manejador;
 }

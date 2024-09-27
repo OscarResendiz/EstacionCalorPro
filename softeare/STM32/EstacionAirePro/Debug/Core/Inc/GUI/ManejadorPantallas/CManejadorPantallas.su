@@ -6,3 +6,4 @@
 ../Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.cpp:32:6:void CManejadorPantallas::MuestraMenuPrincipal()	24	static
 ../Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.cpp:39:6:void CManejadorPantallas::RefrescaPantalla()	16	static
 ../Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.cpp:46:6:void CManejadorPantallas::AsignaPantallaActual(CPantallaBase*)	16	static
+../Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.cpp:55:6:void CManejadorPantallas::SetManejadorControles(CManejadorControles*)	16	static

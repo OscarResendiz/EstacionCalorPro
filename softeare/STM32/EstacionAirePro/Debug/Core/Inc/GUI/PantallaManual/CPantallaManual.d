@@ -35,7 +35,13 @@ Core/Inc/GUI/PantallaManual/CPantallaManual.o: \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
  ../Core/Inc/Constantes.hpp ../Core/Inc/GUI/CEtiquetaTft.hpp \
  ../Core/Inc/Estaciones/CEstacionBase.hpp \
- ../Core/Inc/ManejadorControles/CManejadorControlesBase.hpp \
+ ../Core/Inc/ManejadorControles/CManejadorEventosControles.hpp \
+ ../Core/Inc/ManejadorControles/CManejadorControles.hpp \
+ ../Core/Inc/Boton/CManejadorBoton.hpp \
+ ../Core/Inc/Boton/CManejadorEventosBoton.hpp \
+ ../Core/Inc/Encoder/CEncoder.hpp \
+ ../Core/Inc/Encoder/CManejadorEventosEncoder.hpp \
+ ../Core/Inc/ControlVelocidadAire/ControlVelocidadAire.hpp \
  ../Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.hpp \
  ../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.h \
  ../Core/Inc/GUI/Menu/CMenuItem.hpp ../Core/Inc/GUI/Menu/CMenu.hpp \
@@ -77,7 +83,13 @@ Core/Inc/GUI/PantallaManual/CPantallaManual.o: \
 ../Core/Inc/Constantes.hpp:
 ../Core/Inc/GUI/CEtiquetaTft.hpp:
 ../Core/Inc/Estaciones/CEstacionBase.hpp:
-../Core/Inc/ManejadorControles/CManejadorControlesBase.hpp:
+../Core/Inc/ManejadorControles/CManejadorEventosControles.hpp:
+../Core/Inc/ManejadorControles/CManejadorControles.hpp:
+../Core/Inc/Boton/CManejadorBoton.hpp:
+../Core/Inc/Boton/CManejadorEventosBoton.hpp:
+../Core/Inc/Encoder/CEncoder.hpp:
+../Core/Inc/Encoder/CManejadorEventosEncoder.hpp:
+../Core/Inc/ControlVelocidadAire/ControlVelocidadAire.hpp:
 ../Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.hpp:
 ../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.h:
 ../Core/Inc/GUI/Menu/CMenuItem.hpp:

@@ -1,11 +1,7 @@
-Core/Inc/GUI/CPantallaBase.o: ../Core/Inc/GUI/CPantallaBase.cpp \
- ../Core/Inc/GUI/CPantallaBase.hpp ../Core/Inc/GUI/CRectanguloTft.hpp \
- ../Core/Inc/GUI/CComponenteBaseTft.hpp \
- ../Core/Inc/ILI9341/ILI9341_GFX.hpp \
- ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
- ../Core/Inc/stm32f1xx_hal_conf.h \
- ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h \
- ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h \
+Core/Inc/ManejadorControles/CManejadorControles.o: \
+ ../Core/Inc/ManejadorControles/CManejadorControles.cpp \
+ ../Core/Inc/ManejadorControles/CManejadorControles.hpp \
+ ../Core/Inc/Boton/CManejadorBoton.hpp \
  ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
  ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
  ../Drivers/CMSIS/Include/core_cm3.h \
@@ -13,6 +9,10 @@ Core/Inc/GUI/CPantallaBase.o: ../Core/Inc/GUI/CPantallaBase.cpp \
  ../Drivers/CMSIS/Include/cmsis_compiler.h \
  ../Drivers/CMSIS/Include/cmsis_gcc.h \
  ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h \
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
+ ../Core/Inc/stm32f1xx_hal_conf.h \
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h \
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h \
@@ -31,23 +31,14 @@ Core/Inc/GUI/CPantallaBase.o: ../Core/Inc/GUI/CPantallaBase.cpp \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
- ../Core/Inc/Constantes.hpp ../Core/Inc/GUI/CEtiquetaTft.hpp \
- ../Core/Inc/Estaciones/CEstacionBase.hpp \
- ../Core/Inc/ManejadorControles/CManejadorEventosControles.hpp \
- ../Core/Inc/ManejadorControles/CManejadorControles.hpp \
- ../Core/Inc/Boton/CManejadorBoton.hpp \
  ../Core/Inc/Boton/CManejadorEventosBoton.hpp \
  ../Core/Inc/Encoder/CEncoder.hpp \
  ../Core/Inc/Encoder/CManejadorEventosEncoder.hpp \
- ../Core/Inc/ControlVelocidadAire/ControlVelocidadAire.hpp
-../Core/Inc/GUI/CPantallaBase.hpp:
-../Core/Inc/GUI/CRectanguloTft.hpp:
-../Core/Inc/GUI/CComponenteBaseTft.hpp:
-../Core/Inc/ILI9341/ILI9341_GFX.hpp:
-../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
-../Core/Inc/stm32f1xx_hal_conf.h:
-../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:
-../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h:
+ ../Core/Inc/ControlVelocidadAire/ControlVelocidadAire.hpp \
+ ../Core/Inc/ManejadorControles/CManejadorEventosControles.hpp \
+ ../Core/Inc/Constantes.hpp
+../Core/Inc/ManejadorControles/CManejadorControles.hpp:
+../Core/Inc/Boton/CManejadorBoton.hpp:
 ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h:
 ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h:
 ../Drivers/CMSIS/Include/core_cm3.h:
@@ -55,6 +46,10 @@ Core/Inc/GUI/CPantallaBase.o: ../Core/Inc/GUI/CPantallaBase.cpp \
 ../Drivers/CMSIS/Include/cmsis_compiler.h:
 ../Drivers/CMSIS/Include/cmsis_gcc.h:
 ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
+../Core/Inc/stm32f1xx_hal_conf.h:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h:
@@ -73,13 +68,9 @@ Core/Inc/GUI/CPantallaBase.o: ../Core/Inc/GUI/CPantallaBase.cpp \
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:
-../Core/Inc/Constantes.hpp:
-../Core/Inc/GUI/CEtiquetaTft.hpp:
-../Core/Inc/Estaciones/CEstacionBase.hpp:
-../Core/Inc/ManejadorControles/CManejadorEventosControles.hpp:
-../Core/Inc/ManejadorControles/CManejadorControles.hpp:
-../Core/Inc/Boton/CManejadorBoton.hpp:
 ../Core/Inc/Boton/CManejadorEventosBoton.hpp:
 ../Core/Inc/Encoder/CEncoder.hpp:
 ../Core/Inc/Encoder/CManejadorEventosEncoder.hpp:
 ../Core/Inc/ControlVelocidadAire/ControlVelocidadAire.hpp:
+../Core/Inc/ManejadorControles/CManejadorEventosControles.hpp:
+../Core/Inc/Constantes.hpp:

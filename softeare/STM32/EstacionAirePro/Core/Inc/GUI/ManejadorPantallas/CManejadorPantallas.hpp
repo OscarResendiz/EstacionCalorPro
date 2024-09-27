@@ -11,6 +11,8 @@
 #include "GUI/PantallaManual/CPantallaManual.hpp"
 #include <GUI/PantallaMenuPrincipal/CMenuPrincipal.h>
 #include "Estaciones/CEstacionBase.hpp"
+#include <ManejadorControles/CManejadorControles.hpp>
+
 class CManejadorPantallas
 {
 private:
@@ -19,7 +21,9 @@ private:
 	CPantallaBase* PantallaActual=nullptr;
 	CPantallaManual *pantallaManual=nullptr;
 	CMenuPrincipal* menuPrincipal=nullptr;
+	CManejadorControles *ManejadorControles;
 	bool CambioPantalla;
+
 	void AsignaPantallaActual(CPantallaBase* pantalla);
 public:
 	CManejadorPantallas();
@@ -28,6 +32,7 @@ public:
 	void MuestraPantallaManual();
 	void MuestraMenuPrincipal();
 	void SetEstacion(CEstacionBase* estacion);
+	void SetManejadorControles(CManejadorControles* manejador);
 	void RefrescaPantalla();
 };
 extern CManejadorPantallas ManejadorPantallas;

@@ -6,13 +6,13 @@
 ../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:72:6:void CPantallaManual::MuestraTemperaturas(bool)	6
 ../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:85:6:virtual void CPantallaManual::OnNivelAireEvent(int)	1
 ../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:91:6:void CPantallaManual::MuestraNivelAire(bool)	5
-../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:104:6:virtual void CPantallaManual::OnTemperaturaRealEvent(int)	1
-../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:110:6:virtual void CPantallaManual::OnPerillaIncremento()	1
-../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:116:6:virtual void CPantallaManual::OnPerillaDecremento()	1
-../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:122:6:virtual void CPantallaManual::Refresca()	2
-../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:128:7:virtual void CPantallaManual::OnBotonUnoClickEvent(int)	1
-../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:134:7:virtual void CPantallaManual::OnBotonDosClickEvent(int)	1
-../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:141:7:virtual void CPantallaManual::OnBotonPerillaClickEvent(int)	1
-../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:145:7:void CPantallaManual::MuestraInformacion(bool)	5
-../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:165:7:void CPantallaManual::GuardaTemperatura()	2
-../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:179:7:virtual void CPantallaManual::Show()	2
+../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:105:6:virtual void CPantallaManual::OnTemperaturaRealEvent(int)	1
+../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:111:6:virtual void CPantallaManual::OnPerillaIncremento()	1
+../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:117:6:virtual void CPantallaManual::OnPerillaDecremento()	1
+../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:123:6:virtual void CPantallaManual::Refresca()	2
+../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:129:7:virtual void CPantallaManual::OnBotonUnoClickEvent(int)	1
+../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:135:7:virtual void CPantallaManual::OnBotonDosClickEvent(int)	1
+../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:142:7:virtual void CPantallaManual::OnBotonPerillaClickEvent(int)	1
+../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:146:7:void CPantallaManual::MuestraInformacion(bool)	5
+../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:166:7:void CPantallaManual::GuardaTemperatura()	2
+../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:180:7:virtual void CPantallaManual::Show()	2

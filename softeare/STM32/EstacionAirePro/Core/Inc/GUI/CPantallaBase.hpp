@@ -10,9 +10,11 @@
 #include "GUI/CRectanguloTft.hpp"
 #include "GUI/CEtiquetaTft.hpp"
 #include "Estaciones/CEstacionBase.hpp"
+#include "ManejadorControles/CManejadorEventosControles.hpp"
+#include <ManejadorControles/CManejadorControles.hpp>
 
 //clase que sirve como base para las demas pantallas del sistema
-class CPantallaBase: public CRectanguloTft,CManejadorControlesBase
+class CPantallaBase: public CRectanguloTft, public CManejadorEventosControles
 {
 private:
 	bool Visible=false;
@@ -22,6 +24,7 @@ protected:
 	int VerTitulo = 1;
 	char Titulo[100];
 	CEstacionBase *Estacion;
+	CManejadorControles *ManejadorControles;
 
 public:
 	virtual ~CPantallaBase();
@@ -31,6 +34,7 @@ public:
 	virtual void Show();
 	virtual void Refresca();
 	virtual void SetEstacion(CEstacionBase *estacion);
+	virtual void SetManejadorControles(CManejadorControles *manejador);
 	virtual void Ocultar();
 	virtual bool EsVisible();
 	virtual void SetVisible(bool visible=true);

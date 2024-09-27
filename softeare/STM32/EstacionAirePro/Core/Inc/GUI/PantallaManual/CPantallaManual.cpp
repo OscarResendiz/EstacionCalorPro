@@ -64,7 +64,7 @@ void CPantallaManual::LeeDatosEstacion()
 {
 	SetTemperatura = Estacion->GetTemperatura();
 	Temperatura = Estacion->GetTemperaturaReal();
-	NivelAire = Estacion->GetNivelAire();
+	NivelAire = ManejadorControles->GetNivelAire();
 	EstadoBoquilla=Estacion->GetEstado();
 }
 
@@ -96,6 +96,7 @@ void CPantallaManual::MuestraNivelAire(bool forzar)
 			return;
 	}
 	NivelAireAnterior=NivelAire;
+	Estacion->SetNivelAire(NivelAire);
 	LabelAire->SetTexto("Aire: %d", NivelAire);
 	LabelAire->Show();
 

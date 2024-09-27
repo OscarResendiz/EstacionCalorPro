@@ -10,16 +10,13 @@
 #include "Estaciones/CEstacionBase.hpp"
 #include "Boton/CManejadorEventosBoton.hpp"
 #include "Encoder/CManejadorEventosEncoder.hpp"
-#include "Boton/CManejadorBoton.hpp"
 #include "Max6675/MAX6675.hpp"
-#include "Encoder/CEncoder.hpp"
-#include "ControlVelocidadAire/ControlVelocidadAire.hpp"
 #include "PWM/Pwm.hpp"
 #include "Calefactor/Calefactor.hpp"
 #include <SensorMagnetico/SensorMagnetico.hpp>
 
 
-class CestacionBaku601: public CEstacionBase,CManejadorEventosBoton,CManejadorEventosEncoder,CManejadorEventoSensorMagnetico
+class CestacionBaku601: public CEstacionBase,CManejadorEventoSensorMagnetico
 {
 private:
 	int TemperaturaMaxima = 500;
@@ -49,12 +46,6 @@ protected:
 	int EstadoCalefator=APAGADO;
 // OBJETO UTILIZADO PARA LA COMUNICACION CON EL MAX6675
 	MAX6675 thermocouple;
-	CManejadorBoton BotonMemoria1;
-	CManejadorBoton BotonMemoria2;
-	CManejadorBoton BotonMemoria3;
-	CManejadorBoton BotonManual;
-	CEncoder Encoder;
-	ControlVelocidadAire controlVelocidadAire;
 	Pwm pwm;
 	Calefactor calefactor;
 	SensorMagnetico sensorMagnetico;
@@ -70,12 +61,9 @@ public:
 	virtual int GetTemperatura();
 	//establece el nivel de aire
 	virtual void SetNivelAire(int nivel);
-	//regresa el nivel de aire setado
-	virtual int GetNivelAire();
 	//regresa 1 si esta activo y 0 si esta en reposo
 	virtual int GetEstado();
 	virtual void Procesa();
-	virtual void InterrupcionEncoder(int GPIO_Pin);
 	virtual void ActivarCalefactor();
 	virtual void DesactivarCalefactor();
 	virtual void CruceXCero(int gpio_pin);
@@ -89,18 +77,7 @@ private:
 	//verifica elnivel de aire
 	void procesaAire();
 	void ProcesaTemperaturaReal();
-	void ProcesaBotones(int gpio_pin);
-	//eventos de CManejadorEventosBoton
-	virtual void OnBotonClickEvent(int idBoton, int tiempoClick);
-	virtual void OnBotonPresionadoEvent(int idBoton);
-	virtual void OnBotonSueltoEvent(int idBoton);
 	//eventros del encoder
-	virtual void OnIncrementoEncoder(int id_Encoder);
-	virtual void OnDecrementoEncoder(int id_Encoder);
-	virtual void OnBotonEncoderClickEvent(int id_Encoder, int tiempoClick);
-	virtual void OnBotonEncoderPresionadoEvent(int id_Encoder);
-	virtual void OnBotonEncoderPresionadoLargoEvent(int id_Encoder);
-	virtual void OnBotonEncoderSueltoEvent(int id_Encoder);
 	virtual void IncrementaTemperatura();
 	virtual void DecrementaTemperatura();
 	void ProcesaCalefactor();

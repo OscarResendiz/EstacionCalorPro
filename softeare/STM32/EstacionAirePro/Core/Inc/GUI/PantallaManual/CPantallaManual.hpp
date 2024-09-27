@@ -8,7 +8,7 @@
 #ifndef INC_GUI_PANTALLAMANUAL_CPANTALLAMANUAL_HPP_
 #define INC_GUI_PANTALLAMANUAL_CPANTALLAMANUAL_HPP_
 #include "GUI/CPantallaBase.hpp"
-#include "ManejadorControles/CManejadorControlesBase.hpp"
+#include "ManejadorControles/CManejadorEventosControles.hpp"
 #include "Estaciones/CEstacionBase.hpp"
 
 class CPantallaManual: public CPantallaBase//, CManejadorControlesBase

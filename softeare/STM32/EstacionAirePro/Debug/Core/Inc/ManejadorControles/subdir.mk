@@ -5,13 +5,16 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-../Core/Inc/ManejadorControles/CManejadorControlesBase.cpp 
+../Core/Inc/ManejadorControles/CManejadorControles.cpp \
+../Core/Inc/ManejadorControles/CManejadorEventosControles.cpp 
 
 OBJS += \
-./Core/Inc/ManejadorControles/CManejadorControlesBase.o 
+./Core/Inc/ManejadorControles/CManejadorControles.o \
+./Core/Inc/ManejadorControles/CManejadorEventosControles.o 
 
 CPP_DEPS += \
-./Core/Inc/ManejadorControles/CManejadorControlesBase.d 
+./Core/Inc/ManejadorControles/CManejadorControles.d \
+./Core/Inc/ManejadorControles/CManejadorEventosControles.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -21,7 +24,7 @@ Core/Inc/ManejadorControles/%.o Core/Inc/ManejadorControles/%.su Core/Inc/Maneja
 clean: clean-Core-2f-Inc-2f-ManejadorControles
 
 clean-Core-2f-Inc-2f-ManejadorControles:
-	-$(RM) ./Core/Inc/ManejadorControles/CManejadorControlesBase.cyclo ./Core/Inc/ManejadorControles/CManejadorControlesBase.d ./Core/Inc/ManejadorControles/CManejadorControlesBase.o ./Core/Inc/ManejadorControles/CManejadorControlesBase.su
+	-$(RM) ./Core/Inc/ManejadorControles/CManejadorControles.cyclo ./Core/Inc/ManejadorControles/CManejadorControles.d ./Core/Inc/ManejadorControles/CManejadorControles.o ./Core/Inc/ManejadorControles/CManejadorControles.su ./Core/Inc/ManejadorControles/CManejadorEventosControles.cyclo ./Core/Inc/ManejadorControles/CManejadorEventosControles.d ./Core/Inc/ManejadorControles/CManejadorEventosControles.o ./Core/Inc/ManejadorControles/CManejadorEventosControles.su
 
 .PHONY: clean-Core-2f-Inc-2f-ManejadorControles
 

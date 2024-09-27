@@ -63,3 +63,11 @@ void CPantallaBase::SetVisible(bool visible)
 		return;
 	Visible=visible;
 }
+
+void CPantallaBase::SetManejadorControles(CManejadorControles *manejador)
+{
+	ManejadorControles=manejador;
+	if(ManejadorControles==NULL)
+		return;
+	ManejadorControles->SetManejadorControles(this);
+}

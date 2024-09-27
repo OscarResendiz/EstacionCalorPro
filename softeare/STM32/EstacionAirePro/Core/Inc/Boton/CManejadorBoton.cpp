@@ -52,31 +52,6 @@ void CManejadorBoton::Procesa(int gpio_pin)
 	int tiempoClick = 0;
 	int estado = 0;
 	estado = Leer();
-
-//	if (Estado == estado)
-//	{
-//		if (Estado == BOTON_PRESIONADO)
-		//{
-//			tiempoClick = HAL_GetTick() - TiempoInicioClick;
-	//		ReboteMilis = HAL_GetTick();  //leo el tiempo actual
-		//	if (tiempoClick >= TIRMPO_MILIS_BOTON_PRESIONADO_LARGO)
-			//{
-				//TiempoInicioClick = HAL_GetTick();
-//				Manejador->OnBotonPresionadoEvent(Identificador);
-//				Manejador->OnBotonPresionadoLargoEvent(Identificador);
-	//		}
-		//	return;
-//		}
-		//no ha cambiado por lo que no hay evento que informar
-//		return;
-//	}
-//	if (estado != PreEstado)
-//	{
-		//acaba de cambiar
-//		ReboteMilis = HAL_GetTick();  //leo el tiempo actual
-//		PreEstado = estado;
-//		return;
-//	}
 	//leo el tiempo actual
 	int tiempo = HAL_GetTick();
 	if ((tiempo - ReboteMilis) < TIEMPO_REBOTE)

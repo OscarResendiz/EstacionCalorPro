@@ -8,11 +8,11 @@
 #ifndef INC_MANEJADORCONTROLES_CMANEJADORCONTROLESBASE_HPP_
 #define INC_MANEJADORCONTROLES_CMANEJADORCONTROLESBASE_HPP_
 
-class CManejadorControlesBase
+class CManejadorEventosControles
 {
 public:
-	CManejadorControlesBase();
-	virtual ~CManejadorControlesBase();
+	CManejadorEventosControles();
+	virtual ~CManejadorEventosControles();
 	virtual void OnTemperaturaRealEvent(int temperatura);
 	virtual void OnNivelAireEvent(int aire);
 	virtual void OnBotonUnoClickEvent(int tiempoClick);

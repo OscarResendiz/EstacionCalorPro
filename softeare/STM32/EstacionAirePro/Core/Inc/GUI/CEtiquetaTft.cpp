@@ -92,7 +92,6 @@ void CEtiquetaTft::SetTexto(char *formato, ...)
 	va_end(pa);
 	buffer[posbuffer] = '\0';
 	strcpy(Texto, buffer);
-	//Texto=buffer;
 }
 
 char* CEtiquetaTft::DameTexto()
@@ -139,7 +138,6 @@ void CEtiquetaTft::Show()
 	//muestro el texto;
 	print (Texto);
 }
-
 void CEtiquetaTft::SetTextSize(int textZize)
 {
 	TextSize = textZize;
