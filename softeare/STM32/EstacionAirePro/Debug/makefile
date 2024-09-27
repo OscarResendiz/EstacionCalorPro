@@ -23,6 +23,7 @@ RM := rm -rf
 -include Core/Inc/GUI/PantallaManual/subdir.mk
 -include Core/Inc/GUI/Menu/subdir.mk
 -include Core/Inc/GUI/ManejadorPantallas/subdir.mk
+-include Core/Inc/GUI/ConfigurarPantallaMemoria/subdir.mk
 -include Core/Inc/GUI/subdir.mk
 -include Core/Inc/Estaciones/subdir.mk
 -include Core/Inc/Encoder/subdir.mk

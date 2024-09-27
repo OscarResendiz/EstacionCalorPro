@@ -28,7 +28,7 @@ CPantallaManual::CPantallaManual() :
 	LabelEstado = new CEtiquetaTft( 5, 145, 300, 35, COLOR::BLACK,"Estado: REPOSO", COLOR::WHITE, 3, 0, COLOR::RED);
 	LabelEstado->SetSeparacion(15, 5);
 
-	LabelPID=new CEtiquetaTft( 5, 180, 200, 30, COLOR::BLACK, "PID: 00",COLOR::WHITE, 3, 0, COLOR::RED);
+//	LabelPID=new CEtiquetaTft( 5, 180, 200, 30, COLOR::BLACK, "PID: 00",COLOR::WHITE, 3, 0, COLOR::RED);
 }
 
 
@@ -149,16 +149,6 @@ void CPantallaManual::Refresca()
 		MuestraTemperaturas(forzar);
 		MuestraEstado(forzar);
 		MuestraNivelAire(forzar);
-		//muestro el PID
-		int pid=Estacion->GetPID();
-		if(pid==0 && forzar==false)
-			return;
-		if(pidAnteriro!=pid || forzar==true)
-		{
-			pidAnteriro=pid;
-			LabelPID->SetTexto("PID: %d", pid);
-			LabelPID->Show();
-		}
 		//marco como visible
 		SetVisible(true);
 

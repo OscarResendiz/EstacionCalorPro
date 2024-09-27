@@ -46,6 +46,7 @@ Core/Inc/EEPROM \
 Core/Inc/Encoder \
 Core/Inc/Estaciones \
 Core/Inc/GUI \
+Core/Inc/GUI/ConfigurarPantallaMemoria \
 Core/Inc/GUI/ManejadorPantallas \
 Core/Inc/GUI/Menu \
 Core/Inc/GUI/PantallaManual \

@@ -13,6 +13,6 @@
 ../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:129:7:virtual void CPantallaManual::OnBotonUnoClickEvent(int)	24	static
 ../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:135:7:virtual void CPantallaManual::OnBotonDosClickEvent(int)	24	static
 ../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:142:7:virtual void CPantallaManual::OnBotonPerillaClickEvent(int)	16	static
-../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:146:7:void CPantallaManual::MuestraInformacion(bool)	24	static
-../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:166:7:void CPantallaManual::GuardaTemperatura()	48	static
-../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:180:7:virtual void CPantallaManual::Show()	88	static
+../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:146:7:void CPantallaManual::MuestraInformacion(bool)	16	static
+../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:156:7:void CPantallaManual::GuardaTemperatura()	48	static
+../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:170:7:virtual void CPantallaManual::Show()	88	static

@@ -13,13 +13,18 @@
 #include "GUI/Menu/CMenu.hpp"
 #include <GUI/Menu/CManejadorEventoMenu.hpp>
 
+#define MENU_SALIR 0
+#define MENU_MEMORIA_1 1
+#define MENU_MEMORIA_2 2
+#define MENU_MEMORIA_3 3
+
 class CMenuPrincipal:public CPantallaBase, CManejadorEventoMenu
 {
 private:
 	CMenu* Menu;
 	CEstacionBase *Estacion;
 	CMenuItem* item1,*item2;
-	int MENU_SALIR=31;
+
 public:
 	CMenuPrincipal();
 	virtual ~CMenuPrincipal();

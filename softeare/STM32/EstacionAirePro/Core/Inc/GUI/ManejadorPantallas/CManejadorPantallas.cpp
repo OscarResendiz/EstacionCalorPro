@@ -9,6 +9,7 @@
 #include "GUI/PantallaManual/CPantallaManual.hpp"
 #include <GUI/PantallaMenuPrincipal/CMenuPrincipal.h>
 #include <stdio.h>
+#include <GUI/ConfigurarPantallaMemoria/CConfigurarPantallaMemoria.hpp>
 
 CManejadorPantallas::CManejadorPantallas()
 {
@@ -55,4 +56,12 @@ void CManejadorPantallas::AsignaPantallaActual(CPantallaBase* pantalla)
 void CManejadorPantallas::SetManejadorControles(CManejadorControles* manejador)
 {
 	ManejadorControles=manejador;
+}
+
+void CManejadorPantallas::MuestraPantallaConfiguracionMemoria(int meoria)
+{
+	if(ConfigurarPantallaMemoria==NULL)
+		ConfigurarPantallaMemoria=new CConfigurarPantallaMemoria();
+	ConfigurarPantallaMemoria->SetMemoria(meoria);
+	AsignaPantallaActual(ConfigurarPantallaMemoria);
 }

@@ -18,12 +18,10 @@ CMenuPrincipal::CMenuPrincipal():
 	Menu=new CMenu(4,30,310, 210,COLOR::WHITE,1, COLOR::RED);
 	Menu->AsignaManejadorEventosMenu(this);
 	Menu->AsignaColoresItems(COLOR::BLACK, 0X776F, COLOR::WHITE, COLOR::BLACK);
-	char cadena[30];
-	for(int i=1;i<10;i++)
-	{
-		sprintf(cadena,"Opcion %d",i);
-		Menu->AgregaItem(cadena, i);
-	}
+
+	Menu->AgregaItem("Conf Memoria 1", MENU_MEMORIA_1);
+	Menu->AgregaItem("Conf Memoria 2", MENU_MEMORIA_2);
+	Menu->AgregaItem("Conf Memoria 3", MENU_MEMORIA_3);
 	Menu->AgregaItem("Salir", MENU_SALIR);
 }
 
@@ -36,12 +34,12 @@ void CMenuPrincipal::Show()
 {
 	CPantallaBase::Show();
 	Menu->Show();
+	SetVisible(true);
 }
 void CMenuPrincipal::Refresca()
 {
 	if(EsVisible()==false)
 		Show();
-	SetVisible(true);
 }
 void CMenuPrincipal::OnBotonCuatroClickEvent(int tiempoClick)
 {
@@ -61,7 +59,17 @@ void CMenuPrincipal::OnBotonPerillaClickEvent(int tiempoClick)
 }
 void CMenuPrincipal::OnMenuEvent(int identificador)
 {
-	if(MENU_SALIR==identificador)
+	switch(identificador)
+	{
+	case MENU_SALIR:
 		ManejadorPantallas.MuestraPantallaManual();
+		break;
+	case MENU_MEMORIA_1:
+	case MENU_MEMORIA_2:
+	case MENU_MEMORIA_3:
+		ManejadorPantallas.MuestraPantallaConfiguracionMemoria(identificador);
+		break;
+	}
+
 }
 

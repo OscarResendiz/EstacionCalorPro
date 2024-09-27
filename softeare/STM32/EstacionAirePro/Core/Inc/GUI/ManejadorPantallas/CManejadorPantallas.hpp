@@ -12,6 +12,7 @@
 #include <GUI/PantallaMenuPrincipal/CMenuPrincipal.h>
 #include "Estaciones/CEstacionBase.hpp"
 #include <ManejadorControles/CManejadorControles.hpp>
+#include <GUI/ConfigurarPantallaMemoria/CConfigurarPantallaMemoria.hpp>
 
 class CManejadorPantallas
 {
@@ -22,6 +23,7 @@ private:
 	CPantallaManual *pantallaManual=nullptr;
 	CMenuPrincipal* menuPrincipal=nullptr;
 	CManejadorControles *ManejadorControles;
+	CConfigurarPantallaMemoria *ConfigurarPantallaMemoria;
 	bool CambioPantalla;
 
 	void AsignaPantallaActual(CPantallaBase* pantalla);
@@ -34,6 +36,7 @@ public:
 	void SetEstacion(CEstacionBase* estacion);
 	void SetManejadorControles(CManejadorControles* manejador);
 	void RefrescaPantalla();
+	void MuestraPantallaConfiguracionMemoria(int meoria);
 };
 extern CManejadorPantallas ManejadorPantallas;
 #endif /* INC_GUI_MANEJADORPANTALLAS_H_ */

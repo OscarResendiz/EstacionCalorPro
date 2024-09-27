@@ -1,10 +1,10 @@
-../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.cpp:15:1:CMenuPrincipal::CMenuPrincipal()	80	static
-../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.cpp:30:1:CMenuPrincipal::~CMenuPrincipal()	16	static
-../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.cpp:30:1:virtual CMenuPrincipal::~CMenuPrincipal()	16	static
-../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.cpp:35:6:virtual void CMenuPrincipal::Show()	16	static
-../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.cpp:40:6:virtual void CMenuPrincipal::Refresca()	16	static
-../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.cpp:46:6:virtual void CMenuPrincipal::OnBotonCuatroClickEvent(int)	16	static
-../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.cpp:50:6:virtual void CMenuPrincipal::OnPerillaIncremento()	16	static
-../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.cpp:54:6:virtual void CMenuPrincipal::OnPerillaDecremento()	16	static
-../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.cpp:58:6:virtual void CMenuPrincipal::OnBotonPerillaClickEvent(int)	16	static
-../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.cpp:62:6:virtual void CMenuPrincipal::OnMenuEvent(int)	16	static
+../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.cpp:15:1:CMenuPrincipal::CMenuPrincipal()	40	static
+../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.cpp:28:1:CMenuPrincipal::~CMenuPrincipal()	16	static
+../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.cpp:28:1:virtual CMenuPrincipal::~CMenuPrincipal()	16	static
+../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.cpp:33:6:virtual void CMenuPrincipal::Show()	16	static
+../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.cpp:39:6:virtual void CMenuPrincipal::Refresca()	16	static
+../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.cpp:44:6:virtual void CMenuPrincipal::OnBotonCuatroClickEvent(int)	16	static
+../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.cpp:48:6:virtual void CMenuPrincipal::OnPerillaIncremento()	16	static
+../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.cpp:52:6:virtual void CMenuPrincipal::OnPerillaDecremento()	16	static
+../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.cpp:56:6:virtual void CMenuPrincipal::OnBotonPerillaClickEvent(int)	16	static
+../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.cpp:60:6:virtual void CMenuPrincipal::OnMenuEvent(int)	16	static

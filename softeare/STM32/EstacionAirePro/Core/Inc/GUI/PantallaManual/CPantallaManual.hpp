@@ -29,7 +29,7 @@ private:
 	CEtiquetaTft *LabelTemperaturas;
 	CEtiquetaTft *LabelAire;
 	CEtiquetaTft *LabelEstado;
-	CEtiquetaTft *LabelPID;
+//	CEtiquetaTft *LabelPID;
 
 public:
 	CPantallaManual(CEstacionBase *estacion);

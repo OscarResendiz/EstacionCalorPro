@@ -12,6 +12,7 @@
 "./Core/Inc/GUI/CEtiquetaTft.o"
 "./Core/Inc/GUI/CPantallaBase.o"
 "./Core/Inc/GUI/CRectanguloTft.o"
+"./Core/Inc/GUI/ConfigurarPantallaMemoria/CConfigurarPantallaMemoria.o"
 "./Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.o"
 "./Core/Inc/GUI/Menu/CManejadorEventoMenu.o"
 "./Core/Inc/GUI/Menu/CMenu.o"
