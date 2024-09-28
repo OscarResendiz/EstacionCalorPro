@@ -34,13 +34,9 @@ uint8_t MAX6675::MAX6675_pulso()
 	uint8_t lei;
 	HAL_GPIO_WritePin(CK_MAX_GPIO_Port, CK_MAX_Pin,	GPIO_PinState::GPIO_PIN_SET); //SACA UN 1 reloj
 	for(int i=0;i<1000;i++);
-//	Delay_us(10);
-//	HAL_Delay(1);
 	lei = HAL_GPIO_ReadPin(DAT_MAX_GPIO_Port, DAT_MAX_Pin); // lee el pin
 	HAL_GPIO_WritePin(CK_MAX_GPIO_Port, CK_MAX_Pin,	GPIO_PinState::GPIO_PIN_RESET); //SACA UN 0 reloj
 	for(int i=0;i<1000;i++);
-//	Delay_us(10);
-//	HAL_Delay(1);
 	return lei;
 }
 float MAX6675::MAX6675_lee()
@@ -56,7 +52,6 @@ float MAX6675::MAX6675_lee()
 	uint16_t max6675_dato=0 ;
 	int8_t cont;
 	HAL_GPIO_WritePin(CS_MAX_GPIO_Port, CS_MAX_Pin,	GPIO_PinState::GPIO_PIN_RESET); //Habilita el modulo
-//	HAL_Delay(1);
 	for (cont = 15; cont >= 0; cont--)
 	{
 		if (MAX6675_pulso() == 1)
@@ -65,10 +60,8 @@ float MAX6675::MAX6675_lee()
 	}
 
 	HAL_GPIO_WritePin(CS_MAX_GPIO_Port, CS_MAX_Pin,	GPIO_PinState::GPIO_PIN_SET); //APAGA el modulo
-//	HAL_Delay(1);
 	sensor_dato = (max6675_dato >> 3); //desplaz 3 veces
 	UltimaTemperatura=(((float) sensor_dato * 0.25)); //0.25
-//	SerialPrintf("temperatura=%f sensor=%d\r\n", UltimaTemperatura,sensor_dato);
 	return UltimaTemperatura+26;
 }
 void MAX6675::Init()
@@ -77,7 +70,6 @@ void MAX6675::Init()
 	GPIO_InitTypeDef GPIO_InitStruct =	{ 0 };
 
 	HAL_GPIO_WritePin(GPIOA, CK_MAX_Pin | CS_MAX_Pin, GPIO_PIN_RESET);
-	/*Configure GPIO pin : DAT_MAX_Pin */
 	GPIO_InitStruct.Pin = DAT_MAX_Pin;
 	GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
 	GPIO_InitStruct.Pull = GPIO_NOPULL;

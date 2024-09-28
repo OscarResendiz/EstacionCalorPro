@@ -93,8 +93,6 @@ void SerialPrintf(char *formato, ...)
 
     char *p;
     char buffer[100];
-//    for(int i=0;i<100;i++)
-  //  	buffer[i]='\0';
 
     char formatoFlotante[20];
     int posisionFormato=0;

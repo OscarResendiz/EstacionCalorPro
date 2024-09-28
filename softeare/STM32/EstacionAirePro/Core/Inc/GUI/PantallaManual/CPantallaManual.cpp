@@ -27,8 +27,6 @@ CPantallaManual::CPantallaManual() :
 	LabelAire = new CEtiquetaTft( 5, 105, 200, 30, COLOR::BLACK, "Aire: 00",COLOR::WHITE, 3, 0, COLOR::RED);
 	LabelEstado = new CEtiquetaTft( 5, 145, 300, 35, COLOR::BLACK,"Estado: REPOSO", COLOR::WHITE, 3, 0, COLOR::RED);
 	LabelEstado->SetSeparacion(15, 5);
-
-//	LabelPID=new CEtiquetaTft( 5, 180, 200, 30, COLOR::BLACK, "PID: 00",COLOR::WHITE, 3, 0, COLOR::RED);
 }
 
 
@@ -126,19 +124,6 @@ void CPantallaManual::Refresca()
 		GuardaTemperatura();
 	MuestraInformacion(false);
 }
- void CPantallaManual::OnBotonUnoClickEvent(int tiempoClick)
-{
-	int pid=Estacion->GetPID();
-	pid++;
-	Estacion->SetPID(pid);
-}
- void CPantallaManual::OnBotonDosClickEvent(int tiempoClick)
-{
-		int pid=Estacion->GetPID();
-		pid--;
-		Estacion->SetPID(pid);
-
-}
  void CPantallaManual::OnBotonPerillaClickEvent(int tiempoClick)
  {
 	 ManejadorPantallas.MuestraMenuPrincipal();
@@ -188,3 +173,15 @@ void CPantallaManual::Refresca()
  	LeeDatosEstacion();
  	MuestraInformacion(true);
  }
+void CPantallaManual::OnBotonTresClickEvent(int tiempoClick)
+{
+	ManejadorPantallas.MuestraPantallaMemoria(3);
+}
+void CPantallaManual::OnBotonUnoClickEvent(int tiempoClick)
+{
+	ManejadorPantallas.MuestraPantallaMemoria(1);
+}
+void CPantallaManual::OnBotonDosClickEvent(int tiempoClick)
+{
+	ManejadorPantallas.MuestraPantallaMemoria(2);
+}

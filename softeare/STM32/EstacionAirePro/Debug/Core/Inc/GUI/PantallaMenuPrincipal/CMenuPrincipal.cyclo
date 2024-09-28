@@ -8,3 +8,6 @@
 ../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.cpp:52:6:virtual void CMenuPrincipal::OnPerillaDecremento()	1
 ../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.cpp:56:6:virtual void CMenuPrincipal::OnBotonPerillaClickEvent(int)	1
 ../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.cpp:60:6:virtual void CMenuPrincipal::OnMenuEvent(int)	4
+../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.cpp:76:6:virtual void CMenuPrincipal::OnBotonTresClickEvent(int)	1
+../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.cpp:80:6:virtual void CMenuPrincipal::OnBotonUnoClickEvent(int)	1
+../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.cpp:84:6:virtual void CMenuPrincipal::OnBotonDosClickEvent(int)	1

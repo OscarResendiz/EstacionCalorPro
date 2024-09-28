@@ -36,6 +36,9 @@ public:
 	virtual void OnBotonPerillaClickEvent(int tiempoClick);
 	virtual void OnMenuEvent(int identificador);
 
+	virtual void OnBotonUnoClickEvent(int tiempoClick);
+	virtual void OnBotonDosClickEvent(int tiempoClick);
+	virtual void OnBotonTresClickEvent(int tiempoClick);
 
 };
 

@@ -62,7 +62,7 @@ void CMenuPrincipal::OnMenuEvent(int identificador)
 	switch(identificador)
 	{
 	case MENU_SALIR:
-		ManejadorPantallas.MuestraPantallaManual();
+		ManejadorPantallas.MuestraPantallaAnterior();
 		break;
 	case MENU_MEMORIA_1:
 	case MENU_MEMORIA_2:
@@ -73,3 +73,15 @@ void CMenuPrincipal::OnMenuEvent(int identificador)
 
 }
 
+void CMenuPrincipal::OnBotonTresClickEvent(int tiempoClick)
+{
+	ManejadorPantallas.MuestraPantallaMemoria(3);
+}
+void CMenuPrincipal::OnBotonUnoClickEvent(int tiempoClick)
+{
+	ManejadorPantallas.MuestraPantallaMemoria(1);
+}
+void CMenuPrincipal::OnBotonDosClickEvent(int tiempoClick)
+{
+	ManejadorPantallas.MuestraPantallaMemoria(2);
+}

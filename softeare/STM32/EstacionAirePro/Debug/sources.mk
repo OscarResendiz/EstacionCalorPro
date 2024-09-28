@@ -50,6 +50,7 @@ Core/Inc/GUI/ConfigurarPantallaMemoria \
 Core/Inc/GUI/ManejadorPantallas \
 Core/Inc/GUI/Menu \
 Core/Inc/GUI/PantallaManual \
+Core/Inc/GUI/PantallaMemoria \
 Core/Inc/GUI/PantallaMenuPrincipal \
 Core/Inc/ILI9341 \
 Core/Inc/ManejadorControles \

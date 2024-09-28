@@ -3,8 +3,8 @@
 ../Core/Inc/GUI/CPantallaBase.cpp:16:1:CPantallaBase::CPantallaBase(int, char*)	1
 ../Core/Inc/GUI/CPantallaBase.cpp:29:6:virtual void CPantallaBase::Show()	1
 ../Core/Inc/GUI/CPantallaBase.cpp:36:6:virtual void CPantallaBase::Refresca()	1
-../Core/Inc/GUI/CPantallaBase.cpp:44:6:virtual void CPantallaBase::SetEstacion(CEstacionBase*)	1
-../Core/Inc/GUI/CPantallaBase.cpp:51:6:virtual void CPantallaBase::Ocultar()	1
-../Core/Inc/GUI/CPantallaBase.cpp:56:6:virtual bool CPantallaBase::EsVisible()	1
-../Core/Inc/GUI/CPantallaBase.cpp:60:6:virtual void CPantallaBase::SetVisible(bool)	2
-../Core/Inc/GUI/CPantallaBase.cpp:67:6:virtual void CPantallaBase::SetManejadorControles(CManejadorControles*)	2
+../Core/Inc/GUI/CPantallaBase.cpp:39:6:virtual void CPantallaBase::SetEstacion(CEstacionBase*)	1
+../Core/Inc/GUI/CPantallaBase.cpp:46:6:virtual void CPantallaBase::Ocultar()	1
+../Core/Inc/GUI/CPantallaBase.cpp:51:6:virtual bool CPantallaBase::EsVisible()	1
+../Core/Inc/GUI/CPantallaBase.cpp:55:6:virtual void CPantallaBase::SetVisible(bool)	2
+../Core/Inc/GUI/CPantallaBase.cpp:62:6:virtual void CPantallaBase::SetManejadorControles(CManejadorControles*)	2

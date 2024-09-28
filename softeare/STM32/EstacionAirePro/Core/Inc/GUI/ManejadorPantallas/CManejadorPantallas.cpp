@@ -48,6 +48,7 @@ void CManejadorPantallas::AsignaPantallaActual(CPantallaBase* pantalla)
 {
 	if(PantallaActual!=NULL)
 		PantallaActual->Ocultar();
+	PantallaAnterior=PantallaActual;
 	PantallaActual=pantalla;
 	PantallaActual->SetEstacion(Estacion);
 	PantallaActual->SetManejadorControles(ManejadorControles);
@@ -64,4 +65,18 @@ void CManejadorPantallas::MuestraPantallaConfiguracionMemoria(int meoria)
 		ConfigurarPantallaMemoria=new CConfigurarPantallaMemoria();
 	ConfigurarPantallaMemoria->SetMemoria(meoria);
 	AsignaPantallaActual(ConfigurarPantallaMemoria);
+}
+void CManejadorPantallas::MuestraPantallaMemoria(int memoria)
+{
+	if(PantallaMemoria==NULL)
+		PantallaMemoria=new CPantallaMemoria();
+	PantallaMemoria->SetMemoria(memoria);
+	AsignaPantallaActual(PantallaMemoria);
+
+}
+void CManejadorPantallas::MuestraPantallaAnterior()
+{
+	if(PantallaAnterior==NULL)
+		return;
+	AsignaPantallaActual(PantallaAnterior);
 }

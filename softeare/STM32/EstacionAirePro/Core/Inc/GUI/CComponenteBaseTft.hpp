@@ -95,11 +95,8 @@ public:
 			uint16_t bg, uint8_t size_x, uint8_t size_y);
 	void getTextBounds(const char *string, int16_t x, int16_t y, int16_t *x1,
 			int16_t *y1, uint16_t *w, uint16_t *h);
-//	void getTextBounds(const __FlashStringHelper *s, int16_t x, int16_t y,int16_t *x1, int16_t *y1, uint16_t *w, uint16_t *h);
-	//void getTextBounds(const String &str, int16_t x, int16_t y, int16_t *x1,			int16_t *y1, uint16_t *w, uint16_t *h);
 	void setTextSize(uint8_t s);
 	void setTextSize(uint8_t sx, uint8_t sy);
-//	void setFont(const GFXfont *f = NULL);
 	void setCursor(int16_t x, int16_t y);
 	void setTextColor(uint16_t c);
 	void setTextColor(uint16_t c, uint16_t bg);

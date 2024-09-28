@@ -225,12 +225,10 @@ void CestacionBaku601::CruceXCero(int gpio_pin)
 	if(ciclos<PotenciaCalefactor)
 	{
 		calefactor.Encender();
-//		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6,	GPIO_PinState::GPIO_PIN_SET);
 	}
 	else
 	{
 		calefactor.Apagar();
-//		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6,	GPIO_PinState::GPIO_PIN_RESET);
 	}
 	ciclos=ciclos+1;
 }

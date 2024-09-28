@@ -57,7 +57,8 @@ Core/Src/Principal.o: ../Core/Src/Principal.cpp \
  ../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.h \
  ../Core/Inc/GUI/Menu/CMenuItem.hpp ../Core/Inc/GUI/Menu/CMenu.hpp \
  ../Core/Inc/GUI/Menu/CManejadorEventoMenu.hpp \
- ../Core/Inc/GUI/ConfigurarPantallaMemoria/CConfigurarPantallaMemoria.hpp
+ ../Core/Inc/GUI/ConfigurarPantallaMemoria/CConfigurarPantallaMemoria.hpp \
+ ../Core/Inc/GUI/PantallaMemoria/CPantallaMemoria.hpp
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
 ../Core/Inc/stm32f1xx_hal_conf.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h:
@@ -124,3 +125,4 @@ Core/Src/Principal.o: ../Core/Src/Principal.cpp \
 ../Core/Inc/GUI/Menu/CMenu.hpp:
 ../Core/Inc/GUI/Menu/CManejadorEventoMenu.hpp:
 ../Core/Inc/GUI/ConfigurarPantallaMemoria/CConfigurarPantallaMemoria.hpp:
+../Core/Inc/GUI/PantallaMemoria/CPantallaMemoria.hpp:

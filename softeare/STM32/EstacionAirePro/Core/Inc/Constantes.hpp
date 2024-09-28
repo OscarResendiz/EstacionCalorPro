@@ -49,9 +49,7 @@
 #define STLK_TX_Pin GPIO_PIN_9
 #define STLK_TX_GPIO_Port GPIOD
 #define USB_PowerSwitchOn_Pin GPIO_PIN_6
-//#define USB_PowerSwitchOn_GPIO_Port GPIOG
 #define USB_OverCurrent_Pin GPIO_PIN_7
-//#define USB_OverCurrent_GPIO_Port GPIOG
 #define CS_Pin GPIO_PIN_0
 #define CS_GPIO_Port GPIOB
 #define DC_Pin GPIO_PIN_1
@@ -70,7 +68,7 @@
 #define TMS_GPIO_Port GPIOA
 #define TCK_Pin GPIO_PIN_14
 #define TCK_GPIO_Port GPIOA
-#define RST_Pin GPIO_PIN_5//GPIO_PIN_10
+#define RST_Pin GPIO_PIN_5
 #define RST_GPIO_Port GPIOC
 #define RMII_TX_EN_Pin GPIO_PIN_11
 #define RMII_TX_EN_GPIO_Port GPIOG

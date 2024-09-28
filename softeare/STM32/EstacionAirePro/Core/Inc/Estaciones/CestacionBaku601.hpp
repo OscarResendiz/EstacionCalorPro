@@ -36,7 +36,7 @@ private:
 	float PID_value = 0;
 	// Constantes de PID
 	float Kc = 5;
-	float Tao_I =600;//500; //80;
+	float Tao_I =600;
 	int TiempoAntiReboresCruceXCero=1;
 	int ciclos=0;
 protected:

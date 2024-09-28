@@ -6,5 +6,7 @@
 ../Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.cpp:33:6:void CManejadorPantallas::MuestraMenuPrincipal()	2
 ../Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.cpp:40:6:void CManejadorPantallas::RefrescaPantalla()	2
 ../Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.cpp:47:6:void CManejadorPantallas::AsignaPantallaActual(CPantallaBase*)	2
-../Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.cpp:56:6:void CManejadorPantallas::SetManejadorControles(CManejadorControles*)	1
-../Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.cpp:61:6:void CManejadorPantallas::MuestraPantallaConfiguracionMemoria(int)	2
+../Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.cpp:57:6:void CManejadorPantallas::SetManejadorControles(CManejadorControles*)	1
+../Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.cpp:62:6:void CManejadorPantallas::MuestraPantallaConfiguracionMemoria(int)	2
+../Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.cpp:69:6:void CManejadorPantallas::MuestraPantallaMemoria(int)	2
+../Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.cpp:77:6:void CManejadorPantallas::MuestraPantallaAnterior()	2

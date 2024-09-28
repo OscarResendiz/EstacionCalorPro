@@ -18,6 +18,7 @@
 "./Core/Inc/GUI/Menu/CMenu.o"
 "./Core/Inc/GUI/Menu/CMenuItem.o"
 "./Core/Inc/GUI/PantallaManual/CPantallaManual.o"
+"./Core/Inc/GUI/PantallaMemoria/CPantallaMemoria.o"
 "./Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.o"
 "./Core/Inc/ILI9341/ILI9341_GFX.o"
 "./Core/Inc/ILI9341/ILI9341_STM32_Driver.o"

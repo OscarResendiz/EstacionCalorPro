@@ -1,7 +1,7 @@
 ../Core/Inc/Uart/Uart.c:15:6:uartx_write	16	static
-../Core/Inc/Uart/Uart.c:21:6:uartx_write_text	16	static
+../Core/Inc/Uart/Uart.c:21:6:uartx_write_text	8	static
 ../Core/Inc/Uart/Uart.c:29:9:uartx_read	16	static
 ../Core/Inc/Uart/Uart.c:38:6:uartx_read_text	24	static
-../Core/Inc/Uart/Uart.c:54:6:USART1_UART_Init	8	static
-../Core/Inc/Uart/Uart.c:81:6:ErrorHandler	4	static,ignoring_inline_asm
-../Core/Inc/Uart/Uart.c:91:6:SerialPrintf	256	static
+../Core/Inc/Uart/Uart.c:54:6:USART1_UART_Init	8	static,ignoring_inline_asm
+../Core/Inc/Uart/Uart.c:81:6:ErrorHandler	0	static,ignoring_inline_asm
+../Core/Inc/Uart/Uart.c:91:6:SerialPrintf	248	static

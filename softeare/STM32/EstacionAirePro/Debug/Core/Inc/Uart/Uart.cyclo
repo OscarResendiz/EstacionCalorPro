@@ -4,4 +4,4 @@
 ../Core/Inc/Uart/Uart.c:38:6:uartx_read_text	3
 ../Core/Inc/Uart/Uart.c:54:6:USART1_UART_Init	2
 ../Core/Inc/Uart/Uart.c:81:6:ErrorHandler	1
-../Core/Inc/Uart/Uart.c:91:6:SerialPrintf	16
+../Core/Inc/Uart/Uart.c:91:6:SerialPrintf	14

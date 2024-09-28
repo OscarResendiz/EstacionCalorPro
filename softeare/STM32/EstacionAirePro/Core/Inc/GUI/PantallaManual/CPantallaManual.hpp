@@ -11,7 +11,7 @@
 #include "ManejadorControles/CManejadorEventosControles.hpp"
 #include "Estaciones/CEstacionBase.hpp"
 
-class CPantallaManual: public CPantallaBase//, CManejadorControlesBase
+class CPantallaManual: public CPantallaBase
 {
 private:
 	int SetTemperatura = 0;
@@ -29,7 +29,6 @@ private:
 	CEtiquetaTft *LabelTemperaturas;
 	CEtiquetaTft *LabelAire;
 	CEtiquetaTft *LabelEstado;
-//	CEtiquetaTft *LabelPID;
 
 public:
 	CPantallaManual(CEstacionBase *estacion);
@@ -54,6 +53,7 @@ private:
 
 	virtual void OnBotonUnoClickEvent(int tiempoClick);
 	virtual void OnBotonDosClickEvent(int tiempoClick);
+	virtual void OnBotonTresClickEvent(int tiempoClick);
 	void GuardaTemperatura();
 
 };

@@ -30,7 +30,6 @@ private:
 	CManejadorEventosEncoder *Manejador;
 
 	int ID_Encoder;
-	//---------------------------------
 	int CLK_status = 0;
 	int DT_status = 0;
 	int CLK_Rebotes = 0;

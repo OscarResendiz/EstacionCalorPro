@@ -19,7 +19,7 @@ CPantallaBase::CPantallaBase(int verTitulo, char *titulo) :
 	Visible=false;
 	VerTitulo = verTitulo;
 	strcpy(Titulo, titulo);
-	setRotation(3);  //ROTACION::HORIZONTAL); //en horizontal
+	setRotation(3);
 	int ancho = width();
 	int alto = height();
 	Redimenciona(ancho, alto);
@@ -35,11 +35,6 @@ void CPantallaBase::Show()
 }
 void CPantallaBase::Refresca()
 {
-//	if(visible==false)
-//	{
-		//Show();
-//		visible=true;
-//	}
 }
 void CPantallaBase::SetEstacion(CEstacionBase *estacion)
 {

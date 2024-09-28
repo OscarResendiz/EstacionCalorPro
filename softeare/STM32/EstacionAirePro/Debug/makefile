@@ -20,6 +20,7 @@ RM := rm -rf
 -include Core/Inc/ManejadorControles/subdir.mk
 -include Core/Inc/ILI9341/subdir.mk
 -include Core/Inc/GUI/PantallaMenuPrincipal/subdir.mk
+-include Core/Inc/GUI/PantallaMemoria/subdir.mk
 -include Core/Inc/GUI/PantallaManual/subdir.mk
 -include Core/Inc/GUI/Menu/subdir.mk
 -include Core/Inc/GUI/ManejadorPantallas/subdir.mk
