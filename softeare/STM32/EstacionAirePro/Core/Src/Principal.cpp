@@ -14,7 +14,6 @@
 #include "Boton/CManejadorBoton.hpp"
 #include <ILI9341/ILI9341_GFX.hpp>
 #include <ILI9341/ILI9341_STM32_Driver.hpp>
-#include <ILI9341/ILI9341_Touchscreen.hpp>
 #include "GUI/CRectanguloTft.hpp"
 #include "GUI/CEtiquetaTft.hpp"
 #include "GUI/CPantallaBase.hpp"

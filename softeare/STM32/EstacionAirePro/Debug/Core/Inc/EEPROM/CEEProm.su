@@ -1,5 +1,0 @@
-../Core/Inc/EEPROM/CEEProm.cpp:10:1:CEEProm::CEEProm()	16	static
-../Core/Inc/EEPROM/CEEProm.cpp:16:1:CEEProm::~CEEProm()	16	static
-../Core/Inc/EEPROM/CEEProm.cpp:16:1:virtual CEEProm::~CEEProm()	16	static
-../Core/Inc/EEPROM/CEEProm.cpp:21:6:void CEEProm::Guardar(int, int)	24	static
-../Core/Inc/EEPROM/CEEProm.cpp:25:5:int CEEProm::Leer(int)	16	static

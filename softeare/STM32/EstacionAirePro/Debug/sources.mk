@@ -42,7 +42,6 @@ Core/Inc/Boton \
 Core/Inc/Calefactor \
 Core/Inc/ControlVelocidadAire \
 Core/Inc/Delays \
-Core/Inc/EEPROM \
 Core/Inc/Encoder \
 Core/Inc/Estaciones \
 Core/Inc/GUI \

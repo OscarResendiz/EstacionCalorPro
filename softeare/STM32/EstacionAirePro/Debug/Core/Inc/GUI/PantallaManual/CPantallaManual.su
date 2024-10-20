@@ -10,10 +10,10 @@
 ../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:109:6:virtual void CPantallaManual::OnPerillaIncremento()	16	static
 ../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:115:6:virtual void CPantallaManual::OnPerillaDecremento()	16	static
 ../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:121:6:virtual void CPantallaManual::Refresca()	16	static
-../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:127:7:virtual void CPantallaManual::OnBotonPerillaClickEvent(int)	16	static
+../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:127:7:virtual void CPantallaManual::OnBotonPerillaClickEvent()	16	static
 ../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:131:7:void CPantallaManual::MuestraInformacion(bool)	16	static
 ../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:141:7:void CPantallaManual::GuardaTemperatura()	48	static
 ../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:155:7:virtual void CPantallaManual::Show()	88	static
-../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:176:6:virtual void CPantallaManual::OnBotonTresClickEvent(int)	16	static
-../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:180:6:virtual void CPantallaManual::OnBotonUnoClickEvent(int)	16	static
-../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:184:6:virtual void CPantallaManual::OnBotonDosClickEvent(int)	16	static
+../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:176:6:virtual void CPantallaManual::OnBotonTresClickEvent()	16	static
+../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:180:6:virtual void CPantallaManual::OnBotonUnoClickEvent()	16	static
+../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:184:6:virtual void CPantallaManual::OnBotonDosClickEvent()	16	static

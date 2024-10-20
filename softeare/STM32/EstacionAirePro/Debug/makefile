@@ -28,7 +28,6 @@ RM := rm -rf
 -include Core/Inc/GUI/subdir.mk
 -include Core/Inc/Estaciones/subdir.mk
 -include Core/Inc/Encoder/subdir.mk
--include Core/Inc/EEPROM/subdir.mk
 -include Core/Inc/Delays/subdir.mk
 -include Core/Inc/ControlVelocidadAire/subdir.mk
 -include Core/Inc/Calefactor/subdir.mk

@@ -1,0 +1,13 @@
+../Core/Inc/GUI/PantallaMemoria/CPantallaMemoria.cpp:15:1:CPantallaMemoria::~CPantallaMemoria()	16	static
+../Core/Inc/GUI/PantallaMemoria/CPantallaMemoria.cpp:15:1:virtual CPantallaMemoria::~CPantallaMemoria()	16	static
+../Core/Inc/GUI/PantallaMemoria/CPantallaMemoria.cpp:21:1:CPantallaMemoria::CPantallaMemoria()	64	static
+../Core/Inc/GUI/PantallaMemoria/CPantallaMemoria.cpp:35:7:virtual void CPantallaMemoria::GuardaTemperatura()	16	static
+../Core/Inc/GUI/PantallaMemoria/CPantallaMemoria.cpp:40:7:virtual void CPantallaMemoria::Show()	16	static
+../Core/Inc/GUI/PantallaMemoria/CPantallaMemoria.cpp:52:6:void CPantallaMemoria::SetMemoria(int)	16	static
+../Core/Inc/GUI/PantallaMemoria/CPantallaMemoria.cpp:59:6:virtual void CPantallaMemoria::OnBotonCuatroClickEvent()	16	static
+../Core/Inc/GUI/PantallaMemoria/CPantallaMemoria.cpp:64:6:void CPantallaMemoria::LeeDatosMemoria()	40	static
+../Core/Inc/GUI/PantallaMemoria/CPantallaMemoria.cpp:84:5:int CPantallaMemoria::DameDireccionMemoria()	24	static
+../Core/Inc/GUI/PantallaMemoria/CPantallaMemoria.cpp:101:6:virtual void CPantallaMemoria::LeeDatosEstacion()	24	static
+../Core/Inc/GUI/PantallaMemoria/CPantallaMemoria.cpp:116:6:virtual void CPantallaMemoria::OnPerillaIncremento()	16	static
+../Core/Inc/GUI/PantallaMemoria/CPantallaMemoria.cpp:120:6:virtual void CPantallaMemoria::OnPerillaDecremento()	16	static
+../Core/Inc/GUI/PantallaMemoria/CPantallaMemoria.cpp:124:6:virtual void CPantallaMemoria::MuestraInformacion(bool)	16	static

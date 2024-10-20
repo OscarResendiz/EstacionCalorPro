@@ -20,7 +20,7 @@ CEstacionBase::~CEstacionBase()
 
 float CEstacionBase::GetTemperaturaReal() //regresa la tenperatura actual de la estacion
 {
-
+	return 0;
 }
 void CEstacionBase::SetTemperatura(int temperatura) //establece la temperatura que se quiere alcanzar
 {
@@ -28,7 +28,7 @@ void CEstacionBase::SetTemperatura(int temperatura) //establece la temperatura q
 }
 int CEstacionBase::GetTemperatura() // regresa la temperatura seteada
 {
-
+	return 0;
 }
 void CEstacionBase::SetNivelAire(int nivel) //establece el nivel de aire
 {
@@ -36,10 +36,11 @@ void CEstacionBase::SetNivelAire(int nivel) //establece el nivel de aire
 }
 int CEstacionBase::GetNivelAire() //regresa el nivel de aire setado
 {
-
+	return 0;
 }
 int CEstacionBase::GetEstado() //regresa 1 si esta activo y 0 si esta en reposo
 {
+	return 0;
 
 }
 //para que la misma estacion incremente la temperatura

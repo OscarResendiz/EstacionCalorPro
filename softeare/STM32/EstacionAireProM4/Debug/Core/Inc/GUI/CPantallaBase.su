@@ -1,0 +1,10 @@
+../Core/Inc/GUI/CPantallaBase.cpp:10:1:CPantallaBase::~CPantallaBase()	16	static
+../Core/Inc/GUI/CPantallaBase.cpp:10:1:virtual CPantallaBase::~CPantallaBase()	16	static
+../Core/Inc/GUI/CPantallaBase.cpp:16:1:CPantallaBase::CPantallaBase(int, char*)	72	static
+../Core/Inc/GUI/CPantallaBase.cpp:29:6:virtual void CPantallaBase::Show()	16	static
+../Core/Inc/GUI/CPantallaBase.cpp:36:6:virtual void CPantallaBase::Refresca()	16	static
+../Core/Inc/GUI/CPantallaBase.cpp:39:6:virtual void CPantallaBase::SetEstacion(CEstacionBase*)	16	static
+../Core/Inc/GUI/CPantallaBase.cpp:46:6:virtual void CPantallaBase::Ocultar()	16	static
+../Core/Inc/GUI/CPantallaBase.cpp:52:6:virtual bool CPantallaBase::EsVisible()	16	static
+../Core/Inc/GUI/CPantallaBase.cpp:56:6:virtual void CPantallaBase::SetVisible(bool)	16	static
+../Core/Inc/GUI/CPantallaBase.cpp:63:6:virtual void CPantallaBase::SetManejadorControles(CManejadorControles*)	16	static

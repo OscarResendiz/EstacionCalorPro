@@ -30,15 +30,15 @@ public:
 	virtual ~CMenuPrincipal();
 	virtual void Show();
 	virtual void Refresca();
-	virtual void OnBotonCuatroClickEvent(int tiempoClick);
+	virtual void OnBotonCuatroClickEvent();
 	virtual void OnPerillaIncremento();
 	virtual void OnPerillaDecremento();
-	virtual void OnBotonPerillaClickEvent(int tiempoClick);
+	virtual void OnBotonPerillaClickEvent();
 	virtual void OnMenuEvent(int identificador);
 
-	virtual void OnBotonUnoClickEvent(int tiempoClick);
-	virtual void OnBotonDosClickEvent(int tiempoClick);
-	virtual void OnBotonTresClickEvent(int tiempoClick);
+	virtual void OnBotonUnoClickEvent();
+	virtual void OnBotonDosClickEvent();
+	virtual void OnBotonTresClickEvent();
 
 };
 

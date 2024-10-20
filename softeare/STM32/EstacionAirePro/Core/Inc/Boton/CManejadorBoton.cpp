@@ -49,7 +49,6 @@ void CManejadorBoton::Procesa(int gpio_pin)
 		return;
 	if(gpio_pin!=Gpio_Pin)
 		return;
-	int tiempoClick = 0;
 	int estado = 0;
 	estado = Leer();
 	//leo el tiempo actual
@@ -65,13 +64,6 @@ void CManejadorBoton::Procesa(int gpio_pin)
 	Estado = estado;
 	if (Estado == BOTON_SUELTO)
 	{
-		Manejador->OnBotonSueltoEvent(Identificador);
-		tiempoClick = HAL_GetTick() - TiempoInicioClick;
-		Manejador->OnBotonClickEvent(Identificador, tiempoClick);
-	}
-	if (Estado == BOTON_PRESIONADO)
-	{
-		TiempoInicioClick = HAL_GetTick();
-		Manejador->OnBotonPresionadoEvent(Identificador);
+		Manejador->OnBotonClickEvent(Identificador);
 	}
 }

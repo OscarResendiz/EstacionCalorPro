@@ -1,0 +1,23 @@
+../Core/Inc/Estaciones/CEstacionBase.cpp:10:1:CEstacionBase::CEstacionBase()	16	static
+../Core/Inc/Estaciones/CEstacionBase.cpp:16:1:CEstacionBase::~CEstacionBase()	16	static
+../Core/Inc/Estaciones/CEstacionBase.cpp:16:1:virtual CEstacionBase::~CEstacionBase()	16	static
+../Core/Inc/Estaciones/CEstacionBase.cpp:21:7:virtual float CEstacionBase::GetTemperaturaRealx()	16	static
+../Core/Inc/Estaciones/CEstacionBase.cpp:25:6:virtual void CEstacionBase::SetTemperatura(int)	16	static
+../Core/Inc/Estaciones/CEstacionBase.cpp:29:5:virtual int CEstacionBase::GetTemperatura()	16	static
+../Core/Inc/Estaciones/CEstacionBase.cpp:33:6:virtual void CEstacionBase::SetNivelAire(int)	16	static
+../Core/Inc/Estaciones/CEstacionBase.cpp:37:5:virtual int CEstacionBase::GetNivelAire()	16	static
+../Core/Inc/Estaciones/CEstacionBase.cpp:41:5:virtual int CEstacionBase::GetEstado()	16	static
+../Core/Inc/Estaciones/CEstacionBase.cpp:47:6:virtual void CEstacionBase::IncrementaTemperatura()	16	static
+../Core/Inc/Estaciones/CEstacionBase.cpp:52:6:virtual void CEstacionBase::DecrementaTemperatura()	16	static
+../Core/Inc/Estaciones/CEstacionBase.cpp:57:6:virtual void CEstacionBase::SetManejadorControles(CManejadorEventosControles*)	16	static
+../Core/Inc/Estaciones/CEstacionBase.cpp:62:6:virtual void CEstacionBase::Procesa()	16	static
+../Core/Inc/Estaciones/CEstacionBase.cpp:66:6:virtual void CEstacionBase::NivelAireEvent(int)	16	static
+../Core/Inc/Estaciones/CEstacionBase.cpp:72:6:virtual void CEstacionBase::TemperaturaRealEvent(int)	16	static
+../Core/Inc/Estaciones/CEstacionBase.cpp:79:6:virtual void CEstacionBase::ActivarCalefactor()	16	static
+../Core/Inc/Estaciones/CEstacionBase.cpp:83:6:virtual void CEstacionBase::DesactivarCalefactor()	16	static
+../Core/Inc/Estaciones/CEstacionBase.cpp:87:6:virtual void CEstacionBase::CruceXCero(int)	16	static
+../Core/Inc/Estaciones/CEstacionBase.cpp:91:6:virtual void CEstacionBase::TimerTick()	16	static
+../Core/Inc/Estaciones/CEstacionBase.cpp:95:5:virtual int CEstacionBase::GetPID()	16	static
+../Core/Inc/Estaciones/CEstacionBase.cpp:99:6:virtual void CEstacionBase::SetPID(int)	16	static
+../Core/Inc/Estaciones/CEstacionBase.cpp:103:6:virtual void CEstacionBase::GPIO_INTERRUPCION(int)	16	static
+../Core/Inc/Estaciones/CEstacionBase.cpp:107:6:virtual void CEstacionBase::QuitaManejadorControles()	16	static

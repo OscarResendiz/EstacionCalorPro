@@ -41,7 +41,7 @@ void CMenuPrincipal::Refresca()
 	if(EsVisible()==false)
 		Show();
 }
-void CMenuPrincipal::OnBotonCuatroClickEvent(int tiempoClick)
+void CMenuPrincipal::OnBotonCuatroClickEvent()
 {
 	ManejadorPantallas.MuestraPantallaManual();
 }
@@ -53,7 +53,7 @@ void CMenuPrincipal::OnPerillaDecremento()
 {
 	Menu->OnSeleccionaAnterior();
 }
-void CMenuPrincipal::OnBotonPerillaClickEvent(int tiempoClick)
+void CMenuPrincipal::OnBotonPerillaClickEvent()
 {
 	Menu->OnClickSeleccionado();
 }
@@ -73,15 +73,15 @@ void CMenuPrincipal::OnMenuEvent(int identificador)
 
 }
 
-void CMenuPrincipal::OnBotonTresClickEvent(int tiempoClick)
+void CMenuPrincipal::OnBotonTresClickEvent()
 {
 	ManejadorPantallas.MuestraPantallaMemoria(3);
 }
-void CMenuPrincipal::OnBotonUnoClickEvent(int tiempoClick)
+void CMenuPrincipal::OnBotonUnoClickEvent()
 {
 	ManejadorPantallas.MuestraPantallaMemoria(1);
 }
-void CMenuPrincipal::OnBotonDosClickEvent(int tiempoClick)
+void CMenuPrincipal::OnBotonDosClickEvent()
 {
 	ManejadorPantallas.MuestraPantallaMemoria(2);
 }

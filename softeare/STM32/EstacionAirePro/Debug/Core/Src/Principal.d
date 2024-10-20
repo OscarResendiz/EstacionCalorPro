@@ -38,7 +38,6 @@ Core/Src/Principal.o: ../Core/Src/Principal.cpp \
  ../Core/Inc/Boton/CManejadorEventosBoton.hpp \
  ../Core/Inc/ILI9341/ILI9341_GFX.hpp \
  ../Core/Inc/ILI9341/ILI9341_STM32_Driver.hpp \
- ../Core/Inc/ILI9341/ILI9341_Touchscreen.hpp \
  ../Core/Inc/GUI/CRectanguloTft.hpp \
  ../Core/Inc/GUI/CComponenteBaseTft.hpp ../Core/Inc/GUI/CEtiquetaTft.hpp \
  ../Core/Inc/GUI/CPantallaBase.hpp \
@@ -102,7 +101,6 @@ Core/Src/Principal.o: ../Core/Src/Principal.cpp \
 ../Core/Inc/Boton/CManejadorEventosBoton.hpp:
 ../Core/Inc/ILI9341/ILI9341_GFX.hpp:
 ../Core/Inc/ILI9341/ILI9341_STM32_Driver.hpp:
-../Core/Inc/ILI9341/ILI9341_Touchscreen.hpp:
 ../Core/Inc/GUI/CRectanguloTft.hpp:
 ../Core/Inc/GUI/CComponenteBaseTft.hpp:
 ../Core/Inc/GUI/CEtiquetaTft.hpp:

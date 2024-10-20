@@ -1,0 +1,8 @@
+../Core/Inc/Max6675/Max6675.cpp:10:1:MAX6675::MAX6675()	16	static
+../Core/Inc/Max6675/Max6675.cpp:14:6:void MAX6675::SetConfigDatPin(GPIO_TypeDef*, uint16_t)	24	static
+../Core/Inc/Max6675/Max6675.cpp:20:6:void MAX6675::SetConfigCkPin(GPIO_TypeDef*, uint16_t)	24	static
+../Core/Inc/Max6675/Max6675.cpp:26:6:void MAX6675::SetConfigCsPin(GPIO_TypeDef*, uint16_t)	24	static
+../Core/Inc/Max6675/Max6675.cpp:32:5:int MAX6675::MAX6675_leex()	32	static
+../Core/Inc/Max6675/Max6675.cpp:61:9:uint8_t MAX6675::MAX6675_pulso()	24	static
+../Core/Inc/Max6675/Max6675.cpp:72:6:void MAX6675::Retardo()	32	static,ignoring_inline_asm
+../Core/Inc/Max6675/Max6675.cpp:83:6:void MAX6675::Init()	40	static

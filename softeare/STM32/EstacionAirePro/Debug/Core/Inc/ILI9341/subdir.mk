@@ -6,18 +6,15 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
 ../Core/Inc/ILI9341/ILI9341_GFX.cpp \
-../Core/Inc/ILI9341/ILI9341_STM32_Driver.cpp \
-../Core/Inc/ILI9341/ILI9341_Touchscreen.cpp 
+../Core/Inc/ILI9341/ILI9341_STM32_Driver.cpp 
 
 OBJS += \
 ./Core/Inc/ILI9341/ILI9341_GFX.o \
-./Core/Inc/ILI9341/ILI9341_STM32_Driver.o \
-./Core/Inc/ILI9341/ILI9341_Touchscreen.o 
+./Core/Inc/ILI9341/ILI9341_STM32_Driver.o 
 
 CPP_DEPS += \
 ./Core/Inc/ILI9341/ILI9341_GFX.d \
-./Core/Inc/ILI9341/ILI9341_STM32_Driver.d \
-./Core/Inc/ILI9341/ILI9341_Touchscreen.d 
+./Core/Inc/ILI9341/ILI9341_STM32_Driver.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -27,7 +24,7 @@ Core/Inc/ILI9341/%.o Core/Inc/ILI9341/%.su Core/Inc/ILI9341/%.cyclo: ../Core/Inc
 clean: clean-Core-2f-Inc-2f-ILI9341
 
 clean-Core-2f-Inc-2f-ILI9341:
-	-$(RM) ./Core/Inc/ILI9341/ILI9341_GFX.cyclo ./Core/Inc/ILI9341/ILI9341_GFX.d ./Core/Inc/ILI9341/ILI9341_GFX.o ./Core/Inc/ILI9341/ILI9341_GFX.su ./Core/Inc/ILI9341/ILI9341_STM32_Driver.cyclo ./Core/Inc/ILI9341/ILI9341_STM32_Driver.d ./Core/Inc/ILI9341/ILI9341_STM32_Driver.o ./Core/Inc/ILI9341/ILI9341_STM32_Driver.su ./Core/Inc/ILI9341/ILI9341_Touchscreen.cyclo ./Core/Inc/ILI9341/ILI9341_Touchscreen.d ./Core/Inc/ILI9341/ILI9341_Touchscreen.o ./Core/Inc/ILI9341/ILI9341_Touchscreen.su
+	-$(RM) ./Core/Inc/ILI9341/ILI9341_GFX.cyclo ./Core/Inc/ILI9341/ILI9341_GFX.d ./Core/Inc/ILI9341/ILI9341_GFX.o ./Core/Inc/ILI9341/ILI9341_GFX.su ./Core/Inc/ILI9341/ILI9341_STM32_Driver.cyclo ./Core/Inc/ILI9341/ILI9341_STM32_Driver.d ./Core/Inc/ILI9341/ILI9341_STM32_Driver.o ./Core/Inc/ILI9341/ILI9341_STM32_Driver.su
 
 .PHONY: clean-Core-2f-Inc-2f-ILI9341
 

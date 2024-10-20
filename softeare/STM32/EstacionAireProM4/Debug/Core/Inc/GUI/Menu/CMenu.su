@@ -1,0 +1,16 @@
+../Core/Inc/GUI/Menu/CMenu.cpp:11:1:CMenu::CMenu(int, int, int, int, int, int, int)	40	static
+../Core/Inc/GUI/Menu/CMenu.cpp:20:1:CMenu::~CMenu()	16	static
+../Core/Inc/GUI/Menu/CMenu.cpp:20:1:virtual CMenu::~CMenu()	16	static
+../Core/Inc/GUI/Menu/CMenu.cpp:25:6:virtual void CMenu::Show()	24	static
+../Core/Inc/GUI/Menu/CMenu.cpp:43:6:void CMenu::AsignaColoresItems(int, int, int, int)	24	static
+../Core/Inc/GUI/Menu/CMenu.cpp:51:12:CMenuItem* CMenu::CreaItem(char*, int, bool)	88	static
+../Core/Inc/GUI/Menu/CMenu.cpp:59:6:void CMenu::AgregaItem(char*, int, bool)	32	static
+../Core/Inc/GUI/Menu/CMenu.cpp:75:6:void CMenu::CalaculaPosicionItems(CMenuItem*)	16	static
+../Core/Inc/GUI/Menu/CMenu.cpp:81:6:bool CMenu::SePuedeMostrar(CMenuItem*)	32	static
+../Core/Inc/GUI/Menu/CMenu.cpp:89:6:void CMenu::OnSeleccionaSiguiente()	24	static
+../Core/Inc/GUI/Menu/CMenu.cpp:125:6:void CMenu::OnSeleccionaAnterior()	32	static
+../Core/Inc/GUI/Menu/CMenu.cpp:170:6:void CMenu::OnClickSeleccionado()	24	static
+../Core/Inc/GUI/Menu/CMenu.cpp:178:6:void CMenu::CalculaPaginas()	32	static
+../Core/Inc/GUI/Menu/CMenu.cpp:197:6:void CMenu::LimpiaPaginas()	24	static
+../Core/Inc/GUI/Menu/CMenu.cpp:205:6:bool CMenu::EstaInicioPagina(CMenuItem*)	24	static
+../Core/Inc/GUI/Menu/CMenu.cpp:215:6:void CMenu::AsignaManejadorEventosMenu(CManejadorEventoMenu*)	16	static

@@ -19,20 +19,20 @@ CPantallaMemoria::~CPantallaMemoria()
 
 
 CPantallaMemoria::CPantallaMemoria() :
-		CPantallaBase(1, "   Modo: MEMORIA")
+		CPantallaManual()
 {
-	LabelMemoria=new CEtiquetaTft( 5, 35, 50, 20, COLOR::BLACK,"Memoria: ", COLOR::WHITE, 3, 0, COLOR::WHITE);
-	LabelTemperatura = new CEtiquetaTft( 5, 65, 50, 20, COLOR::BLACK,"Temperatura", COLOR::WHITE, 3, 0, COLOR::WHITE);
-	int centroX = DameCentroX();
-	LabelTemperaturas = new CEtiquetaTft( centroX - 150 / 2, 95, 150, 30,COLOR::WHITE, "000/000", COLOR::BLACK, 3, 1, COLOR::RED);
-	LabelTemperaturas->SetSeparacion(5, 5);
-	LabelAire = new CEtiquetaTft( 5, 135, 200, 30, COLOR::BLACK, "Aire: 00",COLOR::WHITE, 3, 0, COLOR::RED);
-	LabelEstado = new CEtiquetaTft( 5, 175, 300, 35, COLOR::BLACK,"Estado: REPOSO", COLOR::WHITE, 3, 0, COLOR::RED);
-	LabelEstado->SetSeparacion(15, 5);
+//	LabelMemoria=new CEtiquetaTft( 5, 35, 50, 20, COLOR::BLACK,"Memoria: ", COLOR::WHITE, 3, 0, COLOR::WHITE);
+//	LabelTemperatura = new CEtiquetaTft( 5, 65, 50, 20, COLOR::BLACK,"Temperatura", COLOR::WHITE, 3, 0, COLOR::WHITE);
+//	int centroX = DameCentroX();
+//	LabelTemperaturas = new CEtiquetaTft( centroX - 150 / 2, 95, 150, 30,COLOR::WHITE, "000/000", COLOR::BLACK, 3, 1, COLOR::RED);
+//	LabelTemperaturas->SetSeparacion(5, 5);
+//	LabelAire = new CEtiquetaTft( 5, 135, 200, 30, COLOR::BLACK, "Aire: 00",COLOR::WHITE, 3, 0, COLOR::RED);
+//	LabelEstado = new CEtiquetaTft( 5, 175, 300, 35, COLOR::BLACK,"Estado: REPOSO", COLOR::WHITE, 3, 0, COLOR::RED);
+//	LabelEstado->SetSeparacion(15, 5);
 
 }
 
-
+/*
 void CPantallaMemoria::MuestraEstado(bool forzar)
 {
 	if(forzar==false)
@@ -60,7 +60,8 @@ void CPantallaMemoria::MuestraEstado(bool forzar)
 	}
 	LabelEstado->Show();
 }
-
+*/
+/*
 void CPantallaMemoria::LeeDatosEstacion()
 {
 	SetTemperatura = Estacion->GetTemperatura();
@@ -68,8 +69,8 @@ void CPantallaMemoria::LeeDatosEstacion()
 	NivelAire = ManejadorControles->GetNivelAire();
 	EstadoBoquilla=Estacion->GetEstado();
 }
-
-
+*/
+/*
 void CPantallaMemoria::MuestraTemperaturas(bool forzar)
 {
 	if(forzar==false)
@@ -82,13 +83,15 @@ void CPantallaMemoria::MuestraTemperaturas(bool forzar)
 	LabelTemperaturas->SetTexto("%d/%d", Temperatura, SetTemperatura);
 	LabelTemperaturas->Show();
 }
-
+/*
+/*
 void CPantallaMemoria::OnNivelAireEvent(int aire)
 {
 	NivelAire = aire;
 	Estacion->SetNivelAire(NivelAire);
 }
-
+*/
+/*
 void CPantallaMemoria::MuestraNivelAire(bool forzar)
 {
 	if(forzar==false)
@@ -102,35 +105,43 @@ void CPantallaMemoria::MuestraNivelAire(bool forzar)
 	LabelAire->Show();
 
 }
-
+*/
+/*
 void CPantallaMemoria::OnTemperaturaRealEvent(int temperatura)
 {
 	Temperatura = temperatura;
 }
-
+*/
+/*
 //eventos del Encoder
 void CPantallaMemoria::OnPerillaIncremento()
 {
 	Estacion->IncrementaTemperatura();
 	TemperaturaGuardada=false;
 }
-
+*/
+/*
 void CPantallaMemoria::OnPerillaDecremento()
 {
 	Estacion->DecrementaTemperatura();
 	TemperaturaGuardada=false;
 }
-
+*/
+/*
 void CPantallaMemoria::Refresca()
 {
 	if(TemperaturaGuardada==false)
 		GuardaTemperatura();
 	MuestraInformacion(false);
 }
- void CPantallaMemoria::OnBotonPerillaClickEvent(int tiempoClick)
+*/
+/*
+ void CPantallaMemoria::OnBotonPerillaClickEvent()
  {
 	 ManejadorPantallas.MuestraMenuPrincipal();
  }
+ */
+/*
  void CPantallaMemoria::MuestraInformacion(bool forzar)
  {
 		LeeDatosEstacion();
@@ -141,6 +152,8 @@ void CPantallaMemoria::Refresca()
 		SetVisible(true);
 
  }
+ */
+/*
  void CPantallaMemoria::GuardaTemperatura()
  {
  	uint8_t temperatura=Estacion->GetTemperatura();
@@ -155,50 +168,60 @@ void CPantallaMemoria::Refresca()
  	}
 
  }
+ */
+
  void CPantallaMemoria::Show()
  {
- 	CPantallaBase::Show();
- 	LabelTemperatura->Show();
+	 CPantallaManual::Show();
+
+ 	//LabelTemperatura->Show();
  	//leo la temperatura desde la memoria
 	LabelMemoria->SetTexto("Memoria: %d", NumeroMemoria);
 	LabelMemoria->Show();
 
- 	uint8_t temperatura;
- 	uint8_t datos_w[10];
- 	uint8_t datos_r[10];
- 	char buf_tx[30];
- 	  if( HAL_I2C_Mem_Read(&hi2c1,ADDRESS_EEPROM,0,I2C_MEMADD_SIZE_8BIT,&temperatura,1,HAL_MAX_DELAY)==HAL_OK)
- 	  {
- 		 	if(temperatura>=0 && temperatura<=500)
- 		 	{
- 		 		Estacion->SetTemperatura(temperatura);
- 		 	}
- 		 	TemperaturaGuardada=true;
- 	  }
- 	LeeDatosEstacion();
- 	MuestraInformacion(true);
+// 	uint8_t temperatura;
+ //	uint8_t datos_w[10];
+ 	//uint8_t datos_r[10];
+// 	char buf_tx[30];
+ //	  if( HAL_I2C_Mem_Read(&hi2c1,ADDRESS_EEPROM,0,I2C_MEMADD_SIZE_8BIT,&temperatura,1,HAL_MAX_DELAY)==HAL_OK)
+ 	//  {
+ 		// 	if(temperatura>=0 && temperatura<=500)
+ 		 //	{
+ 		 	//	Estacion->SetTemperatura(temperatura);
+// 		 	}
+ //		 	TemperaturaGuardada=true;
+ 	//  }
+// 	LeeDatosEstacion();
+ //	MuestraInformacion(true);
  }
+
 
 void CPantallaMemoria::SetMemoria(int numeroMemoria)
 {
 	NumeroMemoria=numeroMemoria;
 }
-void CPantallaMemoria::OnBotonCuatroClickEvent(int tiempoClick)
+
+/*
+void CPantallaMemoria::OnBotonCuatroClickEvent()
 {
 	ManejadorPantallas.MuestraPantallaManual();
 }
-
-void CPantallaMemoria::OnBotonUnoClickEvent(int tiempoClick)
+*/
+/*
+void CPantallaMemoria::OnBotonUnoClickEvent()
 {
 
 }
-
-void CPantallaMemoria::OnBotonDosClickEvent(int tiempoClick)
+*/
+/*
+void CPantallaMemoria::OnBotonDosClickEvent()
 {
 
 }
-
-void CPantallaMemoria::OnBotonTresClickEvent(int tiempoClick)
+*/
+/*
+void CPantallaMemoria::OnBotonTresClickEvent()
 {
 
 }
+*/

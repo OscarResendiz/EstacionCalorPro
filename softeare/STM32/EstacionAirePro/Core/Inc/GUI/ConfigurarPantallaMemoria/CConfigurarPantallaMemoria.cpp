@@ -125,7 +125,7 @@ void CConfigurarPantallaMemoria::OnPerillaDecremento()
 	if(Temperatura>0)
 		Temperatura--;
 }
-void CConfigurarPantallaMemoria::OnBotonUnoClickEvent(int tiempoClick)
+void CConfigurarPantallaMemoria::OnBotonUnoClickEvent()
 {
 	//hay que guarar la informacion
  	uint16_t datos_w[2];
@@ -135,7 +135,7 @@ void CConfigurarPantallaMemoria::OnBotonUnoClickEvent(int tiempoClick)
 	HAL_I2C_Mem_Write(&hi2c1,ADDRESS_EEPROM,DireccionMemoria,I2C_MEMADD_SIZE_8BIT,(uint8_t*)datos_w,4,HAL_MAX_DELAY);
 	 ManejadorPantallas.MuestraMenuPrincipal();
 }
-void CConfigurarPantallaMemoria::OnBotonDosClickEvent(int tiempoClick)
+void CConfigurarPantallaMemoria::OnBotonDosClickEvent()
 {
 	 ManejadorPantallas.MuestraMenuPrincipal();
 

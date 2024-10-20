@@ -6,10 +6,8 @@
 ../Core/Inc/Encoder/CEncoder.cpp:44:5:int CEncoder::LeeDt()	16	static
 ../Core/Inc/Encoder/CEncoder.cpp:49:6:void CEncoder::Init()	32	static
 ../Core/Inc/Encoder/CEncoder.cpp:70:6:void CEncoder::AsignaManejadorEventos(CManejadorEventosEncoder*)	16	static
-../Core/Inc/Encoder/CEncoder.cpp:75:6:virtual void CEncoder::OnBotonSueltoEvent(int)	16	static
-../Core/Inc/Encoder/CEncoder.cpp:89:6:virtual void CEncoder::OnBotonPresionadoEvent(int)	16	static
-../Core/Inc/Encoder/CEncoder.cpp:103:6:virtual void CEncoder::OnBotonClickEvent(int, int)	24	static
-../Core/Inc/Encoder/CEncoder.cpp:114:6:virtual void CEncoder::Procesa(int)	16	static
-../Core/Inc/Encoder/CEncoder.cpp:120:6:void CEncoder::leeEncoder(int)	16	static
-../Core/Inc/Encoder/CEncoder.cpp:139:6:void CEncoder::incrementa()	16	static
-../Core/Inc/Encoder/CEncoder.cpp:144:6:void CEncoder::decrementa()	16	static
+../Core/Inc/Encoder/CEncoder.cpp:74:6:virtual void CEncoder::OnBotonClickEvent(int)	16	static
+../Core/Inc/Encoder/CEncoder.cpp:85:6:virtual void CEncoder::Procesa(int)	16	static
+../Core/Inc/Encoder/CEncoder.cpp:91:6:void CEncoder::leeEncoder(int)	16	static
+../Core/Inc/Encoder/CEncoder.cpp:110:6:void CEncoder::incrementa()	16	static
+../Core/Inc/Encoder/CEncoder.cpp:115:6:void CEncoder::decrementa()	16	static

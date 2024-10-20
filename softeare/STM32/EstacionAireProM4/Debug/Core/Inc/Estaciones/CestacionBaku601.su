@@ -1,0 +1,25 @@
+../Core/Inc/Estaciones/CestacionBaku601.cpp:38:1:CestacionBaku601::~CestacionBaku601()	16	static
+../Core/Inc/Estaciones/CestacionBaku601.cpp:38:1:virtual CestacionBaku601::~CestacionBaku601()	16	static
+../Core/Inc/Estaciones/CestacionBaku601.cpp:43:1:CestacionBaku601::CestacionBaku601()	16	static
+../Core/Inc/Estaciones/CestacionBaku601.cpp:65:7:virtual float CestacionBaku601::GetTemperaturaRealx()	16	static
+../Core/Inc/Estaciones/CestacionBaku601.cpp:72:6:virtual void CestacionBaku601::SetTemperatura(int)	16	static
+../Core/Inc/Estaciones/CestacionBaku601.cpp:78:5:virtual int CestacionBaku601::GetTemperatura()	16	static
+../Core/Inc/Estaciones/CestacionBaku601.cpp:84:6:virtual void CestacionBaku601::SetNivelAire(int)	16	static
+../Core/Inc/Estaciones/CestacionBaku601.cpp:89:5:virtual int CestacionBaku601::GetNivelAire()	16	static
+../Core/Inc/Estaciones/CestacionBaku601.cpp:96:5:virtual int CestacionBaku601::GetEstado()	16	static
+../Core/Inc/Estaciones/CestacionBaku601.cpp:104:6:virtual void CestacionBaku601::IncrementaTemperatura()	16	static
+../Core/Inc/Estaciones/CestacionBaku601.cpp:112:6:virtual void CestacionBaku601::DecrementaTemperatura()	16	static
+../Core/Inc/Estaciones/CestacionBaku601.cpp:121:6:virtual void CestacionBaku601::ActivarCalefactor()	16	static
+../Core/Inc/Estaciones/CestacionBaku601.cpp:126:6:virtual void CestacionBaku601::DesactivarCalefactor()	16	static
+../Core/Inc/Estaciones/CestacionBaku601.cpp:132:6:virtual void CestacionBaku601::OnSensorMagneticoChange(int)	16	static
+../Core/Inc/Estaciones/CestacionBaku601.cpp:137:6:virtual void CestacionBaku601::Procesa()	16	static
+../Core/Inc/Estaciones/CestacionBaku601.cpp:146:6:void CestacionBaku601::ProcesaTemperatura()	24	static
+../Core/Inc/Estaciones/CestacionBaku601.cpp:157:6:void CestacionBaku601::ProcesaTemperaturaReal()	16	static
+../Core/Inc/Estaciones/CestacionBaku601.cpp:170:6:void CestacionBaku601::procesaAire()	24	static
+../Core/Inc/Estaciones/CestacionBaku601.cpp:181:6:void CestacionBaku601::ProcesaCalefactor()	32	static
+../Core/Inc/Estaciones/CestacionBaku601.cpp:220:6:void CestacionBaku601::EnfriaYApagaPistola()	32	static
+../Core/Inc/Estaciones/CestacionBaku601.cpp:245:6:virtual void CestacionBaku601::CruceXCero(int)	16	static
+../Core/Inc/Estaciones/CestacionBaku601.cpp:275:6:virtual void CestacionBaku601::TimerTick()	16	static
+../Core/Inc/Estaciones/CestacionBaku601.cpp:282:5:virtual int CestacionBaku601::GetPID()	16	static
+../Core/Inc/Estaciones/CestacionBaku601.cpp:286:6:virtual void CestacionBaku601::SetPID(int)	16	static
+../Core/Inc/Estaciones/CestacionBaku601.cpp:290:6:virtual void CestacionBaku601::GPIO_INTERRUPCION(int)	16	static

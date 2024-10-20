@@ -124,7 +124,7 @@ void CPantallaManual::Refresca()
 		GuardaTemperatura();
 	MuestraInformacion(false);
 }
- void CPantallaManual::OnBotonPerillaClickEvent(int tiempoClick)
+ void CPantallaManual::OnBotonPerillaClickEvent()
  {
 	 ManejadorPantallas.MuestraMenuPrincipal();
  }
@@ -173,15 +173,15 @@ void CPantallaManual::Refresca()
  	LeeDatosEstacion();
  	MuestraInformacion(true);
  }
-void CPantallaManual::OnBotonTresClickEvent(int tiempoClick)
+void CPantallaManual::OnBotonTresClickEvent()
 {
 	ManejadorPantallas.MuestraPantallaMemoria(3);
 }
-void CPantallaManual::OnBotonUnoClickEvent(int tiempoClick)
+void CPantallaManual::OnBotonUnoClickEvent()
 {
 	ManejadorPantallas.MuestraPantallaMemoria(1);
 }
-void CPantallaManual::OnBotonDosClickEvent(int tiempoClick)
+void CPantallaManual::OnBotonDosClickEvent()
 {
 	ManejadorPantallas.MuestraPantallaMemoria(2);
 }

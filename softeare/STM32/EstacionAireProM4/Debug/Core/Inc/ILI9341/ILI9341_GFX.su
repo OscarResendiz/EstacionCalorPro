@@ -1,0 +1,7 @@
+../Core/Inc/ILI9341/ILI9341_GFX.cpp:53:6:void ILI9341_Draw_Hollow_Circle(uint16_t, uint16_t, uint16_t, uint16_t)	48	static
+../Core/Inc/ILI9341/ILI9341_GFX.cpp:89:6:void ILI9341_Draw_Filled_Circle(uint16_t, uint16_t, uint16_t, uint16_t)	56	static
+../Core/Inc/ILI9341/ILI9341_GFX.cpp:127:6:void ILI9341_Draw_Hollow_Rectangle_Coord(uint16_t, uint16_t, uint16_t, uint16_t, uint16_t)	40	static
+../Core/Inc/ILI9341/ILI9341_GFX.cpp:177:6:void ILI9341_Draw_Filled_Rectangle_Coord(uint16_t, uint16_t, uint16_t, uint16_t, uint16_t)	48	static
+../Core/Inc/ILI9341/ILI9341_GFX.cpp:227:6:void ILI9341_Draw_Char(char, int, int, uint16_t, uint16_t, uint16_t)	56	static
+../Core/Inc/ILI9341/ILI9341_GFX.cpp:275:6:void ILI9341_Draw_Text(const char*, int, int, uint16_t, uint16_t, uint16_t)	32	static
+../Core/Inc/ILI9341/ILI9341_GFX.cpp:288:6:void ILI9341_Draw_Image(const char*, uint8_t)	568	static

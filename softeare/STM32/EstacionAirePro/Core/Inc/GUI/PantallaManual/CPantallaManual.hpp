@@ -49,11 +49,11 @@ private:
 	//eventos del Encoder
 	virtual void OnPerillaIncremento();
 	virtual void OnPerillaDecremento();
-	virtual void OnBotonPerillaClickEvent(int tiempoClick);
+	virtual void OnBotonPerillaClickEvent();
 
-	virtual void OnBotonUnoClickEvent(int tiempoClick);
-	virtual void OnBotonDosClickEvent(int tiempoClick);
-	virtual void OnBotonTresClickEvent(int tiempoClick);
+	virtual void OnBotonUnoClickEvent();
+	virtual void OnBotonDosClickEvent();
+	virtual void OnBotonTresClickEvent();
 	void GuardaTemperatura();
 
 };

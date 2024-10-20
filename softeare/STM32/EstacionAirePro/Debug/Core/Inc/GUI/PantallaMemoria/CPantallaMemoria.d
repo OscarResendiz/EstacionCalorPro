@@ -1,6 +1,7 @@
 Core/Inc/GUI/PantallaMemoria/CPantallaMemoria.o: \
  ../Core/Inc/GUI/PantallaMemoria/CPantallaMemoria.cpp \
  ../Core/Inc/GUI/PantallaMemoria/CPantallaMemoria.hpp \
+ ../Core/Inc/GUI/PantallaManual/CPantallaManual.hpp \
  ../Core/Inc/GUI/CPantallaBase.hpp ../Core/Inc/GUI/CRectanguloTft.hpp \
  ../Core/Inc/GUI/CComponenteBaseTft.hpp \
  ../Core/Inc/ILI9341/ILI9341_GFX.hpp \
@@ -43,13 +44,13 @@ Core/Inc/GUI/PantallaMemoria/CPantallaMemoria.o: \
  ../Core/Inc/Encoder/CManejadorEventosEncoder.hpp \
  ../Core/Inc/ControlVelocidadAire/ControlVelocidadAire.hpp \
  ../Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.hpp \
- ../Core/Inc/GUI/PantallaManual/CPantallaManual.hpp \
  ../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.h \
  ../Core/Inc/GUI/Menu/CMenuItem.hpp ../Core/Inc/GUI/Menu/CMenu.hpp \
  ../Core/Inc/GUI/Menu/CManejadorEventoMenu.hpp \
  ../Core/Inc/GUI/ConfigurarPantallaMemoria/CConfigurarPantallaMemoria.hpp \
  ../Core/Inc/Uart/Uart.h
 ../Core/Inc/GUI/PantallaMemoria/CPantallaMemoria.hpp:
+../Core/Inc/GUI/PantallaManual/CPantallaManual.hpp:
 ../Core/Inc/GUI/CPantallaBase.hpp:
 ../Core/Inc/GUI/CRectanguloTft.hpp:
 ../Core/Inc/GUI/CComponenteBaseTft.hpp:
@@ -94,7 +95,6 @@ Core/Inc/GUI/PantallaMemoria/CPantallaMemoria.o: \
 ../Core/Inc/Encoder/CManejadorEventosEncoder.hpp:
 ../Core/Inc/ControlVelocidadAire/ControlVelocidadAire.hpp:
 ../Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.hpp:
-../Core/Inc/GUI/PantallaManual/CPantallaManual.hpp:
 ../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.h:
 ../Core/Inc/GUI/Menu/CMenuItem.hpp:
 ../Core/Inc/GUI/Menu/CMenu.hpp:

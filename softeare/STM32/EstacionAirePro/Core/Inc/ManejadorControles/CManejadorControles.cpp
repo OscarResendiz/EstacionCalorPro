@@ -67,147 +67,44 @@ int CManejadorControles::GetNivelAire()
 }
 
 //eventros del boton uno
-void CManejadorControles::BotonUnoClickEvent(int tiempoClick)
+void CManejadorControles::BotonUnoClickEvent()
 {
 	if (ManejadorControles == NULL)
 		return;
-	ManejadorControles->OnBotonUnoClickEvent(tiempoClick);
-
-}
-void CManejadorControles::BotonUnoPresionadoEvent()
-{
-	if (ManejadorControles == NULL)
-		return;
-	ManejadorControles->OnBotonUnoPresionadoEvent();
-
-}
-void CManejadorControles::BotonUnoPresionadoLargoEvent()
-{
-	if (ManejadorControles == NULL)
-		return;
-	ManejadorControles->OnBotonUnoPresionadoLargoEvent();
-
-}
-void CManejadorControles::BotonUnoSueltoEvent()
-{
-	if (ManejadorControles == NULL)
-		return;
-	ManejadorControles->OnBotonUnoSueltoEvent();
+	ManejadorControles->OnBotonUnoClickEvent();
 
 }
 //eventros del boton dos
-void CManejadorControles::BotonDosClickEvent(int tiempoClick)
+void CManejadorControles::BotonDosClickEvent()
 {
 	if (ManejadorControles == NULL)
 		return;
-	ManejadorControles->OnBotonDosClickEvent(tiempoClick);
-
-}
-void CManejadorControles::BotonDosPresionadoEvent()
-{
-	if (ManejadorControles == NULL)
-		return;
-	ManejadorControles->OnBotonDosPresionadoEvent();
-
-}
-void CManejadorControles::BotonDosPresionaLargodoEvent()
-{
-	if (ManejadorControles == NULL)
-		return;
-	ManejadorControles->OnBotonDosPresionadoLargoEvent();
-
-}
-void CManejadorControles::BotonDosSueltoEvent()
-{
-	if (ManejadorControles == NULL)
-		return;
-	ManejadorControles->OnBotonDosSueltoEvent();
+	ManejadorControles->OnBotonDosClickEvent();
 
 }
 //eventros del boton tres
-void CManejadorControles::BotonTresClickEvent(int tiempoClick)
+void CManejadorControles::BotonTresClickEvent()
 {
 	if (ManejadorControles == NULL)
 		return;
-	ManejadorControles->OnBotonTresClickEvent(tiempoClick);
-
-}
-void CManejadorControles::BotonTresPresionadoEvent()
-{
-	if (ManejadorControles == NULL)
-		return;
-	ManejadorControles->OnBotonTresPresionadoEvent();
-
-}
-void CManejadorControles::BotonTresPresionaLargodoEvent()
-{
-	if (ManejadorControles == NULL)
-		return;
-	ManejadorControles->OnBotonTresPresionadoLargoEvent();
-
-}
-void CManejadorControles::BotonTresSueltoEvent()
-{
-	if (ManejadorControles == NULL)
-		return;
-	ManejadorControles->OnBotonTresSueltoEvent();
+	ManejadorControles->OnBotonTresClickEvent();
 
 }
 //eventros del boton Cuatro
-void CManejadorControles::BotonCuatroClickEvent(int tiempoClick)
+void CManejadorControles::BotonCuatroClickEvent()
 {
 	if (ManejadorControles == NULL)
 		return;
-	ManejadorControles->OnBotonCuatroClickEvent(tiempoClick);
-
-}
-void CManejadorControles::BotonCuatroPresionadoEvent()
-{
-	if (ManejadorControles == NULL)
-		return;
-	ManejadorControles->OnBotonCuatroPresionadoEvent();
-
-}
-void CManejadorControles::BotonCuatroPresionaLargodoEvent()
-{
-	if (ManejadorControles == NULL)
-		return;
-	ManejadorControles->OnBotonCuatroPresionadoLargoEvent();
-}
-void CManejadorControles::BotonCuatroSueltoEvent()
-{
-	if (ManejadorControles == NULL)
-		return;
-	ManejadorControles->OnBotonCuatroSueltoEvent();
+	ManejadorControles->OnBotonCuatroClickEvent();
 
 }
 //eventros del boton Perilla
-void CManejadorControles::BotonPerillaClickEvent(int tiempoClick)
+void CManejadorControles::BotonPerillaClickEvent()
 {
 	if (ManejadorControles == NULL)
 		return;
-	ManejadorControles->OnBotonPerillaClickEvent(tiempoClick);
+	ManejadorControles->OnBotonPerillaClickEvent();
 
-}
-void CManejadorControles::BotonPerillaPresionadoEvent()
-{
-	if (ManejadorControles == NULL)
-		return;
-	ManejadorControles->OnBotonPerillaPresionadoEvent();
-
-}
-void CManejadorControles::BotonPerillaPresionadoLargoEvent()
-{
-	if (ManejadorControles == NULL)
-		return;
-	ManejadorControles->OnBotonPerillaPresionadoLargoEvent();
-
-}
-void CManejadorControles::BotonPerillaSueltoEvent()
-{
-	if (ManejadorControles == NULL)
-		return;
-	ManejadorControles->OnBotonPerillaSueltoEvent();
 }
 //eventos del encoder
 void CManejadorControles::EncoderIncremento()
@@ -225,63 +122,25 @@ void CManejadorControles::EncoderDecremento()
 
 }
 
-void CManejadorControles::OnBotonClickEvent(int idBoton, int tiempoClick)
+void CManejadorControles::OnBotonClickEvent(int idBoton)
 {
 	switch (idBoton)
 	{
 	case BOTON_MEMORIA1:
-		BotonUnoClickEvent(tiempoClick);
+		BotonUnoClickEvent();
 		break;
 	case BOTON_MEMORIA2:
-		BotonDosClickEvent(tiempoClick);
+		BotonDosClickEvent();
 		break;
 	case BOTON_MEMORIA3:
-		BotonTresClickEvent(tiempoClick);
+		BotonTresClickEvent();
 		break;
 	case BOTON_MANUAL:
-		BotonCuatroClickEvent(tiempoClick);
+		BotonCuatroClickEvent();
 		break;
 	}
 }
 
-void CManejadorControles::OnBotonPresionadoEvent(int idBoton)
-{
-	switch (idBoton)
-	{
-	case BOTON_MEMORIA1:
-		BotonUnoPresionadoEvent();
-		break;
-	case BOTON_MEMORIA2:
-		BotonDosPresionadoEvent();
-		break;
-	case BOTON_MEMORIA3:
-		BotonTresPresionadoEvent();
-		break;
-	case BOTON_MANUAL:
-		BotonCuatroPresionadoEvent();
-		break;
-	}
-
-}
-
-void CManejadorControles::OnBotonSueltoEvent(int idBoton)
-{
-	switch (idBoton)
-	{
-	case BOTON_MEMORIA1:
-		BotonUnoSueltoEvent();
-		break;
-	case BOTON_MEMORIA2:
-		BotonDosSueltoEvent();
-		break;
-	case BOTON_MEMORIA3:
-		BotonTresSueltoEvent();
-		break;
-	case BOTON_MANUAL:
-		BotonCuatroSueltoEvent();
-		break;
-	}
-}
 
 //eventros del encoder
 void CManejadorControles::OnIncrementoEncoder(int id_Encoder)
@@ -294,25 +153,13 @@ void CManejadorControles::OnDecrementoEncoder(int id_Encoder)
 	EncoderDecremento();
 }
 
-void CManejadorControles::OnBotonEncoderClickEvent(int id_Encoder, int tiempoClick)
+void CManejadorControles::OnBotonEncoderClickEvent(int id_Encoder )
 {
-	BotonPerillaClickEvent(tiempoClick);
+	BotonPerillaClickEvent();
 }
 
-void CManejadorControles::OnBotonEncoderPresionadoEvent(int id_Encoder)
-{
-	BotonPerillaPresionadoEvent();
-}
 
-void CManejadorControles::OnBotonEncoderPresionadoLargoEvent(int id_Encoder)
-{
-	BotonPerillaPresionadoLargoEvent();
-}
 
-void CManejadorControles::OnBotonEncoderSueltoEvent(int id_Encoder)
-{
-	BotonPerillaSueltoEvent();
-}
 
 
 void CManejadorControles::SetManejadorControles(CManejadorEventosControles *obj)

@@ -1,4 +1,0 @@
-../Core/Inc/ILI9341/ILI9341_Touchscreen.cpp:85:10:uint16_t TP_Read()	16	static
-../Core/Inc/ILI9341/ILI9341_Touchscreen.cpp:109:6:void TP_Write(uint8_t)	24	static
-../Core/Inc/ILI9341/ILI9341_Touchscreen.cpp:134:9:uint8_t TP_Read_Coordinates(uint16_t*)	56	static
-../Core/Inc/ILI9341/ILI9341_Touchscreen.cpp:198:9:uint8_t TP_Touchpad_Pressed()	8	static

@@ -1,5 +1,0 @@
-../Core/Inc/EEPROM/CEEProm.cpp:10:1:CEEProm::CEEProm()	1
-../Core/Inc/EEPROM/CEEProm.cpp:16:1:CEEProm::~CEEProm()	1
-../Core/Inc/EEPROM/CEEProm.cpp:16:1:virtual CEEProm::~CEEProm()	1
-../Core/Inc/EEPROM/CEEProm.cpp:21:6:void CEEProm::Guardar(int, int)	1
-../Core/Inc/EEPROM/CEEProm.cpp:25:5:int CEEProm::Leer(int)	1

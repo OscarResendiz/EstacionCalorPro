@@ -1,0 +1,13 @@
+../Core/Inc/Encoder/CEncoder.cpp:10:1:CEncoder::CEncoder()	16	static
+../Core/Inc/Encoder/CEncoder.cpp:16:1:CEncoder::~CEncoder()	16	static
+../Core/Inc/Encoder/CEncoder.cpp:16:1:virtual CEncoder::~CEncoder()	16	static
+../Core/Inc/Encoder/CEncoder.cpp:21:6:void CEncoder::Configurar(GPIO_TypeDef*, uint16_t, GPIO_TypeDef*, uint16_t, GPIO_TypeDef*, uint16_t, int)	32	static
+../Core/Inc/Encoder/CEncoder.cpp:40:5:int CEncoder::LeeClk()	16	static
+../Core/Inc/Encoder/CEncoder.cpp:44:5:int CEncoder::LeeDt()	16	static
+../Core/Inc/Encoder/CEncoder.cpp:49:6:void CEncoder::Init()	40	static
+../Core/Inc/Encoder/CEncoder.cpp:70:6:void CEncoder::AsignaManejadorEventos(CManejadorEventosEncoder*)	16	static
+../Core/Inc/Encoder/CEncoder.cpp:74:6:virtual void CEncoder::OnBotonClickEvent(int)	16	static
+../Core/Inc/Encoder/CEncoder.cpp:85:6:virtual void CEncoder::Procesa(int)	16	static
+../Core/Inc/Encoder/CEncoder.cpp:91:6:void CEncoder::leeEncoder(int)	16	static
+../Core/Inc/Encoder/CEncoder.cpp:110:6:void CEncoder::incrementa()	16	static
+../Core/Inc/Encoder/CEncoder.cpp:115:6:void CEncoder::decrementa()	16	static

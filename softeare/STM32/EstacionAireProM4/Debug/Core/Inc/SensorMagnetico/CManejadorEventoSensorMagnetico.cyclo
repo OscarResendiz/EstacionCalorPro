@@ -1,0 +1,4 @@
+../Core/Inc/SensorMagnetico/CManejadorEventoSensorMagnetico.cpp:10:1:CManejadorEventoSensorMagnetico::CManejadorEventoSensorMagnetico()	1
+../Core/Inc/SensorMagnetico/CManejadorEventoSensorMagnetico.cpp:16:1:CManejadorEventoSensorMagnetico::~CManejadorEventoSensorMagnetico()	1
+../Core/Inc/SensorMagnetico/CManejadorEventoSensorMagnetico.cpp:16:1:virtual CManejadorEventoSensorMagnetico::~CManejadorEventoSensorMagnetico()	1
+../Core/Inc/SensorMagnetico/CManejadorEventoSensorMagnetico.cpp:20:6:virtual void CManejadorEventoSensorMagnetico::OnSensorMagneticoChange(int)	1
