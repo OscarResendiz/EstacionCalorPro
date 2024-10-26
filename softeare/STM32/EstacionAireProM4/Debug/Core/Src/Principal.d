@@ -33,11 +33,12 @@ Core/Src/Principal.o: ../Core/Src/Principal.cpp \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
- ../Core/Inc/Principal.hpp ../Core/Inc/Max6675/Max6675.hpp \
+ ../Core/Inc/Principal.hpp \
+ ../Core/Inc/SensorTemperatura/Max6675/Max6675.hpp \
  ../Core/Inc/Delays/delays.hpp ../Core/Inc/Constantes.hpp \
+ ../Core/Inc/SensorTemperatura/InterfaceSensorTemperatura/InterfaceSensorTemperatura.hpp \
  ../Core/Inc/ControlVelocidadAire/ControlVelocidadAire.hpp \
  ../Core/Inc/Timer/Timer.hpp ../Core/Inc/main.h ../Core/Inc/Uart/Uart.hpp \
- ../Core/Inc/max6675/max6675.hpp \
  ../Core/Inc/ControlVelocidadAire/ControlVelocidadAire.hpp \
  ../Core/Inc/Boton/CManejadorBoton.hpp \
  ../Core/Inc/Boton/CManejadorEventosBoton.hpp \
@@ -53,8 +54,8 @@ Core/Src/Principal.o: ../Core/Src/Principal.cpp \
  ../Core/Inc/Encoder/CManejadorEventosEncoder.hpp \
  ../Core/Inc/GUI/PantallaManual/CPantallaManual.hpp \
  ../Core/Inc/Estaciones/CestacionBaku601.hpp \
- ../Core/Inc/Max6675/MAX6675.hpp ../Core/Inc/PWM/Pwm.hpp \
- ../Core/Inc/Calefactor/Calefactor.hpp \
+ ../Core/Inc/SensorTemperatura/Max6675/MAX6675.hpp \
+ ../Core/Inc/PWM/Pwm.hpp ../Core/Inc/Calefactor/Calefactor.hpp \
  ../Core/Inc/SensorMagnetico/SensorMagnetico.hpp \
  ../Core/Inc/SensorMagnetico/CManejadorEventoSensorMagnetico.hpp \
  ../Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.hpp \
@@ -62,7 +63,8 @@ Core/Src/Principal.o: ../Core/Src/Principal.cpp \
  ../Core/Inc/GUI/Menu/CMenuItem.hpp ../Core/Inc/GUI/Menu/CMenu.hpp \
  ../Core/Inc/GUI/Menu/CManejadorEventoMenu.hpp \
  ../Core/Inc/GUI/ConfigurarPantallaMemoria/CConfigurarPantallaMemoria.hpp \
- ../Core/Inc/GUI/PantallaMemoria/CPantallaMemoria.hpp
+ ../Core/Inc/GUI/PantallaMemoria/CPantallaMemoria.hpp \
+ ../Core/Inc/GUI/PantallaCalibracion/CPantallaCalibracion.hpp
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:
@@ -98,14 +100,14 @@ Core/Src/Principal.o: ../Core/Src/Principal.cpp \
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:
 ../Core/Inc/Principal.hpp:
-../Core/Inc/Max6675/Max6675.hpp:
+../Core/Inc/SensorTemperatura/Max6675/Max6675.hpp:
 ../Core/Inc/Delays/delays.hpp:
 ../Core/Inc/Constantes.hpp:
+../Core/Inc/SensorTemperatura/InterfaceSensorTemperatura/InterfaceSensorTemperatura.hpp:
 ../Core/Inc/ControlVelocidadAire/ControlVelocidadAire.hpp:
 ../Core/Inc/Timer/Timer.hpp:
 ../Core/Inc/main.h:
 ../Core/Inc/Uart/Uart.hpp:
-../Core/Inc/max6675/max6675.hpp:
 ../Core/Inc/ControlVelocidadAire/ControlVelocidadAire.hpp:
 ../Core/Inc/Boton/CManejadorBoton.hpp:
 ../Core/Inc/Boton/CManejadorEventosBoton.hpp:
@@ -122,7 +124,7 @@ Core/Src/Principal.o: ../Core/Src/Principal.cpp \
 ../Core/Inc/Encoder/CManejadorEventosEncoder.hpp:
 ../Core/Inc/GUI/PantallaManual/CPantallaManual.hpp:
 ../Core/Inc/Estaciones/CestacionBaku601.hpp:
-../Core/Inc/Max6675/MAX6675.hpp:
+../Core/Inc/SensorTemperatura/Max6675/MAX6675.hpp:
 ../Core/Inc/PWM/Pwm.hpp:
 ../Core/Inc/Calefactor/Calefactor.hpp:
 ../Core/Inc/SensorMagnetico/SensorMagnetico.hpp:
@@ -134,3 +136,4 @@ Core/Src/Principal.o: ../Core/Src/Principal.cpp \
 ../Core/Inc/GUI/Menu/CManejadorEventoMenu.hpp:
 ../Core/Inc/GUI/ConfigurarPantallaMemoria/CConfigurarPantallaMemoria.hpp:
 ../Core/Inc/GUI/PantallaMemoria/CPantallaMemoria.hpp:
+../Core/Inc/GUI/PantallaCalibracion/CPantallaCalibracion.hpp:

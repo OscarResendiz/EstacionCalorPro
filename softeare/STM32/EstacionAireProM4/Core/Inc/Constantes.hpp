@@ -99,6 +99,7 @@
 #define ADDRESS_EEPROM 0XA0
 //definicion de colores baicos
 //0X ROJO VERDE AZUL AZUL
+//0XRGB?
 enum COLOR
 {
  BLACK= 0x0000,
@@ -108,7 +109,8 @@ enum COLOR
  CYAN= 0x07FF,
  MAGENTA= 0xF81F,
  YELLOW =0xFFE0,
- WHITE =0xFFFF
+ WHITE =0xFFFF,
+ GREY=0xDEDE
 };
 //definicion de tamaños de texto
 enum TEXTSIZE
@@ -132,5 +134,13 @@ enum ROTACION
   HORIZONTAL_INVERTIDO=4
 };
 
+enum DIRMEMORIARPROM
+{
+	TEMPERATURAMANUAL=0,
+	AJUSTETEMPERATURA=2,
+	MEMORIA1=4,
+	MEMORIA2=8,
+	MEMORIA3=12
+};
 
 #endif /* INC_CONSTANTES_HPP_ */

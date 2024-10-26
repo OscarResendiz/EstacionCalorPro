@@ -129,7 +129,7 @@ int main(void)
   while (1)
   {
 		int valor=HAL_ADC_GetValue(&hadc1);
-		SerialPrintf("\r\n analogo: %d",valor);
+		SerialPrintf((char*)"\r\n analogo: %d",valor);
 		HAL_Delay(500);
     /* USER CODE END WHILE */
 

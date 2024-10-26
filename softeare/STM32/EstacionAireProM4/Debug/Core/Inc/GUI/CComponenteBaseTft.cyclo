@@ -58,3 +58,4 @@
 ../Core/Inc/GUI/CComponenteBaseTft.cpp:304:6:void CComponenteBaseTft::setTextSize(uint8_t, uint8_t)	1
 ../Core/Inc/GUI/CComponenteBaseTft.cpp:307:6:void CComponenteBaseTft::setTextColor(uint16_t)	1
 ../Core/Inc/GUI/CComponenteBaseTft.cpp:311:6:void CComponenteBaseTft::print(char*)	1
+../Core/Inc/GUI/CComponenteBaseTft.cpp:315:6:virtual void CComponenteBaseTft::LimpiaTexto()	1

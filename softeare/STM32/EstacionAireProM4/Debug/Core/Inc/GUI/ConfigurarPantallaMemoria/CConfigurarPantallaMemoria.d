@@ -52,7 +52,8 @@ Core/Inc/GUI/ConfigurarPantallaMemoria/CConfigurarPantallaMemoria.o: \
  ../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.h \
  ../Core/Inc/GUI/Menu/CMenuItem.hpp ../Core/Inc/GUI/Menu/CMenu.hpp \
  ../Core/Inc/GUI/Menu/CManejadorEventoMenu.hpp \
- ../Core/Inc/GUI/PantallaMemoria/CPantallaMemoria.hpp
+ ../Core/Inc/GUI/PantallaMemoria/CPantallaMemoria.hpp \
+ ../Core/Inc/GUI/PantallaCalibracion/CPantallaCalibracion.hpp
 ../Core/Inc/GUI/ConfigurarPantallaMemoria/CConfigurarPantallaMemoria.hpp:
 ../Core/Inc/GUI/CPantallaBase.hpp:
 ../Core/Inc/GUI/CRectanguloTft.hpp:
@@ -109,3 +110,4 @@ Core/Inc/GUI/ConfigurarPantallaMemoria/CConfigurarPantallaMemoria.o: \
 ../Core/Inc/GUI/Menu/CMenu.hpp:
 ../Core/Inc/GUI/Menu/CManejadorEventoMenu.hpp:
 ../Core/Inc/GUI/PantallaMemoria/CPantallaMemoria.hpp:
+../Core/Inc/GUI/PantallaCalibracion/CPantallaCalibracion.hpp:

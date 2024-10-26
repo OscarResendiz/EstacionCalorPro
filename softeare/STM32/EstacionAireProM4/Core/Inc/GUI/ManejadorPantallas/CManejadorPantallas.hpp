@@ -14,6 +14,7 @@
 #include <ManejadorControles/CManejadorControles.hpp>
 #include <GUI/ConfigurarPantallaMemoria/CConfigurarPantallaMemoria.hpp>
 #include <GUI/PantallaMemoria/CPantallaMemoria.hpp>
+#include <GUI/PantallaCalibracion/CPantallaCalibracion.hpp>
 
 class CManejadorPantallas
 {
@@ -28,6 +29,8 @@ private:
 	CManejadorControles *ManejadorControles;
 	CConfigurarPantallaMemoria *ConfigurarPantallaMemoria;
 	CPantallaMemoria *PantallaMemoria;
+	CPantallaCalibracion *PantallaCalibracion;
+
 	bool CambioPantalla=false;
 
 	void AsignaPantallaActual(CPantallaBase* pantalla);
@@ -43,6 +46,7 @@ public:
 	void MuestraPantallaConfiguracionMemoria(int meoria);
 	void MuestraPantallaMemoria(int memoria);
 	void MuestraPantallaAnterior();
+	void MuestraCPantallaCalibracion();
 };
 extern CManejadorPantallas ManejadorPantallas;
 #endif /* INC_GUI_MANEJADORPANTALLAS_H_ */

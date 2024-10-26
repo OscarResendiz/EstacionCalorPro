@@ -22,7 +22,7 @@ CMenuPrincipal::CMenuPrincipal():
 	Menu->AgregaItem((char*)"Conf Memoria 1", MENU_PRINCIPAL::MENU_MEMORIA_1);
 	Menu->AgregaItem((char*)"Conf Memoria 2",(int)MENU_PRINCIPAL::MENU_MEMORIA_2);
 	Menu->AgregaItem((char*)"Conf Memoria 3", (int)MENU_PRINCIPAL::MENU_MEMORIA_3);
-	Menu->AgregaItem((char*)"Rampa Temperatura", (int)MENU_PRINCIPAL::MENU_RAMPA);
+	Menu->AgregaItem((char*)"Calibrar", (int)MENU_PRINCIPAL::MENU_CALIBRAR);
 	Menu->AgregaItem((char*)"Salir", MENU_SALIR);
 }
 
@@ -69,6 +69,9 @@ void CMenuPrincipal::OnMenuEvent(int identificador)
 	case MENU_PRINCIPAL::MENU_MEMORIA_2:
 	case MENU_PRINCIPAL::MENU_MEMORIA_3:
 		ManejadorPantallas.MuestraPantallaConfiguracionMemoria(identificador);
+		break;
+	case MENU_PRINCIPAL::MENU_CALIBRAR:
+		ManejadorPantallas.MuestraCPantallaCalibracion();
 		break;
 	}
 

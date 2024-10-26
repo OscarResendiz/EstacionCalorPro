@@ -1,0 +1,13 @@
+../Core/Inc/GUI/PantallaCalibracion/CPantallaCalibracion.cpp:14:1:CPantallaCalibracion::CPantallaCalibracion()	56	static
+../Core/Inc/GUI/PantallaCalibracion/CPantallaCalibracion.cpp:38:1:CPantallaCalibracion::~CPantallaCalibracion()	16	static
+../Core/Inc/GUI/PantallaCalibracion/CPantallaCalibracion.cpp:38:1:virtual CPantallaCalibracion::~CPantallaCalibracion()	16	static
+../Core/Inc/GUI/PantallaCalibracion/CPantallaCalibracion.cpp:43:7:virtual void CPantallaCalibracion::Show()	16	static
+../Core/Inc/GUI/PantallaCalibracion/CPantallaCalibracion.cpp:58:6:virtual void CPantallaCalibracion::Refresca()	16	static
+../Core/Inc/GUI/PantallaCalibracion/CPantallaCalibracion.cpp:62:6:virtual void CPantallaCalibracion::OnBotonDosClickEvent()	16	static
+../Core/Inc/GUI/PantallaCalibracion/CPantallaCalibracion.cpp:67:6:void CPantallaCalibracion::MuestraInformacion()	16	static
+../Core/Inc/GUI/PantallaCalibracion/CPantallaCalibracion.cpp:92:6:virtual void CPantallaCalibracion::OnBotonPerillaClickEvent()	16	static
+../Core/Inc/GUI/PantallaCalibracion/CPantallaCalibracion.cpp:109:6:virtual void CPantallaCalibracion::OnPerillaIncremento()	16	static
+../Core/Inc/GUI/PantallaCalibracion/CPantallaCalibracion.cpp:130:6:virtual void CPantallaCalibracion::OnPerillaDecremento()	16	static
+../Core/Inc/GUI/PantallaCalibracion/CPantallaCalibracion.cpp:152:6:void CPantallaCalibracion::LeeMemoria()	40	static
+../Core/Inc/GUI/PantallaCalibracion/CPantallaCalibracion.cpp:172:6:virtual void CPantallaCalibracion::LeeDatosEstacion()	16	static
+../Core/Inc/GUI/PantallaCalibracion/CPantallaCalibracion.cpp:180:6:virtual void CPantallaCalibracion::OnBotonUnoClickEvent()	40	static

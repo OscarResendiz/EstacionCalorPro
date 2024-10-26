@@ -11,3 +11,4 @@
 ../Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.cpp:69:6:void CManejadorPantallas::MuestraPantallaConfiguracionMemoria(int)	2
 ../Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.cpp:76:6:void CManejadorPantallas::MuestraPantallaMemoria(int)	2
 ../Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.cpp:84:6:void CManejadorPantallas::MuestraPantallaAnterior()	2
+../Core/Inc/GUI/ManejadorPantallas/CManejadorPantallas.cpp:90:6:void CManejadorPantallas::MuestraCPantallaCalibracion()	2

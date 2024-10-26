@@ -23,6 +23,7 @@ CEtiquetaTft::CEtiquetaTft(int xi, int yi, int ancho, int alto,	int backColor, c
 
 void CEtiquetaTft::SetTexto(char *formato, ...)
 {
+//	LimpiaTexto();
 	char *p;
 	char buffer[100];
 	char tmp[100];
@@ -150,4 +151,14 @@ int CEtiquetaTft::DameTextSize()
 void CEtiquetaTft::SetBackColor(int color)
 {
 	BackColor=color;
+}
+void CEtiquetaTft::LimpiaTexto()
+{
+	setTextColor (BackColor);
+	//muestro el texto;
+	print (Texto);
+	setTextColor (ColorTexto);
+	//muestro el texto;
+//	print (Texto);
+
 }

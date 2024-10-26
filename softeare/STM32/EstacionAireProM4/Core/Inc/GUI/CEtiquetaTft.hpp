@@ -32,6 +32,7 @@ public:
 	  void SetTextSize(int textZize);
 	  int DameTextSize();
 	  void SetBackColor(int color);
+	  virtual void LimpiaTexto();
 };
 
 #endif /* INC_GUI_CETIQUETATFT_HPP_ */

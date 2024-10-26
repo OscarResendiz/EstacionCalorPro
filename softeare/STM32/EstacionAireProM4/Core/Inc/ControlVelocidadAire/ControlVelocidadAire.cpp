@@ -55,6 +55,7 @@ void ControlVelocidadAire::Inicializa()
 }
 int ControlVelocidadAire::LeeVelocidad()
 {
+	Inicializa();
 	HAL_ADC_Start(&hadc1);
 	int valor=HAL_ADC_GetValue(&hadc1);
 	//4095->100

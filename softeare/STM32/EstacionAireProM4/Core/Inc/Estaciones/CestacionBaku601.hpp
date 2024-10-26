@@ -10,10 +10,11 @@
 #include "Estaciones/CEstacionBase.hpp"
 #include "Boton/CManejadorEventosBoton.hpp"
 #include "Encoder/CManejadorEventosEncoder.hpp"
-#include "Max6675/MAX6675.hpp"
+#include "SensorTemperatura/Max6675/MAX6675.hpp"
 #include "PWM/Pwm.hpp"
 #include "Calefactor/Calefactor.hpp"
 #include <SensorMagnetico/SensorMagnetico.hpp>
+#include "SensorTemperatura/InterfaceSensorTemperatura/InterfaceSensorTemperatura.hpp"
 
 
 class CestacionBaku601: public CEstacionBase,CManejadorEventoSensorMagnetico
@@ -28,7 +29,7 @@ private:
 	int PotenciaCalefactor=5;
 	int TiempoCalefactorEncendido=0;
 	//variables para el calculo del PID
-	int TiempoMuestreoTemperatura=500; //por defualt hace el muestreo de temperatura cada segundo
+	int TiempoMuestreoTemperatura=1000; //por defualt hace el muestreo de temperatura cada segundo
 	int TiempoActual=0;
 	int TiempoProximoMuestreo=0;
 	float PID_error;
@@ -45,7 +46,8 @@ protected:
 	int CONFIG_TCDO_PIN = 12;
 	int EstadoCalefator=APAGADO;
 // OBJETO UTILIZADO PARA LA COMUNICACION CON EL MAX6675
-	MAX6675 thermocouple;
+	//MAX6675 thermocouple;
+	InterfaceSensorTemperatura* thermocouple;
 	Pwm pwm;
 	Calefactor calefactor;
 	SensorMagnetico sensorMagnetico;
@@ -86,6 +88,8 @@ private:
 	void ProcesaCalefactor();
 	virtual void OnSensorMagneticoChange(int estado);
 	void EnfriaYApagaPistola();
+	void IniciaMax6675();
+	void IniciaSensorTemperaturaAnalogico();
 };
 
 #endif /* INC_ESTACIONES_CESTACIONVIRTUAL_HPP_ */

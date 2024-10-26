@@ -3,4 +3,4 @@
 ../Core/Inc/ControlVelocidadAire/ControlVelocidadAire.cpp:18:1:virtual ControlVelocidadAire::~ControlVelocidadAire()	16	static
 ../Core/Inc/ControlVelocidadAire/ControlVelocidadAire.cpp:23:6:void ControlVelocidadAire::Inicializa()	40	static
 ../Core/Inc/ControlVelocidadAire/ControlVelocidadAire.cpp:56:5:int ControlVelocidadAire::LeeVelocidad()	24	static
-../Core/Inc/ControlVelocidadAire/ControlVelocidadAire.cpp:65:6:void ControlVelocidadAire::Error_Handler()	16	static
+../Core/Inc/ControlVelocidadAire/ControlVelocidadAire.cpp:66:6:void ControlVelocidadAire::Error_Handler()	16	static

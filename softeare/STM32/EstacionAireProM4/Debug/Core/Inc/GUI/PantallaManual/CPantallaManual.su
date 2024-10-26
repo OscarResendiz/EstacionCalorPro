@@ -13,7 +13,8 @@
 ../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:129:7:virtual void CPantallaManual::OnBotonPerillaClickEvent()	16	static
 ../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:133:7:virtual void CPantallaManual::MuestraInformacion(bool)	16	static
 ../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:143:7:virtual void CPantallaManual::GuardaTemperatura()	40	static
-../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:157:7:virtual void CPantallaManual::Show()	40	static
-../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:178:6:virtual void CPantallaManual::OnBotonTresClickEvent()	16	static
-../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:182:6:virtual void CPantallaManual::OnBotonUnoClickEvent()	16	static
-../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:186:6:virtual void CPantallaManual::OnBotonDosClickEvent()	16	static
+../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:157:6:void CPantallaManual::LeeMemoria()	40	static
+../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:170:7:virtual void CPantallaManual::Show()	16	static
+../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:179:6:virtual void CPantallaManual::OnBotonTresClickEvent()	16	static
+../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:183:6:virtual void CPantallaManual::OnBotonUnoClickEvent()	16	static
+../Core/Inc/GUI/PantallaManual/CPantallaManual.cpp:187:6:virtual void CPantallaManual::OnBotonDosClickEvent()	16	static

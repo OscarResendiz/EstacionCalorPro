@@ -87,13 +87,13 @@ int CPantallaMemoria::DameDireccionMemoria()
 	switch(NumeroMemoria)
 	{
 	case 1:
-		direccion=1;
+		direccion=DIRMEMORIARPROM::MEMORIA1;
 		break;
 	case 2:
-		direccion=5;
+		direccion=DIRMEMORIARPROM::MEMORIA2;
 		break;
 	case 3:
-		direccion=9;
+		direccion=DIRMEMORIARPROM::MEMORIA3;
 		break;
 	}
 	return direccion;

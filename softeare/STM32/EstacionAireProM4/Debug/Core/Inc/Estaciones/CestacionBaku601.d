@@ -5,8 +5,8 @@ Core/Inc/Estaciones/CestacionBaku601.o: \
  ../Core/Inc/ManejadorControles/CManejadorEventosControles.hpp \
  ../Core/Inc/Boton/CManejadorEventosBoton.hpp \
  ../Core/Inc/Encoder/CManejadorEventosEncoder.hpp \
- ../Core/Inc/Max6675/MAX6675.hpp ../Core/Inc/Delays/delays.hpp \
- ../Core/Inc/Constantes.hpp \
+ ../Core/Inc/SensorTemperatura/Max6675/MAX6675.hpp \
+ ../Core/Inc/Delays/delays.hpp ../Core/Inc/Constantes.hpp \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../Core/Inc/stm32f4xx_hal_conf.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \
@@ -41,16 +41,18 @@ Core/Inc/Estaciones/CestacionBaku601.o: \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
+ ../Core/Inc/SensorTemperatura/InterfaceSensorTemperatura/InterfaceSensorTemperatura.hpp \
  ../Core/Inc/PWM/Pwm.hpp ../Core/Inc/Calefactor/Calefactor.hpp \
  ../Core/Inc/SensorMagnetico/SensorMagnetico.hpp \
  ../Core/Inc/SensorMagnetico/CManejadorEventoSensorMagnetico.hpp \
- ../Core/Inc/Uart/Uart.hpp
+ ../Core/Inc/Uart/Uart.hpp \
+ ../Core/Inc/SensorTemperatura/SensorAnalogico.hpp
 ../Core/Inc/Estaciones/CestacionBaku601.hpp:
 ../Core/Inc/Estaciones/CEstacionBase.hpp:
 ../Core/Inc/ManejadorControles/CManejadorEventosControles.hpp:
 ../Core/Inc/Boton/CManejadorEventosBoton.hpp:
 ../Core/Inc/Encoder/CManejadorEventosEncoder.hpp:
-../Core/Inc/Max6675/MAX6675.hpp:
+../Core/Inc/SensorTemperatura/Max6675/MAX6675.hpp:
 ../Core/Inc/Delays/delays.hpp:
 ../Core/Inc/Constantes.hpp:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
@@ -87,8 +89,10 @@ Core/Inc/Estaciones/CestacionBaku601.o: \
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:
+../Core/Inc/SensorTemperatura/InterfaceSensorTemperatura/InterfaceSensorTemperatura.hpp:
 ../Core/Inc/PWM/Pwm.hpp:
 ../Core/Inc/Calefactor/Calefactor.hpp:
 ../Core/Inc/SensorMagnetico/SensorMagnetico.hpp:
 ../Core/Inc/SensorMagnetico/CManejadorEventoSensorMagnetico.hpp:
 ../Core/Inc/Uart/Uart.hpp:
+../Core/Inc/SensorTemperatura/SensorAnalogico.hpp:

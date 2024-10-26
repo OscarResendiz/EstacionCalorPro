@@ -8,34 +8,8 @@
 #include <SensorMagnetico/SensorMagnetico.hpp>
 #include "stm32f4xx.h"
 #include "Constantes.hpp"
-#include "max6675/max6675.hpp"
 #include "Uart/Uart.hpp"
 
-/*
-void PruebaTempratura(int n)
-{
-//	HAL_InitTick()
-	int temperatura;
-	MAX6675 thermocouple;
-	double t=1/SystemCoreClock;
-	//if(n==0)
-	{
-	thermocouple.SetConfigCkPin(GPIOA, GPIO_PIN_1);
-	thermocouple.SetConfigCsPin(GPIOA, GPIO_PIN_2);
-	thermocouple.SetConfigDatPin(GPIOA, GPIO_PIN_0);
-	thermocouple.Init();
-	}
-	int x=10;
-	while(x>1)
-	{
-	//	x--;
-
-		temperatura=thermocouple.MAX6675_leex();
-		SerialPrintf("\r\nTemperatura: %d intento = %d",temperatura,n);
-		HAL_Delay(1000);
-	}
-}
-*/
 SensorMagnetico::SensorMagnetico()
 {
 	// TODO Auto-generated constructor stub

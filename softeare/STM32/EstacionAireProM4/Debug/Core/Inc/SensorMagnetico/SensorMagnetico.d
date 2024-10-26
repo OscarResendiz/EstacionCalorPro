@@ -36,8 +36,7 @@ Core/Inc/SensorMagnetico/SensorMagnetico.o: \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
  ../Core/Inc/SensorMagnetico/CManejadorEventoSensorMagnetico.hpp \
- ../Core/Inc/Constantes.hpp ../Core/Inc/max6675/max6675.hpp \
- ../Core/Inc/Delays/delays.hpp ../Core/Inc/Uart/Uart.hpp
+ ../Core/Inc/Constantes.hpp ../Core/Inc/Uart/Uart.hpp
 ../Core/Inc/SensorMagnetico/SensorMagnetico.hpp:
 ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:
 ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h:
@@ -75,6 +74,4 @@ Core/Inc/SensorMagnetico/SensorMagnetico.o: \
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:
 ../Core/Inc/SensorMagnetico/CManejadorEventoSensorMagnetico.hpp:
 ../Core/Inc/Constantes.hpp:
-../Core/Inc/max6675/max6675.hpp:
-../Core/Inc/Delays/delays.hpp:
 ../Core/Inc/Uart/Uart.hpp:

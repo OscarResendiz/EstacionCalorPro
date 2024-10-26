@@ -9,7 +9,8 @@
 #define LIBRERIAS_MAX6675_H_
 #include "Delays/delays.hpp"
 #include <Constantes.hpp>
-class MAX6675
+#include "SensorTemperatura/InterfaceSensorTemperatura/InterfaceSensorTemperatura.hpp"
+class MAX6675: public InterfaceSensorTemperatura
 {
 private:
 	GPIO_TypeDef *DAT_MAX_GPIO_Port;
@@ -23,11 +24,11 @@ private:
 	void Retardo();
 public:
 	MAX6675();
-	void Init();
+	virtual void Init();
 	void SetConfigDatPin(GPIO_TypeDef *portDat, uint16_t pinDat);
 	void SetConfigCkPin(GPIO_TypeDef *portCk, uint16_t pinCk);
 	void SetConfigCsPin(GPIO_TypeDef *portCs, uint16_t pinCs);
 	uint8_t MAX6675_pulso();
-	int MAX6675_leex();
+	virtual int LeeTemepatura();
 };
 #endif /* LIBRERIAS_MAX6675_H_ */

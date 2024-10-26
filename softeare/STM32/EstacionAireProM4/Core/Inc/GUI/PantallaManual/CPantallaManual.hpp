@@ -57,6 +57,7 @@ protected:
 	void MuestraTemperaturas(bool forrzar);
 	void MuestraNivelAire(bool forrzar);
 	virtual void MuestraInformacion(bool forzar);
+	void LeeMemoria();
 };
 
 #endif /* INC_GUI_PANTALLAMANUAL_CPANTALLAMANUAL_HPP_ */

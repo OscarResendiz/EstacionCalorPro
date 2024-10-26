@@ -9,52 +9,40 @@
 #include "Calefactor/Calefactor.hpp"
 #include "Constantes.hpp"
 #include "Uart/Uart.hpp"
+#include "SensorTemperatura/Max6675/MAX6675.hpp"
+#include <SensorTemperatura/SensorAnalogico.hpp>
 
-/*
-void PruebaTempratura(int n)
-{
-//	HAL_InitTick()
-	int temperatura;
-	MAX6675 thermocouple;
-	double t=1/SystemCoreClock;
-	//if(n==0)
-	{
-	thermocouple.SetConfigCkPin(GPIOA, GPIO_PIN_1);
-	thermocouple.SetConfigCsPin(GPIOA, GPIO_PIN_2);
-	thermocouple.SetConfigDatPin(GPIOA, GPIO_PIN_0);
-	thermocouple.Init();
-	}
-	int x=10;
-	while(x>1)
-	{
-	//	x--;
-
-		temperatura=thermocouple.MAX6675_leex();
-		SerialPrintf("\r\nTemperatura: %d intento = %d",temperatura,n);
-		HAL_Delay(1000);
-	}
-}
-*/
 CestacionBaku601::~CestacionBaku601()
 {
 	// TODO Auto-generated destructor stub
 }
 
+void CestacionBaku601::IniciaMax6675()
+{
+	MAX6675 *max6675=new MAX6675();
+	max6675->SetConfigCkPin(GPIOA, GPIO_PIN_1);
+	max6675->SetConfigCsPin(GPIOA, GPIO_PIN_2);
+	max6675->SetConfigDatPin(GPIOA, GPIO_PIN_0);
+	thermocouple=max6675;
+}
+void CestacionBaku601::IniciaSensorTemperaturaAnalogico()
+{
+	SensorAnalogico *sensorTemeratura=new SensorAnalogico();
+	thermocouple=sensorTemeratura;
+}
 CestacionBaku601::CestacionBaku601() :
 		CEstacionBase()
 {
 	pwm.Init(TIM2, TIM_CHANNEL_1, 65535);
 
 	//inicializa la termocupla
-	thermocouple.SetConfigCkPin(GPIOA, GPIO_PIN_1);
-	thermocouple.SetConfigCsPin(GPIOA, GPIO_PIN_2);
-	thermocouple.SetConfigDatPin(GPIOA, GPIO_PIN_0);
-	thermocouple.Init();
+	//IniciaMax6675();
+	IniciaSensorTemperaturaAnalogico();
+	thermocouple->Init();
 
 
 	calefactor.Configurar(GPIOB, GPIO_PIN_3);
 	calefactor.Init();
-//	PruebaTempratura(0);
 	sensorMagnetico.Configurar(GPIOB, GPIO_PIN_5);
 	sensorMagnetico.Init();
 	sensorMagnetico.AsignaManejadorEventos(this);
@@ -65,7 +53,7 @@ CestacionBaku601::CestacionBaku601() :
 float CestacionBaku601::GetTemperaturaRealx()
 {
 	//return //TemperaturaRealActual;//
-	return thermocouple.MAX6675_leex(); //* .59;
+	return thermocouple->LeeTemepatura(); //* .59;
 }
 
 //establece la temperatura que se quiere alcanzar

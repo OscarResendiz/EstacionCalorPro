@@ -213,7 +213,7 @@ void CComponenteBaseTft::print(unsigned int num, int base)
 }
 void CComponenteBaseTft::printf(char *formato, ...)
 {
-
+	LimpiaTexto();
 	char *p;
 	char buffer[100];
 	char tmp[100];
@@ -311,4 +311,8 @@ void CComponenteBaseTft::setTextColor(uint16_t c)
 void CComponenteBaseTft::print(char *texto)
 {
 	ILI9341_Draw_Text(texto, CursorX,CursorY, ColorTexto, TextSize, BackColor);
+}
+void CComponenteBaseTft::LimpiaTexto()
+{
+
 }

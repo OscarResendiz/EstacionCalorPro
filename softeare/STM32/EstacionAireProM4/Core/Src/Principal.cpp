@@ -9,7 +9,6 @@
 #include "Principal.hpp"
 #include <stdio.h>
 #include "Uart/Uart.hpp"
-#include "max6675/max6675.hpp"
 #include "ControlVelocidadAire/ControlVelocidadAire.hpp"
 #include "Boton/CManejadorBoton.hpp"
 #include <ILI9341/ILI9341_GFX.hpp>
@@ -37,7 +36,6 @@ void IncializaSistema()
 	HAL_NVIC_SetPriority(EXTI15_10_IRQn, 0, 0);
 	HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
 
-	//PruebaTempratura(0);
 	estacion = new CestacionBaku601();
 	ManejadorControles=new CManejadorControles();
 	ILI9341_Init(); //initial driver setup to drive ili9341
@@ -51,7 +49,6 @@ void IncializaSistema()
 void EjecutaSistema()
 {
 	int n=0;
-//	PruebaTempratura(0);
 	ManejadorPantallas.SetEstacion(estacion);
 	ManejadorPantallas.SetManejadorControles(ManejadorControles);
 	ManejadorPantallas.MuestraPantallaManual();
@@ -79,7 +76,6 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
 	if(htim->Instance==TIM3)
 	{
-//		SerialPrintf("\r\n Timer");
 		if(estacion==NULL)
 			return;
 		estacion->TimerTick();

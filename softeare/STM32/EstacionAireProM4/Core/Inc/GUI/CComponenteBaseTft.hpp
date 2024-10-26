@@ -112,6 +112,8 @@ public:
 	void println(unsigned int num, int base);
 	void print(unsigned int num, int base);
 	void printf(char *formato, ...);
+  virtual void LimpiaTexto();
+
 };
 
 #endif /* INC_GUI_CCOMPONENTEBASETFT_HPP_ */

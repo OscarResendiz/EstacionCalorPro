@@ -7,7 +7,7 @@
 
 #ifndef INC_PRINCIPAL_HPP_
 #define INC_PRINCIPAL_HPP_
-#include "Max6675/Max6675.hpp"
+#include "SensorTemperatura/Max6675/Max6675.hpp"
 #include "ControlVelocidadAire/ControlVelocidadAire.hpp"
 #include <Timer/Timer.hpp>
 

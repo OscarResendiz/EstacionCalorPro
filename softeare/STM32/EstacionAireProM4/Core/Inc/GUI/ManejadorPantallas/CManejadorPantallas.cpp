@@ -87,3 +87,9 @@ void CManejadorPantallas::MuestraPantallaAnterior()
 		return;
 	AsignaPantallaActual(PantallaAnterior);
 }
+void CManejadorPantallas::MuestraCPantallaCalibracion()
+{
+	if(PantallaCalibracion==NULL)
+		PantallaCalibracion=new CPantallaCalibracion();
+	AsignaPantallaActual(PantallaCalibracion);
+}

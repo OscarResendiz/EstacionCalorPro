@@ -53,6 +53,7 @@ Core/Inc/GUI/PantallaMemoria/CPantallaMemoria.o: \
  ../Core/Inc/GUI/Menu/CMenuItem.hpp ../Core/Inc/GUI/Menu/CMenu.hpp \
  ../Core/Inc/GUI/Menu/CManejadorEventoMenu.hpp \
  ../Core/Inc/GUI/ConfigurarPantallaMemoria/CConfigurarPantallaMemoria.hpp \
+ ../Core/Inc/GUI/PantallaCalibracion/CPantallaCalibracion.hpp \
  ../Core/Inc/Uart/Uart.hpp
 ../Core/Inc/GUI/PantallaMemoria/CPantallaMemoria.hpp:
 ../Core/Inc/GUI/PantallaManual/CPantallaManual.hpp:
@@ -110,4 +111,5 @@ Core/Inc/GUI/PantallaMemoria/CPantallaMemoria.o: \
 ../Core/Inc/GUI/Menu/CMenu.hpp:
 ../Core/Inc/GUI/Menu/CManejadorEventoMenu.hpp:
 ../Core/Inc/GUI/ConfigurarPantallaMemoria/CConfigurarPantallaMemoria.hpp:
+../Core/Inc/GUI/PantallaCalibracion/CPantallaCalibracion.hpp:
 ../Core/Inc/Uart/Uart.hpp:

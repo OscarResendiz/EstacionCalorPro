@@ -142,29 +142,22 @@ void CPantallaManual::Refresca()
  }
  void CPantallaManual::GuardaTemperatura()
  {
- 	uint8_t temperatura=Estacion->GetTemperatura();
+ 	uint16_t temperatura=Estacion->GetTemperatura();
 // 	uint8_t datos_w[10];
  	int t= HAL_GetTick();
  	if(t>tiempoescritura)
  	{
 
- 		HAL_I2C_Mem_Write(&hi2c1,ADDRESS_EEPROM,0,I2C_MEMADD_SIZE_8BIT,&temperatura,1,HAL_MAX_DELAY);
+ 		HAL_I2C_Mem_Write(&hi2c1,ADDRESS_EEPROM,DIRMEMORIARPROM::TEMPERATURAMANUAL,I2C_MEMADD_SIZE_8BIT,(uint8_t*)&temperatura,2,HAL_MAX_DELAY);
  		TemperaturaGuardada=true;
  		tiempoescritura=t+1000;
  	}
 
  }
- void CPantallaManual::Show()
- {
- 	CPantallaBase::Show();
- 	LabelTemperatura->Show();
- 	//leo la temperatura desde la memoria
-
- 	uint8_t temperatura;
-// 	uint8_t datos_w[10];
-// 	uint8_t datos_r[10];
-// 	char buf_tx[30];
- 	  if( HAL_I2C_Mem_Read(&hi2c1,ADDRESS_EEPROM,0,I2C_MEMADD_SIZE_8BIT,&temperatura,1,HAL_MAX_DELAY)==HAL_OK)
+void CPantallaManual::LeeMemoria()
+{
+ 	uint16_t temperatura;
+ 	  if( HAL_I2C_Mem_Read(&hi2c1,ADDRESS_EEPROM,DIRMEMORIARPROM::TEMPERATURAMANUAL,I2C_MEMADD_SIZE_8BIT,(uint8_t*)&temperatura,2,HAL_MAX_DELAY)==HAL_OK)
  	  {
  		 	if(temperatura>=0 && temperatura<=500)
  		 	{
@@ -172,6 +165,14 @@ void CPantallaManual::Refresca()
  		 	}
  		 	TemperaturaGuardada=true;
  	  }
+}
+
+ void CPantallaManual::Show()
+ {
+ 	CPantallaBase::Show();
+ 	LabelTemperatura->Show();
+ 	//leo la temperatura desde la memoria
+ 	LeeMemoria();
  	LeeDatosEstacion();
  	MuestraInformacion(true);
  }

@@ -1,8 +1,8 @@
-../Core/Inc/SensorMagnetico/SensorMagnetico.cpp:39:1:SensorMagnetico::SensorMagnetico()	1
-../Core/Inc/SensorMagnetico/SensorMagnetico.cpp:45:1:SensorMagnetico::~SensorMagnetico()	1
-../Core/Inc/SensorMagnetico/SensorMagnetico.cpp:45:1:virtual SensorMagnetico::~SensorMagnetico()	1
-../Core/Inc/SensorMagnetico/SensorMagnetico.cpp:50:6:void SensorMagnetico::Configurar(GPIO_TypeDef*, uint16_t)	1
-../Core/Inc/SensorMagnetico/SensorMagnetico.cpp:56:6:void SensorMagnetico::Init()	1
-../Core/Inc/SensorMagnetico/SensorMagnetico.cpp:66:6:void SensorMagnetico::AsignaManejadorEventos(CManejadorEventoSensorMagnetico*)	1
-../Core/Inc/SensorMagnetico/SensorMagnetico.cpp:72:5:int SensorMagnetico::Leer()	1
-../Core/Inc/SensorMagnetico/SensorMagnetico.cpp:78:6:void SensorMagnetico::Procesa()	5
+../Core/Inc/SensorMagnetico/SensorMagnetico.cpp:13:1:SensorMagnetico::SensorMagnetico()	1
+../Core/Inc/SensorMagnetico/SensorMagnetico.cpp:19:1:SensorMagnetico::~SensorMagnetico()	1
+../Core/Inc/SensorMagnetico/SensorMagnetico.cpp:19:1:virtual SensorMagnetico::~SensorMagnetico()	1
+../Core/Inc/SensorMagnetico/SensorMagnetico.cpp:24:6:void SensorMagnetico::Configurar(GPIO_TypeDef*, uint16_t)	1
+../Core/Inc/SensorMagnetico/SensorMagnetico.cpp:30:6:void SensorMagnetico::Init()	1
+../Core/Inc/SensorMagnetico/SensorMagnetico.cpp:40:6:void SensorMagnetico::AsignaManejadorEventos(CManejadorEventoSensorMagnetico*)	1
+../Core/Inc/SensorMagnetico/SensorMagnetico.cpp:46:5:int SensorMagnetico::Leer()	1
+../Core/Inc/SensorMagnetico/SensorMagnetico.cpp:52:6:void SensorMagnetico::Procesa()	5

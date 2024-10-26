@@ -5,7 +5,7 @@
  *      Author: Alcides Ramos
  */
 
-#include "Max6675/Max6675.hpp"
+#include "SensorTemperatura/Max6675/Max6675.hpp"
 #include "Uart/Uart.hpp"
 MAX6675::MAX6675()
 {
@@ -29,7 +29,7 @@ void MAX6675::SetConfigCsPin(GPIO_TypeDef *portCs, uint16_t pinCs)
 	CS_MAX_Pin = pinCs;
 
 }
-int MAX6675::MAX6675_leex()
+int MAX6675::LeeTemepatura()
 {
 	//Init();
 	uint16_t sensor_dato;
