@@ -9,6 +9,7 @@
 #include "stm32f4xx.h"
 #include "stm32f4xx_hal_conf.h"
 #include "Constantes.hpp"
+#include <EPROM/CEprom.hpp>
 
 extern I2C_HandleTypeDef hi2c1;
 
@@ -82,7 +83,8 @@ void SensorAnalogico::Error_Handler(void)
 }
 int SensorAnalogico::LeeMemoria()
 {
- 	uint16_t diferencia;
+	return Eprom.DameAjusteTemperatura();
+/* 	uint16_t diferencia;
  	if( HAL_I2C_Mem_Read(&hi2c1,ADDRESS_EEPROM,DIRMEMORIARPROM::AJUSTETEMPERATURA,I2C_MEMADD_SIZE_8BIT,(uint8_t*)&diferencia,2,HAL_MAX_DELAY)==HAL_OK)
  	{
  	 	if(diferencia>=-500 && diferencia<=500)
@@ -91,4 +93,6 @@ int SensorAnalogico::LeeMemoria()
  	 	}
 	}
  	return 0;
+ 	*/
+//	return 0;
 }

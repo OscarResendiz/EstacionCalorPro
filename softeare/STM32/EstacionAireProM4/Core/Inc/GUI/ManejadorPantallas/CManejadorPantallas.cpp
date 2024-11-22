@@ -37,6 +37,12 @@ void CManejadorPantallas::MuestraMenuPrincipal()
 	AsignaPantallaActual(menuPrincipal);
 }
 
+void CManejadorPantallas::MuestraMenuRampa()
+{
+	if(menuRampa==NULL)
+		menuRampa=new CPantallaMenuRampa();
+	AsignaPantallaActual(menuRampa);
+}
 void CManejadorPantallas::RefrescaPantalla()
 {
 	CambiaPantalla();
@@ -52,8 +58,10 @@ void CManejadorPantallas::CambiaPantalla()
 	if(	CambioPantalla==false)
 		return;
 	if(PantallaActual!=NULL)
+	{
 		PantallaActual->Ocultar();
-	PantallaAnterior=PantallaActual;
+		PantallaAnterior=PantallaActual;
+	}
 	PantallaActual=PantallaPendinteCambiar;
 	PantallaActual->SetEstacion(Estacion);
 	PantallaActual->SetManejadorControles(ManejadorControles);
@@ -92,4 +100,18 @@ void CManejadorPantallas::MuestraCPantallaCalibracion()
 	if(PantallaCalibracion==NULL)
 		PantallaCalibracion=new CPantallaCalibracion();
 	AsignaPantallaActual(PantallaCalibracion);
+}
+void CManejadorPantallas::MuestraPantallaRampa(int nrampa)
+{
+	if(PantallaRampa==NULL)
+		PantallaRampa=new CPantallaRampa();
+	PantallaRampa->SetNumeroRampa(nrampa);
+	AsignaPantallaActual(PantallaRampa);
+
+}
+void CManejadorPantallas::MuestraPantallaInicializaMemoria()
+{
+	if(PantallaInicializaMemoria==NULL)
+		PantallaInicializaMemoria=new CPantallaInicializaMemoria();
+	AsignaPantallaActual(PantallaInicializaMemoria);
 }

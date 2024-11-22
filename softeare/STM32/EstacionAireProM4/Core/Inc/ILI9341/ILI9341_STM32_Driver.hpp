@@ -119,7 +119,7 @@
 #define LIGHTGREY   0xC618      
 #define DARKGREY    0x7BEF      
 //#define BLUE        0x001F
-#define GREEN       0x07E0      
+//#define GREEN       0x07E0
 #define CYAN        0x07FF      
 //#define RED         0xF800
 #define MAGENTA     0xF81F      

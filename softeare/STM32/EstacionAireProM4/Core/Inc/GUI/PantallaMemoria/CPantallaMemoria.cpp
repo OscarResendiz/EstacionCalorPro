@@ -9,6 +9,8 @@
 #include <GUI/ManejadorPantallas/CManejadorPantallas.hpp>
 #include "Uart/Uart.hpp"
 #include "Constantes.hpp"
+#include <EPROM/CEprom.hpp>
+
 extern I2C_HandleTypeDef hi2c1;
 extern UART_HandleTypeDef huart1;
 
@@ -52,7 +54,7 @@ CPantallaMemoria::CPantallaMemoria() :
 void CPantallaMemoria::SetMemoria(int numeroMemoria)
 {
 	NumeroMemoria=numeroMemoria;
-	DireccionMemoria=DameDireccionMemoria();
+//	DireccionMemoria=DameDireccionMemoria();
 }
 
 
@@ -63,40 +65,23 @@ void CPantallaMemoria::OnBotonCuatroClickEvent()
 
 void CPantallaMemoria::LeeDatosMemoria()
 {
-	uint16_t datos_r[2];
-	  if( HAL_I2C_Mem_Read(&hi2c1,ADDRESS_EEPROM,DireccionMemoria,I2C_MEMADD_SIZE_8BIT,(uint8_t*)datos_r,4,HAL_MAX_DELAY)==HAL_OK)
-	  {
-			Temperatura=datos_r[0];
-			VelocidadAire=datos_r[1];
 
-		 	if(Temperatura<0 || Temperatura>500)
-		 	{
-		 		Temperatura=100;
-		 	}
-		 	if(VelocidadAire<0 || VelocidadAire>100)
-		 	{
-		 		VelocidadAire=50;
-		 	}
-		 	Estacion->SetNivelAire(VelocidadAire);
-	  }
-
-}
-int CPantallaMemoria::DameDireccionMemoria()
-{
-	int direccion=1;
 	switch(NumeroMemoria)
 	{
 	case 1:
-		direccion=DIRMEMORIARPROM::MEMORIA1;
+		Temperatura=Eprom.DameTemperatuarMemoria1();
+		VelocidadAire=Eprom.DameVelocidadMemoria1();
 		break;
 	case 2:
-		direccion=DIRMEMORIARPROM::MEMORIA2;
+		Temperatura=Eprom.DameTemperatuarMemoria2();
+		VelocidadAire=Eprom.DameVelocidadMemoria2();
 		break;
 	case 3:
-		direccion=DIRMEMORIARPROM::MEMORIA3;
+		Temperatura=Eprom.DameTemperatuarMemoria3();
+		VelocidadAire=Eprom.DameVelocidadMemoria3();
 		break;
 	}
-	return direccion;
+
 }
 void CPantallaMemoria::LeeDatosEstacion()
 {

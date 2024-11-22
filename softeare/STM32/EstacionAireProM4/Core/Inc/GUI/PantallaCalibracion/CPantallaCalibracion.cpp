@@ -8,6 +8,7 @@
 #include <GUI/PantallaCalibracion/CPantallaCalibracion.hpp>
 #include <GUI/ManejadorPantallas/CManejadorPantallas.hpp>
 #include "stm32f4xx_hal_conf.h"
+#include <EPROM/CEprom.hpp>
 
 extern I2C_HandleTypeDef hi2c1;
 
@@ -151,8 +152,14 @@ void CPantallaCalibracion::OnPerillaDecremento()
 
 void CPantallaCalibracion::LeeMemoria()
 {
- 	uint16_t diferencia;
- 	uint16_t temperatura;
+// 	uint16_t diferencia;
+ //	uint16_t temperatura;
+
+	Temperatura=Eprom.DameTemperaturaManual();
+	Diferencia=Eprom.DameAjusteTemperatura();
+	Estacion->SetTemperatura(Temperatura);
+
+/*
  	if( HAL_I2C_Mem_Read(&hi2c1,ADDRESS_EEPROM,DIRMEMORIARPROM::TEMPERATURAMANUAL,I2C_MEMADD_SIZE_8BIT,(uint8_t*)&temperatura,2,HAL_MAX_DELAY)==HAL_OK)
  	{
  	 	if(temperatura>=0 && temperatura<=500)
@@ -161,6 +168,8 @@ void CPantallaCalibracion::LeeMemoria()
  	 		Estacion->SetTemperatura(temperatura);
  	 	}
  	}
+ 	*/
+	/*
  	if( HAL_I2C_Mem_Read(&hi2c1,ADDRESS_EEPROM,DIRMEMORIARPROM::AJUSTETEMPERATURA,I2C_MEMADD_SIZE_8BIT,(uint8_t*)&diferencia,2,HAL_MAX_DELAY)==HAL_OK)
  	{
  	 	if(diferencia>=-500 && diferencia<=500)
@@ -168,6 +177,7 @@ void CPantallaCalibracion::LeeMemoria()
  	 		Diferencia=diferencia;
  	 	}
 	}
+	*/
 }
 void CPantallaCalibracion::LeeDatosEstacion()
 {
@@ -179,7 +189,10 @@ void CPantallaCalibracion::LeeDatosEstacion()
 }
 void CPantallaCalibracion::OnBotonUnoClickEvent()
 {
+	Eprom.GuardaAjusteTemperatura(Diferencia);
+	/*
  	uint16_t diferencia=Diferencia;
 	HAL_I2C_Mem_Write(&hi2c1,ADDRESS_EEPROM,DIRMEMORIARPROM::AJUSTETEMPERATURA,I2C_MEMADD_SIZE_8BIT,(uint8_t*)&diferencia,2,HAL_MAX_DELAY);
+	*/
 	 ManejadorPantallas.MuestraMenuPrincipal();
 }

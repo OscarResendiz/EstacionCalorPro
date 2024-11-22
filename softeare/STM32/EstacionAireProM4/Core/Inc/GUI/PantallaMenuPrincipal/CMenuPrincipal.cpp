@@ -13,57 +13,26 @@
 #include "string.h"
 
 CMenuPrincipal::CMenuPrincipal():
-	CPantallaBase(1,(char*) " Menu Principal")
+	CPantallaMenuBase((char*) " Menu Principal")
 {
-	Menu=new CMenu(4,30,310, 210,COLOR::WHITE,1, COLOR::RED);
-	Menu->AsignaManejadorEventosMenu(this);
-	Menu->AsignaColoresItems(COLOR::BLACK, 0X776F, COLOR::WHITE, COLOR::BLACK);
-
-	Menu->AgregaItem((char*)"Conf Memoria 1", MENU_PRINCIPAL::MENU_MEMORIA_1);
-	Menu->AgregaItem((char*)"Conf Memoria 2",(int)MENU_PRINCIPAL::MENU_MEMORIA_2);
-	Menu->AgregaItem((char*)"Conf Memoria 3", (int)MENU_PRINCIPAL::MENU_MEMORIA_3);
-	Menu->AgregaItem((char*)"Calibrar", (int)MENU_PRINCIPAL::MENU_CALIBRAR);
-	Menu->AgregaItem((char*)"Salir", MENU_SALIR);
+	AgregaMenuItem((char*)"Conf Memoria 1", MENU_PRINCIPAL::MENU_MEMORIA_1);
+	AgregaMenuItem((char*)"Conf Memoria 2",(int)MENU_PRINCIPAL::MENU_MEMORIA_2);
+	AgregaMenuItem((char*)"Conf Memoria 3", (int)MENU_PRINCIPAL::MENU_MEMORIA_3);
+	AgregaMenuItem((char*)"Calibrar", (int)MENU_PRINCIPAL::MENU_CALIBRAR);
+	AgregaMenuItem((char*)"Rampa", (int)MENU_PRINCIPAL::MENU_RAMPA);
+	AgregaMenuItem((char*)"Salir", MENU_SALIR);
 }
 
 CMenuPrincipal::~CMenuPrincipal()
 {
 	// TODO Auto-generated destructor stub
 }
-
-void CMenuPrincipal::Show()
-{
-	CPantallaBase::Show();
-	Menu->Show();
-	SetVisible(true);
-}
-void CMenuPrincipal::Refresca()
-{
-	if(EsVisible()==false)
-		Show();
-}
-void CMenuPrincipal::OnBotonCuatroClickEvent()
-{
-	ManejadorPantallas.MuestraPantallaManual();
-}
-void CMenuPrincipal::OnPerillaIncremento()
-{
-	Menu->OnSeleccionaSiguiente();
-}
-void CMenuPrincipal::OnPerillaDecremento()
-{
-	Menu->OnSeleccionaAnterior();
-}
-void CMenuPrincipal::OnBotonPerillaClickEvent()
-{
-	Menu->OnClickSeleccionado();
-}
 void CMenuPrincipal::OnMenuEvent(int identificador)
 {
 	switch(identificador)
 	{
 	case MENU_PRINCIPAL::MENU_SALIR:
-		ManejadorPantallas.MuestraPantallaManual();//.MuestraPantallaAnterior();
+		ManejadorPantallas.MuestraPantallaManual();
 		break;
 	case MENU_PRINCIPAL::MENU_MEMORIA_1:
 	case MENU_PRINCIPAL::MENU_MEMORIA_2:
@@ -72,6 +41,9 @@ void CMenuPrincipal::OnMenuEvent(int identificador)
 		break;
 	case MENU_PRINCIPAL::MENU_CALIBRAR:
 		ManejadorPantallas.MuestraCPantallaCalibracion();
+		break;
+	case MENU_PRINCIPAL::MENU_RAMPA:
+		ManejadorPantallas.MuestraMenuRampa();
 		break;
 	}
 
@@ -88,4 +60,8 @@ void CMenuPrincipal::OnBotonUnoClickEvent()
 void CMenuPrincipal::OnBotonDosClickEvent()
 {
 	ManejadorPantallas.MuestraPantallaMemoria(2);
+}
+void CMenuPrincipal::OnBotonCuatroClickEvent()
+{
+	ManejadorPantallas.MuestraPantallaManual();
 }

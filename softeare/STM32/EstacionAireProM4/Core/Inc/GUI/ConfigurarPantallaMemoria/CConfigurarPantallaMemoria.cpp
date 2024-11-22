@@ -7,6 +7,7 @@
 
 #include <GUI/ConfigurarPantallaMemoria/CConfigurarPantallaMemoria.hpp>
 #include <GUI/ManejadorPantallas/CManejadorPantallas.hpp>
+#include <EPROM/CEprom.hpp>
 
 extern I2C_HandleTypeDef hi2c1;
 
@@ -59,11 +60,27 @@ void CConfigurarPantallaMemoria::SetMemoria(int numeroMemoria)
 	TemperaturaAnterior=-1;
 	VelocidadAireAnterior=-1;
 	NumeroMemoria=numeroMemoria;
-	DireccionMemoria=DameDireccionMemoria();
+//	DireccionMemoria=DameDireccionMemoria();
 }
 
 void CConfigurarPantallaMemoria::LeeDatosMemoria()
 {
+	switch(NumeroMemoria)
+	{
+	case 1:
+		Temperatura=Eprom.DameTemperatuarMemoria1();
+		VelocidadAire=Eprom.DameVelocidadMemoria1();
+		break;
+	case 2:
+		Temperatura=Eprom.DameTemperatuarMemoria2();
+		VelocidadAire=Eprom.DameVelocidadMemoria2();
+		break;
+	case 3:
+		Temperatura=Eprom.DameTemperatuarMemoria3();
+		VelocidadAire=Eprom.DameVelocidadMemoria3();
+		break;
+	}
+	/*
 	uint16_t datos_r[2];
 	  if( HAL_I2C_Mem_Read(&hi2c1,ADDRESS_EEPROM,DireccionMemoria,I2C_MEMADD_SIZE_8BIT,(uint8_t*)datos_r,4,HAL_MAX_DELAY)==HAL_OK)
 	  {
@@ -79,8 +96,10 @@ void CConfigurarPantallaMemoria::LeeDatosMemoria()
 		 		VelocidadAire=50;
 		 	}
 	  }
+	  */
 
 }
+/*
 int CConfigurarPantallaMemoria::DameDireccionMemoria()
 {
 	int direccion=1;
@@ -98,6 +117,7 @@ int CConfigurarPantallaMemoria::DameDireccionMemoria()
 	}
 	return direccion;
 }
+*/
 void CConfigurarPantallaMemoria::MuestraInformacion()
 {
 
@@ -127,12 +147,25 @@ void CConfigurarPantallaMemoria::OnPerillaDecremento()
 }
 void CConfigurarPantallaMemoria::OnBotonUnoClickEvent()
 {
+	switch(NumeroMemoria)
+	{
+	case 1:
+		Eprom.GuardaMemoria1(Temperatura, VelocidadAire);
+		break;
+	case 2:
+		Eprom.GuardaMemoria2(Temperatura, VelocidadAire);
+		break;
+	case 3:
+		Eprom.GuardaMemoria3(Temperatura, VelocidadAire);
+		break;
+	}
+	/*
 	//hay que guarar la informacion
  	uint16_t datos_w[2];
-
  	datos_w[0]=Temperatura;
  	datos_w[1]=VelocidadAire;
 	HAL_I2C_Mem_Write(&hi2c1,ADDRESS_EEPROM,DireccionMemoria,I2C_MEMADD_SIZE_8BIT,(uint8_t*)datos_w,4,HAL_MAX_DELAY);
+	*/
 	 ManejadorPantallas.MuestraMenuPrincipal();
 }
 void CConfigurarPantallaMemoria::OnBotonDosClickEvent()

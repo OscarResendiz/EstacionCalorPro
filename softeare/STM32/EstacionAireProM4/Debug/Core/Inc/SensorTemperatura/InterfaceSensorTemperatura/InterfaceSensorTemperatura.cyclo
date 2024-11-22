@@ -1,5 +1,0 @@
-../Core/Inc/SensorTemperatura/InterfaceSensorTemperatura/InterfaceSensorTemperatura.cpp:10:1:InterfaceSensorTemperatura::InterfaceSensorTemperatura()	1
-../Core/Inc/SensorTemperatura/InterfaceSensorTemperatura/InterfaceSensorTemperatura.cpp:16:1:InterfaceSensorTemperatura::~InterfaceSensorTemperatura()	1
-../Core/Inc/SensorTemperatura/InterfaceSensorTemperatura/InterfaceSensorTemperatura.cpp:16:1:virtual InterfaceSensorTemperatura::~InterfaceSensorTemperatura()	1
-../Core/Inc/SensorTemperatura/InterfaceSensorTemperatura/InterfaceSensorTemperatura.cpp:21:6:virtual void InterfaceSensorTemperatura::Init()	1
-../Core/Inc/SensorTemperatura/InterfaceSensorTemperatura/InterfaceSensorTemperatura.cpp:25:5:virtual int InterfaceSensorTemperatura::LeeTemepatura()	1

@@ -12,12 +12,8 @@
 #include "GUI/Menu/CMenuItem.hpp"
 #include "GUI/Menu/CMenu.hpp"
 #include <GUI/Menu/CManejadorEventoMenu.hpp>
+#include <GUI/PantallaMenuBase/CPantallaMenuBase.hpp>
 
-//#define MENU_SALIR 0
-//#define MENU_MEMORIA_1 1
-//#define MENU_MEMORIA_2 2
-//#define MENU_MEMORIA_3 3
-//#define MENU_RAMPA 4
 enum MENU_PRINCIPAL
 {
 	MENU_SALIR=0,
@@ -29,22 +25,16 @@ enum MENU_PRINCIPAL
 
 };
 
-class CMenuPrincipal:public CPantallaBase, CManejadorEventoMenu
+class CMenuPrincipal:public CPantallaMenuBase
 {
 private:
-	CMenu* Menu;
 	CEstacionBase *Estacion;
 	CMenuItem* item1,*item2;
 
 public:
 	CMenuPrincipal();
 	virtual ~CMenuPrincipal();
-	virtual void Show();
-	virtual void Refresca();
 	virtual void OnBotonCuatroClickEvent();
-	virtual void OnPerillaIncremento();
-	virtual void OnPerillaDecremento();
-	virtual void OnBotonPerillaClickEvent();
 	virtual void OnMenuEvent(int identificador);
 
 	virtual void OnBotonUnoClickEvent();

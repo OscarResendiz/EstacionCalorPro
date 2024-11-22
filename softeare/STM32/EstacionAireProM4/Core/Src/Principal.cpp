@@ -22,6 +22,8 @@
 #include <Timer/Timer.hpp>
 #include "GUI/ManejadorPantallas/CManejadorPantallas.hpp"
 #include "ManejadorControles/CManejadorControles.hpp"
+#include <EPROM/CEprom.hpp>
+#include <RapaTemperatura/CControladorRampas.hpp>
 
 extern ADC_HandleTypeDef hadc1;
 
@@ -29,6 +31,8 @@ CestacionBaku601 *estacion;
 //TIM_HandleTypeDef htim2;
 CManejadorPantallas ManejadorPantallas;
 CManejadorControles *ManejadorControles;
+CEprom Eprom;
+CControladorRampas ControladorRampas;
 void IncializaSistema()
 {
 	USART1_UART_Init();
@@ -51,7 +55,10 @@ void EjecutaSistema()
 	int n=0;
 	ManejadorPantallas.SetEstacion(estacion);
 	ManejadorPantallas.SetManejadorControles(ManejadorControles);
-	ManejadorPantallas.MuestraPantallaManual();
+	if(ControladorRampas.MemoriaInicialidada()==false)
+		ManejadorPantallas.MuestraPantallaInicializaMemoria();
+	else
+		ManejadorPantallas.MuestraPantallaManual();
 	while (true)
 	{
 		n++;

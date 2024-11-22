@@ -1,6 +1,0 @@
-../Core/Inc/Delays/delays.cpp:17:6:void delay_us_C(uint32_t)	2
-../Core/Inc/Delays/delays.cpp:35:6:void delay_us_ASM(uint32_t)	1
-../Core/Inc/Delays/delays.cpp:59:6:void delay_us_ASM_IT(uint32_t)	1
-../Core/Inc/Delays/delays.cpp:105:6:void delay_us_dwt_init()	1
-../Core/Inc/Delays/delays.cpp:114:6:void delay_us_dwt(uint32_t)	2
-../Core/Inc/Delays/delays.cpp:123:6:void Delay_ms(uint32_t)	1

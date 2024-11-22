@@ -1,3 +1,0 @@
-../Core/Inc/Timer/Timer.cpp:11:6:bool CTimer::Init(TIM_TypeDef*, uint32_t, IRQn_Type)	56	static
-../Core/Inc/Timer/Timer.cpp:50:6:void CTimer::Start()	16	static
-../Core/Inc/Timer/Timer.cpp:54:6:void CTimer::Stop()	16	static

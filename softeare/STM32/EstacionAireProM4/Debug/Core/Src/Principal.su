@@ -1,8 +1,0 @@
-../Core/Inc/Timer/Timer.hpp:14:7:CTimer::CTimer()	16	static
-../Core/Src/Principal.cpp:32:6:void IncializaSistema()	96	static
-../Core/Src/Principal.cpp:49:6:void EjecutaSistema()	16	static
-../Core/Src/Principal.cpp:64:6:void HAL_GPIO_EXTI_Callback(uint16_t)	16	static
-../Core/Src/Principal.cpp:75:6:void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef*)	16	static
-../Core/Src/Principal.cpp:83:1:void __static_initialization_and_destruction_0(int, int)	16	static
-../Core/Src/Principal.cpp:83:1:cpp)	8	static
-../Core/Src/Principal.cpp:83:1:cpp)	8	static

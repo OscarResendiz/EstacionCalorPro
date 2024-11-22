@@ -9,6 +9,8 @@
 #include <GUI/ManejadorPantallas/CManejadorPantallas.hpp>
 #include <Uart/Uart.hpp>
 #include "Constantes.hpp"
+#include <EPROM/CEprom.hpp>
+
 extern I2C_HandleTypeDef hi2c1;
 extern UART_HandleTypeDef huart1;
 
@@ -147,8 +149,8 @@ void CPantallaManual::Refresca()
  	int t= HAL_GetTick();
  	if(t>tiempoescritura)
  	{
-
- 		HAL_I2C_Mem_Write(&hi2c1,ADDRESS_EEPROM,DIRMEMORIARPROM::TEMPERATURAMANUAL,I2C_MEMADD_SIZE_8BIT,(uint8_t*)&temperatura,2,HAL_MAX_DELAY);
+ 		Eprom.GuardaTemepraturaManual(temperatura);
+// 		HAL_I2C_Mem_Write(&hi2c1,ADDRESS_EEPROM,DIRMEMORIARPROM::TEMPERATURAMANUAL,I2C_MEMADD_SIZE_8BIT,(uint8_t*)&temperatura,2,HAL_MAX_DELAY);
  		TemperaturaGuardada=true;
  		tiempoescritura=t+1000;
  	}
@@ -156,7 +158,12 @@ void CPantallaManual::Refresca()
  }
 void CPantallaManual::LeeMemoria()
 {
- 	uint16_t temperatura;
+
+ 	uint16_t temperatura=Eprom.DameTemperaturaManual();
+	Estacion->SetTemperatura(temperatura);
+	TemperaturaGuardada=true;
+
+/*
  	  if( HAL_I2C_Mem_Read(&hi2c1,ADDRESS_EEPROM,DIRMEMORIARPROM::TEMPERATURAMANUAL,I2C_MEMADD_SIZE_8BIT,(uint8_t*)&temperatura,2,HAL_MAX_DELAY)==HAL_OK)
  	  {
  		 	if(temperatura>=0 && temperatura<=500)
@@ -165,6 +172,7 @@ void CPantallaManual::LeeMemoria()
  		 	}
  		 	TemperaturaGuardada=true;
  	  }
+ 	  */
 }
 
  void CPantallaManual::Show()

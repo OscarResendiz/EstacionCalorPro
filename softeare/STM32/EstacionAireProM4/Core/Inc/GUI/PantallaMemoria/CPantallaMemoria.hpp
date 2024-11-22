@@ -14,7 +14,6 @@
 class CPantallaMemoria: public CPantallaManual
 {
 private:
-	int DireccionMemoria;
 	int NumeroMemoria;
 	int VelocidadAire=0;
 	CEtiquetaTft *LabelMemoria;
@@ -23,10 +22,8 @@ private:
 	virtual void OnBotonCuatroClickEvent();
 	virtual void GuardaTemperatura();
 	void LeeDatosMemoria();
-	int DameDireccionMemoria();
 protected:
 	virtual void LeeDatosEstacion();
-//	virtual void MuestraEstado(bool forrzar);
 	virtual void MuestraInformacion(bool forzar);
 public:
 	virtual void OnPerillaIncremento();

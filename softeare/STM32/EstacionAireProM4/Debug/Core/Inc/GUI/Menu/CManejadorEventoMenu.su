@@ -1,4 +1,0 @@
-../Core/Inc/GUI/Menu/CManejadorEventoMenu.cpp:10:1:CManejadorEventoMenu::CManejadorEventoMenu()	16	static
-../Core/Inc/GUI/Menu/CManejadorEventoMenu.cpp:16:1:CManejadorEventoMenu::~CManejadorEventoMenu()	16	static
-../Core/Inc/GUI/Menu/CManejadorEventoMenu.cpp:16:1:virtual CManejadorEventoMenu::~CManejadorEventoMenu()	16	static
-../Core/Inc/GUI/Menu/CManejadorEventoMenu.cpp:21:6:virtual void CManejadorEventoMenu::OnMenuEvent(int)	16	static

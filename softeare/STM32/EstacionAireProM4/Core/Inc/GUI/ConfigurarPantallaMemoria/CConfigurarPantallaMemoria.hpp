@@ -19,7 +19,7 @@ private:
 	CEtiquetaTft *LabelTemperaturas;
 	CEtiquetaTft *LabelAire;
 	int NumeroMemoria;
-	int DireccionMemoria;
+//	int DireccionMemoria;
 	int Temperatura;
 	int VelocidadAire=0;
 	int TemperaturaAnterior;
@@ -27,7 +27,7 @@ private:
 	int VelocidadAireInicialPotenciometro;
 
 	void LeeDatosMemoria();
-	int DameDireccionMemoria();
+//	int DameDireccionMemoria();
 	void MuestraInformacion();
 public:
 	CConfigurarPantallaMemoria();

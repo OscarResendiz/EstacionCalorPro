@@ -1,8 +1,0 @@
-../Core/Inc/Boton/CManejadorBoton.cpp:12:1:CManejadorBoton::CManejadorBoton()	1
-../Core/Inc/Boton/CManejadorBoton.cpp:18:1:CManejadorBoton::~CManejadorBoton()	1
-../Core/Inc/Boton/CManejadorBoton.cpp:18:1:virtual CManejadorBoton::~CManejadorBoton()	1
-../Core/Inc/Boton/CManejadorBoton.cpp:23:6:void CManejadorBoton::Configurar(GPIO_TypeDef*, uint16_t, uint8_t)	1
-../Core/Inc/Boton/CManejadorBoton.cpp:29:6:void CManejadorBoton::Init()	1
-../Core/Inc/Boton/CManejadorBoton.cpp:38:5:int CManejadorBoton::Leer()	1
-../Core/Inc/Boton/CManejadorBoton.cpp:43:6:void CManejadorBoton::AsignaManejadorEventos(CManejadorEventosBoton*)	1
-../Core/Inc/Boton/CManejadorBoton.cpp:47:6:void CManejadorBoton::Procesa(int)	5
