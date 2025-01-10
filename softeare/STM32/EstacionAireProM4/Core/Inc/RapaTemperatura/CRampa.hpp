@@ -21,7 +21,8 @@ public:
 	virtual ~CRampa();
 	CRampa operator=(CRampa &rampa);
 	void SetNombre(char* nombre);
-	CRampa(CRampa &rampa);
+	CRampa(CRampa &&rampa);
+//	CRampa(CRampa &rampa);
 };
 
 #endif /* INC_RAPATEMPERATURA_CRAMPA_HPP_ */

@@ -29,6 +29,8 @@ private:
 	CManejadorEventoMenu* Manejador;
 
 	CMenuItem* CreaItem(char* texto, int identificador,bool seleccionado);
+	CMenuItem* CreaItem(char* texto, int identificador,int x, int y,int ancho, int alto,bool seleccionado);
+	CMenuItem* CreaItem(char* texto, int identificador,int x, int y,int ancho, int alto,int colorFondo,int colorTexto,bool seleccionado);
 	void CalaculaPosicionItems(CMenuItem* raiz);
 	void CalculaPaginas();
 	void LimpiaPaginas();
@@ -40,11 +42,15 @@ public:
 	void Show();
 	void AsignaColoresItems(int colorTexto, int colorFondo, int colorTextoResaltado, int solorFondoResaltado);
 	void AgregaItem(char* texto, int identificador,bool seleccionado=false);
+	void AgregaItem(char* texto, int identificador,int x, int y,int ancho, int alto,bool seleccionado=false);
+	void AgregaItem(char* texto, int identificador,int x, int y,int ancho, int alto,int colorFondo,int colorTexto,bool seleccionado=false);
 	void OnSeleccionaSiguiente();
 	void OnSeleccionaAnterior();
 	void OnClickSeleccionado();
 	bool SePuedeMostrar(CMenuItem *item);
 	void AsignaManejadorEventosMenu(CManejadorEventoMenu *manejador);
+	void SetPosicion(int x, int y);
+	void BorrarItemns();
 };
 
 #endif /* INC_GUI_MENU_CMENU_HPP_ */

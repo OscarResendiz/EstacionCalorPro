@@ -28,7 +28,8 @@ CPantallaMemoria::CPantallaMemoria() :
 	LabelTemperatura->CambiaPosicion(5,65);
 	int centroX = DameCentroX();
 	LabelTemperaturas->CambiaPosicion(centroX - 150 / 2, 95);
-	LabelAire->CambiaPosicion(5, 135);
+	LabelAire1->CambiaPosicion(5, 135);
+	LabelAire2->CambiaPosicion(110, 135);
 	LabelEstado->CambiaPosicion(5, 175);
 
 }
@@ -87,7 +88,7 @@ void CPantallaMemoria::LeeDatosEstacion()
 {
 	CPantallaManual::LeeDatosEstacion();
 	int velocidad=ManejadorControles->GetNivelAire();
-	if(VelocidadAireInicialPotenciometro>velocidad+1 ||VelocidadAireInicialPotenciometro<velocidad-1)
+	if(VelocidadAireInicialPotenciometro>velocidad+DiferenciaAire ||VelocidadAireInicialPotenciometro<velocidad-DiferenciaAire)
 	{
 		NivelAire =velocidad;
 		CambioNIvelAire=true;

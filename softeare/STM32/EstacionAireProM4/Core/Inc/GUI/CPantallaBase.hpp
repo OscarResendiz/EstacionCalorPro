@@ -38,6 +38,8 @@ public:
 	virtual void Ocultar();
 	virtual bool EsVisible();
 	virtual void SetVisible(bool visible=true);
+	virtual void SetTituloPantalla(char *texto);
+	virtual void Seleccionada();
 };
 
 #endif /* INC_GUI_CPANTALLABASE_HPP_ */

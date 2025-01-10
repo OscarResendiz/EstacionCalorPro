@@ -18,6 +18,7 @@ private:
 	int VelocidadAire=0;
 	CEtiquetaTft *LabelMemoria;
 	int VelocidadAireInicialPotenciometro;
+	int DiferenciaAire=5;
 	bool CambioNIvelAire=false;
 	virtual void OnBotonCuatroClickEvent();
 	virtual void GuardaTemperatura();

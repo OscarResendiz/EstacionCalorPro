@@ -1,0 +1,6 @@
+../Core/Inc/ControlVelocidadAire/ControlVelocidadAire.cpp:12:1:ControlVelocidadAire::ControlVelocidadAire()	1
+../Core/Inc/ControlVelocidadAire/ControlVelocidadAire.cpp:18:1:ControlVelocidadAire::~ControlVelocidadAire()	1
+../Core/Inc/ControlVelocidadAire/ControlVelocidadAire.cpp:18:1:virtual ControlVelocidadAire::~ControlVelocidadAire()	1
+../Core/Inc/ControlVelocidadAire/ControlVelocidadAire.cpp:23:6:void ControlVelocidadAire::Inicializa()	3
+../Core/Inc/ControlVelocidadAire/ControlVelocidadAire.cpp:56:5:int ControlVelocidadAire::LeeVelocidad()	1
+../Core/Inc/ControlVelocidadAire/ControlVelocidadAire.cpp:66:6:void ControlVelocidadAire::Error_Handler()	1

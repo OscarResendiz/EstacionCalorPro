@@ -1,0 +1,8 @@
+../Core/Inc/GUI/Rampa/PantallaPasosRampa/CPantallaPasosRampa.cpp:19:1:CPantallaPasosRampa::CPantallaPasosRampa(int)	1
+../Core/Inc/GUI/Rampa/PantallaPasosRampa/CPantallaPasosRampa.cpp:26:6:virtual void CPantallaPasosRampa::SetIDRampa(int)	3
+../Core/Inc/GUI/Rampa/PantallaPasosRampa/CPantallaPasosRampa.cpp:51:1:CPantallaPasosRampa::~CPantallaPasosRampa()	1
+../Core/Inc/GUI/Rampa/PantallaPasosRampa/CPantallaPasosRampa.cpp:51:1:virtual CPantallaPasosRampa::~CPantallaPasosRampa()	1
+../Core/Inc/GUI/Rampa/PantallaPasosRampa/CPantallaPasosRampa.cpp:56:6:virtual void CPantallaPasosRampa::OnMenuEvent(int)	3
+../Core/Inc/GUI/Rampa/PantallaPasosRampa/CPantallaPasosRampa.cpp:72:1:void __static_initialization_and_destruction_0(int, int)	5
+../Core/Inc/GUI/Rampa/PantallaPasosRampa/CPantallaPasosRampa.cpp:72:1:cpp)	1
+../Core/Inc/GUI/Rampa/PantallaPasosRampa/CPantallaPasosRampa.cpp:72:1:cpp)	1

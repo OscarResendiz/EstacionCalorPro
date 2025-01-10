@@ -1,0 +1,2 @@
+en STM32Cube ide ir a
+menu->window->show view->build Analiser

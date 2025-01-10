@@ -1,0 +1,9 @@
+../Core/Inc/GUI/Rampa/PantallaMenuRampa/CPantallaMenuRampa.cpp:17:1:CPantallaMenuRampa::CPantallaMenuRampa()	16	static
+../Core/Inc/GUI/Rampa/PantallaMenuRampa/CPantallaMenuRampa.cpp:23:1:CPantallaMenuRampa::~CPantallaMenuRampa()	16	static
+../Core/Inc/GUI/Rampa/PantallaMenuRampa/CPantallaMenuRampa.cpp:23:1:virtual CPantallaMenuRampa::~CPantallaMenuRampa()	16	static
+../Core/Inc/GUI/Rampa/PantallaMenuRampa/CPantallaMenuRampa.cpp:27:6:virtual void CPantallaMenuRampa::OnBotonCuatroClickEvent()	16	static
+../Core/Inc/GUI/Rampa/PantallaMenuRampa/CPantallaMenuRampa.cpp:31:6:virtual void CPantallaMenuRampa::OnMenuEvent(int)	16	static
+../Core/Inc/GUI/Rampa/PantallaMenuRampa/CPantallaMenuRampa.cpp:53:6:virtual void CPantallaMenuRampa::OnBotonTresClickEvent()	16	static
+../Core/Inc/GUI/Rampa/PantallaMenuRampa/CPantallaMenuRampa.cpp:57:6:virtual void CPantallaMenuRampa::OnBotonUnoClickEvent()	16	static
+../Core/Inc/GUI/Rampa/PantallaMenuRampa/CPantallaMenuRampa.cpp:61:6:virtual void CPantallaMenuRampa::OnBotonDosClickEvent()	16	static
+../Core/Inc/GUI/Rampa/PantallaMenuRampa/CPantallaMenuRampa.cpp:65:6:virtual void CPantallaMenuRampa::Seleccionada()	72	static

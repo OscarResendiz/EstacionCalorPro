@@ -1,0 +1,7 @@
+../Core/Inc/GUI/Rampa/PantallaEliminarPaso/CPantallaEliminarPaso.cpp:12:1:CPantallaEliminarPaso::CPantallaEliminarPaso()	56	static
+../Core/Inc/GUI/Rampa/PantallaEliminarPaso/CPantallaEliminarPaso.cpp:22:1:CPantallaEliminarPaso::~CPantallaEliminarPaso()	16	static
+../Core/Inc/GUI/Rampa/PantallaEliminarPaso/CPantallaEliminarPaso.cpp:22:1:virtual CPantallaEliminarPaso::~CPantallaEliminarPaso()	16	static
+../Core/Inc/GUI/Rampa/PantallaEliminarPaso/CPantallaEliminarPaso.cpp:27:6:virtual void CPantallaEliminarPaso::OnBotonUnoClickEvent()	16	static
+../Core/Inc/GUI/Rampa/PantallaEliminarPaso/CPantallaEliminarPaso.cpp:33:6:virtual void CPantallaEliminarPaso::OnBotonTresClickEvent()	16	static
+../Core/Inc/GUI/Rampa/PantallaEliminarPaso/CPantallaEliminarPaso.cpp:40:6:virtual void CPantallaEliminarPaso::SetIdPaso(int, int)	24	static
+../Core/Inc/GUI/Rampa/PantallaEliminarPaso/CPantallaEliminarPaso.cpp:48:6:virtual void CPantallaEliminarPaso::Show()	16	static

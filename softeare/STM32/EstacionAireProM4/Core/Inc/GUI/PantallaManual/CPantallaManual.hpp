@@ -27,7 +27,8 @@ protected:
 	int Temperatura = 0;
 	CEtiquetaTft *LabelTemperatura;
 	CEtiquetaTft *LabelTemperaturas;
-	CEtiquetaTft *LabelAire;
+	CEtiquetaTft *LabelAire1;
+	CEtiquetaTft *LabelAire2;
 	CEtiquetaTft *LabelEstado;
 	int NivelAire = 0;
 

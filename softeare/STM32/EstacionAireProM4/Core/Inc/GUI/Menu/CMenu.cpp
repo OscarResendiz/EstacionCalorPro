@@ -71,7 +71,6 @@ void CMenu::AgregaItem(char* texto, int identificador,bool seleccionado)
 	CalaculaPosicionItems(Opciones);
 	CalculaPaginas();
 }
-
 void CMenu::CalaculaPosicionItems(CMenuItem* raiz)
 {
 	if(raiz==NULL)
@@ -215,4 +214,66 @@ bool CMenu::EstaInicioPagina(CMenuItem* item)
 void CMenu::AsignaManejadorEventosMenu(CManejadorEventoMenu *manejador)
 {
 	Manejador=manejador;
+}
+
+void CMenu::AgregaItem(char* texto, int identificador,int x, int y,int ancho, int alto,bool seleccionado)
+{
+	CMenuItem* tmp=CreaItem(texto,identificador,Xi+x,Yi+y,ancho, alto,seleccionado);
+	if(Opciones==NULL)
+	{
+		Opciones=tmp;
+		Opciones->Selecciona(true);
+		Seleccionado=Opciones;
+		ItemInicial=Opciones;
+		return;
+	}
+	Opciones->AgregaAlFinal(tmp);
+}
+CMenuItem* CMenu::CreaItem(char* texto, int identificador,int x, int y,int ancho, int alto,bool seleccionado)
+{
+	CEtiquetaTft* etiquetaTmp=new CEtiquetaTft(x, y, ancho, alto, ColorFondo,texto, ColorTexto, 3, 0, ColorFondo);
+	CMenuItem* tmp=new CMenuItem(etiquetaTmp,identificador,seleccionado);
+	tmp->AsignaColores(ColorTexto, ColorFondo, ColoTextoSeleccionado, ColorFondoSeleccionado);
+	return tmp;
+}
+void CMenu::SetPosicion(int x, int y)
+{
+	Xi=x;
+	Yi=y;
+}
+void CMenu::AgregaItem(char* texto, int identificador,int x, int y,int ancho, int alto,int colorFondo,int colorTexto,bool seleccionado)
+{
+	CMenuItem* tmp=CreaItem(texto,identificador,Xi+x,Yi+y,ancho, alto,colorFondo,colorTexto,seleccionado);
+	if(Opciones==NULL)
+	{
+		Opciones=tmp;
+		Opciones->Selecciona(true);
+		Seleccionado=Opciones;
+		ItemInicial=Opciones;
+		return;
+	}
+	Opciones->AgregaAlFinal(tmp);
+
+}
+CMenuItem* CMenu::CreaItem(char* texto, int identificador,int x, int y,int ancho, int alto,int colorFondo,int colorTexto,bool seleccionado)
+{
+	CEtiquetaTft* etiquetaTmp=new CEtiquetaTft(x, y, ancho, alto, colorFondo,texto, colorTexto, 3, 0, ColorFondo);
+	CMenuItem* tmp=new CMenuItem(etiquetaTmp,identificador,seleccionado);
+	tmp->AsignaColores(colorTexto, colorFondo, ColoTextoSeleccionado, ColorFondoSeleccionado);
+	return tmp;
+
+}
+
+void CMenu::BorrarItemns()
+{
+
+	CMenuItem *tmp=Opciones;
+	CMenuItem *tmp2;
+	while(tmp!=NULL)
+	{
+		tmp2=tmp->DameSiguiente();
+		delete tmp;
+		tmp=tmp2;
+	}
+	Opciones=NULL;
 }

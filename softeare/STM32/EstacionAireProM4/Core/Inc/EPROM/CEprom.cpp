@@ -35,7 +35,7 @@ int CEprom::DameTemperaturaManual()
 	if (TemperaturaManual != -1)
 		return TemperaturaManual;
 	uint16_t temperatura;
-	if (HAL_I2C_Mem_Read(&hi2c1, ADDRESS_EEPROM, TEMPERATURAMANUAL, I2C_MEMADD_SIZE_8BIT, (uint8_t*) &temperatura, 2, HAL_MAX_DELAY) == HAL_OK)
+	if (HAL_I2C_Mem_Read(&hi2c1, DameDireccionAlta(TEMPERATURAMANUAL), TEMPERATURAMANUAL, I2C_MEMADD_SIZE_8BIT, (uint8_t*) &temperatura, 2, HAL_MAX_DELAY) == HAL_OK)
 	{
 		if (temperatura >= 0 && temperatura <= 500)
 		{
@@ -48,14 +48,14 @@ int CEprom::DameTemperaturaManual()
 void CEprom::GuardaTemepraturaManual(int temperatura)
 {
 	TemperaturaManual = temperatura;
-	HAL_I2C_Mem_Write(&hi2c1, ADDRESS_EEPROM, TEMPERATURAMANUAL, I2C_MEMADD_SIZE_8BIT, (uint8_t*) &temperatura, 2, HAL_MAX_DELAY);
+	HAL_I2C_Mem_Write(&hi2c1, DameDireccionAlta(TEMPERATURAMANUAL), TEMPERATURAMANUAL, I2C_MEMADD_SIZE_8BIT, (uint8_t*) &temperatura, 2, HAL_MAX_DELAY);
 }
 
 int CEprom::DameAjusteTemperatura()
 {
 	if (Diferencia != -1)
 		return Diferencia;
-	if (HAL_I2C_Mem_Read(&hi2c1, ADDRESS_EEPROM, AJUSTETEMPERATURA, I2C_MEMADD_SIZE_8BIT, (uint8_t*) &Diferencia, 2, HAL_MAX_DELAY) == HAL_OK)
+	if (HAL_I2C_Mem_Read(&hi2c1, DameDireccionAlta(AJUSTETEMPERATURA), AJUSTETEMPERATURA, I2C_MEMADD_SIZE_8BIT, (uint8_t*) &Diferencia, 2, HAL_MAX_DELAY) == HAL_OK)
 	{
 		if (Diferencia >= -500 && Diferencia <= 500)
 		{
@@ -69,7 +69,7 @@ int CEprom::DameAjusteTemperatura()
 void CEprom::GuardaAjusteTemperatura(int diferencia)
 {
 	Diferencia=diferencia;
-	HAL_I2C_Mem_Write(&hi2c1,ADDRESS_EEPROM,AJUSTETEMPERATURA,I2C_MEMADD_SIZE_8BIT,(uint8_t*)&diferencia,2,HAL_MAX_DELAY);
+	HAL_I2C_Mem_Write(&hi2c1,DameDireccionAlta(AJUSTETEMPERATURA),AJUSTETEMPERATURA,I2C_MEMADD_SIZE_8BIT,(uint8_t*)&diferencia,2,HAL_MAX_DELAY);
 }
 
 int CEprom::DameTemperatuarMemoria1()
@@ -94,7 +94,7 @@ void CEprom::GuardaMemoria1(int temperatura, int velocidad)
 	uint16_t datos_w[2];
 	datos_w[0] = temperatura;
 	datos_w[1] = velocidad;
-	HAL_I2C_Mem_Write(&hi2c1, ADDRESS_EEPROM, MEMORIA1, I2C_MEMADD_SIZE_8BIT, (uint8_t*) datos_w, 4, HAL_MAX_DELAY);
+	HAL_I2C_Mem_Write(&hi2c1, DameDireccionAlta(MEMORIA1), MEMORIA1, I2C_MEMADD_SIZE_8BIT, (uint8_t*) datos_w, 4, HAL_MAX_DELAY);
 
 }
 
@@ -120,7 +120,7 @@ void CEprom::GuardaMemoria2(int temperatura, int velocidad)
 	uint16_t datos_w[2];
 	datos_w[0] = temperatura;
 	datos_w[1] = velocidad;
-	HAL_I2C_Mem_Write(&hi2c1, ADDRESS_EEPROM, MEMORIA2, I2C_MEMADD_SIZE_8BIT, (uint8_t*) datos_w, 4, HAL_MAX_DELAY);
+	HAL_I2C_Mem_Write(&hi2c1, DameDireccionAlta(MEMORIA2), MEMORIA2, I2C_MEMADD_SIZE_8BIT, (uint8_t*) datos_w, 4, HAL_MAX_DELAY);
 
 }
 
@@ -144,12 +144,12 @@ void CEprom::GuardaMemoria3(int temperatura, int velocidad)
 	uint16_t datos_w[2];
 	datos_w[0] = temperatura;
 	datos_w[1] = velocidad;
-	HAL_I2C_Mem_Write(&hi2c1, ADDRESS_EEPROM, MEMORIA3, I2C_MEMADD_SIZE_8BIT, (uint8_t*) datos_w, 4, HAL_MAX_DELAY);
+	HAL_I2C_Mem_Write(&hi2c1, DameDireccionAlta(MEMORIA3), MEMORIA3, I2C_MEMADD_SIZE_8BIT, (uint8_t*) datos_w, 4, HAL_MAX_DELAY);
 }
 void CEprom::LeeMemoria1()
 {
 	uint16_t datos_r[2];
-	if (HAL_I2C_Mem_Read(&hi2c1, ADDRESS_EEPROM, MEMORIA1, I2C_MEMADD_SIZE_8BIT, (uint8_t*) datos_r, 4, HAL_MAX_DELAY) == HAL_OK)
+	if (HAL_I2C_Mem_Read(&hi2c1, DameDireccionAlta(MEMORIA1), MEMORIA1, I2C_MEMADD_SIZE_8BIT, (uint8_t*) datos_r, 4, HAL_MAX_DELAY) == HAL_OK)
 	{
 		Memoria1_Temperatura = datos_r[0];
 		Memoria1_VelocidadAire = datos_r[1];
@@ -166,7 +166,7 @@ void CEprom::LeeMemoria1()
 void CEprom::LeeMemoria2()
 {
 	uint16_t datos_r[2];
-	if (HAL_I2C_Mem_Read(&hi2c1, ADDRESS_EEPROM, MEMORIA2, I2C_MEMADD_SIZE_8BIT, (uint8_t*) datos_r, 4, HAL_MAX_DELAY) == HAL_OK)
+	if (HAL_I2C_Mem_Read(&hi2c1, DameDireccionAlta(MEMORIA2), MEMORIA2, I2C_MEMADD_SIZE_8BIT, (uint8_t*) datos_r, 4, HAL_MAX_DELAY) == HAL_OK)
 	{
 		Memoria2_Temperatura = datos_r[0];
 		Memoria2_VelocidadAire = datos_r[1];
@@ -183,7 +183,7 @@ void CEprom::LeeMemoria2()
 void CEprom::LeeMemoria3()
 {
 	uint16_t datos_r[2];
-	if (HAL_I2C_Mem_Read(&hi2c1, ADDRESS_EEPROM, MEMORIA3, I2C_MEMADD_SIZE_8BIT, (uint8_t*) datos_r, 4, HAL_MAX_DELAY) == HAL_OK)
+	if (HAL_I2C_Mem_Read(&hi2c1, DameDireccionAlta(MEMORIA3), MEMORIA3, I2C_MEMADD_SIZE_8BIT, (uint8_t*) datos_r, 4, HAL_MAX_DELAY) == HAL_OK)
 	{
 		Memoria3_Temperatura = datos_r[0];
 		Memoria3_VelocidadAire = datos_r[1];
@@ -202,7 +202,7 @@ int CEprom::DameNumeroRampas()
 {
 	if (NRampas != -1)
 		return NRampas;
-	if (HAL_I2C_Mem_Read(&hi2c1, ADDRESS_EEPROM, DIRNRAMPAS, I2C_MEMADD_SIZE_8BIT, (uint8_t*) &NRampas, 2, HAL_MAX_DELAY) == HAL_OK)
+	if (HAL_I2C_Mem_Read(&hi2c1, DameDireccionAlta(DIRNRAMPAS), DIRNRAMPAS, I2C_MEMADD_SIZE_8BIT, (uint8_t*) &NRampas, 2, HAL_MAX_DELAY) == HAL_OK)
 	{
 			return NRampas;
 	}
@@ -212,20 +212,31 @@ int CEprom::DameNumeroRampas()
 void CEprom::GuardaNumeroRampas(int nrampas)
 {
 	NRampas=nrampas;
-	HAL_I2C_Mem_Write(&hi2c1,ADDRESS_EEPROM,DIRNRAMPAS,I2C_MEMADD_SIZE_8BIT,(uint8_t*)&NRampas,2,HAL_MAX_DELAY);
+	HAL_I2C_Mem_Write(&hi2c1,DameDireccionAlta(DIRNRAMPAS),DIRNRAMPAS,I2C_MEMADD_SIZE_8BIT,(uint8_t*)&NRampas,2,HAL_MAX_DELAY);
 
 }
 int CEprom::DameDireccionInicioRampas()
 {
 	return DIRECCION_INICIO_RAMPAS;
 }
-bool CEprom::GuardaBytes(int direccion, int numBytes,uint8_t* bloque)
+bool CEprom::GuardaBytes(uint16_t direccion, uint16_t numBytes,uint8_t* bloque)
 {
-	return HAL_I2C_Mem_Write(&hi2c1,ADDRESS_EEPROM,direccion,I2C_MEMADD_SIZE_8BIT,bloque,numBytes,HAL_MAX_DELAY)== HAL_OK;
+	int dirtmp=direccion;
+	for(int x=0;x<numBytes;x++)
+	{
+		if(HAL_I2C_Mem_Write(&hi2c1,DameDireccionAlta(dirtmp),dirtmp,I2C_MEMADD_SIZE_8BIT,bloque,1,HAL_MAX_DELAY)!= HAL_OK)
+		{
+			return false;
+		}
+		for(int i=0;i<100000;i++);
+		bloque++;
+		dirtmp++;
+	}
+	return true;
 }
 bool CEprom::LeeBytes(int direccion, int numBytes,uint8_t* bloque)
 {
-	if(HAL_I2C_Mem_Read(&hi2c1, ADDRESS_EEPROM, direccion, I2C_MEMADD_SIZE_8BIT,  bloque, numBytes, HAL_MAX_DELAY) == HAL_OK)
+	if(HAL_I2C_Mem_Read(&hi2c1, DameDireccionAlta(direccion), direccion, I2C_MEMADD_SIZE_8BIT,  bloque, numBytes, HAL_MAX_DELAY) == HAL_OK)
 	{
 			return true;
 	}
@@ -239,4 +250,11 @@ bool CEprom::HayEspacio(int direccion,int nbytes)
 int CEprom::DameCapacidadMaximaMemoria()
 {
 	return TAM_MAXIMO_MEMORIA;
+}
+uint8_t CEprom::DameDireccionAlta(uint16_t direccion)
+{
+	uint8_t tmp=direccion>>7;
+	tmp=tmp|0xF0;
+	tmp=tmp&0xAF;
+	return tmp;
 }

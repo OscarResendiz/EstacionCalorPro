@@ -1,0 +1,16 @@
+../Core/Inc/RapaTemperatura/CControladorRampas.cpp:15:1:CControladorRampas::CControladorRampas()	1
+../Core/Inc/RapaTemperatura/CControladorRampas.cpp:33:1:CControladorRampas::~CControladorRampas()	1
+../Core/Inc/RapaTemperatura/CControladorRampas.cpp:33:1:virtual CControladorRampas::~CControladorRampas()	1
+../Core/Inc/RapaTemperatura/CControladorRampas.cpp:39:6:bool CControladorRampas::MemoriaInicialidada()	3
+../Core/Inc/RapaTemperatura/CControladorRampas.cpp:53:6:void CControladorRampas::InicializaMemoria()	7
+../Core/Inc/RapaTemperatura/CControladorRampas.cpp:102:6:void CControladorRampas::SetControlProgreso(CControlProgreso*)	1
+../Core/Inc/RapaTemperatura/CControladorRampas.cpp:107:5:int CControladorRampas::DameNumeroRampas()	4
+../Core/Inc/RapaTemperatura/CControladorRampas.cpp:124:8:CRampa CControladorRampas::DameRampa(int)	5
+../Core/Inc/RapaTemperatura/CControladorRampas.cpp:144:8:CRampa CControladorRampas::DameRampaNumero(int)	5
+../Core/Inc/RapaTemperatura/CControladorRampas.cpp:164:8:CRampa CControladorRampas::LeeRampaMemoria(int)	1
+../Core/Inc/RapaTemperatura/CControladorRampas.cpp:196:6:void CControladorRampas::GuardaRampaMemoria(int, CRampa*)	2
+../Core/Inc/RapaTemperatura/CControladorRampas.cpp:233:8:CRampa CControladorRampas::AgregaRampa(char*)	4
+../Core/Inc/RapaTemperatura/CControladorRampas.cpp:257:6:bool CControladorRampas::ActualizaRampa(int, char*)	4
+../Core/Inc/RapaTemperatura/CControladorRampas.cpp:276:6:bool CControladorRampas::EliminaRampa(int)	4
+../Core/Inc/RapaTemperatura/CControladorRampas.cpp:297:6:void CControladorRampas::ActualizadaRampa(int, char*)	4
+../Core/Inc/RapaTemperatura/CControladorRampas.cpp:315:5:int CControladorRampas::DameSiguienteID_Rampa()	4

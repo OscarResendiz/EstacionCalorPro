@@ -1,0 +1,7 @@
+../Core/Inc/GUI/Rampa/PantallaEliminarRampa/CPantallaEliminarRampa.cpp:14:1:CPantallaEliminarRampa::CPantallaEliminarRampa()	1
+../Core/Inc/GUI/Rampa/PantallaEliminarRampa/CPantallaEliminarRampa.cpp:24:1:CPantallaEliminarRampa::~CPantallaEliminarRampa()	1
+../Core/Inc/GUI/Rampa/PantallaEliminarRampa/CPantallaEliminarRampa.cpp:24:1:virtual CPantallaEliminarRampa::~CPantallaEliminarRampa()	1
+../Core/Inc/GUI/Rampa/PantallaEliminarRampa/CPantallaEliminarRampa.cpp:29:6:virtual void CPantallaEliminarRampa::OnBotonUnoClickEvent()	1
+../Core/Inc/GUI/Rampa/PantallaEliminarRampa/CPantallaEliminarRampa.cpp:35:6:virtual void CPantallaEliminarRampa::OnBotonTresClickEvent()	1
+../Core/Inc/GUI/Rampa/PantallaEliminarRampa/CPantallaEliminarRampa.cpp:42:6:virtual void CPantallaEliminarRampa::SetIdRampa(int)	1
+../Core/Inc/GUI/Rampa/PantallaEliminarRampa/CPantallaEliminarRampa.cpp:49:6:virtual void CPantallaEliminarRampa::Show()	1

@@ -1,0 +1,16 @@
+../Core/Inc/ILI9341/ILI9341_STM32_Driver.cpp:92:6:void ILI9341_SPI_Init()	1
+../Core/Inc/ILI9341/ILI9341_STM32_Driver.cpp:100:6:void ILI9341_SPI_Send(unsigned char)	1
+../Core/Inc/ILI9341/ILI9341_STM32_Driver.cpp:106:6:void ILI9341_Write_Command(uint8_t)	1
+../Core/Inc/ILI9341/ILI9341_STM32_Driver.cpp:115:6:void ILI9341_Write_Data(uint8_t)	1
+../Core/Inc/ILI9341/ILI9341_STM32_Driver.cpp:124:6:void ILI9341_Set_Address(uint16_t, uint16_t, uint16_t, uint16_t)	1
+../Core/Inc/ILI9341/ILI9341_STM32_Driver.cpp:142:6:void ILI9341_Reset()	1
+../Core/Inc/ILI9341/ILI9341_STM32_Driver.cpp:152:6:void ILI9341_Set_Rotation(uint8_t)	5
+../Core/Inc/ILI9341/ILI9341_STM32_Driver.cpp:189:6:void ILI9341_Enable()	1
+../Core/Inc/ILI9341/ILI9341_STM32_Driver.cpp:195:6:void ILI9341_Init()	1
+../Core/Inc/ILI9341/ILI9341_STM32_Driver.cpp:335:6:void ILI9341_Draw_Colour(uint16_t)	1
+../Core/Inc/ILI9341/ILI9341_STM32_Driver.cpp:347:6:void ILI9341_Draw_Colour_Burst(uint16_t, uint32_t)	5
+../Core/Inc/ILI9341/ILI9341_STM32_Driver.cpp:394:6:void ILI9341_Fill_Screen(uint16_t)	1
+../Core/Inc/ILI9341/ILI9341_STM32_Driver.cpp:406:6:void ILI9341_Draw_Pixel(uint16_t, uint16_t, uint16_t)	4
+../Core/Inc/ILI9341/ILI9341_STM32_Driver.cpp:458:6:void ILI9341_Draw_Rectangle(uint16_t, uint16_t, uint16_t, uint16_t, uint16_t)	6
+../Core/Inc/ILI9341/ILI9341_STM32_Driver.cpp:476:6:void ILI9341_Draw_Horizontal_Line(uint16_t, uint16_t, uint16_t, uint16_t)	5
+../Core/Inc/ILI9341/ILI9341_STM32_Driver.cpp:490:6:void ILI9341_Draw_Vertical_Line(uint16_t, uint16_t, uint16_t, uint16_t)	5

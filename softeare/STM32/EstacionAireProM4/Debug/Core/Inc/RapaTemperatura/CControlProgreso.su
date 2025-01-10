@@ -1,0 +1,6 @@
+../Core/Inc/RapaTemperatura/CControlProgreso.cpp:10:1:CControlProgreso::CControlProgreso()	16	static
+../Core/Inc/RapaTemperatura/CControlProgreso.cpp:16:1:CControlProgreso::~CControlProgreso()	16	static
+../Core/Inc/RapaTemperatura/CControlProgreso.cpp:16:1:virtual CControlProgreso::~CControlProgreso()	16	static
+../Core/Inc/RapaTemperatura/CControlProgreso.cpp:21:6:virtual void CControlProgreso::OnProgreso(int, int)	24	static
+../Core/Inc/RapaTemperatura/CControlProgreso.cpp:25:6:virtual void CControlProgreso::OnMensaje(char*)	16	static
+../Core/Inc/RapaTemperatura/CControlProgreso.cpp:29:6:virtual void CControlProgreso::OnFinProgreso()	16	static

@@ -1,0 +1,12 @@
+../Core/Inc/GUI/ConfigurarPantallaMemoria/CConfigurarPantallaMemoria.cpp:14:1:CConfigurarPantallaMemoria::CConfigurarPantallaMemoria()	64	static
+../Core/Inc/GUI/ConfigurarPantallaMemoria/CConfigurarPantallaMemoria.cpp:31:1:CConfigurarPantallaMemoria::~CConfigurarPantallaMemoria()	16	static
+../Core/Inc/GUI/ConfigurarPantallaMemoria/CConfigurarPantallaMemoria.cpp:31:1:virtual CConfigurarPantallaMemoria::~CConfigurarPantallaMemoria()	16	static
+../Core/Inc/GUI/ConfigurarPantallaMemoria/CConfigurarPantallaMemoria.cpp:36:6:virtual void CConfigurarPantallaMemoria::Show()	16	static
+../Core/Inc/GUI/ConfigurarPantallaMemoria/CConfigurarPantallaMemoria.cpp:49:6:virtual void CConfigurarPantallaMemoria::Refresca()	24	static
+../Core/Inc/GUI/ConfigurarPantallaMemoria/CConfigurarPantallaMemoria.cpp:58:6:virtual void CConfigurarPantallaMemoria::SetMemoria(int)	16	static
+../Core/Inc/GUI/ConfigurarPantallaMemoria/CConfigurarPantallaMemoria.cpp:66:6:void CConfigurarPantallaMemoria::LeeDatosMemoria()	16	static
+../Core/Inc/GUI/ConfigurarPantallaMemoria/CConfigurarPantallaMemoria.cpp:84:6:void CConfigurarPantallaMemoria::MuestraInformacion()	16	static
+../Core/Inc/GUI/ConfigurarPantallaMemoria/CConfigurarPantallaMemoria.cpp:101:6:virtual void CConfigurarPantallaMemoria::OnPerillaIncremento()	16	static
+../Core/Inc/GUI/ConfigurarPantallaMemoria/CConfigurarPantallaMemoria.cpp:106:6:virtual void CConfigurarPantallaMemoria::OnPerillaDecremento()	16	static
+../Core/Inc/GUI/ConfigurarPantallaMemoria/CConfigurarPantallaMemoria.cpp:111:6:virtual void CConfigurarPantallaMemoria::OnBotonUnoClickEvent()	16	static
+../Core/Inc/GUI/ConfigurarPantallaMemoria/CConfigurarPantallaMemoria.cpp:127:6:virtual void CConfigurarPantallaMemoria::OnBotonTresClickEvent()	16	static

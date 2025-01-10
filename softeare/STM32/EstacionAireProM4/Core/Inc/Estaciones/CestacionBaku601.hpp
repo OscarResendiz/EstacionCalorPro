@@ -40,6 +40,7 @@ private:
 	float Tao_I =600;
 	int TiempoAntiReboresCruceXCero=1;
 	int ciclos=0;
+	int EstadoSensorMagnetico;
 protected:
 	int CONFIG_TCSCK_PIN = 8;
 	int CONFIG_TCCS_PIN = 11;

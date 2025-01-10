@@ -1,0 +1,8 @@
+../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.cpp:15:1:CMenuPrincipal::CMenuPrincipal()	1
+../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.cpp:26:1:CMenuPrincipal::~CMenuPrincipal()	1
+../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.cpp:26:1:virtual CMenuPrincipal::~CMenuPrincipal()	1
+../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.cpp:30:6:virtual void CMenuPrincipal::OnMenuEvent(int)	5
+../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.cpp:52:6:virtual void CMenuPrincipal::OnBotonTresClickEvent()	1
+../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.cpp:56:6:virtual void CMenuPrincipal::OnBotonUnoClickEvent()	1
+../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.cpp:60:6:virtual void CMenuPrincipal::OnBotonDosClickEvent()	1
+../Core/Inc/GUI/PantallaMenuPrincipal/CMenuPrincipal.cpp:64:6:virtual void CMenuPrincipal::OnBotonCuatroClickEvent()	1

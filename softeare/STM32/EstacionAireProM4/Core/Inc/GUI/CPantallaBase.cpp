@@ -67,3 +67,13 @@ void CPantallaBase::SetManejadorControles(CManejadorControles *manejador)
 		return;
 	ManejadorControles->SetManejadorControles(this);
 }
+void CPantallaBase::SetTituloPantalla(char *texto)
+{
+	strcpy(Titulo, texto);
+	LabelTitulo->SetTexto(texto);
+
+}
+void CPantallaBase::Seleccionada()
+{
+
+}

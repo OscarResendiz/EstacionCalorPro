@@ -1,0 +1,5 @@
+../Core/Inc/GUI/Rampa/PantallaRampa/CPantallaRampa.cpp:15:1:CPantallaRampa::CPantallaRampa()	1
+../Core/Inc/GUI/Rampa/PantallaRampa/CPantallaRampa.cpp:27:1:CPantallaRampa::~CPantallaRampa()	1
+../Core/Inc/GUI/Rampa/PantallaRampa/CPantallaRampa.cpp:27:1:virtual CPantallaRampa::~CPantallaRampa()	1
+../Core/Inc/GUI/Rampa/PantallaRampa/CPantallaRampa.cpp:32:6:void CPantallaRampa::SetNumeroRampa(int)	1
+../Core/Inc/GUI/Rampa/PantallaRampa/CPantallaRampa.cpp:38:6:virtual void CPantallaRampa::OnMenuEvent(int)	6

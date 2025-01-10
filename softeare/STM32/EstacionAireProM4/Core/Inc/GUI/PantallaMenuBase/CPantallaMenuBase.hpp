@@ -21,11 +21,14 @@ public:
 	CPantallaMenuBase(char *titulo);
 	virtual ~CPantallaMenuBase();
 	void AgregaMenuItem(char *texto, int Opcion);
+	virtual void AgregaMenuItem(char *texto, int Opcion, int x, int y, int ancho,int alto);
+	virtual void AgregaMenuItem(char *texto, int Opcion, int x, int y, int ancho,int alto,int colorFondo, int colorTexto);
 	virtual void OnPerillaIncremento();
 	virtual void OnPerillaDecremento();
 	virtual void OnBotonPerillaClickEvent();
 	virtual void Show();
 	virtual void Refresca();
+	virtual void BorraMenu();
 };
 
 #endif /* INC_GUI_PANTALLAMENUBASE_CPANTALLAMENUBASE_HPP_ */

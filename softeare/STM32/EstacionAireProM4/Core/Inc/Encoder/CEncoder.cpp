@@ -92,6 +92,14 @@ void CEncoder::leeEncoder(int gpio_pin)
 {
 	if(PinClk!=gpio_pin)
 		return;
+	/*int tiempo = HAL_GetTick();
+	do
+	{
+		ReboteMilis = HAL_GetTick();  //leo el tiempo actual
+	}
+	while((tiempo - ReboteMilis) < TiempoReboteEncoder);
+	*/
+	for(int i=8000;i>0;i--);
 	CLK_status = LeeClk();
 	if (CLK_status != CLK_statusAnterior && CLK_status == 1)
 	{

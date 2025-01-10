@@ -1,0 +1,6 @@
+../Core/Inc/GUI/CBarraProgreso.cpp:11:1:CBarraProgreso::CBarraProgreso(int, int, int, int, int, int, int, int)	1
+../Core/Inc/GUI/CBarraProgreso.cpp:18:1:CBarraProgreso::~CBarraProgreso()	1
+../Core/Inc/GUI/CBarraProgreso.cpp:18:1:virtual CBarraProgreso::~CBarraProgreso()	1
+../Core/Inc/GUI/CBarraProgreso.cpp:23:6:void CBarraProgreso::SetMaximo(int)	1
+../Core/Inc/GUI/CBarraProgreso.cpp:27:6:void CBarraProgreso::SetValor(int)	1
+../Core/Inc/GUI/CBarraProgreso.cpp:31:6:virtual void CBarraProgreso::Show()	3

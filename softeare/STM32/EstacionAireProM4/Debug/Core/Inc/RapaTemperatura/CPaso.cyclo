@@ -1,0 +1,3 @@
+../Core/Inc/RapaTemperatura/CPaso.cpp:12:1:CPaso::CPaso()	1
+../Core/Inc/RapaTemperatura/CPaso.cpp:24:1:CPaso::~CPaso()	1
+../Core/Inc/RapaTemperatura/CPaso.cpp:24:1:virtual CPaso::~CPaso()	1

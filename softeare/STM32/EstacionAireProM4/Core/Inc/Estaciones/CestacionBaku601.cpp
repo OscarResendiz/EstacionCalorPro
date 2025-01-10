@@ -19,16 +19,16 @@ CestacionBaku601::~CestacionBaku601()
 
 void CestacionBaku601::IniciaMax6675()
 {
-	MAX6675 *max6675=new MAX6675();
+	MAX6675 *max6675 = new MAX6675();
 	max6675->SetConfigCkPin(GPIOA, GPIO_PIN_1);
 	max6675->SetConfigCsPin(GPIOA, GPIO_PIN_2);
 	max6675->SetConfigDatPin(GPIOA, GPIO_PIN_0);
-	thermocouple=max6675;
+	thermocouple = max6675;
 }
 void CestacionBaku601::IniciaSensorTemperaturaAnalogico()
 {
-	SensorAnalogico *sensorTemeratura=new SensorAnalogico();
-	thermocouple=sensorTemeratura;
+	SensorAnalogico *sensorTemeratura = new SensorAnalogico();
+	thermocouple = sensorTemeratura;
 }
 CestacionBaku601::CestacionBaku601() :
 		CEstacionBase()
@@ -39,7 +39,6 @@ CestacionBaku601::CestacionBaku601() :
 	//IniciaMax6675();
 	IniciaSensorTemperaturaAnalogico();
 	thermocouple->Init();
-
 
 	calefactor.Configurar(GPIOB, GPIO_PIN_3);
 	calefactor.Init();
@@ -71,7 +70,7 @@ int CestacionBaku601::GetTemperatura()
 //establece el nivel de aire
 void CestacionBaku601::SetNivelAire(int nivel)
 {
-	NivelAire=nivel;
+	NivelAire = nivel;
 	//pwm.SicloTrabajo(nivel);
 }
 int CestacionBaku601::GetNivelAire()
@@ -79,15 +78,11 @@ int CestacionBaku601::GetNivelAire()
 	return NivelAire;
 }
 
-
 //regresa 1 si esta activo y 0 si esta en reposo
 int CestacionBaku601::GetEstado()
 {
 	return sensorMagnetico.Leer();
 }
-
-
-
 
 void CestacionBaku601::IncrementaTemperatura()
 {
@@ -105,7 +100,6 @@ void CestacionBaku601::DecrementaTemperatura()
 	}
 }
 
-
 void CestacionBaku601::ActivarCalefactor()
 {
 	EstadoCalefator = ENCENDIDO;
@@ -115,7 +109,6 @@ void CestacionBaku601::DesactivarCalefactor()
 {
 	EstadoCalefator = APAGADO;
 }
-
 
 void CestacionBaku601::OnSensorMagneticoChange(int estado)
 {
@@ -144,14 +137,14 @@ void CestacionBaku601::ProcesaTemperatura()
 
 void CestacionBaku601::ProcesaTemperaturaReal()
 {
-/*
- *int temperatura = GetTemperaturaReal();
-	if (temperaturaRealAnterior != temperatura)
-	{
-		temperaturaRealAnterior = temperatura;
-		TemperaturaRealEvent(temperaturaRealAnterior);
-	}
-	*/
+	/*
+	 *int temperatura = GetTemperaturaReal();
+	 if (temperaturaRealAnterior != temperatura)
+	 {
+	 temperaturaRealAnterior = temperatura;
+	 TemperaturaRealEvent(temperaturaRealAnterior);
+	 }
+	 */
 }
 
 //verifica elnivel de aire
@@ -165,59 +158,58 @@ void CestacionBaku601::procesaAire()
 	}
 }
 
-
 void CestacionBaku601::ProcesaCalefactor()
 {
 	if (EstadoCalefator == APAGADO)
 	{
 		//esta apagado el calefactor
-		PotenciaCalefactor=0;
+		PotenciaCalefactor = 0;
 		calefactor.Apagar();
 		return;
 	}
-	int sensor = sensorMagnetico.Leer();
-	if (sensor == BOTON_PRESIONADO)
+	EstadoSensorMagnetico = sensorMagnetico.Leer();
+	if (EstadoSensorMagnetico == BOTON_PRESIONADO)
 	{
 		//el usuario coloco la pistola en su base por lo que hay que enfriarla
 		EnfriaYApagaPistola();
 		return;
 	}
-	TiempoEnfriando=0;
+	TiempoEnfriando = 0;
 	//enciendo el aire
 	int aire = GetNivelAire();
 	pwm.SicloTrabajo(aire);
 	//aqui se hace al calculo del PID
 	//veo si ya paso el tiempo para hacer el muestreo
-	TiempoActual=HAL_GetTick(); //me trae el tiempo en milisegundos
-	if(TiempoActual<TiempoProximoMuestreo )
+	TiempoActual = HAL_GetTick(); //me trae el tiempo en milisegundos
+	if (TiempoActual < TiempoProximoMuestreo)
 	{
 		//a un no ha paso el tiempo para
 		return;
 	}
 	//calculo el siguiente tiempo de muestreo
-	TiempoProximoMuestreo=TiempoActual+TiempoMuestreoTemperatura;
-	TemperaturaRealActual=GetTemperaturaRealx();//thermocouple.MAX6675_lee();
-	int temperatura = TemperaturaRealActual;//GetTemperaturaReal();
-	 PID_error = TemperaturaEspecificada - temperatura;                       //Calculo del error
-	 Error_INT = Error_INT + PID_error * (1000 / TiempoMuestreoTemperatura);  //Calculo de la integral del error
-	 PID_value = Kc * (PID_error + (1 / Tao_I) * Error_INT)/10;   //Calculo de la salida del controlador PI
-	 //asigno la potencia del calefactor
-	 PotenciaCalefactor=PID_value;
+	TiempoProximoMuestreo = TiempoActual + TiempoMuestreoTemperatura;
+	TemperaturaRealActual = GetTemperaturaRealx(); //thermocouple.MAX6675_lee();
+	int temperatura = TemperaturaRealActual; //GetTemperaturaReal();
+	PID_error = TemperaturaEspecificada - temperatura;                       //Calculo del error
+	Error_INT = Error_INT + PID_error * (1000 / TiempoMuestreoTemperatura);  //Calculo de la integral del error
+	PID_value = Kc * (PID_error + (1 / Tao_I) * Error_INT) / 10;   //Calculo de la salida del controlador PI
+	//asigno la potencia del calefactor
+	PotenciaCalefactor = PID_value;
 }
 
 void CestacionBaku601::EnfriaYApagaPistola()
 {
 	//calefactor.Apagar();
-	PotenciaCalefactor=0; //bajo toda la potencia
+	PotenciaCalefactor = 0; //bajo toda la potencia
 	float temperatura = GetTemperaturaRealx();
 	if (temperatura <= TEMPERATURA_APAGADO)
 	{
-		if(TiempoEnfriando==0)
+		if (TiempoEnfriando == 0)
 		{
-			TiempoEnfriando=HAL_GetTick();
+			TiempoEnfriando = HAL_GetTick();
 			return;
 		}
-		if(HAL_GetTick()-TiempoEnfriando<=10000)
+		if (HAL_GetTick() - TiempoEnfriando <= 10000)
 		{
 			return;
 		}
@@ -225,32 +217,35 @@ void CestacionBaku601::EnfriaYApagaPistola()
 		return;
 	}
 	//pongo al maximo el aire para enfriar la pistola
-	if(temperatura>10)
+	if (temperatura > 10)
 	{
 		pwm.SicloTrabajo(100);
 	}
 }
 void CestacionBaku601::CruceXCero(int gpio_pin)
 {
-	if(gpio_pin!=CruceCero_Pin)
-		return;
-	if(TiempoAntiReboresCruceXCero>0)
+	if (EstadoSensorMagnetico == BOTON_PRESIONADO)
 	{
+		calefactor.Apagar();
 		return;
 	}
-	TiempoAntiReboresCruceXCero=9;
-	if(conteolecturatemperatura>10)
+	if (gpio_pin != CruceCero_Pin)
+		return;
+//	if(TiempoAntiReboresCruceXCero>0)
+//	{
+	//return;
+//	}
+//	TiempoAntiReboresCruceXCero = 9;
+	if (conteolecturatemperatura > 10)
 	{
-		conteolecturatemperatura=0;
-//		TemperaturaRealActual=thermocouple.MAX6675_lee();
+		conteolecturatemperatura = 0;
 	}
 	conteolecturatemperatura++;
-//	ProcesaTemperaturaReal();
-	if(ciclos>=100)
+	if (ciclos >= 100)
 	{
-		ciclos=0;
+		ciclos = 0;
 	}
-	if(ciclos<PotenciaCalefactor)
+	if (ciclos < PotenciaCalefactor)
 	{
 		calefactor.Encender();
 	}
@@ -258,14 +253,19 @@ void CestacionBaku601::CruceXCero(int gpio_pin)
 	{
 		calefactor.Apagar();
 	}
-	ciclos=ciclos+1;
+	ciclos = ciclos + 1;
 }
 void CestacionBaku601::TimerTick()
 {
-		if(TiempoAntiReboresCruceXCero>0)
-		{
-			TiempoAntiReboresCruceXCero--;
-		}
+	if (TiempoAntiReboresCruceXCero > 0)
+	{
+		TiempoAntiReboresCruceXCero--;
+	}
+	else
+	{
+		CruceXCero(CruceCero_Pin);
+		TiempoAntiReboresCruceXCero = 200000;
+	}
 }
 int CestacionBaku601::GetPID()
 {
@@ -273,9 +273,9 @@ int CestacionBaku601::GetPID()
 }
 void CestacionBaku601::SetPID(int valor)
 {
-	PotenciaCalefactor=valor;
+	PotenciaCalefactor = valor;
 }
 void CestacionBaku601::GPIO_INTERRUPCION(int GPIO_Pin)
 {
-	CruceXCero(GPIO_Pin);
+//	CruceXCero(GPIO_Pin);
 }

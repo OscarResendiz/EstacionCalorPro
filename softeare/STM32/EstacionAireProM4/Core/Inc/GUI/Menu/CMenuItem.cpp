@@ -19,6 +19,8 @@ CMenuItem::CMenuItem(CEtiquetaTft* etiqueta,int identificador,bool seleccionado)
 
 CMenuItem::~CMenuItem()
 {
+	if(Etiqueta!=NULL)
+		delete Etiqueta;
 	// TODO Auto-generated destructor stub
 }
 

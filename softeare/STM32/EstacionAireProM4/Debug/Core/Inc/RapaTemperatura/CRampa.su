@@ -1,0 +1,6 @@
+../Core/Inc/RapaTemperatura/CRampa.cpp:12:1:CRampa::CRampa()	24	static
+../Core/Inc/RapaTemperatura/CRampa.cpp:24:1:CRampa::~CRampa()	16	static
+../Core/Inc/RapaTemperatura/CRampa.cpp:24:1:virtual CRampa::~CRampa()	16	static
+../Core/Inc/RapaTemperatura/CRampa.cpp:29:8:CRampa CRampa::operator=(CRampa&)	32	static
+../Core/Inc/RapaTemperatura/CRampa.cpp:41:6:void CRampa::SetNombre(char*)	24	static
+../Core/Inc/RapaTemperatura/CRampa.cpp:48:1:CRampa::CRampa(CRampa&&)	24	static

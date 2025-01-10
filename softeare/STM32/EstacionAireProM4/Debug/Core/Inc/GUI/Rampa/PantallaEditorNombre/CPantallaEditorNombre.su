@@ -1,0 +1,12 @@
+../Core/Inc/GUI/Rampa/PantallaEditorNombre/CPantallaEditorNombre.cpp:11:1:CPantallaEditorNombre::CPantallaEditorNombre(int)	120	static
+../Core/Inc/GUI/Rampa/PantallaEditorNombre/CPantallaEditorNombre.cpp:89:1:CPantallaEditorNombre::~CPantallaEditorNombre()	16	static
+../Core/Inc/GUI/Rampa/PantallaEditorNombre/CPantallaEditorNombre.cpp:89:1:virtual CPantallaEditorNombre::~CPantallaEditorNombre()	16	static
+../Core/Inc/GUI/Rampa/PantallaEditorNombre/CPantallaEditorNombre.cpp:94:6:virtual void CPantallaEditorNombre::Show()	16	static
+../Core/Inc/GUI/Rampa/PantallaEditorNombre/CPantallaEditorNombre.cpp:100:6:virtual void CPantallaEditorNombre::Refresca()	16	static
+../Core/Inc/GUI/Rampa/PantallaEditorNombre/CPantallaEditorNombre.cpp:103:6:virtual void CPantallaEditorNombre::OnMenuEvent(int)	24	static
+../Core/Inc/GUI/Rampa/PantallaEditorNombre/CPantallaEditorNombre.cpp:248:6:void CPantallaEditorNombre::AsignaID(int)	48	static
+../Core/Inc/GUI/Rampa/PantallaEditorNombre/CPantallaEditorNombre.cpp:268:6:void CPantallaEditorNombre::GuardaNombreRampa()	40	static
+../Core/Inc/GUI/Rampa/PantallaEditorNombre/CPantallaEditorNombre.cpp:284:6:virtual void CPantallaEditorNombre::Seleccionada()	16	static
+../Core/Inc/GUI/Rampa/PantallaEditorNombre/CPantallaEditorNombre.cpp:288:6:virtual void CPantallaEditorNombre::OnBotonUnoClickEvent()	16	static
+../Core/Inc/GUI/Rampa/PantallaEditorNombre/CPantallaEditorNombre.cpp:292:6:virtual void CPantallaEditorNombre::OnBotonTresClickEvent()	16	static
+../Core/Inc/GUI/Rampa/PantallaEditorNombre/CPantallaEditorNombre.cpp:297:6:virtual void CPantallaEditorNombre::OnBotonCuatroClickEvent()	16	static

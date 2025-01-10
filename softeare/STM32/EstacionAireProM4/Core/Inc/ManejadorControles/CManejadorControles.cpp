@@ -13,7 +13,7 @@ CManejadorControles::CManejadorControles()
 {
 	// TODO Auto-generated constructor stub
 	//configuracion de los botones
-	BotonMemoria1.Configurar(GPIOC, GPIO_PIN_14, 1);
+	BotonMemoria1.Configurar(GPIOC, GPIO_PIN_13, 1);
 	BotonMemoria1.AsignaManejadorEventos(this);
 	BotonMemoria1.Init();
 

@@ -21,12 +21,13 @@ Pwm::~Pwm()
 }
 void Pwm::Init(TIM_TypeDef * timer, int chanel,int periodo)
 {
+
 	  TIM_ClockConfigTypeDef sClockSourceConfig = {0};
 	  TIM_MasterConfigTypeDef sMasterConfig = {0};
 	  TIM_OC_InitTypeDef sConfigOC = {0};
-
+	  //periodo=99;
 	  Htim.Instance = timer;
-	  Htim.Init.Prescaler = 0;
+	  Htim.Init.Prescaler = 64;
 	  Htim.Init.CounterMode = TIM_COUNTERMODE_UP;
 	  Htim.Init.Period = periodo;
 	  Htim.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
@@ -59,6 +60,7 @@ void Pwm::Init(TIM_TypeDef * timer, int chanel,int periodo)
 	    Error_Handler();
 	  }
 //	  HAL_TIM_MspPostInit(&Htim);
+
 	HAL_TIM_PWM_Start(&Htim,chanel);
 	SicloTrabajo(0);
 
@@ -71,6 +73,7 @@ void Pwm::SicloTrabajo(int siclo)
 	// x->siclo
 	int valor=siclo*Htim.Init.Period/100;
 	Htim.Instance->CCR1=valor;
+
 }
 
 void Pwm::Error_Handler(void)

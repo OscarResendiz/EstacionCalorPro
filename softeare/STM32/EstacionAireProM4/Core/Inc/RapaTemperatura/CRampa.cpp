@@ -45,6 +45,17 @@ void CRampa::SetNombre(char* nombre)
 		Nombre[i]=nombre[i];
 	}
 }
+CRampa::CRampa(CRampa &&rampa)
+{
+	ID_RAMPA=rampa.ID_RAMPA;
+	Ocupado=rampa.Ocupado;
+	for(int i=0;i<TAM_NOMBRE;i++)
+	{
+		Nombre[i]=rampa.Nombre[i];
+	}
+
+}
+/*
 CRampa::CRampa(CRampa &rampa)
 {
 	ID_RAMPA=rampa.ID_RAMPA;
@@ -55,3 +66,4 @@ CRampa::CRampa(CRampa &rampa)
 	}
 
 }
+*/

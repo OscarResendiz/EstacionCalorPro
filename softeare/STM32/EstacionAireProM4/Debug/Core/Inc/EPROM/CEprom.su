@@ -1,0 +1,27 @@
+../Core/Inc/EPROM/CEprom.cpp:13:1:CEprom::CEprom()	16	static
+../Core/Inc/EPROM/CEprom.cpp:28:1:CEprom::~CEprom()	16	static
+../Core/Inc/EPROM/CEprom.cpp:28:1:virtual CEprom::~CEprom()	16	static
+../Core/Inc/EPROM/CEprom.cpp:33:5:int CEprom::DameTemperaturaManual()	40	static
+../Core/Inc/EPROM/CEprom.cpp:48:6:void CEprom::GuardaTemepraturaManual(int)	32	static
+../Core/Inc/EPROM/CEprom.cpp:54:5:int CEprom::DameAjusteTemperatura()	32	static
+../Core/Inc/EPROM/CEprom.cpp:69:6:void CEprom::GuardaAjusteTemperatura(int)	32	static
+../Core/Inc/EPROM/CEprom.cpp:75:5:int CEprom::DameTemperatuarMemoria1()	16	static
+../Core/Inc/EPROM/CEprom.cpp:83:5:int CEprom::DameVelocidadMemoria1()	16	static
+../Core/Inc/EPROM/CEprom.cpp:90:6:void CEprom::GuardaMemoria1(int, int)	48	static
+../Core/Inc/EPROM/CEprom.cpp:101:5:int CEprom::DameTemperatuarMemoria2()	16	static
+../Core/Inc/EPROM/CEprom.cpp:109:5:int CEprom::DameVelocidadMemoria2()	16	static
+../Core/Inc/EPROM/CEprom.cpp:116:6:void CEprom::GuardaMemoria2(int, int)	48	static
+../Core/Inc/EPROM/CEprom.cpp:127:5:int CEprom::DameTemperatuarMemoria3()	16	static
+../Core/Inc/EPROM/CEprom.cpp:134:5:int CEprom::DameVelocidadMemoria3()	16	static
+../Core/Inc/EPROM/CEprom.cpp:140:6:void CEprom::GuardaMemoria3(int, int)	48	static
+../Core/Inc/EPROM/CEprom.cpp:149:6:void CEprom::LeeMemoria1()	40	static
+../Core/Inc/EPROM/CEprom.cpp:166:6:void CEprom::LeeMemoria2()	40	static
+../Core/Inc/EPROM/CEprom.cpp:183:6:void CEprom::LeeMemoria3()	40	static
+../Core/Inc/EPROM/CEprom.cpp:201:5:int CEprom::DameNumeroRampas()	32	static
+../Core/Inc/EPROM/CEprom.cpp:212:6:void CEprom::GuardaNumeroRampas(int)	32	static
+../Core/Inc/EPROM/CEprom.cpp:218:5:int CEprom::DameDireccionInicioRampas()	16	static
+../Core/Inc/EPROM/CEprom.cpp:222:6:bool CEprom::GuardaBytes(uint16_t, uint16_t, uint8_t*)	56	static
+../Core/Inc/EPROM/CEprom.cpp:237:6:bool CEprom::LeeBytes(int, int, uint8_t*)	40	static
+../Core/Inc/EPROM/CEprom.cpp:245:6:bool CEprom::HayEspacio(int, int)	24	static
+../Core/Inc/EPROM/CEprom.cpp:250:5:int CEprom::DameCapacidadMaximaMemoria()	16	static
+../Core/Inc/EPROM/CEprom.cpp:254:9:uint8_t CEprom::DameDireccionAlta(uint16_t)	24	static

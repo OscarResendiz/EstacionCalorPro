@@ -1,0 +1,15 @@
+../Core/Inc/GUI/Menu/CMenuItem.cpp:10:1:CMenuItem::CMenuItem(CEtiquetaTft*, int, bool)	1
+../Core/Inc/GUI/Menu/CMenuItem.cpp:20:1:CMenuItem::~CMenuItem()	3
+../Core/Inc/GUI/Menu/CMenuItem.cpp:20:1:virtual CMenuItem::~CMenuItem()	1
+../Core/Inc/GUI/Menu/CMenuItem.cpp:27:6:void CMenuItem::AgregaAlFinal(CMenuItem*)	2
+../Core/Inc/GUI/Menu/CMenuItem.cpp:38:6:void CMenuItem::Show()	2
+../Core/Inc/GUI/Menu/CMenuItem.cpp:52:6:void CMenuItem::AsignaColores(int, int, int, int)	1
+../Core/Inc/GUI/Menu/CMenuItem.cpp:59:6:void CMenuItem::Selecciona(bool)	1
+../Core/Inc/GUI/Menu/CMenuItem.cpp:64:6:void CMenuItem::CalculaPosicionY(int)	2
+../Core/Inc/GUI/Menu/CMenuItem.cpp:73:12:CMenuItem* CMenuItem::DameSiguiente()	1
+../Core/Inc/GUI/Menu/CMenuItem.cpp:77:5:int CMenuItem::DamePosicionY()	1
+../Core/Inc/GUI/Menu/CMenuItem.cpp:81:5:int CMenuItem::DameAltura()	1
+../Core/Inc/GUI/Menu/CMenuItem.cpp:85:6:bool CMenuItem::EstaSeleccionado()	1
+../Core/Inc/GUI/Menu/CMenuItem.cpp:89:12:CMenuItem* CMenuItem::DameAnterior()	1
+../Core/Inc/GUI/Menu/CMenuItem.cpp:94:6:void CMenuItem::AsignaAnterior(CMenuItem*)	1
+../Core/Inc/GUI/Menu/CMenuItem.cpp:98:5:int CMenuItem::DameIdentificador()	1

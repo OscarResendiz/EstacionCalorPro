@@ -9,7 +9,10 @@
 #include "GUI/PantallaManual/CPantallaManual.hpp"
 #include <GUI/PantallaMenuPrincipal/CMenuPrincipal.h>
 #include <stdio.h>
+#include<string.h>
 #include <GUI/ConfigurarPantallaMemoria/CConfigurarPantallaMemoria.hpp>
+#include <GUI/Rampa/PantallaEditorNombre/CPantallaEditorNombre.hpp>
+#include <GUI/Rampa/PantallaEliminarRampa/CPantallaEliminarRampa.hpp>
 
 CManejadorPantallas::CManejadorPantallas()
 {
@@ -52,6 +55,7 @@ void CManejadorPantallas::AsignaPantallaActual(CPantallaBase* pantalla)
 {
 	PantallaPendinteCambiar=pantalla;
 	CambioPantalla=true;
+	PantallaPendinteCambiar->Seleccionada();
 }
 void CManejadorPantallas::CambiaPantalla()
 {
@@ -114,4 +118,55 @@ void CManejadorPantallas::MuestraPantallaInicializaMemoria()
 	if(PantallaInicializaMemoria==NULL)
 		PantallaInicializaMemoria=new CPantallaInicializaMemoria();
 	AsignaPantallaActual(PantallaInicializaMemoria);
+}
+void CManejadorPantallas::MuestraPantallaEditorNombre(int id_Rampa)
+{
+	if(PantallaEditorNombre==NULL)
+		PantallaEditorNombre=new CPantallaEditorNombre(id_Rampa);
+	PantallaEditorNombre->AsignaID(id_Rampa);
+	AsignaPantallaActual(PantallaEditorNombre);
+}
+void CManejadorPantallas::AsignaPantallaPasosRampa(int id_rampa)
+{
+	if(PantallaPasosRampa==NULL)
+		PantallaPasosRampa=new CPantallaPasosRampa(id_rampa);
+	PantallaPasosRampa->SetIDRampa(id_rampa);
+	AsignaPantallaActual(PantallaPasosRampa);
+
+}
+void CManejadorPantallas::MuestraPantallaEliminarRampa(int id_rampa)
+{
+	if(PantallaEliminarRampa==NULL)
+		PantallaEliminarRampa=new CPantallaEliminarRampa();
+	PantallaEliminarRampa->SetIdRampa(id_rampa);
+	AsignaPantallaActual(PantallaEliminarRampa);
+
+}
+void CManejadorPantallas::MuestraPantallaEdicionPaso(int id_rampa,int id_paso)
+{
+	if(PantallaEdicionPaso==NULL)
+		PantallaEdicionPaso=new CPantallaEdicionPaso();
+	PantallaEdicionPaso->SetIdPaso(id_rampa,id_paso);
+	AsignaPantallaActual(PantallaEdicionPaso);
+}
+void CManejadorPantallas::MuestraPantallaPaso(int id_rampa,int id_paso)
+{
+	if(PantallaPaso==NULL)
+		PantallaPaso=new CPantallaPaso();
+	PantallaPaso->SetIdPaso(id_rampa,id_paso);
+	AsignaPantallaActual(PantallaPaso);
+}
+void CManejadorPantallas::MuestraPantallaEliminarPaso(int id_rampa,int id_paso)
+{
+	if(PantallaEliminarPaso==NULL)
+		PantallaEliminarPaso=new CPantallaEliminarPaso();
+	PantallaEliminarPaso->SetIdPaso(id_rampa,id_paso);
+	AsignaPantallaActual(PantallaEliminarPaso);
+}
+void CManejadorPantallas::MuestraPantallaEjecucionRampa(int id_rampa)
+{
+	if(PantallaEjecucionRampa==NULL)
+		PantallaEjecucionRampa=new CPantallaEjecucionRampa();
+	PantallaEjecucionRampa->SetIDRampa(id_rampa);
+	AsignaPantallaActual(PantallaEjecucionRampa);
 }

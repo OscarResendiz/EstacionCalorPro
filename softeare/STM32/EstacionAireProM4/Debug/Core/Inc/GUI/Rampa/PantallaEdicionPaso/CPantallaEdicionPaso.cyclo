@@ -1,0 +1,17 @@
+../Core/Inc/GUI/Rampa/PantallaEdicionPaso/CPantallaEdicionPaso.cpp:13:1:CPantallaEdicionPaso::CPantallaEdicionPaso()	1
+../Core/Inc/GUI/Rampa/PantallaEdicionPaso/CPantallaEdicionPaso.cpp:40:1:CPantallaEdicionPaso::~CPantallaEdicionPaso()	1
+../Core/Inc/GUI/Rampa/PantallaEdicionPaso/CPantallaEdicionPaso.cpp:40:1:virtual CPantallaEdicionPaso::~CPantallaEdicionPaso()	1
+../Core/Inc/GUI/Rampa/PantallaEdicionPaso/CPantallaEdicionPaso.cpp:44:6:void CPantallaEdicionPaso::SetIdPaso(int, int)	2
+../Core/Inc/GUI/Rampa/PantallaEdicionPaso/CPantallaEdicionPaso.cpp:61:6:virtual void CPantallaEdicionPaso::OnPerillaIncremento()	2
+../Core/Inc/GUI/Rampa/PantallaEdicionPaso/CPantallaEdicionPaso.cpp:69:6:virtual void CPantallaEdicionPaso::OnPerillaDecremento()	2
+../Core/Inc/GUI/Rampa/PantallaEdicionPaso/CPantallaEdicionPaso.cpp:76:6:virtual void CPantallaEdicionPaso::OnBotonUnoClickEvent()	2
+../Core/Inc/GUI/Rampa/PantallaEdicionPaso/CPantallaEdicionPaso.cpp:91:6:virtual void CPantallaEdicionPaso::OnBotonTresClickEvent()	2
+../Core/Inc/GUI/Rampa/PantallaEdicionPaso/CPantallaEdicionPaso.cpp:98:6:virtual void CPantallaEdicionPaso::Show()	1
+../Core/Inc/GUI/Rampa/PantallaEdicionPaso/CPantallaEdicionPaso.cpp:116:6:void CPantallaEdicionPaso::NavegarIncremento()	2
+../Core/Inc/GUI/Rampa/PantallaEdicionPaso/CPantallaEdicionPaso.cpp:127:6:void CPantallaEdicionPaso::NavegarDecremento()	2
+../Core/Inc/GUI/Rampa/PantallaEdicionPaso/CPantallaEdicionPaso.cpp:138:6:virtual void CPantallaEdicionPaso::OnBotonPerillaClickEvent()	2
+../Core/Inc/GUI/Rampa/PantallaEdicionPaso/CPantallaEdicionPaso.cpp:153:6:void CPantallaEdicionPaso::ValorIncremento()	8
+../Core/Inc/GUI/Rampa/PantallaEdicionPaso/CPantallaEdicionPaso.cpp:177:6:void CPantallaEdicionPaso::ValorDecremento()	8
+../Core/Inc/GUI/Rampa/PantallaEdicionPaso/CPantallaEdicionPaso.cpp:203:6:void CPantallaEdicionPaso::MuestraTemperatura()	1
+../Core/Inc/GUI/Rampa/PantallaEdicionPaso/CPantallaEdicionPaso.cpp:208:6:void CPantallaEdicionPaso::MuestraAire()	1
+../Core/Inc/GUI/Rampa/PantallaEdicionPaso/CPantallaEdicionPaso.cpp:213:6:void CPantallaEdicionPaso::MuestraTiempo()	1

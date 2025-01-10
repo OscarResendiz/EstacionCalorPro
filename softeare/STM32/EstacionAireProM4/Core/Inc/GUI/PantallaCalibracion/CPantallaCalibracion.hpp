@@ -39,7 +39,7 @@ public:
 	virtual ~CPantallaCalibracion();
 	virtual void Show();
 	virtual void Refresca();
-	virtual void OnBotonDosClickEvent();
+	virtual void OnBotonTresClickEvent();
 	virtual void OnPerillaIncremento();
 	virtual void OnPerillaDecremento();
 	virtual void OnBotonPerillaClickEvent();

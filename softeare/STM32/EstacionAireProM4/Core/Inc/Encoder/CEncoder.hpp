@@ -39,6 +39,8 @@ private:
 	int CLK_statusAnterior;
 	int DT_statusAnterior;
 	int estado;
+	int ReboteMilis;
+	int TiempoReboteEncoder=20;
 public:
 	CEncoder();
 	virtual ~CEncoder();

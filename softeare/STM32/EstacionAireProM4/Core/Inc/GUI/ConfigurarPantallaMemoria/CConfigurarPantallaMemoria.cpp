@@ -80,44 +80,7 @@ void CConfigurarPantallaMemoria::LeeDatosMemoria()
 		VelocidadAire=Eprom.DameVelocidadMemoria3();
 		break;
 	}
-	/*
-	uint16_t datos_r[2];
-	  if( HAL_I2C_Mem_Read(&hi2c1,ADDRESS_EEPROM,DireccionMemoria,I2C_MEMADD_SIZE_8BIT,(uint8_t*)datos_r,4,HAL_MAX_DELAY)==HAL_OK)
-	  {
-			Temperatura=datos_r[0];
-			VelocidadAire=datos_r[1];
-
-		 	if(Temperatura<0 || Temperatura>500)
-		 	{
-		 		Temperatura=100;
-		 	}
-		 	if(VelocidadAire<0 || VelocidadAire>100)
-		 	{
-		 		VelocidadAire=50;
-		 	}
-	  }
-	  */
-
 }
-/*
-int CConfigurarPantallaMemoria::DameDireccionMemoria()
-{
-	int direccion=1;
-	switch(NumeroMemoria)
-	{
-	case 1:
-		direccion=1;
-		break;
-	case 2:
-		direccion=5;
-		break;
-	case 3:
-		direccion=9;
-		break;
-	}
-	return direccion;
-}
-*/
 void CConfigurarPantallaMemoria::MuestraInformacion()
 {
 
@@ -159,16 +122,9 @@ void CConfigurarPantallaMemoria::OnBotonUnoClickEvent()
 		Eprom.GuardaMemoria3(Temperatura, VelocidadAire);
 		break;
 	}
-	/*
-	//hay que guarar la informacion
- 	uint16_t datos_w[2];
- 	datos_w[0]=Temperatura;
- 	datos_w[1]=VelocidadAire;
-	HAL_I2C_Mem_Write(&hi2c1,ADDRESS_EEPROM,DireccionMemoria,I2C_MEMADD_SIZE_8BIT,(uint8_t*)datos_w,4,HAL_MAX_DELAY);
-	*/
 	 ManejadorPantallas.MuestraMenuPrincipal();
 }
-void CConfigurarPantallaMemoria::OnBotonDosClickEvent()
+void CConfigurarPantallaMemoria::OnBotonTresClickEvent()
 {
 	 ManejadorPantallas.MuestraMenuPrincipal();
 

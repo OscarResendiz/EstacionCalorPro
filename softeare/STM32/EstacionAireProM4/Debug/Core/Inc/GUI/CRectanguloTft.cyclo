@@ -1,0 +1,16 @@
+../Core/Inc/GUI/CRectanguloTft.cpp:10:1:CRectanguloTft::~CRectanguloTft()	1
+../Core/Inc/GUI/CRectanguloTft.cpp:10:1:virtual CRectanguloTft::~CRectanguloTft()	1
+../Core/Inc/GUI/CRectanguloTft.cpp:15:1:CRectanguloTft::CRectanguloTft(int, int, int, int, int, int, int)	1
+../Core/Inc/GUI/CRectanguloTft.cpp:27:6:virtual void CRectanguloTft::Show()	2
+../Core/Inc/GUI/CRectanguloTft.cpp:37:6:virtual void CRectanguloTft::CambiaPosicion(int, int)	1
+../Core/Inc/GUI/CRectanguloTft.cpp:43:6:virtual void CRectanguloTft::Redimenciona(int, int)	1
+../Core/Inc/GUI/CRectanguloTft.cpp:49:6:void CRectanguloTft::SetColorFondo(int)	1
+../Core/Inc/GUI/CRectanguloTft.cpp:54:6:void CRectanguloTft::SetColorContorno(int)	1
+../Core/Inc/GUI/CRectanguloTft.cpp:59:5:int CRectanguloTft::DameColorFondo()	1
+../Core/Inc/GUI/CRectanguloTft.cpp:64:5:int CRectanguloTft::DameColorContorno()	1
+../Core/Inc/GUI/CRectanguloTft.cpp:69:5:int CRectanguloTft::DamePosicionX()	1
+../Core/Inc/GUI/CRectanguloTft.cpp:74:5:int CRectanguloTft::DamePosicionY()	1
+../Core/Inc/GUI/CRectanguloTft.cpp:79:5:int CRectanguloTft::DameAncho()	1
+../Core/Inc/GUI/CRectanguloTft.cpp:84:5:int CRectanguloTft::DameAlto()	1
+../Core/Inc/GUI/CRectanguloTft.cpp:90:5:int CRectanguloTft::DameCentroX()	1
+../Core/Inc/GUI/CRectanguloTft.cpp:95:5:int CRectanguloTft::DameCentroY()	1

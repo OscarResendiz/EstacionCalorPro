@@ -1,0 +1,21 @@
+../Core/Inc/RapaTemperatura/CControladorPasosRampa.cpp:14:1:CControladorPasosRampa::CControladorPasosRampa()	1
+../Core/Inc/RapaTemperatura/CControladorPasosRampa.cpp:20:1:CControladorPasosRampa::~CControladorPasosRampa()	1
+../Core/Inc/RapaTemperatura/CControladorPasosRampa.cpp:20:1:virtual CControladorPasosRampa::~CControladorPasosRampa()	1
+../Core/Inc/RapaTemperatura/CPaso.hpp:13:7:constexpr CPaso::CPaso(const CPaso&)	1
+../Core/Inc/RapaTemperatura/CControladorPasosRampa.cpp:25:6:bool CControladorPasosRampa::EliminaPasosRampa(int)	4
+../Core/Inc/RapaTemperatura/CControladorPasosRampa.cpp:46:5:int CControladorPasosRampa::DameSiguienteID_Paso()	4
+../Core/Inc/RapaTemperatura/CControladorPasosRampa.cpp:86:6:void CControladorPasosRampa::GuardaPasoMemoria(int, CPaso*)	1
+../Core/Inc/RapaTemperatura/CControladorPasosRampa.cpp:107:7:CPaso CControladorPasosRampa::LeePasoMemoria(int)	1
+../Core/Inc/RapaTemperatura/CControladorPasosRampa.cpp:137:6:bool CControladorPasosRampa::ActualizaPasoRampa(int, int, uint16_t, uint8_t, uint8_t)	4
+../Core/Inc/RapaTemperatura/CControladorPasosRampa.cpp:160:6:bool CControladorPasosRampa::EliminaPasoRampa(int)	3
+../Core/Inc/RapaTemperatura/CControladorPasosRampa.cpp:178:6:void CControladorPasosRampa::SetDireccionUltimoID_Paso(int)	1
+../Core/Inc/RapaTemperatura/CControladorPasosRampa.cpp:183:6:void CControladorPasosRampa::SetDireccionTablaPasos(int)	1
+../Core/Inc/RapaTemperatura/CControladorPasosRampa.cpp:187:6:void CControladorPasosRampa::SetNumeroMaximoPasos(int)	1
+../Core/Inc/RapaTemperatura/CControladorPasosRampa.cpp:191:5:int CControladorPasosRampa::GetBytesXPaso()	1
+../Core/Inc/RapaTemperatura/CControladorPasosRampa.cpp:195:5:int CControladorPasosRampa::GetNumeroMaximoPasos()	1
+../Core/Inc/RapaTemperatura/CControladorPasosRampa.cpp:199:5:int CControladorPasosRampa::GetDireccionTablaPasos()	1
+../Core/Inc/RapaTemperatura/CControladorPasosRampa.cpp:203:6:void CControladorPasosRampa::SetUltimoIDPado(uint8_t)	1
+../Core/Inc/RapaTemperatura/CControladorPasosRampa.cpp:209:5:int CControladorPasosRampa::DameNumeroPasosRampa(int)	4
+../Core/Inc/RapaTemperatura/CControladorPasosRampa.cpp:225:7:CPaso CControladorPasosRampa::DameSiguientePaso(int, int)	7
+../Core/Inc/RapaTemperatura/CControladorPasosRampa.cpp:249:7:CPaso CControladorPasosRampa::DamePasoRampa(int)	4
+../Core/Inc/RapaTemperatura/CControladorPasosRampa.cpp:262:6:bool CControladorPasosRampa::AgregarPasoRampa(int, uint16_t, uint8_t, uint8_t)	4

@@ -14,8 +14,7 @@
 class CEprom
 {
 private:
-	int TAM_MAXIMO_MEMORIA=8192;
-	int  ADDRESS_EEPROM= 0XA0;
+	int TAM_MAXIMO_MEMORIA=1024;
 	int  TEMPERATURAMANUAL=0;
 	int  AJUSTETEMPERATURA=2;
 	int  MEMORIA1=4;
@@ -56,10 +55,11 @@ public:
 	int DameNumeroRampas();
 	void GuardaNumeroRampas(int nrampas);
 	int DameDireccionInicioRampas();
-	bool GuardaBytes(int direccion, int numBytes, uint8_t *bloque);
+	bool GuardaBytes(uint16_t direccion, uint16_t numBytes, uint8_t *bloque);
 	bool LeeBytes(int direccion, int numBytes, uint8_t*bloque);
 	bool HayEspacio(int direccion,int nbytes);
 	int DameCapacidadMaximaMemoria();
+	uint8_t DameDireccionAlta(uint16_t direccion);
 };
 
 extern CEprom Eprom;

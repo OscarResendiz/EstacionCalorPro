@@ -1,0 +1,5 @@
+../Core/Inc/GUI/Rampa/PantallaPaso/CPantallaPaso.cpp:12:1:CPantallaPaso::CPantallaPaso()	16	static
+../Core/Inc/GUI/Rampa/PantallaPaso/CPantallaPaso.cpp:22:1:CPantallaPaso::~CPantallaPaso()	16	static
+../Core/Inc/GUI/Rampa/PantallaPaso/CPantallaPaso.cpp:22:1:virtual CPantallaPaso::~CPantallaPaso()	16	static
+../Core/Inc/GUI/Rampa/PantallaPaso/CPantallaPaso.cpp:27:6:void CPantallaPaso::SetIdPaso(int, int)	24	static
+../Core/Inc/GUI/Rampa/PantallaPaso/CPantallaPaso.cpp:34:6:virtual void CPantallaPaso::OnMenuEvent(int)	16	static

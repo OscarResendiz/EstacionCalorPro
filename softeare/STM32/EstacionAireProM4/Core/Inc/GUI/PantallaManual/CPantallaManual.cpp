@@ -26,7 +26,8 @@ CPantallaManual::CPantallaManual() :
 	int centroX = DameCentroX();
 	LabelTemperaturas = new CEtiquetaTft( centroX - 150 / 2, 65, 150, 30,COLOR::WHITE,(char*) "000/000", COLOR::BLACK, 3, 1, COLOR::RED);
 	LabelTemperaturas->SetSeparacion(5, 5);
-	LabelAire = new CEtiquetaTft( 5, 105, 200, 30, COLOR::BLACK, (char*)"Aire: 00",COLOR::WHITE, 3, 0, COLOR::RED);
+	LabelAire1 = new CEtiquetaTft( 5, 105, 200, 30, COLOR::BLACK, (char*)"Aire:",COLOR::WHITE, 3, 0, COLOR::RED);
+	LabelAire2 = new CEtiquetaTft( 110, 105, 100, 30, COLOR::WHITE, (char*)"00",COLOR::BLACK, 3, 0, COLOR::RED);
 	LabelEstado = new CEtiquetaTft( 5, 145, 300, 35, COLOR::BLACK,(char*)"Estado: REPOSO", COLOR::WHITE, 3, 0, COLOR::RED);
 	LabelEstado->SetSeparacion(15, 5);
 }
@@ -99,8 +100,8 @@ void CPantallaManual::MuestraNivelAire(bool forzar)
 	}
 	NivelAireAnterior=NivelAire;
 	Estacion->SetNivelAire(NivelAire);
-	LabelAire->SetTexto((char*)"Aire: %d", NivelAire);
-	LabelAire->Show();
+	LabelAire2->SetTexto((char*)"%d", NivelAire);
+	LabelAire2->Show();
 
 }
 
@@ -179,6 +180,7 @@ void CPantallaManual::LeeMemoria()
  {
  	CPantallaBase::Show();
  	LabelTemperatura->Show();
+ 	LabelAire1->Show();
  	//leo la temperatura desde la memoria
  	LeeMemoria();
  	LeeDatosEstacion();

@@ -50,4 +50,17 @@ void CPantallaMenuBase::Refresca()
 	if(EsVisible()==false)
 		Show();
 }
+void CPantallaMenuBase::AgregaMenuItem(char *texto, int Opcion, int x, int y,int ancho,int alto)
+{
+	Menu->AgregaItem(texto, Opcion,x,y,ancho,alto);
 
+}
+void CPantallaMenuBase::AgregaMenuItem(char *texto, int Opcion, int x, int y, int ancho,int alto,int colorFondo, int colorTexto)
+{
+	Menu->AgregaItem(texto, Opcion,x,y,ancho,alto,colorFondo,colorTexto);
+
+}
+void CPantallaMenuBase::BorraMenu()
+{
+	Menu->BorrarItemns();
+}

@@ -1,0 +1,12 @@
+../Core/Inc/GUI/PantallaMenuBase/CPantallaMenuBase.cpp:10:1:CPantallaMenuBase::CPantallaMenuBase(char*)	40	static
+../Core/Inc/GUI/PantallaMenuBase/CPantallaMenuBase.cpp:21:1:CPantallaMenuBase::~CPantallaMenuBase()	16	static
+../Core/Inc/GUI/PantallaMenuBase/CPantallaMenuBase.cpp:21:1:virtual CPantallaMenuBase::~CPantallaMenuBase()	16	static
+../Core/Inc/GUI/PantallaMenuBase/CPantallaMenuBase.cpp:26:6:void CPantallaMenuBase::AgregaMenuItem(char*, int)	24	static
+../Core/Inc/GUI/PantallaMenuBase/CPantallaMenuBase.cpp:30:6:virtual void CPantallaMenuBase::OnPerillaIncremento()	16	static
+../Core/Inc/GUI/PantallaMenuBase/CPantallaMenuBase.cpp:34:6:virtual void CPantallaMenuBase::OnPerillaDecremento()	16	static
+../Core/Inc/GUI/PantallaMenuBase/CPantallaMenuBase.cpp:38:6:virtual void CPantallaMenuBase::OnBotonPerillaClickEvent()	16	static
+../Core/Inc/GUI/PantallaMenuBase/CPantallaMenuBase.cpp:42:6:virtual void CPantallaMenuBase::Show()	16	static
+../Core/Inc/GUI/PantallaMenuBase/CPantallaMenuBase.cpp:48:6:virtual void CPantallaMenuBase::Refresca()	16	static
+../Core/Inc/GUI/PantallaMenuBase/CPantallaMenuBase.cpp:53:6:virtual void CPantallaMenuBase::AgregaMenuItem(char*, int, int, int, int, int)	40	static
+../Core/Inc/GUI/PantallaMenuBase/CPantallaMenuBase.cpp:58:6:virtual void CPantallaMenuBase::AgregaMenuItem(char*, int, int, int, int, int, int, int)	48	static
+../Core/Inc/GUI/PantallaMenuBase/CPantallaMenuBase.cpp:63:6:virtual void CPantallaMenuBase::BorraMenu()	16	static

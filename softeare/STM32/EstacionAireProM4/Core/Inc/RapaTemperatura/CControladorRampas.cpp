@@ -9,6 +9,8 @@
 #include <EPROM/CEprom.hpp>
 #include <RapaTemperatura/CRampa.hpp>
 #include <RapaTemperatura/CPaso.hpp>
+#include<string.h>
+#include <RapaTemperatura/CControladorPasosRampa.hpp>
 
 CControladorRampas::CControladorRampas()
 {
@@ -17,13 +19,14 @@ CControladorRampas::CControladorRampas()
 	DireccionInicial = Eprom.DameDireccionInicioRampas();
 	DireccionKey = DireccionInicial;
 	DireccionUltimoID_Rampa = DireccionKey + 3;
-	;
-	DireccionUltimoID_Paso = DireccionUltimoID_Rampa + 2;
-	DireccionTablaRampas = DireccionUltimoID_Paso + 2;
+	int direccionUltimoID_Paso=DireccionUltimoID_Rampa + 2;
+	ControladorPasosRampa.SetDireccionUltimoID_Paso(direccionUltimoID_Paso);
+	DireccionTablaRampas = direccionUltimoID_Paso + 2;
 	BytesRampa = sizeof(CRampa);
-	DireccionTablaPasos = DireccionTablaRampas + (BytesRampa * NUMERO_MAXIMO_RAMPAS);
-	BytesPaso = sizeof(CPaso);
-	NUMERO_MAXIMO_PASOS = (capacidadMemoriaInstalada - DireccionTablaPasos) / BytesPaso;
+	int direccionTablaPasos= DireccionTablaRampas + (BytesRampa * NUMERO_MAXIMO_RAMPAS);
+	ControladorPasosRampa.SetDireccionTablaPasos(direccionTablaPasos);
+	int bytesPaso = ControladorPasosRampa.GetBytesXPaso();
+	ControladorPasosRampa.SetNumeroMaximoPasos( (capacidadMemoriaInstalada - direccionTablaPasos) / bytesPaso);
 	UltimoID_Rampa = -1;
 }
 
@@ -36,10 +39,10 @@ CControladorRampas::~CControladorRampas()
 bool CControladorRampas::MemoriaInicialidada()
 {
 	Eprom.LeeBytes(DireccionKey, 3, (uint8_t*)&Key);
-	char key[] = "KEY";
+	//char key[] = "OSC";
 	for (int i = 0; i < 3; i++)
 	{
-		if (Key[i] != key[i])
+		if (Key[i] != KEY[i])
 		{
 			return false;
 		}
@@ -54,7 +57,10 @@ void CControladorRampas::InicializaMemoria()
 	int direccionRampa;
 	int direccionPaso;
 	int progreso = 0;
-	int maximo = NUMERO_MAXIMO_RAMPAS + NUMERO_MAXIMO_PASOS;
+	int numeroMaximoPasos=ControladorPasosRampa.GetNumeroMaximoPasos();
+	int direccionTablaPasos=ControladorPasosRampa.GetDireccionTablaPasos();
+	int bytesPaso=ControladorPasosRampa.GetBytesXPaso();
+	int maximo = NUMERO_MAXIMO_RAMPAS + numeroMaximoPasos;
 
 	if (ControlProgreso != NULL)
 		ControlProgreso->OnMensaje((char*) "Iniciando memoria");
@@ -67,27 +73,23 @@ void CControladorRampas::InicializaMemoria()
 			progreso++;
 		}
 		direccionRampa = DireccionTablaRampas + (BytesRampa * i);
-		Eprom.GuardaBytes(direccionRampa, BytesRampa,(uint8_t*) &rampa);
+		GuardaRampaMemoria(direccionRampa, &rampa);
 	}
 
-	for (int i = 0; i < NUMERO_MAXIMO_PASOS; i++)
+	for (int i = 0; i < numeroMaximoPasos; i++)
 	{
 		if (ControlProgreso != NULL)
 		{
 			ControlProgreso->OnProgreso(progreso, maximo);
 			progreso++;
 		}
-		direccionPaso = DireccionTablaPasos + (BytesPaso * i);
-		Eprom.GuardaBytes(direccionPaso, BytesPaso, (uint8_t*)&paso);
+		direccionPaso = direccionTablaPasos + (bytesPaso * i);
+		ControladorPasosRampa.GuardaPasoMemoria(direccionPaso,&paso);
 	}
 	UltimoID_Rampa = 0;
 	Eprom.GuardaBytes(DireccionUltimoID_Rampa, 2, (uint8_t*)&UltimoID_Rampa);
-	UltimoID_Paso = 0;
-	Eprom.GuardaBytes(DireccionUltimoID_Paso, 2, (uint8_t*)&UltimoID_Paso);
-	Key[0]='K';
-	Key[1]='E';
-	Key[2]='Y';
-	Eprom.GuardaBytes(DireccionKey, 3,(uint8_t*) &Key);
+	ControladorPasosRampa.SetUltimoIDPado(0);
+	Eprom.GuardaBytes(DireccionKey, 3,(uint8_t*) KEY);
 
 	if (ControlProgreso != NULL)
 	{
@@ -106,289 +108,227 @@ int CControladorRampas::DameNumeroRampas()
 {
 	if (TotalRampas != -1)
 		return TotalRampas;
-	CRampa rampa;
 	TotalRampas = 0;
 	//recorro toda la tabla de rampas y cuento las que estan activas
 	for (int i = 0; i < NUMERO_MAXIMO_RAMPAS; i++)
 	{
 		int direccionRampa = DireccionTablaRampas + (BytesRampa * i);
 		//me traigo los datos de la rampa de la memoria
-		Eprom.LeeBytes(direccionRampa, BytesRampa, (uint8_t*)&rampa);
+		CRampa rampa=LeeRampaMemoria(direccionRampa);
 		if (rampa.Ocupado == true)
 			TotalRampas++;
 	}
 	return TotalRampas;
 }
 
-CRampa CControladorRampas::DameRampa(int numero)
+CRampa CControladorRampas::DameRampa(int id_Rampa)
 {
-	CRampa tmpRampa;
+
 	int numeroRampa = 0;
 	//recorro toda la tabla de rampas y cuento las que estan activas
 	for (int i = 0; i < NUMERO_MAXIMO_RAMPAS; i++)
 	{
 		int direccionRampa = DireccionTablaRampas + (BytesRampa * i);
 		//me traigo los datos de la rampa de la memoria
-		Eprom.LeeBytes(direccionRampa, BytesRampa,(uint8_t*) &tmpRampa);
+		CRampa tmpRampa=LeeRampaMemoria(direccionRampa);
 		if (tmpRampa.Ocupado == false)
 			continue;
 		numeroRampa++;
-		if (numeroRampa != numero)
+		if (tmpRampa.ID_RAMPA != id_Rampa)
 			continue;
 		return tmpRampa;
 	}
-	tmpRampa.ID_RAMPA=0;
-	return tmpRampa;
+	CRampa tmpRampa2;
+	return tmpRampa2;
 }
-CRampa CControladorRampas::AgregaRampa(char *nombre)
+CRampa CControladorRampas::DameRampaNumero(int posicion)
 {
-	//busco la primer ubicacion vacia para almacear la rampa
-	CRampa tmpRampa;
+
+	int numeroRampa = 0;
 	//recorro toda la tabla de rampas y cuento las que estan activas
 	for (int i = 0; i < NUMERO_MAXIMO_RAMPAS; i++)
 	{
 		int direccionRampa = DireccionTablaRampas + (BytesRampa * i);
 		//me traigo los datos de la rampa de la memoria
-		Eprom.LeeBytes(direccionRampa, BytesRampa, (uint8_t*)&tmpRampa);
+		CRampa tmpRampa=LeeRampaMemoria(direccionRampa);
+		if (tmpRampa.Ocupado != true)
+			continue;
+		numeroRampa++;
+		if (numeroRampa-1 != posicion)
+			continue;
+		return tmpRampa;
+	}
+	CRampa tmpRampa2;
+	return tmpRampa2;
+}
+CRampa CControladorRampas::LeeRampaMemoria(int direccion)
+{
+	/*
+	 * lee una rampa desde la memoria
+	 * el mapa es el siguiente
+	 * -----------------------------------------
+	 * | direccion | bytes | dato              |
+	 * |-----------|-------|-------------------|
+	 * | 00        | 1     | Bandera de ocupado|
+	 * | 01-02     | 2     | ID_RAMPA          |
+	 * | 03-11h    | 15    | Nombre de la rampa|
+	 * -----------------------------------------
+	 */
+	uint8_t ocupado;
+	uint16_t id_rampa;
+	char nombre[20];
+	CRampa rampa;
+	//leo la bandera de ocupado
+	Eprom.LeeBytes(direccion, 1, &ocupado);
+	Eprom.LeeBytes(direccion, 1, &ocupado);
+	rampa.Ocupado=ocupado;
+	//leo el ID_RAMPA
+	Eprom.LeeBytes(direccion+1, 2, (uint8_t*)&id_rampa);
+	Eprom.LeeBytes(direccion+1, 2, (uint8_t*)&id_rampa);
+	rampa.ID_RAMPA=id_rampa;
+	//leo el nombre
+	Eprom.LeeBytes(direccion+3, 15, (uint8_t*)nombre);
+	Eprom.LeeBytes(direccion+3, 15, (uint8_t*)nombre);
+	rampa.SetNombre(nombre);
+	return rampa;
+
+}
+void CControladorRampas::GuardaRampaMemoria(int direccion, CRampa *rampa)
+{
+	/*
+	 * lee una rampa desde la memoria
+	 * el mapa es el siguiente
+	 * -----------------------------------------
+	 * | direccion | bytes | dato              |
+	 * |-----------|-------|-------------------|
+	 * | 00        | 1     | Bandera de ocupado|
+	 * | 01-02     | 2     | ID_RAMPA          |
+	 * | 03-11h    | 15    | Nombre de la rampa|
+	 * -----------------------------------------
+	 */
+	//guardo la bandera de ocupado
+	uint8_t ocupado;
+	uint16_t id_rampa;
+	char nombre[20];
+	uint8_t tmp[30];
+	ocupado=rampa->Ocupado;
+	id_rampa=rampa->ID_RAMPA;
+	strcpy(nombre,rampa->Nombre);
+	Eprom.GuardaBytes(direccion, 1, &ocupado);
+	//guardo el ID_RAMPA
+	Eprom.GuardaBytes(direccion+1, 2, (uint8_t*)&id_rampa);
+	//guardo el nombre
+	Eprom.GuardaBytes(direccion+3, 15, (uint8_t*)nombre);
+
+	id_rampa=-1;
+	ocupado=-1;
+	for(int i=0;i<15;i++)
+		nombre[i]='\0';
+
+	Eprom.LeeBytes(direccion+3, 15, (uint8_t*)nombre);
+	Eprom.LeeBytes(direccion+1, 2, (uint8_t*)&id_rampa);
+	Eprom.LeeBytes(direccion, 1, &ocupado);
+	Eprom.LeeBytes(direccion, 18, tmp);
+}
+CRampa CControladorRampas::AgregaRampa(char *nombre)
+{
+	//busco la primer ubicacion vacia para almacear la rampa
+	//recorro toda la tabla de rampas y cuento las que estan activas
+	for (int i = 0; i < NUMERO_MAXIMO_RAMPAS; i++)
+	{
+		int direccionRampa = DireccionTablaRampas + (BytesRampa * i);
+		//me traigo los datos de la rampa de la memoria
+		CRampa tmpRampa=LeeRampaMemoria(direccionRampa);
 		if (tmpRampa.Ocupado == 0)
 		{
 			tmpRampa.Ocupado = 1;
 			tmpRampa.ID_RAMPA = DameSiguienteID_Rampa();
 			tmpRampa.SetNombre(nombre);
 			TotalRampas++;
-			Eprom.GuardaBytes(direccionRampa, BytesRampa, (uint8_t*)&tmpRampa);
+			GuardaRampaMemoria(direccionRampa,&tmpRampa);
+			CRampa rampa2=LeeRampaMemoria(direccionRampa);
 			return tmpRampa;
 		}
 	}
-	tmpRampa.ID_RAMPA=0;
-	return tmpRampa;
+	CRampa tmpRampa2;
+	return tmpRampa2;
 }
 
 bool CControladorRampas::ActualizaRampa(int ID_Rampa, char *nombre)
 {
-	CRampa tmpRampa;
 	//recorro toda la tabla de rampas y cuento las que estan activas
 	for (int i = 0; i < NUMERO_MAXIMO_RAMPAS; i++)
 	{
 		int direccionRampa = DireccionTablaRampas + (BytesRampa * i);
 		//me traigo los datos de la rampa de la memoria
-		if (Eprom.LeeBytes(direccionRampa, BytesRampa, (uint8_t*)&tmpRampa) == false)
-			return false;
+		CRampa tmpRampa=LeeRampaMemoria(direccionRampa);
 		if (tmpRampa.ID_RAMPA == ID_Rampa)
 		{
 			tmpRampa.Ocupado = 1;
 			tmpRampa.SetNombre(nombre);
-			return Eprom.GuardaBytes(direccionRampa, BytesRampa,(uint8_t*) &tmpRampa);
+			GuardaRampaMemoria(direccionRampa,&tmpRampa);
+			return true;
 		}
 	}
 	return false;
 }
 
-int CControladorRampas::DameSiguienteID_Rampa()
-{
-	if (UltimoID_Rampa == -1)
-	{
-		Eprom.LeeBytes(DireccionUltimoID_Rampa, 2,(uint8_t*) &UltimoID_Rampa);
-	}
-	UltimoID_Rampa++;
-	Eprom.GuardaBytes(DireccionUltimoID_Rampa, 2, (uint8_t*)&UltimoID_Rampa);
-	return UltimoID_Rampa;
-}
 bool CControladorRampas::EliminaRampa(int ID_Rampa)
 {
-	CRampa tmpRampa;
 	//recorro toda la tabla de rampas y cuento las que estan activas
 	for (int i = 0; i < NUMERO_MAXIMO_RAMPAS; i++)
 	{
 		int direccionRampa = DireccionTablaRampas + (BytesRampa * i);
 		//me traigo los datos de la rampa de la memoria
-		if (Eprom.LeeBytes(direccionRampa, BytesRampa, (uint8_t*)&tmpRampa) == false)
-			return false;
+		CRampa tmpRampa=LeeRampaMemoria(direccionRampa);
 		if (tmpRampa.ID_RAMPA == ID_Rampa)
 		{
 			tmpRampa.Ocupado = 0;
-			Eprom.GuardaBytes(direccionRampa, BytesRampa,(uint8_t*) &tmpRampa);
+			GuardaRampaMemoria(direccionRampa,&tmpRampa);
+			//Eprom.GuardaBytes(direccionRampa, BytesRampa,(uint8_t*) &tmpRampa);
 			TotalRampas--;
-			return EliminaPasosRampa(ID_Rampa);
+			return ControladorPasosRampa.EliminaPasosRampa(ID_Rampa);
 		}
 	}
 	return false;
 }
 
-bool CControladorRampas::EliminaPasosRampa(int ID_Rampa)
-{
-	CPaso paso;
-	for (int i = 0; i < NUMERO_MAXIMO_PASOS; i++)
-	{
-		int direccionPaso = DireccionTablaPasos + (BytesPaso * i);
-		if (Eprom.LeeBytes(direccionPaso, BytesPaso, (uint8_t*)&paso) == false)
-			return false;
-		if (paso.Ocupado == 0)
-			continue;
-		if (paso.ID_Rampa != ID_Rampa)
-			continue;
-		paso.Ocupado = 0;
-		if (Eprom.GuardaBytes(direccionPaso, BytesPaso, (uint8_t*)&paso) == false)
-			return false;
-	}
-	return true;
-}
-bool CControladorRampas::AgregarPasoRampa(int ID_Rampa, uint16_t Temperatura, uint8_t NivelAire, uint8_t Segundos)
-{
-	CPaso pasoTmp;
-	for (int i = 0; i < NUMERO_MAXIMO_PASOS; i++)
-	{
-		int direccionPaso = DireccionTablaPasos + (BytesPaso * i);
-		if (Eprom.LeeBytes(direccionPaso, BytesPaso, (uint8_t*)&pasoTmp) == false)
-			return false;
-		if (pasoTmp.Ocupado == 1)
-		{
-			continue;
-		}
-		pasoTmp.ID_Rampa = ID_Rampa;
-		pasoTmp.ID_Paso = DameSiguienteID_Paso();
-		pasoTmp.Ocupado = 1;
-		pasoTmp.NivelAire = NivelAire;
-		pasoTmp.Segundos = Segundos;
-		pasoTmp.Temperatura = Temperatura;
-		return Eprom.GuardaBytes(direccionPaso, BytesPaso,(uint8_t*) &pasoTmp);
-	}
-	return false;
-}
-
-int CControladorRampas::DameSiguienteID_Paso()
-{
-	if (UltimoID_Paso == -1)
-	{
-		Eprom.LeeBytes(DireccionUltimoID_Paso, 2,(uint8_t*) &UltimoID_Paso);
-	}
-	UltimoID_Paso++;
-	Eprom.GuardaBytes(DireccionUltimoID_Paso, 2,(uint8_t*) &UltimoID_Paso);
-	return UltimoID_Paso;
-}
 
 void CControladorRampas::ActualizadaRampa(int ID_Rampa,char *nombre)
 {
-	CRampa tmpRampa;
 	//recorro toda la tabla de rampas y cuento las que estan activas
 	for (int i = 0; i < NUMERO_MAXIMO_RAMPAS; i++)
 	{
 		int direccionRampa = DireccionTablaRampas + (BytesRampa * i);
 		//me traigo los datos de la rampa de la memoria
-		Eprom.LeeBytes(direccionRampa, BytesRampa, (uint8_t*)&tmpRampa);
+		CRampa tmpRampa=LeeRampaMemoria(direccionRampa);
+
 		if (tmpRampa.ID_RAMPA == ID_Rampa)
 		{
 			tmpRampa.Ocupado = 1;
 			tmpRampa.SetNombre(nombre);
-			Eprom.GuardaBytes(direccionRampa, BytesRampa,(uint8_t*) &tmpRampa);
+			GuardaRampaMemoria(direccionRampa,&tmpRampa);
 			return;
 		}
 	}
 }
-bool CControladorRampas::ActualizaPasoRampa(int ID_Paso,int ID_Rampa,uint16_t Temperatura,uint8_t NivelAire,uint8_t Segundos)
+int CControladorRampas::DameSiguienteID_Rampa()
 {
-	CPaso pasoTmp;
-	for (int i = 0; i < NUMERO_MAXIMO_PASOS; i++)
+	UltimoID_Rampa=0;
+	for (int i = 0; i < NUMERO_MAXIMO_RAMPAS; i++)
 	{
-		int direccionPaso = DireccionTablaPasos + (BytesPaso * i);
-		if (Eprom.LeeBytes(direccionPaso, BytesPaso,(uint8_t*) &pasoTmp) == false)
-			return false;
-		if (pasoTmp.ID_Paso != ID_Paso)
-			continue;
-		pasoTmp.ID_Rampa = ID_Rampa;
-		pasoTmp.Ocupado = 1;
-		pasoTmp.NivelAire = NivelAire;
-		pasoTmp.Segundos = Segundos;
-		pasoTmp.Temperatura = Temperatura;
-		return Eprom.GuardaBytes(direccionPaso, BytesPaso,(uint8_t*) &pasoTmp);
-	}
-	return false;
+		int direccionRampa = DireccionTablaRampas + (BytesRampa * i);
+		//me traigo los datos de la rampa de la memoria
+		CRampa tmpRampa=LeeRampaMemoria(direccionRampa);
 
-}
-bool CControladorRampas::EliminaPasoRampa(int ID_Paso)
-{
-	CPaso pasoTmp;
-	for (int i = 0; i < NUMERO_MAXIMO_PASOS; i++)
-	{
-		int direccionPaso = DireccionTablaPasos + (BytesPaso * i);
-		if (Eprom.LeeBytes(direccionPaso, BytesPaso,(uint8_t*) &pasoTmp) == false)
-			return false;
-		if (pasoTmp.ID_Paso != ID_Paso)
-			continue;
-		pasoTmp.Ocupado = 0;
-		return Eprom.GuardaBytes(direccionPaso, BytesPaso,(uint8_t*) &pasoTmp);
-	}
-	return false;
-
-}
-CPaso CControladorRampas::DamePasoRampa(int ID_Paso)
-{
-	CPaso pasoTmp;
-	for (int i = 0; i < NUMERO_MAXIMO_PASOS; i++)
-	{
-		int direccionPaso = DireccionTablaPasos + (BytesPaso * i);
-		if (Eprom.LeeBytes(direccionPaso, BytesPaso, (uint8_t*)&pasoTmp) == false)
+		if (tmpRampa.Ocupado == 1)
 		{
-			pasoTmp.ID_Paso=0;
-			return pasoTmp;
-		}
-		if (pasoTmp.ID_Paso != ID_Paso)
-			continue;
-		return pasoTmp;
-	}
-	pasoTmp.ID_Paso=0;
-	return pasoTmp;
-
-}
-int CControladorRampas::DameNumeroPasosRampa(int ID_Rampa)
-{
-	CPaso pasoTmp;
-	int npasos=0;
-	posicionPasoActual=0;
-	for(int i=0;i<100;i++)
-		tmpPasos[i]=0;
-	for (int i = 0; i < NUMERO_MAXIMO_PASOS; i++)
-	{
-		int direccionPaso = DireccionTablaPasos + (BytesPaso * i);
-		if (Eprom.LeeBytes(direccionPaso, BytesPaso,(uint8_t*) &pasoTmp) == false)
-			return 0;
-		if (pasoTmp.ID_Rampa == ID_Rampa)
-		{
-			tmpPasos[npasos]=pasoTmp.ID_Paso;
-			npasos++;
-
-		}
-	}
-	OrdenaPasos();
-	return npasos;
-}
-void CControladorRampas::OrdenaPasos()
-{
-	int tmp;
-	int max;
-	for(int i=0;i<100;i++)
-	{
-		if(tmpPasos[i]==0)
-			break;
-		max++;
-	}
-	for(int i=0;i<max;i++)
-	{
-		for(int j=i+1;j<max;j++)
-		{
-			if(tmpPasos[i]>tmpPasos[j])
+			if(tmpRampa.ID_RAMPA>=UltimoID_Rampa)
 			{
-				tmp=tmpPasos[i];
-				tmpPasos[i]=tmpPasos[j];
-				tmpPasos[j]=tmp;
+				UltimoID_Rampa=tmpRampa.ID_RAMPA;
 			}
 		}
 	}
-}
-CPaso CControladorRampas::DameSiguientePaso()
-{
-	CPaso paso;
-	int ID_Paso=tmpPasos[posicionPasoActual];
-	posicionPasoActual++;
-	return DamePasoRampa(ID_Paso);
+	UltimoID_Rampa++;
+	return UltimoID_Rampa;
 }

@@ -60,7 +60,7 @@ void CPantallaCalibracion::Refresca()
 {
 	MuestraInformacion();
 }
-void CPantallaCalibracion::OnBotonDosClickEvent()
+void CPantallaCalibracion::OnBotonTresClickEvent()
 {
 	 ManejadorPantallas.MuestraMenuPrincipal();
 

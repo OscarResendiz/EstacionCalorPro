@@ -15,8 +15,8 @@ class CPaso
 
 public:
 	uint8_t Ocupado;
-	uint16_t ID_Rampa;
-	uint16_t ID_Paso;
+	uint8_t ID_Rampa;
+	uint8_t ID_Paso;
 	uint16_t Temperatura;
 	uint8_t NivelAire;
 	uint8_t Segundos;

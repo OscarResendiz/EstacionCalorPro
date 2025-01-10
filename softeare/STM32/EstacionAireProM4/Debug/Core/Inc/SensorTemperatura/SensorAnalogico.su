@@ -1,0 +1,7 @@
+../Core/Inc/SensorTemperatura/SensorAnalogico.cpp:16:1:SensorAnalogico::SensorAnalogico()	16	static
+../Core/Inc/SensorTemperatura/SensorAnalogico.cpp:22:1:SensorAnalogico::~SensorAnalogico()	16	static
+../Core/Inc/SensorTemperatura/SensorAnalogico.cpp:22:1:virtual SensorAnalogico::~SensorAnalogico()	16	static
+../Core/Inc/SensorTemperatura/SensorAnalogico.cpp:27:6:virtual void SensorAnalogico::Init()	40	static
+../Core/Inc/SensorTemperatura/SensorAnalogico.cpp:61:5:virtual int SensorAnalogico::LeeTemepatura()	32	static
+../Core/Inc/SensorTemperatura/SensorAnalogico.cpp:80:6:void SensorAnalogico::Error_Handler()	16	static
+../Core/Inc/SensorTemperatura/SensorAnalogico.cpp:84:5:int SensorAnalogico::LeeMemoria()	16	static
