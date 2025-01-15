@@ -89,8 +89,8 @@ void CControladorPasosRampa::GuardaPasoMemoria(int direccion, CPaso *paso)
 	uint8_t ID_Rampa=paso->ID_Rampa;
 	uint8_t ID_Paso=paso->ID_Paso;
 	uint8_t NivelAire=paso->NivelAire;
-	uint8_t Segundos=paso->Segundos;
-	uint16_t Temperatura=paso->Temperatura;
+	uint8_t Minutos=paso->Minutos;
+	uint8_t Temperatura=paso->Temperatura;
 
 	Eprom.GuardaBytes(direccion, 1,&Ocupado);
 	direccion++;
@@ -100,9 +100,9 @@ void CControladorPasosRampa::GuardaPasoMemoria(int direccion, CPaso *paso)
 	direccion++;
 	Eprom.GuardaBytes(direccion, 1,&NivelAire);
 	direccion++;
-	Eprom.GuardaBytes(direccion, 1,&Segundos);
+	Eprom.GuardaBytes(direccion, 1,&Temperatura);
 	direccion++;
-	Eprom.GuardaBytes(direccion, 2,(uint8_t*) &Temperatura);
+	Eprom.GuardaBytes(direccion, 1, &Minutos);
 }
 CPaso CControladorPasosRampa::LeePasoMemoria(int direccion)
 {
@@ -110,8 +110,8 @@ CPaso CControladorPasosRampa::LeePasoMemoria(int direccion)
 	uint8_t ID_Rampa;
 	uint8_t ID_Paso;
 	uint8_t NivelAire;
-	uint8_t Segundos;
-	uint16_t Temperatura;
+	uint8_t Minutos;
+	uint8_t Temperatura;
 
 	Eprom.LeeBytes(direccion, 1,&Ocupado);
 	direccion++;
@@ -121,37 +121,33 @@ CPaso CControladorPasosRampa::LeePasoMemoria(int direccion)
 	direccion++;
 	Eprom.LeeBytes(direccion, 1,&NivelAire);
 	direccion++;
-	Eprom.LeeBytes(direccion, 1,&Segundos);
+	Eprom.LeeBytes(direccion, 1,&Temperatura);
 	direccion++;
-	Eprom.LeeBytes(direccion, 2,(uint8_t*) &Temperatura);
+	Eprom.LeeBytes(direccion, 1,&Minutos);
 
 	CPaso paso;
 	paso.Ocupado=Ocupado;
 	paso.ID_Rampa=ID_Rampa;
 	paso.ID_Paso=ID_Paso;
 	paso.NivelAire=NivelAire;
-	paso.Segundos=Segundos;
+	paso.Minutos=Minutos;
 	paso.Temperatura=Temperatura;
 	return paso;
 }
-bool CControladorPasosRampa::ActualizaPasoRampa(int ID_Paso,int ID_Rampa,uint16_t Temperatura,uint8_t NivelAire,uint8_t Segundos)
+bool CControladorPasosRampa::ActualizaPasoRampa(int ID_Paso,int ID_Rampa,uint8_t Temperatura,uint8_t NivelAire,uint8_t Minutos)
 {
-	//CPaso pasoTmp;
 	for (int i = 0; i < NUMERO_MAXIMO_PASOS; i++)
 	{
 		int direccionPaso = DireccionTablaPasos + (BytesPaso * i);
 		CPaso pasoTmp=LeePasoMemoria(direccionPaso);
-//		if (Eprom.LeeBytes(direccionPaso, BytesPaso,(uint8_t*) &pasoTmp) == false)
-	//		return false;
 		if (pasoTmp.ID_Paso != ID_Paso)
 			continue;
 		pasoTmp.ID_Rampa = ID_Rampa;
 		pasoTmp.Ocupado = 1;
 		pasoTmp.NivelAire = NivelAire;
-		pasoTmp.Segundos = Segundos;
+		pasoTmp.Minutos = Minutos;
 		pasoTmp.Temperatura = Temperatura;
 		GuardaPasoMemoria(direccionPaso,&pasoTmp);
-		//return Eprom.GuardaBytes(direccionPaso, BytesPaso,(uint8_t*) &pasoTmp);
 		return true;
 	}
 	return false;
@@ -259,7 +255,7 @@ CPaso CControladorPasosRampa::DamePasoRampa(int ID_Paso)
 	CPaso pasoTmp2;
 	return pasoTmp2;
 }
-bool CControladorPasosRampa::AgregarPasoRampa(int ID_Rampa, uint16_t Temperatura, uint8_t NivelAire, uint8_t Segundos)
+bool CControladorPasosRampa::AgregarPasoRampa(int ID_Rampa, uint8_t Temperatura, uint8_t NivelAire, uint8_t Minutos)
 {
 	for (int i = 0; i < NUMERO_MAXIMO_PASOS; i++)
 	{
@@ -274,7 +270,7 @@ bool CControladorPasosRampa::AgregarPasoRampa(int ID_Rampa, uint16_t Temperatura
 		pasoTmp.ID_Paso =id_paso;
 		pasoTmp.Ocupado = 1;
 		pasoTmp.NivelAire = NivelAire;
-		pasoTmp.Segundos = Segundos;
+		pasoTmp.Minutos = Minutos;
 		pasoTmp.Temperatura = Temperatura;
 		GuardaPasoMemoria(direccionPaso, &pasoTmp);
 		return true;

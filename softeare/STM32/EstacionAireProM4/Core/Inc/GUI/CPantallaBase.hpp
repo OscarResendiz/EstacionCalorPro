@@ -19,7 +19,6 @@ class CPantallaBase: public CRectanguloTft, public CManejadorEventosControles
 private:
 	bool Visible=false;
 protected:
-//  CAdmiinstradorPantallasBase *AdmiinstradorPantallasBase;
 	CEtiquetaTft *LabelTitulo;
 	int VerTitulo = 1;
 	char Titulo[100];

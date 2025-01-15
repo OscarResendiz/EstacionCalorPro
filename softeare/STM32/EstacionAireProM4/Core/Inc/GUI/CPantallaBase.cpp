@@ -41,7 +41,7 @@ void CPantallaBase::SetEstacion(CEstacionBase *estacion)
 	Estacion = estacion;
 	//asigno los evetos de la estacion
 	Estacion->SetManejadorControles(this);
-	Estacion->ActivarCalefactor();
+	Estacion->DesactivarCalefactor();
 }
 void CPantallaBase::Ocultar()
 {

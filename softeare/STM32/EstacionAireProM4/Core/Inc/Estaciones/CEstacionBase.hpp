@@ -39,6 +39,7 @@ public:
 	virtual int GetPID();
 	virtual void SetPID(int valor);
 protected:
+	virtual void EnfriaYApagaPistola();
 	virtual void NivelAireEvent(int aire);
 	virtual void TemperaturaRealEvent(int temperatura);
 	virtual void GPIO_INTERRUPCION(int GPIO_Pin);

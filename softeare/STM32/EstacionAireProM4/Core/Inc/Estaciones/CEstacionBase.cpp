@@ -108,3 +108,7 @@ void CEstacionBase::QuitaManejadorControles()
 {
 	ManejadorControles = NULL;
 }
+void CEstacionBase::EnfriaYApagaPistola()
+{
+
+}

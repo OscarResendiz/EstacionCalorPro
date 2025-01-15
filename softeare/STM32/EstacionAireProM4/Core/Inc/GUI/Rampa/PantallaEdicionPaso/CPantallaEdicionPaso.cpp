@@ -24,7 +24,7 @@ CPantallaBase(1, (char*)"EDITOR PASO")
 	LabelAire = new CEtiquetaTft( 5, 100, 200, 30, COLOR::BLACK,(char*) "Aire",COLOR::WHITE, 3, 0, COLOR::RED);
 	TextAire = new CEtiquetaTft( 100, 100, 150, 30, COLOR::GREY,(char*) "00",COLOR::BLACK, 3, 0, COLOR::RED);
 	// Tiempo
-	LabelTiempo = new CEtiquetaTft( 5, 135, 200, 30, COLOR::BLACK,(char*) "Segs",COLOR::WHITE, 3, 0, COLOR::RED);
+	LabelTiempo = new CEtiquetaTft( 5, 135, 200, 30, COLOR::BLACK,(char*) "TIEM",COLOR::WHITE, 3, 0, COLOR::RED);
 	TextTiempo = new CEtiquetaTft( 100, 135, 150, 30, COLOR::GREY,(char*) "00",COLOR::BLACK, 3, 0, COLOR::RED);
 
 	LabelGuardar=new CEtiquetaTft( 10, 200, 130, 30, COLOR::GREEN,(char*)"GUARDAR", COLOR::BLACK, 3, 1, COLOR::WHITE);
@@ -47,7 +47,7 @@ void CPantallaEdicionPaso::SetIdPaso(int id_rampa, int id_paso)
 	ID_Rampa=id_rampa;
 	Temperatura=100;
 	NivelAire=50;
-	Segundos=10;
+	Minutos=10;
 	CRampa rampa=	ControladorRampas.DameRampa(ID_Rampa);
 	LabelRampa->SetTexto((char*)"Rampa:%s",rampa.Nombre);
 	if(id_paso!=-1)
@@ -55,7 +55,7 @@ void CPantallaEdicionPaso::SetIdPaso(int id_rampa, int id_paso)
 		CPaso paso=ControladorPasosRampa.DamePasoRampa(ID_Paso);
 		Temperatura=paso.Temperatura;
 		NivelAire=paso.NivelAire;
-		Segundos=paso.Segundos;
+		Minutos=paso.Minutos;
 	}
 }
 void CPantallaEdicionPaso::OnPerillaIncremento()
@@ -77,12 +77,12 @@ void CPantallaEdicionPaso::OnBotonUnoClickEvent()
 {
 	if(ID_Paso<=0)
 	{
-		ControladorPasosRampa.AgregarPasoRampa(ID_Rampa, Temperatura, NivelAire, Segundos);
+		ControladorPasosRampa.AgregarPasoRampa(ID_Rampa, Temperatura, NivelAire, Minutos);
 		ManejadorPantallas.AsignaPantallaPasosRampa(ID_Rampa);
 	}
 	else
 	{
-		ControladorPasosRampa.ActualizaPasoRampa(ID_Paso, ID_Rampa, Temperatura, NivelAire, Segundos);
+		ControladorPasosRampa.ActualizaPasoRampa(ID_Paso, ID_Rampa, Temperatura, NivelAire, Minutos);
 		ManejadorPantallas.MuestraPantallaPaso(ID_Rampa, ID_Paso);
 	}
 
@@ -167,9 +167,9 @@ void CPantallaEdicionPaso::ValorIncremento()
 		MuestraAire();
 		break;
 	case 2:
-		Segundos++;
-		if(Segundos>600)
-			Segundos=600;
+		Minutos++;
+		if(Minutos>255)
+			Minutos=255;
 		MuestraTiempo();
 		break;
 	}
@@ -191,9 +191,9 @@ void CPantallaEdicionPaso::ValorDecremento()
 		MuestraAire();
 		break;
 	case 2:
-		Segundos--;
-		if(Segundos<0)
-			Segundos=0;
+		Minutos--;
+		if(Minutos<0)
+			Minutos=0;
 		MuestraTiempo();
 		break;
 	}
@@ -212,6 +212,20 @@ void CPantallaEdicionPaso::MuestraAire()
 }
 void CPantallaEdicionPaso::MuestraTiempo()
 {
-	TextTiempo->SetTexto((char*)"%d", Segundos);
+	SegundosATexto(Minutos);
+//	TextTiempo->SetTexto((char*)"%d", Segundos);
+	TextTiempo->SetTexto(TextoTiempo);
 	TextTiempo->Show();
+}
+void CPantallaEdicionPaso::SegundosATexto(int tiempoMinutos)
+{
+	int horas;
+	int minutos;
+	int segundos;
+	horas=tiempoMinutos/(60);
+	tiempoMinutos=tiempoMinutos-(horas*60);
+	minutos=tiempoMinutos;
+	//tiempoSegundos=0;//tiempoSegundos-(minutos*60);
+	segundos=0;//tiempoSegundos;
+	sprintf(TextoTiempo,(char*)"%d:%d:%d",horas,minutos,segundos);
 }

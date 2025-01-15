@@ -10,3 +10,4 @@
 ../Core/Inc/GUI/PantallaMemoria/CPantallaMemoria.cpp:102:6:virtual void CPantallaMemoria::OnPerillaIncremento()	1
 ../Core/Inc/GUI/PantallaMemoria/CPantallaMemoria.cpp:106:6:virtual void CPantallaMemoria::OnPerillaDecremento()	1
 ../Core/Inc/GUI/PantallaMemoria/CPantallaMemoria.cpp:110:6:virtual void CPantallaMemoria::MuestraInformacion(bool)	2
+../Core/Inc/GUI/PantallaMemoria/CPantallaMemoria.cpp:125:6:virtual void CPantallaMemoria::SetEstacion(CEstacionBase*)	1

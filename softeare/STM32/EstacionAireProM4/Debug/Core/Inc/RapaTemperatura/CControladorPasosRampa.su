@@ -6,16 +6,16 @@
 ../Core/Inc/RapaTemperatura/CControladorPasosRampa.cpp:46:5:int CControladorPasosRampa::DameSiguienteID_Paso()	48	static
 ../Core/Inc/RapaTemperatura/CControladorPasosRampa.cpp:86:6:void CControladorPasosRampa::GuardaPasoMemoria(int, CPaso*)	32	static
 ../Core/Inc/RapaTemperatura/CControladorPasosRampa.cpp:107:7:CPaso CControladorPasosRampa::LeePasoMemoria(int)	32	static
-../Core/Inc/RapaTemperatura/CControladorPasosRampa.cpp:137:6:bool CControladorPasosRampa::ActualizaPasoRampa(int, int, uint16_t, uint8_t, uint8_t)	56	static
-../Core/Inc/RapaTemperatura/CControladorPasosRampa.cpp:160:6:bool CControladorPasosRampa::EliminaPasoRampa(int)	48	static
-../Core/Inc/RapaTemperatura/CControladorPasosRampa.cpp:178:6:void CControladorPasosRampa::SetDireccionUltimoID_Paso(int)	16	static
-../Core/Inc/RapaTemperatura/CControladorPasosRampa.cpp:183:6:void CControladorPasosRampa::SetDireccionTablaPasos(int)	16	static
-../Core/Inc/RapaTemperatura/CControladorPasosRampa.cpp:187:6:void CControladorPasosRampa::SetNumeroMaximoPasos(int)	16	static
-../Core/Inc/RapaTemperatura/CControladorPasosRampa.cpp:191:5:int CControladorPasosRampa::GetBytesXPaso()	16	static
-../Core/Inc/RapaTemperatura/CControladorPasosRampa.cpp:195:5:int CControladorPasosRampa::GetNumeroMaximoPasos()	16	static
-../Core/Inc/RapaTemperatura/CControladorPasosRampa.cpp:199:5:int CControladorPasosRampa::GetDireccionTablaPasos()	16	static
-../Core/Inc/RapaTemperatura/CControladorPasosRampa.cpp:203:6:void CControladorPasosRampa::SetUltimoIDPado(uint8_t)	16	static
-../Core/Inc/RapaTemperatura/CControladorPasosRampa.cpp:209:5:int CControladorPasosRampa::DameNumeroPasosRampa(int)	48	static
-../Core/Inc/RapaTemperatura/CControladorPasosRampa.cpp:225:7:CPaso CControladorPasosRampa::DameSiguientePaso(int, int)	56	static
-../Core/Inc/RapaTemperatura/CControladorPasosRampa.cpp:249:7:CPaso CControladorPasosRampa::DamePasoRampa(int)	64	static
-../Core/Inc/RapaTemperatura/CControladorPasosRampa.cpp:262:6:bool CControladorPasosRampa::AgregarPasoRampa(int, uint16_t, uint8_t, uint8_t)	56	static
+../Core/Inc/RapaTemperatura/CControladorPasosRampa.cpp:137:6:bool CControladorPasosRampa::ActualizaPasoRampa(int, int, uint8_t, uint8_t, uint8_t)	56	static
+../Core/Inc/RapaTemperatura/CControladorPasosRampa.cpp:156:6:bool CControladorPasosRampa::EliminaPasoRampa(int)	48	static
+../Core/Inc/RapaTemperatura/CControladorPasosRampa.cpp:174:6:void CControladorPasosRampa::SetDireccionUltimoID_Paso(int)	16	static
+../Core/Inc/RapaTemperatura/CControladorPasosRampa.cpp:179:6:void CControladorPasosRampa::SetDireccionTablaPasos(int)	16	static
+../Core/Inc/RapaTemperatura/CControladorPasosRampa.cpp:183:6:void CControladorPasosRampa::SetNumeroMaximoPasos(int)	16	static
+../Core/Inc/RapaTemperatura/CControladorPasosRampa.cpp:187:5:int CControladorPasosRampa::GetBytesXPaso()	16	static
+../Core/Inc/RapaTemperatura/CControladorPasosRampa.cpp:191:5:int CControladorPasosRampa::GetNumeroMaximoPasos()	16	static
+../Core/Inc/RapaTemperatura/CControladorPasosRampa.cpp:195:5:int CControladorPasosRampa::GetDireccionTablaPasos()	16	static
+../Core/Inc/RapaTemperatura/CControladorPasosRampa.cpp:199:6:void CControladorPasosRampa::SetUltimoIDPado(uint8_t)	16	static
+../Core/Inc/RapaTemperatura/CControladorPasosRampa.cpp:205:5:int CControladorPasosRampa::DameNumeroPasosRampa(int)	48	static
+../Core/Inc/RapaTemperatura/CControladorPasosRampa.cpp:221:7:CPaso CControladorPasosRampa::DameSiguientePaso(int, int)	56	static
+../Core/Inc/RapaTemperatura/CControladorPasosRampa.cpp:245:7:CPaso CControladorPasosRampa::DamePasoRampa(int)	64	static
+../Core/Inc/RapaTemperatura/CControladorPasosRampa.cpp:258:6:bool CControladorPasosRampa::AgregarPasoRampa(int, uint8_t, uint8_t, uint8_t)	56	static

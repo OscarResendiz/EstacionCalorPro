@@ -21,7 +21,8 @@ private:
 	int ID_Rampa;
 	int Temperatura;
 	int NivelAire;
-	int Segundos;
+	int Minutos;
+	char TextoTiempo[100];
 	CEtiquetaTft *LabelGuardar;
 	CEtiquetaTft *LabelCancelar;
 	CEtiquetaTft *LabelRampa;
@@ -38,6 +39,14 @@ private:
 	CEtiquetaTft *Textos[3];
 	int Seleccionado;
 	ESTADO_EDICION_PASO Estado;
+	void SegundosATexto(int tiempoMinutos);
+	void NavegarIncremento();
+	void NavegarDecremento();
+	void ValorIncremento();
+	void ValorDecremento();
+	void MuestraTemperatura();
+	void MuestraAire();
+	void MuestraTiempo();
 public:
 	CPantallaEdicionPaso();
 	virtual ~CPantallaEdicionPaso();
@@ -47,14 +56,7 @@ public:
 	virtual void OnBotonUnoClickEvent();
 	virtual void OnBotonTresClickEvent();
 	virtual void Show();
-	void NavegarIncremento();
-	void NavegarDecremento();
 	virtual void OnBotonPerillaClickEvent();
-	void ValorIncremento();
-	void ValorDecremento();
-	void MuestraTemperatura();
-	void MuestraAire();
-	void MuestraTiempo();
 
 };
 

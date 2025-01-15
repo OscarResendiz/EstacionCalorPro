@@ -9,5 +9,6 @@
 ../Core/Inc/GUI/PantallaCalibracion/CPantallaCalibracion.cpp:110:6:virtual void CPantallaCalibracion::OnPerillaIncremento()	16	static
 ../Core/Inc/GUI/PantallaCalibracion/CPantallaCalibracion.cpp:131:6:virtual void CPantallaCalibracion::OnPerillaDecremento()	16	static
 ../Core/Inc/GUI/PantallaCalibracion/CPantallaCalibracion.cpp:153:6:void CPantallaCalibracion::LeeMemoria()	16	static
-../Core/Inc/GUI/PantallaCalibracion/CPantallaCalibracion.cpp:182:6:virtual void CPantallaCalibracion::LeeDatosEstacion()	16	static
-../Core/Inc/GUI/PantallaCalibracion/CPantallaCalibracion.cpp:190:6:virtual void CPantallaCalibracion::OnBotonUnoClickEvent()	16	static
+../Core/Inc/GUI/PantallaCalibracion/CPantallaCalibracion.cpp:159:6:virtual void CPantallaCalibracion::LeeDatosEstacion()	16	static
+../Core/Inc/GUI/PantallaCalibracion/CPantallaCalibracion.cpp:164:6:virtual void CPantallaCalibracion::OnBotonUnoClickEvent()	16	static
+../Core/Inc/GUI/PantallaCalibracion/CPantallaCalibracion.cpp:169:6:virtual void CPantallaCalibracion::SetEstacion(CEstacionBase*)	16	static

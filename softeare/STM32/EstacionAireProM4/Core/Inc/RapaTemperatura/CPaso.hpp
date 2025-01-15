@@ -17,9 +17,9 @@ public:
 	uint8_t Ocupado;
 	uint8_t ID_Rampa;
 	uint8_t ID_Paso;
-	uint16_t Temperatura;
+	uint8_t Temperatura;
 	uint8_t NivelAire;
-	uint8_t Segundos;
+	uint8_t Minutos;
 
 	CPaso();
 	virtual ~CPaso();

@@ -21,3 +21,4 @@
 ../Core/Inc/Estaciones/CEstacionBase.cpp:99:6:virtual void CEstacionBase::SetPID(int)	1
 ../Core/Inc/Estaciones/CEstacionBase.cpp:103:6:virtual void CEstacionBase::GPIO_INTERRUPCION(int)	1
 ../Core/Inc/Estaciones/CEstacionBase.cpp:107:6:virtual void CEstacionBase::QuitaManejadorControles()	1
+../Core/Inc/Estaciones/CEstacionBase.cpp:111:6:virtual void CEstacionBase::EnfriaYApagaPistola()	1

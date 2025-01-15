@@ -17,7 +17,7 @@ CPaso::CPaso()
 	ID_Paso=0;
 	Temperatura=0;
 	NivelAire=0;
-	Segundos=0;
+	Minutos=0;
 
 }
 

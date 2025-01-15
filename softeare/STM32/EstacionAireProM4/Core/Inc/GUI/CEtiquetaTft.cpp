@@ -27,6 +27,11 @@ void CEtiquetaTft::SetTexto(char *formato, ...)
 	char *p;
 	char buffer[100];
 	char tmp[100];
+	for(int i=0;i<100;i++)
+	{
+		buffer[i]='\0';
+		tmp[i]='\0';
+	}
 	int postmp = 0;
 	int posbuffer = 0;
 	va_list pa;

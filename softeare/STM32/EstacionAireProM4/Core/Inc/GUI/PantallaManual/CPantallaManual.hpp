@@ -59,6 +59,7 @@ protected:
 	void MuestraNivelAire(bool forrzar);
 	virtual void MuestraInformacion(bool forzar);
 	void LeeMemoria();
+	virtual void SetEstacion(CEstacionBase *estacion);
 };
 
 #endif /* INC_GUI_PANTALLAMANUAL_CPANTALLAMANUAL_HPP_ */

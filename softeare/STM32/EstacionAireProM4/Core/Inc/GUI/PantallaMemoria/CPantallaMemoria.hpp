@@ -34,6 +34,7 @@ public:
 	virtual ~CPantallaMemoria();
 	virtual void Show();
 	void SetMemoria(int numeroMemoria);
+	virtual void SetEstacion(CEstacionBase *estacion);
 };
 
 #endif /* INC_GUI_PANTALLAMEMORIA_CPANTALLAMEMORIA_HPP_ */

@@ -122,3 +122,8 @@ void CPantallaMemoria::MuestraInformacion(bool forzar)
 		SetVisible(true);
 }
 
+void CPantallaMemoria::SetEstacion(CEstacionBase *estacion)
+{
+	CPantallaBase::SetEstacion(estacion);
+	Estacion->ActivarCalefactor();
+}

@@ -15,7 +15,7 @@
 class CControladorRampas
 {
 private:
-	char *KEY=(char*)"002";
+	char *KEY=(char*)"003";
 	int const NUMERO_MAXIMO_RAMPAS=30;
 	int TotalRampas=-1;
 	int DireccionInicial=-1;

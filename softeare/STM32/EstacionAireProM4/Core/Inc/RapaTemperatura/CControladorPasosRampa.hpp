@@ -14,7 +14,7 @@ class CControladorPasosRampa
 {
 private:
 	int  NUMERO_MAXIMO_PASOS=2000;
-	int BytesPaso=7;
+	int BytesPaso=6;
 	int DireccionUltimoID_Paso;
 	uint16_t UltimoID_Paso;
 	int DireccionTablaPasos;
@@ -26,9 +26,9 @@ private:
 public:
 	CControladorPasosRampa();
 	virtual ~CControladorPasosRampa();
-	bool AgregarPasoRampa(int ID_Rampa,uint16_t Temperatura,uint8_t NivelAire,uint8_t Segundos);
+	bool AgregarPasoRampa(int ID_Rampa,uint8_t Temperatura,uint8_t NivelAire,uint8_t Minutos);
 	int DameSiguienteID_Paso();
-	bool ActualizaPasoRampa(int ID_Paso,int ID_Rampa,uint16_t Temperatura,uint8_t NivelAire,uint8_t Segundos);
+	bool ActualizaPasoRampa(int ID_Paso,int ID_Rampa,uint8_t Temperatura,uint8_t NivelAire,uint8_t Minutos);
 	bool EliminaPasoRampa(int ID_Paso);
 	CPaso DamePasoRampa(int ID_Paso);
 	int DameNumeroPasosRampa(int ID_Rampa);

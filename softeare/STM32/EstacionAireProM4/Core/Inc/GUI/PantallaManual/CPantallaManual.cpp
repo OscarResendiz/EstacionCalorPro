@@ -75,7 +75,7 @@ void CPantallaManual::MuestraTemperaturas(bool forzar)
 {
 	if(forzar==false)
 	{
-		if(TemperaturaAnterior==Temperatura &&SetTemperaturaAnterior==SetTemperatura)//&& EsVisible()==true )
+		if(TemperaturaAnterior==Temperatura &&SetTemperaturaAnterior==SetTemperatura)
 			return;
 	}
 
@@ -107,7 +107,6 @@ void CPantallaManual::MuestraNivelAire(bool forzar)
 
 void CPantallaManual::OnTemperaturaRealEvent(int temperatura)
 {
-//	Temperatura = temperatura;
 }
 
 //eventos del Encoder
@@ -146,12 +145,10 @@ void CPantallaManual::Refresca()
  void CPantallaManual::GuardaTemperatura()
  {
  	uint16_t temperatura=Estacion->GetTemperatura();
-// 	uint8_t datos_w[10];
  	int t= HAL_GetTick();
  	if(t>tiempoescritura)
  	{
  		Eprom.GuardaTemepraturaManual(temperatura);
-// 		HAL_I2C_Mem_Write(&hi2c1,ADDRESS_EEPROM,DIRMEMORIARPROM::TEMPERATURAMANUAL,I2C_MEMADD_SIZE_8BIT,(uint8_t*)&temperatura,2,HAL_MAX_DELAY);
  		TemperaturaGuardada=true;
  		tiempoescritura=t+1000;
  	}
@@ -163,17 +160,6 @@ void CPantallaManual::LeeMemoria()
  	uint16_t temperatura=Eprom.DameTemperaturaManual();
 	Estacion->SetTemperatura(temperatura);
 	TemperaturaGuardada=true;
-
-/*
- 	  if( HAL_I2C_Mem_Read(&hi2c1,ADDRESS_EEPROM,DIRMEMORIARPROM::TEMPERATURAMANUAL,I2C_MEMADD_SIZE_8BIT,(uint8_t*)&temperatura,2,HAL_MAX_DELAY)==HAL_OK)
- 	  {
- 		 	if(temperatura>=0 && temperatura<=500)
- 		 	{
- 		 		Estacion->SetTemperatura(temperatura);
- 		 	}
- 		 	TemperaturaGuardada=true;
- 	  }
- 	  */
 }
 
  void CPantallaManual::Show()
@@ -197,4 +183,9 @@ void CPantallaManual::OnBotonUnoClickEvent()
 void CPantallaManual::OnBotonDosClickEvent()
 {
 	ManejadorPantallas.MuestraPantallaMemoria(2);
+}
+void CPantallaManual::SetEstacion(CEstacionBase *estacion)
+{
+	CPantallaBase::SetEstacion(estacion);
+	Estacion->ActivarCalefactor();
 }

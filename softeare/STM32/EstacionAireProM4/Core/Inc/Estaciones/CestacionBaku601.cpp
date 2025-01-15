@@ -34,9 +34,6 @@ CestacionBaku601::CestacionBaku601() :
 		CEstacionBase()
 {
 	pwm.Init(TIM2, TIM_CHANNEL_1, 65535);
-
-	//inicializa la termocupla
-	//IniciaMax6675();
 	IniciaSensorTemperaturaAnalogico();
 	thermocouple->Init();
 
@@ -71,7 +68,6 @@ int CestacionBaku601::GetTemperatura()
 void CestacionBaku601::SetNivelAire(int nivel)
 {
 	NivelAire = nivel;
-	//pwm.SicloTrabajo(nivel);
 }
 int CestacionBaku601::GetNivelAire()
 {
@@ -86,10 +82,11 @@ int CestacionBaku601::GetEstado()
 
 void CestacionBaku601::IncrementaTemperatura()
 {
-	if (TemperaturaEspecificada < TemperaturaMaxima)
+	if (TemperaturaEspecificada > TemperaturaMaxima)
 	{
-		TemperaturaEspecificada++;
+		TemperaturaEspecificada = TemperaturaMaxima;
 	}
+	TemperaturaEspecificada++;
 }
 
 void CestacionBaku601::DecrementaTemperatura()
@@ -118,7 +115,6 @@ void CestacionBaku601::OnSensorMagneticoChange(int estado)
 void CestacionBaku601::Procesa()
 {
 	ProcesaTemperatura();
-//	ProcesaTemperaturaReal();
 	procesaAire();
 	ProcesaCalefactor();
 }
@@ -137,14 +133,6 @@ void CestacionBaku601::ProcesaTemperatura()
 
 void CestacionBaku601::ProcesaTemperaturaReal()
 {
-	/*
-	 *int temperatura = GetTemperaturaReal();
-	 if (temperaturaRealAnterior != temperatura)
-	 {
-	 temperaturaRealAnterior = temperatura;
-	 TemperaturaRealEvent(temperaturaRealAnterior);
-	 }
-	 */
 }
 
 //verifica elnivel de aire
@@ -188,8 +176,8 @@ void CestacionBaku601::ProcesaCalefactor()
 	}
 	//calculo el siguiente tiempo de muestreo
 	TiempoProximoMuestreo = TiempoActual + TiempoMuestreoTemperatura;
-	TemperaturaRealActual = GetTemperaturaRealx(); //thermocouple.MAX6675_lee();
-	int temperatura = TemperaturaRealActual; //GetTemperaturaReal();
+	TemperaturaRealActual = GetTemperaturaRealx();
+	int temperatura = TemperaturaRealActual;
 	PID_error = TemperaturaEspecificada - temperatura;                       //Calculo del error
 	Error_INT = Error_INT + PID_error * (1000 / TiempoMuestreoTemperatura);  //Calculo de la integral del error
 	PID_value = Kc * (PID_error + (1 / Tao_I) * Error_INT) / 10;   //Calculo de la salida del controlador PI
@@ -199,7 +187,6 @@ void CestacionBaku601::ProcesaCalefactor()
 
 void CestacionBaku601::EnfriaYApagaPistola()
 {
-	//calefactor.Apagar();
 	PotenciaCalefactor = 0; //bajo toda la potencia
 	float temperatura = GetTemperaturaRealx();
 	if (temperatura <= TEMPERATURA_APAGADO)
@@ -231,11 +218,6 @@ void CestacionBaku601::CruceXCero(int gpio_pin)
 	}
 	if (gpio_pin != CruceCero_Pin)
 		return;
-//	if(TiempoAntiReboresCruceXCero>0)
-//	{
-	//return;
-//	}
-//	TiempoAntiReboresCruceXCero = 9;
 	if (conteolecturatemperatura > 10)
 	{
 		conteolecturatemperatura = 0;
@@ -264,7 +246,7 @@ void CestacionBaku601::TimerTick()
 	else
 	{
 		CruceXCero(CruceCero_Pin);
-		TiempoAntiReboresCruceXCero = 200000;
+		TiempoAntiReboresCruceXCero =250;// 2000;
 	}
 }
 int CestacionBaku601::GetPID()
@@ -277,5 +259,4 @@ void CestacionBaku601::SetPID(int valor)
 }
 void CestacionBaku601::GPIO_INTERRUPCION(int GPIO_Pin)
 {
-//	CruceXCero(GPIO_Pin);
 }

@@ -45,6 +45,7 @@ public:
 	virtual void OnBotonPerillaClickEvent();
 	virtual void LeeDatosEstacion();
 	virtual void OnBotonUnoClickEvent();
+	virtual void SetEstacion(CEstacionBase *estacion);
 };
 
 #endif /* INC_GUI_PANTALLACALIBRACION_CPANTALLACALIBRACION_HPP_ */

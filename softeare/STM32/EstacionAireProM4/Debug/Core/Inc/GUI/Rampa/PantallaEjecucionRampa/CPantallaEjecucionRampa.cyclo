@@ -2,6 +2,13 @@
 ../Core/Inc/GUI/Rampa/PantallaEjecucionRampa/CPantallaEjecucionRampa.cpp:30:1:CPantallaEjecucionRampa::~CPantallaEjecucionRampa()	1
 ../Core/Inc/GUI/Rampa/PantallaEjecucionRampa/CPantallaEjecucionRampa.cpp:30:1:virtual CPantallaEjecucionRampa::~CPantallaEjecucionRampa()	1
 ../Core/Inc/GUI/Rampa/PantallaEjecucionRampa/CPantallaEjecucionRampa.cpp:34:6:void CPantallaEjecucionRampa::SetIDRampa(int)	1
-../Core/Inc/GUI/Rampa/PantallaEjecucionRampa/CPantallaEjecucionRampa.cpp:41:6:virtual void CPantallaEjecucionRampa::OnBotonUnoClickEvent()	3
-../Core/Inc/GUI/Rampa/PantallaEjecucionRampa/CPantallaEjecucionRampa.cpp:61:6:virtual void CPantallaEjecucionRampa::OnBotonTresClickEvent()	1
-../Core/Inc/GUI/Rampa/PantallaEjecucionRampa/CPantallaEjecucionRampa.cpp:67:6:virtual void CPantallaEjecucionRampa::Show()	1
+../Core/Inc/GUI/Rampa/PantallaEjecucionRampa/CPantallaEjecucionRampa.cpp:47:6:virtual void CPantallaEjecucionRampa::OnBotonUnoClickEvent()	4
+../Core/Inc/GUI/Rampa/PantallaEjecucionRampa/CPantallaEjecucionRampa.cpp:76:6:virtual void CPantallaEjecucionRampa::OnBotonTresClickEvent()	1
+../Core/Inc/GUI/Rampa/PantallaEjecucionRampa/CPantallaEjecucionRampa.cpp:82:6:virtual void CPantallaEjecucionRampa::Show()	1
+../Core/Inc/GUI/Rampa/PantallaEjecucionRampa/CPantallaEjecucionRampa.cpp:91:6:virtual void CPantallaEjecucionRampa::Refresca()	5
+../Core/Inc/GUI/Rampa/PantallaEjecucionRampa/CPantallaEjecucionRampa.cpp:123:6:void CPantallaEjecucionRampa::FinEjecucion()	1
+../Core/Inc/GUI/Rampa/PantallaEjecucionRampa/CPantallaEjecucionRampa.cpp:129:6:void CPantallaEjecucionRampa::PasoTerminado()	2
+../Core/Inc/GUI/Rampa/PantallaEjecucionRampa/CPantallaEjecucionRampa.cpp:152:6:void CPantallaEjecucionRampa::MuestraDatos()	1
+../Core/Inc/GUI/Rampa/PantallaEjecucionRampa/CPantallaEjecucionRampa.cpp:164:6:void CPantallaEjecucionRampa::SegundosATexto(int)	2
+../Core/Inc/GUI/Rampa/PantallaEjecucionRampa/CPantallaEjecucionRampa.cpp:180:6:void CPantallaEjecucionRampa::ActualizaEstacion()	1
+../Core/Inc/GUI/Rampa/PantallaEjecucionRampa/CPantallaEjecucionRampa.cpp:186:6:virtual void CPantallaEjecucionRampa::SetEstacion(CEstacionBase*)	1

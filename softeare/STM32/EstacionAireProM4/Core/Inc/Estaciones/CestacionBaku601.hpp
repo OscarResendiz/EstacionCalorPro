@@ -36,8 +36,9 @@ private:
 	float Error_INT=0;
 	float PID_value = 0;
 	// Constantes de PID
-	float Kc = 5;
-	float Tao_I =600;
+	float Kc = 100;//5;
+	float Tao_I =1000;//600;
+
 	int TiempoAntiReboresCruceXCero=1;
 	int ciclos=0;
 	int EstadoSensorMagnetico;
@@ -46,8 +47,7 @@ protected:
 	int CONFIG_TCCS_PIN = 11;
 	int CONFIG_TCDO_PIN = 12;
 	int EstadoCalefator=APAGADO;
-// OBJETO UTILIZADO PARA LA COMUNICACION CON EL MAX6675
-	//MAX6675 thermocouple;
+//	bool BanderaEnsendido;
 	InterfaceSensorTemperatura* thermocouple;
 	Pwm pwm;
 	Calefactor calefactor;
@@ -78,6 +78,7 @@ public:
 	virtual void GPIO_INTERRUPCION(int GPIO_Pin);
 	virtual int GetNivelAire();
 private:
+	virtual void EnfriaYApagaPistola();
 	//verifica el nivel de temperatura seleccinada por el usuario
 	void ProcesaTemperatura();
 	//verifica elnivel de aire
@@ -88,7 +89,6 @@ private:
 	virtual void DecrementaTemperatura();
 	void ProcesaCalefactor();
 	virtual void OnSensorMagneticoChange(int estado);
-	void EnfriaYApagaPistola();
 	void IniciaMax6675();
 	void IniciaSensorTemperaturaAnalogico();
 };
