@@ -19,9 +19,9 @@
 ../Core/Inc/Estaciones/CestacionBaku601.cpp:134:6:void CestacionBaku601::ProcesaTemperaturaReal()	1
 ../Core/Inc/Estaciones/CestacionBaku601.cpp:139:6:void CestacionBaku601::procesaAire()	2
 ../Core/Inc/Estaciones/CestacionBaku601.cpp:149:6:void CestacionBaku601::ProcesaCalefactor()	4
-../Core/Inc/Estaciones/CestacionBaku601.cpp:188:6:virtual void CestacionBaku601::EnfriaYApagaPistola()	6
-../Core/Inc/Estaciones/CestacionBaku601.cpp:212:6:virtual void CestacionBaku601::CruceXCero(int)	6
-../Core/Inc/Estaciones/CestacionBaku601.cpp:240:6:virtual void CestacionBaku601::TimerTick()	2
-../Core/Inc/Estaciones/CestacionBaku601.cpp:252:5:virtual int CestacionBaku601::GetPID()	1
-../Core/Inc/Estaciones/CestacionBaku601.cpp:256:6:virtual void CestacionBaku601::SetPID(int)	1
-../Core/Inc/Estaciones/CestacionBaku601.cpp:260:6:virtual void CestacionBaku601::GPIO_INTERRUPCION(int)	1
+../Core/Inc/Estaciones/CestacionBaku601.cpp:189:6:virtual void CestacionBaku601::EnfriaYApagaPistola()	6
+../Core/Inc/Estaciones/CestacionBaku601.cpp:213:6:virtual void CestacionBaku601::CruceXCero(int)	6
+../Core/Inc/Estaciones/CestacionBaku601.cpp:241:6:virtual void CestacionBaku601::TimerTick()	2
+../Core/Inc/Estaciones/CestacionBaku601.cpp:253:5:virtual int CestacionBaku601::GetPID()	1
+../Core/Inc/Estaciones/CestacionBaku601.cpp:257:6:virtual void CestacionBaku601::SetPID(int)	1
+../Core/Inc/Estaciones/CestacionBaku601.cpp:261:6:virtual void CestacionBaku601::GPIO_INTERRUPCION(int)	1

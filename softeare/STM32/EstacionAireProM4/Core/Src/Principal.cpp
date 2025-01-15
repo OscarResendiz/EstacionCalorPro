@@ -33,6 +33,9 @@ CManejadorPantallas ManejadorPantallas;
 CManejadorControles *ManejadorControles;
 CEprom Eprom;
 CControladorRampas ControladorRampas;
+int tiempoZumbido=2000;
+int tiempozumbando=0;
+bool zumba=0;
 void IncializaSistema()
 {
 	USART1_UART_Init();
@@ -70,6 +73,8 @@ void EjecutaSistema()
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
+	zumba=true;
+	tiempozumbando=tiempoZumbido;
 	if(estacion!=NULL)
 	{
 		estacion->GPIO_INTERRUPCION(GPIO_Pin);
@@ -86,5 +91,15 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 		if(estacion==NULL)
 			return;
 		estacion->TimerTick();
+		if(zumba)
+		{
+			HAL_GPIO_WritePin(GPIOA, GPIO_PIN_2,	GPIO_PinState::GPIO_PIN_SET);
+			if(tiempozumbando<=0)
+			{
+				HAL_GPIO_WritePin(GPIOA, GPIO_PIN_2,	GPIO_PinState::GPIO_PIN_RESET);
+				zumba=false;
+			}
+			tiempozumbando--;
+		}
 	}
 }

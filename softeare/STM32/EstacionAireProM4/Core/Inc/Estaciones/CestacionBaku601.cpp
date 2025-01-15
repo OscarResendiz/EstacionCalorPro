@@ -151,8 +151,9 @@ void CestacionBaku601::ProcesaCalefactor()
 	if (EstadoCalefator == APAGADO)
 	{
 		//esta apagado el calefactor
-		PotenciaCalefactor = 0;
-		calefactor.Apagar();
+		//PotenciaCalefactor = 0;
+		//calefactor.Apagar();
+		EnfriaYApagaPistola();
 		return;
 	}
 	EstadoSensorMagnetico = sensorMagnetico.Leer();
