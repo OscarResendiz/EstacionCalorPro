@@ -5066,6 +5066,11 @@ Discarded input sections
  .group         0x00000000        0xc ./Core/Inc/ManejadorControles/CManejadorControles.o
  .group         0x00000000        0xc ./Core/Inc/ManejadorControles/CManejadorControles.o
  .group         0x00000000        0xc ./Core/Inc/ManejadorControles/CManejadorControles.o
+ .group         0x00000000        0xc ./Core/Inc/ManejadorControles/CManejadorControles.o
+ .group         0x00000000        0xc ./Core/Inc/ManejadorControles/CManejadorControles.o
+ .group         0x00000000        0xc ./Core/Inc/ManejadorControles/CManejadorControles.o
+ .group         0x00000000        0xc ./Core/Inc/ManejadorControles/CManejadorControles.o
+ .group         0x00000000        0xc ./Core/Inc/ManejadorControles/CManejadorControles.o
  .text          0x00000000        0x0 ./Core/Inc/ManejadorControles/CManejadorControles.o
  .data          0x00000000        0x0 ./Core/Inc/ManejadorControles/CManejadorControles.o
  .bss           0x00000000        0x0 ./Core/Inc/ManejadorControles/CManejadorControles.o
@@ -5137,6 +5142,9 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 ./Core/Inc/ManejadorControles/CManejadorControles.o
  .debug_macro   0x00000000       0x35 ./Core/Inc/ManejadorControles/CManejadorControles.o
  .debug_macro   0x00000000       0x20 ./Core/Inc/ManejadorControles/CManejadorControles.o
+ .debug_macro   0x00000000       0x10 ./Core/Inc/ManejadorControles/CManejadorControles.o
+ .debug_macro   0x00000000       0x16 ./Core/Inc/ManejadorControles/CManejadorControles.o
+ .debug_macro   0x00000000      0x138 ./Core/Inc/ManejadorControles/CManejadorControles.o
  .group         0x00000000        0xc ./Core/Inc/ManejadorControles/CManejadorEventosControles.o
  .text          0x00000000        0x0 ./Core/Inc/ManejadorControles/CManejadorEventosControles.o
  .data          0x00000000        0x0 ./Core/Inc/ManejadorControles/CManejadorEventosControles.o
@@ -6456,7 +6464,9 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 ./Core/Inc/Uart/Uart.o
  .debug_macro   0x00000000       0x35 ./Core/Inc/Uart/Uart.o
  .debug_macro   0x00000000       0x20 ./Core/Inc/Uart/Uart.o
+ .debug_macro   0x00000000       0x1c ./Core/Inc/Uart/Uart.o
  .debug_macro   0x00000000       0x10 ./Core/Inc/Uart/Uart.o
+ .debug_macro   0x00000000       0x1c ./Core/Inc/Uart/Uart.o
  .debug_macro   0x00000000       0x16 ./Core/Inc/Uart/Uart.o
  .debug_macro   0x00000000      0x138 ./Core/Inc/Uart/Uart.o
  .debug_macro   0x00000000       0x4c ./Core/Inc/Uart/Uart.o
@@ -15201,7 +15211,7 @@ LOAD C:/ST/STM32CubeIDE_1.13.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_rnglists
                 0x00002119      0x1bc ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o
 
-.debug_macro    0x00000000    0x264a6
+.debug_macro    0x00000000    0x264da
  .debug_macro   0x00000000      0x313 ./Core/Inc/Boton/CManejadorBoton.o
  .debug_macro   0x00000313      0xb8c ./Core/Inc/Boton/CManejadorBoton.o
  .debug_macro   0x00000e9f       0x2e ./Core/Inc/Boton/CManejadorBoton.o
@@ -15327,78 +15337,78 @@ LOAD C:/ST/STM32CubeIDE_1.13.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_macro   0x0001ed02       0xb3 ./Core/Inc/ILI9341/ILI9341_GFX.o
  .debug_macro   0x0001edb5       0x16 ./Core/Inc/ILI9341/ILI9341_GFX.o
  .debug_macro   0x0001edcb      0x24a ./Core/Inc/ILI9341/ILI9341_STM32_Driver.o
- .debug_macro   0x0001f015      0x34a ./Core/Inc/ManejadorControles/CManejadorControles.o
- .debug_macro   0x0001f35f       0x1b ./Core/Inc/ManejadorControles/CManejadorEventosControles.o
- .debug_macro   0x0001f37a      0x33e ./Core/Inc/PWM/Pwm.o
- .debug_macro   0x0001f6b8       0x10 ./Core/Inc/PWM/Pwm.o
- .debug_macro   0x0001f6c8       0x16 ./Core/Inc/PWM/Pwm.o
- .debug_macro   0x0001f6de       0x16 ./Core/Inc/PWM/Pwm.o
- .debug_macro   0x0001f6f4       0x29 ./Core/Inc/PWM/Pwm.o
- .debug_macro   0x0001f71d       0x1c ./Core/Inc/PWM/Pwm.o
- .debug_macro   0x0001f739       0xde ./Core/Inc/PWM/Pwm.o
- .debug_macro   0x0001f817       0x1b ./Core/Inc/RapaTemperatura/CControlProgreso.o
- .debug_macro   0x0001f832      0x313 ./Core/Inc/RapaTemperatura/CControladorPasosRampa.o
- .debug_macro   0x0001fb45      0x32e ./Core/Inc/RapaTemperatura/CControladorRampas.o
- .debug_macro   0x0001fe73      0x228 ./Core/Inc/RapaTemperatura/CPaso.o
- .debug_macro   0x0002009b      0x22e ./Core/Inc/RapaTemperatura/CRampa.o
- .debug_macro   0x000202c9       0x1b ./Core/Inc/SensorMagnetico/CManejadorEventoSensorMagnetico.o
- .debug_macro   0x000202e4      0x313 ./Core/Inc/SensorMagnetico/SensorMagnetico.o
- .debug_macro   0x000205f7       0x1b ./Core/Inc/SensorTemperatura/InterfaceSensorTemperatura/InterfaceSensorTemperatura.o
- .debug_macro   0x00020612      0x245 ./Core/Inc/SensorTemperatura/SensorAnalogico.o
- .debug_macro   0x00020857      0x318 ./Core/Inc/Timer/Timer.o
- .debug_macro   0x00020b6f       0x10 ./Core/Inc/Timer/Timer.o
- .debug_macro   0x00020b7f       0x16 ./Core/Inc/Timer/Timer.o
- .debug_macro   0x00020b95      0x333 ./Core/Inc/Uart/Uart.o
- .debug_macro   0x00020ec8       0x1c ./Core/Inc/Uart/Uart.o
- .debug_macro   0x00020ee4       0x1c ./Core/Inc/Uart/Uart.o
- .debug_macro   0x00020f00      0x597 ./Core/Src/Principal.o
- .debug_macro   0x00021497       0x16 ./Core/Src/Principal.o
- .debug_macro   0x000214ad       0xb9 ./Core/Src/Principal.o
- .debug_macro   0x00021566      0x22c ./Core/Src/gpio.o
- .debug_macro   0x00021792      0xab4 ./Core/Src/gpio.o
- .debug_macro   0x00022246     0x1011 ./Core/Src/gpio.o
- .debug_macro   0x00023257      0x189 ./Core/Src/gpio.o
- .debug_macro   0x000233e0      0x3a4 ./Core/Src/main.o
- .debug_macro   0x00023784       0x64 ./Core/Src/main.o
- .debug_macro   0x000237e8      0x22d ./Core/Src/spi.o
- .debug_macro   0x00023a15      0x228 ./Core/Src/stm32f4xx_hal_msp.o
- .debug_macro   0x00023c3d      0x232 ./Core/Src/stm32f4xx_it.o
- .debug_macro   0x00023e6f      0x274 ./Core/Src/syscalls.o
- .debug_macro   0x000240e3       0x10 ./Core/Src/syscalls.o
- .debug_macro   0x000240f3       0x10 ./Core/Src/syscalls.o
- .debug_macro   0x00024103       0x10 ./Core/Src/syscalls.o
- .debug_macro   0x00024113       0x10 ./Core/Src/syscalls.o
- .debug_macro   0x00024123       0x1c ./Core/Src/syscalls.o
- .debug_macro   0x0002413f       0x52 ./Core/Src/syscalls.o
- .debug_macro   0x00024191       0x22 ./Core/Src/syscalls.o
- .debug_macro   0x000241b3       0x10 ./Core/Src/syscalls.o
- .debug_macro   0x000241c3       0x52 ./Core/Src/syscalls.o
- .debug_macro   0x00024215       0xcf ./Core/Src/syscalls.o
- .debug_macro   0x000242e4       0x1c ./Core/Src/syscalls.o
- .debug_macro   0x00024300       0x3d ./Core/Src/syscalls.o
- .debug_macro   0x0002433d       0x35 ./Core/Src/syscalls.o
- .debug_macro   0x00024372      0x12c ./Core/Src/syscalls.o
- .debug_macro   0x0002449e       0x10 ./Core/Src/syscalls.o
- .debug_macro   0x000244ae      0x242 ./Core/Src/syscalls.o
- .debug_macro   0x000246f0       0x10 ./Core/Src/syscalls.o
- .debug_macro   0x00024700      0x18a ./Core/Src/syscalls.o
- .debug_macro   0x0002488a       0x16 ./Core/Src/syscalls.o
- .debug_macro   0x000248a0       0xce ./Core/Src/syscalls.o
- .debug_macro   0x0002496e       0xff ./Core/Src/sysmem.o
- .debug_macro   0x00024a6d      0x23c ./Core/Src/sysmem.o
- .debug_macro   0x00024ca9      0x219 ./Core/Src/system_stm32f4xx.o
- .debug_macro   0x00024ec2      0x279 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
- .debug_macro   0x0002513b      0x21a ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.o
- .debug_macro   0x00025355      0x219 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
- .debug_macro   0x0002556e      0x21f ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
- .debug_macro   0x0002578d      0x267 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.o
- .debug_macro   0x000259f4      0x23d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
- .debug_macro   0x00025c31      0x228 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.o
- .debug_macro   0x00025e59      0x21a ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
- .debug_macro   0x00026073      0x219 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o
- .debug_macro   0x0002628c      0x21a ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o
+ .debug_macro   0x0001f015      0x37e ./Core/Inc/ManejadorControles/CManejadorControles.o
+ .debug_macro   0x0001f393       0x1c ./Core/Inc/ManejadorControles/CManejadorControles.o
+ .debug_macro   0x0001f3af       0x1c ./Core/Inc/ManejadorControles/CManejadorControles.o
+ .debug_macro   0x0001f3cb       0x1b ./Core/Inc/ManejadorControles/CManejadorEventosControles.o
+ .debug_macro   0x0001f3e6      0x33e ./Core/Inc/PWM/Pwm.o
+ .debug_macro   0x0001f724       0x10 ./Core/Inc/PWM/Pwm.o
+ .debug_macro   0x0001f734       0x16 ./Core/Inc/PWM/Pwm.o
+ .debug_macro   0x0001f74a       0x16 ./Core/Inc/PWM/Pwm.o
+ .debug_macro   0x0001f760       0x29 ./Core/Inc/PWM/Pwm.o
+ .debug_macro   0x0001f789       0x1c ./Core/Inc/PWM/Pwm.o
+ .debug_macro   0x0001f7a5       0xde ./Core/Inc/PWM/Pwm.o
+ .debug_macro   0x0001f883       0x1b ./Core/Inc/RapaTemperatura/CControlProgreso.o
+ .debug_macro   0x0001f89e      0x313 ./Core/Inc/RapaTemperatura/CControladorPasosRampa.o
+ .debug_macro   0x0001fbb1      0x32e ./Core/Inc/RapaTemperatura/CControladorRampas.o
+ .debug_macro   0x0001fedf      0x228 ./Core/Inc/RapaTemperatura/CPaso.o
+ .debug_macro   0x00020107      0x22e ./Core/Inc/RapaTemperatura/CRampa.o
+ .debug_macro   0x00020335       0x1b ./Core/Inc/SensorMagnetico/CManejadorEventoSensorMagnetico.o
+ .debug_macro   0x00020350      0x313 ./Core/Inc/SensorMagnetico/SensorMagnetico.o
+ .debug_macro   0x00020663       0x1b ./Core/Inc/SensorTemperatura/InterfaceSensorTemperatura/InterfaceSensorTemperatura.o
+ .debug_macro   0x0002067e      0x245 ./Core/Inc/SensorTemperatura/SensorAnalogico.o
+ .debug_macro   0x000208c3      0x318 ./Core/Inc/Timer/Timer.o
+ .debug_macro   0x00020bdb       0x10 ./Core/Inc/Timer/Timer.o
+ .debug_macro   0x00020beb       0x16 ./Core/Inc/Timer/Timer.o
+ .debug_macro   0x00020c01      0x333 ./Core/Inc/Uart/Uart.o
+ .debug_macro   0x00020f34      0x597 ./Core/Src/Principal.o
+ .debug_macro   0x000214cb       0x16 ./Core/Src/Principal.o
+ .debug_macro   0x000214e1       0xb9 ./Core/Src/Principal.o
+ .debug_macro   0x0002159a      0x22c ./Core/Src/gpio.o
+ .debug_macro   0x000217c6      0xab4 ./Core/Src/gpio.o
+ .debug_macro   0x0002227a     0x1011 ./Core/Src/gpio.o
+ .debug_macro   0x0002328b      0x189 ./Core/Src/gpio.o
+ .debug_macro   0x00023414      0x3a4 ./Core/Src/main.o
+ .debug_macro   0x000237b8       0x64 ./Core/Src/main.o
+ .debug_macro   0x0002381c      0x22d ./Core/Src/spi.o
+ .debug_macro   0x00023a49      0x228 ./Core/Src/stm32f4xx_hal_msp.o
+ .debug_macro   0x00023c71      0x232 ./Core/Src/stm32f4xx_it.o
+ .debug_macro   0x00023ea3      0x274 ./Core/Src/syscalls.o
+ .debug_macro   0x00024117       0x10 ./Core/Src/syscalls.o
+ .debug_macro   0x00024127       0x10 ./Core/Src/syscalls.o
+ .debug_macro   0x00024137       0x10 ./Core/Src/syscalls.o
+ .debug_macro   0x00024147       0x10 ./Core/Src/syscalls.o
+ .debug_macro   0x00024157       0x1c ./Core/Src/syscalls.o
+ .debug_macro   0x00024173       0x52 ./Core/Src/syscalls.o
+ .debug_macro   0x000241c5       0x22 ./Core/Src/syscalls.o
+ .debug_macro   0x000241e7       0x10 ./Core/Src/syscalls.o
+ .debug_macro   0x000241f7       0x52 ./Core/Src/syscalls.o
+ .debug_macro   0x00024249       0xcf ./Core/Src/syscalls.o
+ .debug_macro   0x00024318       0x1c ./Core/Src/syscalls.o
+ .debug_macro   0x00024334       0x3d ./Core/Src/syscalls.o
+ .debug_macro   0x00024371       0x35 ./Core/Src/syscalls.o
+ .debug_macro   0x000243a6      0x12c ./Core/Src/syscalls.o
+ .debug_macro   0x000244d2       0x10 ./Core/Src/syscalls.o
+ .debug_macro   0x000244e2      0x242 ./Core/Src/syscalls.o
+ .debug_macro   0x00024724       0x10 ./Core/Src/syscalls.o
+ .debug_macro   0x00024734      0x18a ./Core/Src/syscalls.o
+ .debug_macro   0x000248be       0x16 ./Core/Src/syscalls.o
+ .debug_macro   0x000248d4       0xce ./Core/Src/syscalls.o
+ .debug_macro   0x000249a2       0xff ./Core/Src/sysmem.o
+ .debug_macro   0x00024aa1      0x23c ./Core/Src/sysmem.o
+ .debug_macro   0x00024cdd      0x219 ./Core/Src/system_stm32f4xx.o
+ .debug_macro   0x00024ef6      0x279 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
+ .debug_macro   0x0002516f      0x21a ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.o
+ .debug_macro   0x00025389      0x219 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
+ .debug_macro   0x000255a2      0x21f ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
+ .debug_macro   0x000257c1      0x267 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.o
+ .debug_macro   0x00025a28      0x23d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
+ .debug_macro   0x00025c65      0x228 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.o
+ .debug_macro   0x00025e8d      0x21a ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
+ .debug_macro   0x000260a7      0x219 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o
+ .debug_macro   0x000262c0      0x21a ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o
 
-.debug_line     0x00000000    0x40fcd
+.debug_line     0x00000000    0x40fd4
  .debug_line    0x00000000      0xa91 ./Core/Inc/Boton/CManejadorBoton.o
  .debug_line    0x00000a91       0xbd ./Core/Inc/Boton/CManejadorEventosBoton.o
  .debug_line    0x00000b4e      0xa34 ./Core/Inc/Calefactor/Calefactor.o
@@ -15435,40 +15445,40 @@ LOAD C:/ST/STM32CubeIDE_1.13.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_line    0x0001f44a     0x1376 ./Core/Inc/GUI/Rampa/PantallaRampa/CPantallaRampa.o
  .debug_line    0x000207c0      0xc32 ./Core/Inc/ILI9341/ILI9341_GFX.o
  .debug_line    0x000213f2      0xce2 ./Core/Inc/ILI9341/ILI9341_STM32_Driver.o
- .debug_line    0x000220d4      0xd31 ./Core/Inc/ManejadorControles/CManejadorControles.o
- .debug_line    0x00022e05      0x162 ./Core/Inc/ManejadorControles/CManejadorEventosControles.o
- .debug_line    0x00022f67      0xd63 ./Core/Inc/PWM/Pwm.o
- .debug_line    0x00023cca       0xdf ./Core/Inc/RapaTemperatura/CControlProgreso.o
- .debug_line    0x00023da9      0xe97 ./Core/Inc/RapaTemperatura/CControladorPasosRampa.o
- .debug_line    0x00024c40      0xf2c ./Core/Inc/RapaTemperatura/CControladorRampas.o
- .debug_line    0x00025b6c      0x818 ./Core/Inc/RapaTemperatura/CPaso.o
- .debug_line    0x00026384      0x8f3 ./Core/Inc/RapaTemperatura/CRampa.o
- .debug_line    0x00026c77       0xd9 ./Core/Inc/SensorMagnetico/CManejadorEventoSensorMagnetico.o
- .debug_line    0x00026d50      0xa9e ./Core/Inc/SensorMagnetico/SensorMagnetico.o
- .debug_line    0x000277ee      0x103 ./Core/Inc/SensorTemperatura/InterfaceSensorTemperatura/InterfaceSensorTemperatura.o
- .debug_line    0x000278f1      0x97e ./Core/Inc/SensorTemperatura/SensorAnalogico.o
- .debug_line    0x0002826f      0x9cf ./Core/Inc/Timer/Timer.o
- .debug_line    0x00028c3e      0xb4c ./Core/Inc/Uart/Uart.o
- .debug_line    0x0002978a     0x15e7 ./Core/Src/Principal.o
- .debug_line    0x0002ad71      0x869 ./Core/Src/gpio.o
- .debug_line    0x0002b5da      0xe39 ./Core/Src/main.o
- .debug_line    0x0002c413      0x801 ./Core/Src/spi.o
- .debug_line    0x0002cc14      0x99c ./Core/Src/stm32f4xx_hal_msp.o
- .debug_line    0x0002d5b0      0x946 ./Core/Src/stm32f4xx_it.o
- .debug_line    0x0002def6      0x8b2 ./Core/Src/syscalls.o
- .debug_line    0x0002e7a8      0x583 ./Core/Src/sysmem.o
- .debug_line    0x0002ed2b      0x862 ./Core/Src/system_stm32f4xx.o
- .debug_line    0x0002f58d       0x7a ./Core/Startup/startup_stm32f411ceux.o
- .debug_line    0x0002f607      0xacb ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
- .debug_line    0x000300d2     0x1293 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.o
- .debug_line    0x00031365      0xdbd ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
- .debug_line    0x00032122      0xc1b ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
- .debug_line    0x00032d3d     0x3c11 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.o
- .debug_line    0x0003694e      0xe54 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
- .debug_line    0x000377a2     0x1de9 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.o
- .debug_line    0x0003958b     0x3649 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
- .debug_line    0x0003cbd4     0x1a5c ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o
- .debug_line    0x0003e630     0x299d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o
+ .debug_line    0x000220d4      0xd4a ./Core/Inc/ManejadorControles/CManejadorControles.o
+ .debug_line    0x00022e1e      0x162 ./Core/Inc/ManejadorControles/CManejadorEventosControles.o
+ .debug_line    0x00022f80      0xd63 ./Core/Inc/PWM/Pwm.o
+ .debug_line    0x00023ce3       0xdf ./Core/Inc/RapaTemperatura/CControlProgreso.o
+ .debug_line    0x00023dc2      0xe97 ./Core/Inc/RapaTemperatura/CControladorPasosRampa.o
+ .debug_line    0x00024c59      0xf2c ./Core/Inc/RapaTemperatura/CControladorRampas.o
+ .debug_line    0x00025b85      0x818 ./Core/Inc/RapaTemperatura/CPaso.o
+ .debug_line    0x0002639d      0x8f3 ./Core/Inc/RapaTemperatura/CRampa.o
+ .debug_line    0x00026c90       0xd9 ./Core/Inc/SensorMagnetico/CManejadorEventoSensorMagnetico.o
+ .debug_line    0x00026d69      0xa9e ./Core/Inc/SensorMagnetico/SensorMagnetico.o
+ .debug_line    0x00027807      0x103 ./Core/Inc/SensorTemperatura/InterfaceSensorTemperatura/InterfaceSensorTemperatura.o
+ .debug_line    0x0002790a      0x97e ./Core/Inc/SensorTemperatura/SensorAnalogico.o
+ .debug_line    0x00028288      0x9cf ./Core/Inc/Timer/Timer.o
+ .debug_line    0x00028c57      0xb4c ./Core/Inc/Uart/Uart.o
+ .debug_line    0x000297a3     0x15e7 ./Core/Src/Principal.o
+ .debug_line    0x0002ad8a      0x869 ./Core/Src/gpio.o
+ .debug_line    0x0002b5f3      0xe2f ./Core/Src/main.o
+ .debug_line    0x0002c422      0x801 ./Core/Src/spi.o
+ .debug_line    0x0002cc23      0x994 ./Core/Src/stm32f4xx_hal_msp.o
+ .debug_line    0x0002d5b7      0x946 ./Core/Src/stm32f4xx_it.o
+ .debug_line    0x0002defd      0x8b2 ./Core/Src/syscalls.o
+ .debug_line    0x0002e7af      0x583 ./Core/Src/sysmem.o
+ .debug_line    0x0002ed32      0x862 ./Core/Src/system_stm32f4xx.o
+ .debug_line    0x0002f594       0x7a ./Core/Startup/startup_stm32f411ceux.o
+ .debug_line    0x0002f60e      0xacb ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
+ .debug_line    0x000300d9     0x1293 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.o
+ .debug_line    0x0003136c      0xdbd ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
+ .debug_line    0x00032129      0xc1b ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
+ .debug_line    0x00032d44     0x3c11 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.o
+ .debug_line    0x00036955      0xe54 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
+ .debug_line    0x000377a9     0x1de9 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.o
+ .debug_line    0x00039592     0x3649 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
+ .debug_line    0x0003cbdb     0x1a5c ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o
+ .debug_line    0x0003e637     0x299d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o
 
 .debug_str      0x00000000    0xadc3e
  .debug_str     0x00000000    0x994f7 ./Core/Inc/Boton/CManejadorBoton.o
@@ -15544,7 +15554,7 @@ LOAD C:/ST/STM32CubeIDE_1.13.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_str     0x000a52f3      0x2af ./Core/Inc/ILI9341/ILI9341_STM32_Driver.o
                               0x96f5d (size before relaxing)
  .debug_str     0x000a55a2      0x514 ./Core/Inc/ManejadorControles/CManejadorControles.o
-                              0x9a0b6 (size before relaxing)
+                              0x9a683 (size before relaxing)
  .debug_str     0x000a5ab6       0xaa ./Core/Inc/ManejadorControles/CManejadorEventosControles.o
                                0x36a6 (size before relaxing)
  .debug_str     0x000a5b60      0x766 ./Core/Inc/PWM/Pwm.o

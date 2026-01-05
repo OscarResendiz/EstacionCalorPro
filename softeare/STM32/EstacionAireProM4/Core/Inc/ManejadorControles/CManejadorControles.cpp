@@ -8,9 +8,12 @@
 #include <ManejadorControles/CManejadorControles.hpp>
 #include "Constantes.hpp"
 #include "Uart/Uart.hpp"
-
+#include <stdio.h>
+//#include <memory>
 CManejadorControles::CManejadorControles()
 {
+//	std::shared_ptr<CManejadorBoton> btnx {p:new CManejadorBoton};
+
 	// TODO Auto-generated constructor stub
 	//configuracion de los botones
 	BotonMemoria1.Configurar(GPIOC, GPIO_PIN_13, 1);

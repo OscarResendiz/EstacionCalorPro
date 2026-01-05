@@ -1,20 +1,20 @@
-../Core/Inc/ManejadorControles/CManejadorControles.cpp:12:1:CManejadorControles::CManejadorControles()	1
-../Core/Inc/ManejadorControles/CManejadorControles.cpp:41:1:CManejadorControles::~CManejadorControles()	1
-../Core/Inc/ManejadorControles/CManejadorControles.cpp:41:1:virtual CManejadorControles::~CManejadorControles()	1
-../Core/Inc/ManejadorControles/CManejadorControles.cpp:46:6:virtual void CManejadorControles::GPIO_INTERRUPCION(int)	1
-../Core/Inc/ManejadorControles/CManejadorControles.cpp:52:6:void CManejadorControles::ProcesaBotones(int)	1
-../Core/Inc/ManejadorControles/CManejadorControles.cpp:61:6:virtual void CManejadorControles::InterrupcionEncoder(int)	1
-../Core/Inc/ManejadorControles/CManejadorControles.cpp:67:5:int CManejadorControles::GetNivelAire()	1
-../Core/Inc/ManejadorControles/CManejadorControles.cpp:73:6:virtual void CManejadorControles::BotonUnoClickEvent()	2
-../Core/Inc/ManejadorControles/CManejadorControles.cpp:81:6:virtual void CManejadorControles::BotonDosClickEvent()	2
-../Core/Inc/ManejadorControles/CManejadorControles.cpp:89:6:virtual void CManejadorControles::BotonTresClickEvent()	2
-../Core/Inc/ManejadorControles/CManejadorControles.cpp:97:6:virtual void CManejadorControles::BotonCuatroClickEvent()	2
-../Core/Inc/ManejadorControles/CManejadorControles.cpp:105:6:virtual void CManejadorControles::BotonPerillaClickEvent()	2
-../Core/Inc/ManejadorControles/CManejadorControles.cpp:113:6:virtual void CManejadorControles::EncoderIncremento()	2
-../Core/Inc/ManejadorControles/CManejadorControles.cpp:120:6:virtual void CManejadorControles::EncoderDecremento()	2
-../Core/Inc/ManejadorControles/CManejadorControles.cpp:128:6:virtual void CManejadorControles::OnBotonClickEvent(int)	5
-../Core/Inc/ManejadorControles/CManejadorControles.cpp:149:6:virtual void CManejadorControles::OnIncrementoEncoder(int)	1
-../Core/Inc/ManejadorControles/CManejadorControles.cpp:154:6:virtual void CManejadorControles::OnDecrementoEncoder(int)	1
-../Core/Inc/ManejadorControles/CManejadorControles.cpp:159:6:virtual void CManejadorControles::OnBotonEncoderClickEvent(int)	1
-../Core/Inc/ManejadorControles/CManejadorControles.cpp:168:6:virtual void CManejadorControles::SetManejadorControles(CManejadorEventosControles*)	1
-../Core/Inc/ManejadorControles/CManejadorControles.cpp:173:6:void CManejadorControles::TimerTick()	1
+../Core/Inc/ManejadorControles/CManejadorControles.cpp:13:1:CManejadorControles::CManejadorControles()	1
+../Core/Inc/ManejadorControles/CManejadorControles.cpp:44:1:CManejadorControles::~CManejadorControles()	1
+../Core/Inc/ManejadorControles/CManejadorControles.cpp:44:1:virtual CManejadorControles::~CManejadorControles()	1
+../Core/Inc/ManejadorControles/CManejadorControles.cpp:49:6:virtual void CManejadorControles::GPIO_INTERRUPCION(int)	1
+../Core/Inc/ManejadorControles/CManejadorControles.cpp:55:6:void CManejadorControles::ProcesaBotones(int)	1
+../Core/Inc/ManejadorControles/CManejadorControles.cpp:64:6:virtual void CManejadorControles::InterrupcionEncoder(int)	1
+../Core/Inc/ManejadorControles/CManejadorControles.cpp:70:5:int CManejadorControles::GetNivelAire()	1
+../Core/Inc/ManejadorControles/CManejadorControles.cpp:76:6:virtual void CManejadorControles::BotonUnoClickEvent()	2
+../Core/Inc/ManejadorControles/CManejadorControles.cpp:84:6:virtual void CManejadorControles::BotonDosClickEvent()	2
+../Core/Inc/ManejadorControles/CManejadorControles.cpp:92:6:virtual void CManejadorControles::BotonTresClickEvent()	2
+../Core/Inc/ManejadorControles/CManejadorControles.cpp:100:6:virtual void CManejadorControles::BotonCuatroClickEvent()	2
+../Core/Inc/ManejadorControles/CManejadorControles.cpp:108:6:virtual void CManejadorControles::BotonPerillaClickEvent()	2
+../Core/Inc/ManejadorControles/CManejadorControles.cpp:116:6:virtual void CManejadorControles::EncoderIncremento()	2
+../Core/Inc/ManejadorControles/CManejadorControles.cpp:123:6:virtual void CManejadorControles::EncoderDecremento()	2
+../Core/Inc/ManejadorControles/CManejadorControles.cpp:131:6:virtual void CManejadorControles::OnBotonClickEvent(int)	5
+../Core/Inc/ManejadorControles/CManejadorControles.cpp:152:6:virtual void CManejadorControles::OnIncrementoEncoder(int)	1
+../Core/Inc/ManejadorControles/CManejadorControles.cpp:157:6:virtual void CManejadorControles::OnDecrementoEncoder(int)	1
+../Core/Inc/ManejadorControles/CManejadorControles.cpp:162:6:virtual void CManejadorControles::OnBotonEncoderClickEvent(int)	1
+../Core/Inc/ManejadorControles/CManejadorControles.cpp:171:6:virtual void CManejadorControles::SetManejadorControles(CManejadorEventosControles*)	1
+../Core/Inc/ManejadorControles/CManejadorControles.cpp:176:6:void CManejadorControles::TimerTick()	1
